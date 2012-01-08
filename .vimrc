@@ -332,19 +332,16 @@ nmap d> d<
 nmap d" ds"
 nmap d' ds'
 
-xmap ) ,s)
+xmap ) S)
 xmap ( )
-xmap ] ,s]
+xmap ] S]
 xmap [ ]
-xmap } ,s}
+xmap } S}
 xmap { }
-xmap > ,s>
+xmap > S>
 xmap < >
-xmap " ,s"
-xmap ' ,s'
-
-xmap <Leader>s <Plug>Vsurround
-xmap <Leader>S <Plug>VSurround
+xmap " S"
+xmap ' S'
 
 " --------------------------------------------------------------------------------------------------
 " Keymap
@@ -379,6 +376,13 @@ function! ToggleHorizontalScrollbar()
 		set guioptions+=b
 	endif
 endfunc
+
+" --------------------------------------------------------------------------------------------------
+" bufexplorer
+" --------------------------------------------------------------------------------------------------
+
+nmap <silent> ga :BufExplorer<CR>
+" autocmd FileType bufexplorer nmap <buffer> l :call <SID>BESelectBuffer()<cr>
 
 " --------------------------------------------------------------------------------------------------
 " NERDTree (un)Mappings
