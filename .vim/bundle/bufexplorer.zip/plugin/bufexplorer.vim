@@ -47,8 +47,8 @@ if v:version < 700
 endif
 
 " Public Interface {{{1
-if maparg("<Leader>be") =~ 'BufExplorer'
-  nunmap <Leader>be
+if maparg("ga") =~ 'BufExplorer'
+  nunmap ga
 endif
 
 if maparg("<Leader>bs") =~ 'BufExplorerHorizontalSplit'
@@ -59,7 +59,7 @@ if maparg("<Leader>bv") =~ 'BufExplorerVerticalSplit'
   nunmap <Leader>bv
 endif
 
-nmap <script> <silent> <unique> <Leader>be :BufExplorer<CR>
+nmap <script> <silent> <unique> ga :BufExplorer<CR>
 nmap <script> <silent> <unique> <Leader>bs :BufExplorerHorizontalSplit<CR>
 nmap <script> <silent> <unique> <Leader>bv :BufExplorerVerticalSplit<CR>
 
