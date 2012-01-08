@@ -65,6 +65,7 @@ alias cd.....='cd ../../../..'
 
 export CC=colorgcc
 export EDITOR=gvim
+export NODE_PATH=/usr/local/lib/node_modules
 
 # Extract Stuff
 extract () {
