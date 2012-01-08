@@ -279,6 +279,10 @@ endfunction
 
 " NB: this supports "rp that replaces the selection by the contents of @r
 xmap <silent> <expr> p <sid>Repl()
+xmap <silent> <expr> P <sid>Repl()
+
+nmap p <Plug>AfterPasta
+nmap P <Plug>BeforePasta
 
 " --------------------------------------------------------------------------------------------------
 " CamelCase Plugin Mappings
