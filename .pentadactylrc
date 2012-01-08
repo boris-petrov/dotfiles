@@ -1,0 +1,38 @@
+set runtimepath=~/pentadactyl
+
+set complete=bhs
+set findcase=ignore
+set novisualbell
+set hlfind
+set autocomplete=
+set newtab=all
+set wildcase=.?:ignore
+set guioptions+=M
+set wildmode=
+
+javascript dactyl.beep = function() { return false; }
+
+colorscheme desert
+
+nnoremap J 15j
+nnoremap K 15k
+nnoremap j 5j
+nnoremap k 5k
+
+nmap h gT
+nmap l gt
+nmap H <C-o>
+nmap L <C-i>
+
+nmap gb <C-o>
+
+nnoremap <C-c> <C-v><C-c>
+inoremap <C-v> <C-v><C-v>
+
+" TODO: how?!
+" cmap <RETURN> <TAB><RETURN>
+
+nmap <C-d> :q<RETURN>
+
+nnoremap <ESC> <C-c>:noh<RETURN>
+

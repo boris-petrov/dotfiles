@@ -1,0 +1,21 @@
+[user]
+	name = Boris Petrov
+	email = boris_petrov@live.com
+[diff]
+	tool = meld
+[merge]
+	tool = meld
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    dy = difftool -y
+    dyc = difftool -y --cached
+[log]
+    date = iso
+[format]
+	pretty = %Cblue%h%Creset %an %Cgreen%ad%Creset%d%n%B
+[color]
+    status = auto
+[core]
+	autocrlf = input
