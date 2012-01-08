@@ -158,11 +158,11 @@ function! LoadVimAddonManager()
 
 	set runtimepath+=~/.vim/bundle/vim-addon-manager
 
-	call scriptmanager#Activate( [ "bufexplorer.zip", "camelcasemotion", "fugitive", "The_NERD_tree", "PreciseJump", "smartword", "SuperTab", "surround", "tComment", "vim-coffee-script" ] )
+	call scriptmanager#Activate( [ "camelcasemotion", "fugitive", "The_NERD_tree", "PreciseJump", "smartword", "SuperTab", "surround", "tComment", "vim-coffee-script" ] )
 
-endf
+endfunction
 
-au VimEnter * call LoadVimAddonManager()
+autocmd VimEnter * call LoadVimAddonManager()
 
 " --------------------------------------------------------------------------------------------------
 " Fonts
@@ -361,7 +361,7 @@ function! ToggleKeymap()
 			Inconsolata
 		endif
 	endif
-endfunc
+endfunction
 
 " --------------------------------------------------------------------------------------------------
 " Wrapping
@@ -375,7 +375,7 @@ function! ToggleHorizontalScrollbar()
 	else
 		set guioptions+=b
 	endif
-endfunc
+endfunction
 
 " --------------------------------------------------------------------------------------------------
 " NERDTree (un)Mappings
