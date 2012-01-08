@@ -9,11 +9,39 @@ endif
 
 set nocompatible
 
-syntax on
+filetype off " required by Vundle
 
-filetype on
+set runtimepath+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'bkad/CamelCaseMotion'
+Bundle 'ervandew/supertab'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-surround'
+Bundle 'sickill/vim-pasta'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Bundle 'tpope/vim-rails.git'
+
+" vim-scripts repos
+Bundle 'PreciseJump'
+Bundle 'smartword'
+" Bundle 'FuzzyFinder'
+
+" non github repos
+" Bundle 'git://git.wincent.com/command-t.git'
+
+" filetype on
 filetype indent on
 filetype plugin on
+
+syntax on
 
 set hidden
 
@@ -149,20 +177,6 @@ if has('win32')
 elseif has('unix')
 	let g:haddock_browser = "firefox"
 endif
-
-" --------------------------------------------------------------------------------------------------
-" Vim Addon Manager
-" --------------------------------------------------------------------------------------------------
-
-function! LoadVimAddonManager()
-
-	set runtimepath+=~/.vim/bundle/vim-addon-manager
-
-	call scriptmanager#Activate( [ "camelcasemotion", "fugitive", "The_NERD_tree", "PreciseJump", "smartword", "SuperTab", "surround", "tComment", "vim-coffee-script" ] )
-
-endfunction
-
-autocmd VimEnter * call LoadVimAddonManager()
 
 " --------------------------------------------------------------------------------------------------
 " Fonts
