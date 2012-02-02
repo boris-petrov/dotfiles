@@ -2,16 +2,13 @@
 
 if has('win32')
 	let $VIMRUNTIME='C:\Program Files (x86)\Vim\vim73'
-	set runtimepath=$VIM/vimfiles,$VIMRUNTIME
-elseif has('unix')
-	set runtimepath=~/.vim,$VIMRUNTIME
 endif
 
 set nocompatible
 
 filetype off " required by Vundle
 
-set runtimepath+=~/.vim/bundle/vundle/
+set runtimepath+=~/.vim/bundle/vundle/,~/.vim,$VIMRUNTIME
 call vundle#rc()
 
 " let Vundle manage Vundle
