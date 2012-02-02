@@ -408,6 +408,17 @@ autocmd FileType nerdtree nmap <buffer> h x
 autocmd FileType nerdtree nmap <buffer> c ma
 autocmd FileType nerdtree nmap <buffer> d md
 
+"--------------------------------------------------------
+" Abreviations
+" -------------------------------------------------------
+
+cab W w
+cab Wq wq
+cab wQ wq
+cab WQ wq
+cab Q q
+cab q1 q!
+
 " --------------------------------------------------------------------------------------------------
 " Misc Mappings
 " --------------------------------------------------------------------------------------------------
@@ -424,7 +435,7 @@ nnoremap <C-j> <C-e>
 nnoremap <C-k> <C-y>
 
 " Map <F5> to remove all trailing whitespace
-nnoremap <silent> <F5> :let _s=@/<RETURN>:%s/\s\+$//e<RETURN>:let @/=_s<RETURN>:nohl<RETURN>:w<RETURN>
+nnoremap <silent> <F5> :let _s=@/<RETURN>:%s/\s\+$//e<RETURN>:let @/=_s<RETURN>:nohl<RETURN>:set ff=unix<RETURN>:w<RETURN>
 
 " free mappings - U, P, S, H, L, M, X, $, ^, &, -, _, +, |, \, ','
 
@@ -479,9 +490,6 @@ nnoremap gb <C-o>
 
 noremap <S-SPACE> <PAGEUP>
 noremap <SPACE> <PAGEDOWN>
-
-cmap W w
-cmap Q q
 
 " Quit like in bash
 nnoremap <C-d> :q<RETURN>
