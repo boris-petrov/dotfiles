@@ -410,7 +410,7 @@ autocmd FileType nerdtree nmap <buffer> d md
 " FuzzyFinder Mappings
 " --------------------------------------------------------------------------------------------------
 
-nnoremap gz :FufFile<RETURN>
+nnoremap gz :FufCoverageFile<RETURN>
 
 "--------------------------------------------------------
 " Abreviations
