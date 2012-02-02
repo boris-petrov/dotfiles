@@ -29,7 +29,8 @@ Bundle 'sickill/vim-pasta'
 " vim-scripts repos
 Bundle 'PreciseJump'
 Bundle 'smartword'
-" Bundle 'FuzzyFinder'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
@@ -119,7 +120,7 @@ set nojoinspaces " do not put 2 spaces after dot when joining lines
 set notildeop
 
 set more " I like the more prompt
-set shortmess=a " all abbreviations, but I like the other things
+" set shortmess=a " all abbreviations, but I like the other things
 
 set nostartofline " keeps my cursor where it is
 
@@ -404,6 +405,12 @@ autocmd FileType nerdtree nmap <buffer> l o
 autocmd FileType nerdtree nmap <buffer> h x
 autocmd FileType nerdtree nmap <buffer> c ma
 autocmd FileType nerdtree nmap <buffer> d md
+
+" --------------------------------------------------------------------------------------------------
+" FuzzyFinder Mappings
+" --------------------------------------------------------------------------------------------------
+
+nnoremap gz :FufFile<RETURN>
 
 "--------------------------------------------------------
 " Abreviations
