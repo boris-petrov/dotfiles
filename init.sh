@@ -1,25 +1,20 @@
 #!/bin/sh
 
+shopt -s dotglob
+
+SCRIPT=$(readlink -f $0)
+SCRIPTPATH=$(dirname $SCRIPT)
+
 if [ `uname -s` = "Linux" ]; then
-	shopt -s dotglob
-
-	SCRIPT=$(readlink -f $0)
-	SCRIPTPATH=$(dirname $SCRIPT)
-
 	for file in $SCRIPTPATH/*
 	do
-		if [ $file != "$SCRIPTPATH/init.sh" ]
+		if [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" -a $file != "$SCRIPTPATH/.minttyrc" ]
 		then
-			ln -s $file ~/$(basename $file)
+			ln -sf $file ~/$(basename $file)
 		fi
 	done
 
 elif [ `uname -o` = "Cygwin" ]; then
-
-	shopt -s dotglob
-
-	SCRIPT=$(readlink -f $0)
-	SCRIPTPATH=$(dirname $SCRIPT)
 
 	for file in $SCRIPTPATH/*
 	do
