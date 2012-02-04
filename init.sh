@@ -8,7 +8,7 @@ SCRIPTPATH=$(dirname $SCRIPT)
 if [ `uname -s` = "Linux" ]; then
 	for file in $SCRIPTPATH/*
 	do
-		if [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" -a $file != "$SCRIPTPATH/.minttyrc" ]
+		if [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" -a $file != "$SCRIPTPATH/.minttyrc" -a $file != "$SCRIPTPATH/AutoHotkey.ahk" ]
 		then
 			ln -sf $file ~/$(basename $file)
 		fi
@@ -30,6 +30,9 @@ elif [ `uname -o` = "Cygwin" ]; then
 		elif [ $file == "$SCRIPTPATH/.vimrc" ]; then
 			cmd /c del "C:\Program Files (x86)\Vim\_vimrc"
 			cmd /c mklink "C:\Program Files (x86)\Vim\_vimrc" $(cygpath -w $SCRIPTPATH/.vimrc)
+		elif [ $file == "$SCRIPTPATH/AutoHotkey.ahk" ]; then
+			cmd /c del %USERPROFILE%\\Documents\\AutoHotkey.ahk
+			cmd /c mklink %USERPROFILE%\\Documents\\AutoHotkey.ahk $(cygpath -w $SCRIPTPATH/AutoHotkey.ahk)
 		elif [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" ]; then
 			ln -sf $file ~/$(basename $file)
 		fi
