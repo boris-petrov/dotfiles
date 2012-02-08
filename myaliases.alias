@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="Legacy" ?>
+<!-- This file defines aliases for use by the Find and Run Robot program (http://www.donationcoder.com/Software/Mouser/findrun/index.html). -->
+<FarrAliasFile>
+    <FileFormatVersion>1</FileFormatVersion>
+    <AliasSetDescription>My aliases</AliasSetDescription>
+    <AliasEntry>
+        <AliasText>Usernames</AliasText>
+        <Score>1000</Score>
+        <Regex>^user(?:n|na|nam)?$</Regex>
+        <Results>
+            <Result>Usernames and Passwords | C:\Program Files (x86)\Vim\vim73\gvim.exe &quot;C:\Users\Boris\Documents\Usernames and Passwords.txt&quot; /icon=C:\Users\Boris\Documents\Usernames and Passwords.txt</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>todo</AliasText>
+        <Score>1000</Score>
+        <Results>
+            <Result>TODOs | C:\Program Files (x86)\Vim\vim73\gvim.exe &quot;C:\Users\Boris\Documents\To do.txt&quot; /icon=C:\Users\Boris\Documents\To do.txt</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>I&apos;m Feeling Lucky Google Search</AliasText>
+        <Score>1000</Score>
+        <Regex>^gss\s+(.*)$</Regex>
+        <Results>
+            <Result>Google - $$1 | http://www.google.com/search?q=$$u1&amp;btnI=745 /ICON=C:\Program Files (x86)\FindAndRunRobot\AliasGroups\Installed\Core_Aliases\icons\google.ico</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>wikipedia</AliasText>
+        <Score>1000</Score>
+        <Regex>^w(?:iki|ik|i)?\s+(.*)$</Regex>
+        <Results>
+            <Result>http://en.wikipedia.org/wiki/Special:Search?search=$$1 /ICON=C:\Program Files (x86)\FindAndRunRobot\AliasGroups\Installed\Core_Aliases\icons\wikipedia.ico</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>internet</AliasText>
+        <Score>1000</Score>
+        <Regex>^(?!gs\s+)(.+\.(?:com|org|net|edu|bg).*)$</Regex>
+        <Results>
+            <Result>Surf to $$1 | http://$$1 /ICON=C:\Program Files (x86)\FindAndRunRobot\AliasGroups\Installed\Core_Aliases\icons\farr\core-internet_www.ico</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>vim</AliasText>
+        <Score>1000</Score>
+        <Regex>^g?vim?$</Regex>
+        <Results>
+            <Result>gVim | C:\Program Files (x86)\Vim\vim73\gvim.exe</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>internet explorer</AliasText>
+        <Score>1000</Score>
+        <Regex>^ie(?:x|xp)?$</Regex>
+        <Results>
+            <Result>Internet Explorer | C:\Program Files (x86)\Internet Explorer\iexplore.exe</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>cmd</AliasText>
+        <Score>1000</Score>
+        <Results>
+            <Result>Console | &quot;C:\Program Files\Console\Console.exe&quot;</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>google search</AliasText>
+        <Score>1000</Score>
+        <Regex>^gs?\s+(.*)$</Regex>
+        <Results>
+            <Result>Google - $$1 | http://www.google.com/search?q=$$u1 /ICON=C:\Program Files (x86)\FindAndRunRobot\AliasGroups\Installed\Core_Aliases\icons\google.ico</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>SA Dictionary</AliasText>
+        <Score>1000</Score>
+        <Regex>^sa ?(?:d|di|dic|dict)?$</Regex>
+        <Results>
+            <Result>SA Dictionary | C:\Program Files (x86)\SA Dictionary\Diction.exe</Result>
+        </Results>
+    </AliasEntry>
+</FarrAliasFile>
