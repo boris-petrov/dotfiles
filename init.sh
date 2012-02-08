@@ -8,7 +8,7 @@ SCRIPTPATH=$(dirname $SCRIPT)
 if [ `uname -s` = "Linux" ]; then
 	for file in $SCRIPTPATH/*
 	do
-		if [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" -a $file != "$SCRIPTPATH/.minttyrc" -a $file != "$SCRIPTPATH/AutoHotkey.ahk" -a $file != "$SCRIPTPATH/prio.ini" ]
+		if [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" -a $file != "$SCRIPTPATH/.minttyrc" -a $file != "$SCRIPTPATH/AutoHotkey.ahk" -a $file != "$SCRIPTPATH/prio.ini" -a $file != "$SCRIPTPATH/_vsvimrc"  ]
 		then
 			ln -sf $file ~/$(basename $file)
 		fi
@@ -36,6 +36,9 @@ elif [ `uname -o` = "Cygwin" ]; then
 		elif [ $file == "$SCRIPTPATH/prio.ini" ]; then
 			cmd /c del %USERPROFILE%\\AppData\\Roaming\\prio.ini
 			cmd /c mklink %USERPROFILE%\\AppData\\Roaming\\prio.ini $(cygpath -w $SCRIPTPATH/prio.ini)
+		elif [ $file == "$SCRIPTPATH/_vsvimrc" ]; then
+			cmd /c del %USERPROFILE%\\_vsvimrc
+			cmd /c mklink %USERPROFILE%\\_vsvimrc $(cygpath -w $SCRIPTPATH/_vsvimrc)
 		elif [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" ]; then
 			ln -sf $file ~/$(basename $file)
 		fi
