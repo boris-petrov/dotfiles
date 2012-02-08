@@ -110,7 +110,7 @@ set novisualbell " but not the visuals!
 
 " set virtualedit=onemore
 
-set autochdir " changes the current dir to the one the file being edited is in
+set noautochdir " do not change the current dir to the one the file being edited is in
 
 set lazyredraw " faster macros
 set ttyfast " nicer redraw

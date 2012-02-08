@@ -8,7 +8,7 @@ SCRIPTPATH=$(dirname $SCRIPT)
 if [ `uname -s` = "Linux" ]; then
 	for file in $SCRIPTPATH/*
 	do
-		if [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" -a $file != "$SCRIPTPATH/.minttyrc" -a $file != "$SCRIPTPATH/AutoHotkey.ahk" ]
+		if [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" -a $file != "$SCRIPTPATH/.minttyrc" -a $file != "$SCRIPTPATH/AutoHotkey.ahk" -a $file != "$SCRIPTPATH/prio.ini" ]
 		then
 			ln -sf $file ~/$(basename $file)
 		fi
@@ -33,6 +33,9 @@ elif [ `uname -o` = "Cygwin" ]; then
 		elif [ $file == "$SCRIPTPATH/AutoHotkey.ahk" ]; then
 			cmd /c del %USERPROFILE%\\Documents\\AutoHotkey.ahk
 			cmd /c mklink %USERPROFILE%\\Documents\\AutoHotkey.ahk $(cygpath -w $SCRIPTPATH/AutoHotkey.ahk)
+		elif [ $file == "$SCRIPTPATH/prio.ini" ]; then
+			cmd /c del %USERPROFILE%\\AppData\\Roaming\\prio.ini
+			cmd /c mklink %USERPROFILE%\\AppData\\Roaming\\prio.ini $(cygpath -w $SCRIPTPATH/prio.ini)
 		elif [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" ]; then
 			ln -sf $file ~/$(basename $file)
 		fi
