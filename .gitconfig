@@ -16,6 +16,9 @@
 [format]
 	pretty = %Cblue%h%Creset %an %Cgreen%ad%Creset%d%n%B
 [color]
-    status = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
 [core]
 	autocrlf = input
