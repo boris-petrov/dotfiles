@@ -1,0 +1,55 @@
+set incsearch
+set hlsearch
+set ignorecase
+
+set autoindent
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+nnoremap gj J
+
+map J 4j
+map K 4k
+
+noremap z ^
+noremap Z $
+
+map gg gg
+
+nnoremap vv V
+nnoremap Y y$
+nnoremap V v$
+" nmap V vZh
+
+inoremap hj <ESC>
+inoremap jh <ESC>
+inoremap jk <ESC>
+inoremap kj <ESC>
+inoremap kl <ESC>
+inoremap lk <ESC>
+
+nnoremap <ESC> :noh<RETURN>
+
+nnoremap <RETURN> o<ESC>
+nnoremap <S-RETURN> O<ESC>
+
+noremap <S-SPACE> <PAGEUP>
+noremap <SPACE> <PAGEDOWN>
+
+nnoremap <TAB> >>
+xnoremap <TAB> >
+nnoremap <S-TAB> <<
+xnoremap <S-TAB> <
+
+nnoremap <C-j> <C-e>
+nnoremap <C-k> <C-y>
+
+nnoremap gb <C-->
+
+nnoremap gcc <C-t>c
+xnoremap gc <C-t>c
+
+nnoremap gd <F12>
+
