@@ -204,6 +204,8 @@ autocmd FileType helpfile set nonumber " no line numbers when viewing help
 autocmd FileType helpfile nmap <buffer> <RETURN> <C-]>
 autocmd FileType helpfile nmap <buffer> <BACKSPACE> <C-t>
 
+autocmd FileType coffee set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+
 runtime macros/matchit.vim " smarter matching with % (ifs, elses...)
 
 " When editing a file, always jump to the last cursor position
