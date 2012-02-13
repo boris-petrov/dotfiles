@@ -196,3 +196,4 @@ elif [ `uname -o` = "Cygwin" ]; then
 	settitle $(pwd)
 fi
 
+export LD_LIBRARY_PATH=.:/usr/local/lib:../mt4-client-api
