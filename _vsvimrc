@@ -16,8 +16,6 @@ map K 4k
 noremap z ^
 noremap Z $
 
-map gg gg
-
 nnoremap vv V
 nnoremap Y y$
 nnoremap V v$
