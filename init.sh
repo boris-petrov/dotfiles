@@ -8,7 +8,7 @@ SCRIPTPATH=$(dirname $SCRIPT)
 if [ `uname -s` = "Linux" ]; then
 	for file in $SCRIPTPATH/*
 	do
-		if [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" -a $file != "$SCRIPTPATH/.minttyrc" -a $file != "$SCRIPTPATH/AutoHotkey.ahk" -a $file != "$SCRIPTPATH/prio.ini" -a $file != "$SCRIPTPATH/_vsvimrc" -a $file != "$SCRIPTPATH/DonationCoder" ]
+		if [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" -a $file != "$SCRIPTPATH/.minttyrc" -a $file != "$SCRIPTPATH/AutoHotkey.ahk" -a $file != "$SCRIPTPATH/prio.ini" -a $file != "$SCRIPTPATH/_vsvimrc" -a $file != "$SCRIPTPATH/DonationCoder" -a $file != "$SCRIPTPATH/CurrentSettings.vssettings" ]
 		then
 			ln -sf $file ~/$(basename $file)
 		fi
@@ -45,6 +45,9 @@ elif [ `uname -o` = "Cygwin" ]; then
 		elif [ $file == "$SCRIPTPATH/myaliases.alias" ]; then
 			cmd /c del %USERPROFILE%\\Documents\\DonationCoder\\FindAndRunRobot\\AliasGroups\\MyCustom\\myaliases.alias
 			cmd /c mklink %USERPROFILE%\\Documents\\DonationCoder\\FindAndRunRobot\\AliasGroups\\MyCustom\\myaliases.alias $(cygpath -w $SCRIPTPATH/myaliases.alias)
+		elif [ $file == "$SCRIPTPATH/CurrentSettings.vssettings" ]; then
+			cmd /c del "%USERPROFILE%\\Documents\\Visual Studio 2010\\Settings\\CurrentSettings.vssettings"
+			cmd /c mklink "%USERPROFILE%\\Documents\\Visual Studio 2010\\Settings\\CurrentSettings.vssettings" $(cygpath -w $SCRIPTPATH/CurrentSettings.vssettings)
 		elif [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" ]; then
 			ln -sf $file ~/$(basename $file)
 		fi
