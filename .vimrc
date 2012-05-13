@@ -23,6 +23,11 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-surround'
 Bundle 'sickill/vim-pasta'
+Bundle 'kien/ctrlp.vim'
+Bundle 'AndrewRadev/coffee_tools.vim'
+Bundle 'sjl/gundo.vim'
+Bundle 'godlygeek/tabular'
+Bundle 'majutsushi/tagbar'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'tpope/vim-rails.git'
 
@@ -30,7 +35,6 @@ Bundle 'sickill/vim-pasta'
 Bundle 'PreciseJump'
 Bundle 'smartword'
 Bundle 'L9'
-Bundle 'FuzzyFinder'
 
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
@@ -100,7 +104,7 @@ set scrolljump=7
 set wildmenu
 set wildchar=<Tab>
 set wildmode=longest,list
-set wildignore=*.o,*.hi,*.dll,*.obj,*.exe,*.lib,*.so
+set wildignore=*.o,*.hi,*.dll,*.obj,*.lib,*.swp,*.zip,*.exe,*.so,*.zip
 
 set wrap " line wrapping
 set linebreak " does not wrap in the middle of the word
@@ -177,6 +181,13 @@ elseif has('unix')
 endif
 
 " --------------------------------------------------------------------------------------------------
+" Leader Variables
+" --------------------------------------------------------------------------------------------------
+
+let mapleader = ","
+let g:mapleader = ","
+
+" --------------------------------------------------------------------------------------------------
 " Fonts
 " --------------------------------------------------------------------------------------------------
 
@@ -202,7 +213,8 @@ autocmd FileType helpfile setlocal nonumber " no line numbers when viewing help
 autocmd FileType helpfile nmap <buffer> <RETURN> <C-]>
 autocmd FileType helpfile nmap <buffer> <BACKSPACE> <C-t>
 
-autocmd FileType coffee,ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType coffee,ruby                 setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd BufNewFile,BufReadPost coffee,python setlocal foldmethod=indent nofoldenable
 
 runtime macros/matchit.vim " smarter matching with % (ifs, elses...)
 
@@ -224,11 +236,59 @@ autocmd FileType haskell compiler ghc
 " autocmd BufEnter *.hs execute "so Session.vim"
 
 " --------------------------------------------------------------------------------------------------
-" Leader Variables
+" Tabularize
 " --------------------------------------------------------------------------------------------------
 
-let mapleader = ","
-let g:mapleader = ","
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
+
+" --------------------------------------------------------------------------------------------------
+" Tagbar
+" --------------------------------------------------------------------------------------------------
+
+nnoremap <silent> gd :TagbarToggle<CR>
+autocmd FileType tagbar nmap <buffer> l <CR>
+let g:tagbar_autofocus             = 1
+let g:tagbar_updateonsave_maxlines = 0
+let g:tagbar_autoclose             = 1
+
+if executable('coffeetags')
+	let g:tagbar_type_coffee = {
+				\ 'ctagsbin' : 'coffeetags',
+				\ 'ctagsargs' : '',
+				\ 'kinds' : [
+				\ 'f:functions',
+				\ 'o:object',
+				\ ],
+				\ 'sro' : ".",
+				\ 'kind2scope' : {
+				\ 'f' : 'object',
+				\ 'o' : 'object',
+				\ }
+				\ }
+endif
+
+" --------------------------------------------------------------------------------------------------
+" Gundo
+" --------------------------------------------------------------------------------------------------
+
+nnoremap <F4> :GundoToggle<CR>
+
+" --------------------------------------------------------------------------------------------------
+" CoffeeScript related stuff
+" --------------------------------------------------------------------------------------------------
+
+let coffee_compiler     = 'iced'
+let coffee_compile_vert = 1
+
+autocmd FileType coffee nmap <buffer> dd <Plug>CoffeeToolsDeleteAndDedent
+autocmd FileType coffee xmap <buffer> d  <Plug>CoffeeToolsDeleteAndDedent
+
+let g:coffee_tools_function_text_object = 1
+
+let g:pasta_enabled_filetypes = ['coffee']
 
 " --------------------------------------------------------------------------------------------------
 " Session Options and Mappings
@@ -265,22 +325,30 @@ xmap <silent> # :call VisualSearch('b')<RETURN>n
 " Pasting Options
 " --------------------------------------------------------------------------------------------------
 
+nmap p <Plug>AfterPasta
+nmap P <Plug>BeforePasta
+
+let s:cpo_save=&cpo
+set cpo&vim
+"------------------------------------------------------------------------
+" I haven't found how to hide this function (yet)
 function! RestoreRegister()
-	let @" = s:restore_reg
+	if &clipboard == 'unnamed'
+		let @* = s:restore_reg
+	elseif &clipboard == 'unnamedplus'
+		let @+ = s:restore_reg
+	else
+		let @" = s:restore_reg
+	endif
 	return ''
 endfunction
 
 function! s:Repl()
 	let s:restore_reg = @"
-	return "p@=RestoreRegister()\<RETURN>"
+	return "\<Plug>VisualPasta@=RestoreRegister()\<cr>"
 endfunction
 
-" NB: this supports "rp that replaces the selection by the contents of @r
 xmap <silent> <expr> p <sid>Repl()
-xmap <silent> <expr> P <sid>Repl()
-
-nmap p <Plug>AfterPasta
-nmap P <Plug>BeforePasta
 
 " --------------------------------------------------------------------------------------------------
 " CamelCase Plugin Mappings
@@ -407,10 +475,14 @@ autocmd FileType nerdtree nmap <buffer> c ma
 autocmd FileType nerdtree nmap <buffer> d md
 
 " --------------------------------------------------------------------------------------------------
-" FuzzyFinder Mappings
+" Ctrl-P Mappings
 " --------------------------------------------------------------------------------------------------
 
-nnoremap gz :FufCoverageFile<RETURN>
+let g:ctrlp_map = 'gz'
+let g:ctrlp_working_path_mode = 2
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
 
 "--------------------------------------------------------
 " Abreviations
