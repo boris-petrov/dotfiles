@@ -9,12 +9,12 @@ unsetopt LIST_AMBIGUOUS # If this option is set completions are shown only if th
 setopt AUTO_MENU
 
 setopt APPEND_HISTORY
-unsetopt AUTO_CD # If a command is not in the hash table, and there exists an executable directory by that name, perform the cd command to that directory. 
-setopt AUTO_PUSHD # Make cd push the old directory onto the directory stack. 
+unsetopt AUTO_CD # If a command is not in the hash table, and there exists an executable directory by that name, perform the cd command to that directory.
+setopt AUTO_PUSHD # Make cd push the old directory onto the directory stack.
 unsetopt AUTO_REMOVE_SLASH
 unsetopt BEEP
-unsetopt BG_NICE # Run all background jobs at a lower priority. This option is set by default. 
-setopt CHASE_LINKS # Resolve symbolic links to their true values. 
+unsetopt BG_NICE # Run all background jobs at a lower priority. This option is set by default.
+setopt CHASE_LINKS # Resolve symbolic links to their true values.
 setopt CLOBBER # Allows > redirection to truncate existing files, and >> to create files.
 setopt CORRECT # Try to correct the spelling of commands.
 setopt COMPLETE_ALIASES
@@ -56,7 +56,11 @@ alias ls='ls -AhF --color=auto --group-directories-first'
 alias ll='ls -l'
 alias gcc=colorgcc
 
-alias vim=gvim
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gc='git commit'
+alias gl='git log'
 
 alias cd..='cd ..'
 alias cd...='cd ../..'
@@ -93,7 +97,7 @@ up-line-or-beginning-search () {
   if [[ $LBUFFER == *$'\n'* ]]; then
     zle .up-line-or-history
     __searching=''
-  elif [[ -n $PREBUFFER ]] && 
+  elif [[ -n $PREBUFFER ]] &&
       zstyle -t ':zle:up-line-or-beginning-search' edit-buffer
   then
     zle .push-line-or-edit
@@ -110,7 +114,7 @@ down-line-or-beginning-search () {
   if [[ $LBUFFER == *$'\n'* ]]; then
     zle .down-line-or-history
     __searching=''
-  elif [[ -n $PREBUFFER ]] && 
+  elif [[ -n $PREBUFFER ]] &&
       zstyle -t ':zle:down-line-or-beginning-search' edit-buffer
   then
     zle .push-line-or-edit
@@ -155,7 +159,7 @@ compdef -d git
 
 if [ `uname -s` = "Linux" ]; then
 	# the next ones work with urxvt
-	
+
 	if [ $TERM = "xterm" ]; then
 		xterm-bindings
 	else
