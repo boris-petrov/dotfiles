@@ -25,7 +25,8 @@ unsetopt HUP # Send the HUP signal to running jobs when the shell exits.
 setopt NOTIFY # Report the status of background jobs immediately, rather than waiting until just before printing a prompt.
 bindkey -v # vi-mode
 
-PROMPT="%{$fg[green]%}%n@%m %{$fg[yellow]%}%~
+PROMPT="
+%{$fg[green]%}%n@%m %{$fg[yellow]%}%~
 %{$reset_color%}%(?..%{${fg[red]}%})%B%#%{$reset_color%} "
 RPROMPT=""
 
@@ -200,4 +201,4 @@ elif [ `uname -o` = "Cygwin" ]; then
 	settitle $(pwd)
 fi
 
-export LD_LIBRARY_PATH=.:/usr/local/lib:../mt4-client-api
+export LD_LIBRARY_PATH=.:/usr/local/lib
