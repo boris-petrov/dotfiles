@@ -181,6 +181,15 @@ elseif has('unix')
 endif
 
 " --------------------------------------------------------------------------------------------------
+" Highlight extra whitespace
+" --------------------------------------------------------------------------------------------------
+
+highlight ExtraWhitespace guibg=red
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /^\s* \s*\|\s\+$/
+
+" --------------------------------------------------------------------------------------------------
 " Leader Variables
 " --------------------------------------------------------------------------------------------------
 
@@ -480,7 +489,7 @@ autocmd FileType nerdtree nmap <buffer> d md
 
 let g:ctrlp_map = 'gz'
 let g:ctrlp_working_path_mode = 2
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+let g:ctrlp_custom_ignore = '\.git$\|node_modules$\|\.hg$\|\.svn$'
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 
