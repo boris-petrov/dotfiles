@@ -185,9 +185,7 @@ endif
 " --------------------------------------------------------------------------------------------------
 
 highlight ExtraWhitespace guibg=red
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /^\s* \s*\|\s\+$/
+match ExtraWhitespace /\s\+\%#\@<!$/
 
 " --------------------------------------------------------------------------------------------------
 " Leader Variables
