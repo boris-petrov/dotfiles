@@ -24,4 +24,4 @@ AltFnShortcuts=no
 SwitchShortcuts=no
 ClickTargetMod=off
 ScrollMod=off
-Term=xterm
+Term=xterm-256color
