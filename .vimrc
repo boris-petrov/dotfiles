@@ -248,8 +248,8 @@ autocmd FileType haskell compiler ghc
 
 nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
-nmap <Leader>a: :Tabularize /:\zs<CR>
-vmap <Leader>a: :Tabularize /:\zs<CR>
+nmap <Leader>a: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
+vmap <Leader>a: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
 
 " --------------------------------------------------------------------------------------------------
 " Tagbar
@@ -384,6 +384,7 @@ ounmap e
 let g:PreciseJump_target_keys = '123456789abcdefghijklmnopqrstuwxzABCDEFGHIJKLMNOPQRSTUWXZ'
 map f _f
 map F _F
+let g:PreciseJump_match_target_hi = "PreciseJumpTarget"
 
 " --------------------------------------------------------------------------------------------------
 " Indenting
