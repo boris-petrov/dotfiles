@@ -2,6 +2,9 @@
 
 if has('win32')
 	let $VIMRUNTIME='C:\Program Files (x86)\Vim\vim73'
+	set runtimepath=$VIM/vimfiles,$VIMRUNTIME
+elseif has('unix')
+	set runtimepath=~/.vim,$VIMRUNTIME
 endif
 
 set nocompatible
@@ -104,7 +107,7 @@ set scrolljump=7
 set wildmenu
 set wildchar=<Tab>
 set wildmode=longest,list
-set wildignore=*.o,*.hi,*.dll,*.obj,*.lib,*.swp,*.zip,*.exe,*.so,*.zip
+set wildignore=*.o,*.hi,*.dll,*.obj,*.lib,*.swp,*.zip,*.exe,*.so
 
 set wrap " line wrapping
 set linebreak " does not wrap in the middle of the word
