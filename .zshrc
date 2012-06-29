@@ -162,7 +162,7 @@ compdef -d git
 
 if [ `uname -s` = "Linux" ]; then
 	# the next ones work with urxvt
-	
+
 	if [ $TERM = "xterm" ] || [ $TERM = "xterm-256color" ]; then
 		xterm-bindings
 	else
