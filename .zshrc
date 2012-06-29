@@ -16,7 +16,7 @@ unsetopt BEEP
 unsetopt BG_NICE # Run all background jobs at a lower priority. This option is set by default.
 setopt CHASE_LINKS # Resolve symbolic links to their true values.
 setopt CLOBBER # Allows > redirection to truncate existing files, and >> to create files.
-setopt CORRECT # Try to correct the spelling of commands.
+# setopt CORRECT # Try to correct the spelling of commands.
 setopt COMPLETE_ALIASES
 setopt GLOB_DOTS # Do not require a leading . in a filename to be matched explicitly.
 setopt HIST_IGNORE_DUPS
@@ -51,7 +51,9 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm 
 alias df='df -h'
 alias du='du -h'
 
-alias grep='grep --color'
+alias grep='grep --color --exclude-dir=node_modules --exclude-dir=.git'
+
+alias glog='git log --graph --oneline --decorate'
 
 alias ls='ls -AhF --color=auto --group-directories-first'
 alias ll='ls -l'
@@ -69,7 +71,7 @@ alias cd....='cd ../../..'
 alias cd.....='cd ../../../..'
 
 export CC=colorgcc
-export EDITOR=gvim
+export EDITOR=vim
 export NODE_PATH=/usr/local/lib/node_modules
 
 # Extract Stuff
@@ -160,8 +162,8 @@ compdef -d git
 
 if [ `uname -s` = "Linux" ]; then
 	# the next ones work with urxvt
-
-	if [ $TERM = "xterm" ]; then
+	
+	if [ $TERM = "xterm" ] || [ $TERM = "xterm-256color" ]; then
 		xterm-bindings
 	else
 		# Ctrl+Left/Right to move by whole words
@@ -185,6 +187,9 @@ if [ `uname -s` = "Linux" ]; then
 	# To have paths colored instead of underlined
 	ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
 
+	eval `ssh-agent`
+	ssh-add
+
 elif [ `uname -o` = "Cygwin" ]; then
 
 	xterm-bindings
@@ -201,4 +206,8 @@ elif [ `uname -o` = "Cygwin" ]; then
 	settitle $(pwd)
 fi
 
-export LD_LIBRARY_PATH=.:/usr/local/lib
+export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
+export LD_LIBRARY_PATH=.:/usr/local/lib:../../mt4-client-api:../mt4-client-api:/opt/java/jre/lib/i386:/opt/java/jre/lib/i386/client
+export PATH=./node_modules/.bin:$PATH
+
+ulimit -c unlimited
