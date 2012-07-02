@@ -168,6 +168,9 @@ set formatoptions-=o " Stop continuing the comments on pressing o and O
 
 set grepprg=grep\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git " Use cygwin grep
 
+set spell
+setlocal spell spelllang=en
+
 colorscheme rdark " cannot live without it
 
 set fileencodings=utf-8,utf-16,utf-32,cp-1251,unicode
@@ -255,6 +258,8 @@ nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
 nmap <Leader>a: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
 vmap <Leader>a: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
+nmap <Leader>a, :Tabularize /^.*,\s*\zs\s/l0<CR>
+vmap <Leader>a, :Tabularize /^.*,\s*\zs\s/l0<CR>
 
 " --------------------------------------------------------------------------------------------------
 " Tagbar
@@ -539,7 +544,7 @@ let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 
 "--------------------------------------------------------
-" Abreviations
+" Abbreviations
 " -------------------------------------------------------
 
 cab W w
