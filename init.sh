@@ -27,6 +27,7 @@ elif [ `uname -o` = "Cygwin" ]; then
 		elif [ $file == "$SCRIPTPATH/.vim" ]; then
 			cmd /c rmdir %USERPROFILE%\\.vim
 			cmd /c mklink /d %USERPROFILE%\\.vim $(cygpath -w $SCRIPTPATH/.vim)
+			cmd /c mklink /d $(cygpath -w ~)\\.vim $(cygpath -w $SCRIPTPATH/.vim)
 		elif [ $file == "$SCRIPTPATH/.vimrc" ]; then
 			cmd /c del "C:\Program Files (x86)\Vim\_vimrc"
 			cmd /c mklink "C:\Program Files (x86)\Vim\_vimrc" $(cygpath -w $SCRIPTPATH/.vimrc)
