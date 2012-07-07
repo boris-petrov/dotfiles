@@ -205,14 +205,9 @@ elif [ `uname -o` = "Cygwin" ]; then
   }
   settitle $(pwd)
 
-	# change title of MinTTY to current dir
-	function settitle() {
-		echo -ne "\033]2;"$1"\007"
-	}
-	function chpwd() {
-		settitle $(pwd)
-	}
-	settitle $(pwd)
+  alias vi='/cygdrive/c/Program\ Files\ \(x86\)/Vim/vim73/gvim.exe'
+  alias vim=vi
+  alias gvim=vim
 fi
 
 export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
