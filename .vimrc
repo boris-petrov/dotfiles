@@ -302,6 +302,7 @@ let coffee_compile_vert = 1
 
 autocmd FileType coffee nmap <buffer> dd <Plug>CoffeeToolsDeleteAndDedent
 autocmd FileType coffee xmap <buffer> d  <Plug>CoffeeToolsDeleteAndDedent
+autocmd FileType coffee xmap <buffer> x  <Plug>CoffeeToolsDeleteAndDedent
 
 let g:coffee_tools_function_text_object = 1
 
