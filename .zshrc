@@ -211,7 +211,7 @@ elif [ `uname -o` = "Cygwin" ]; then
 fi
 
 export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
-export LD_LIBRARY_PATH=.:/usr/local/lib:../../mt4-client-api:../mt4-client-api:/opt/java/jre/lib/i386:/opt/java/jre/lib/i386/client
+export LD_LIBRARY_PATH=.:/usr/local/lib:/opt/java/jre/lib/i386:/opt/java/jre/lib/i386/client
 export PATH=./node_modules/.bin:$PATH
 
 ulimit -c unlimited
