@@ -16,7 +16,7 @@ unsetopt BEEP
 unsetopt BG_NICE # Run all background jobs at a lower priority. This option is set by default.
 setopt CHASE_LINKS # Resolve symbolic links to their true values.
 setopt CLOBBER # Allows > redirection to truncate existing files, and >> to create files.
-# setopt CORRECT # Try to correct the spelling of commands.
+unsetopt CORRECT # Do NOT try to correct the spelling of commands.
 setopt COMPLETE_ALIASES
 setopt GLOB_DOTS # Do not require a leading . in a filename to be matched explicitly.
 setopt HIST_IGNORE_DUPS
