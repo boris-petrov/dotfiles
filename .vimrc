@@ -224,10 +224,10 @@ endif
 " Autocommands
 " --------------------------------------------------------------------------------------------------
 
-autocmd FileType helpfile setlocal nonumber " no line numbers when viewing help
+autocmd FileType help setlocal nonumber " no line numbers when viewing help
 " These do not work?!
-autocmd FileType helpfile nmap <buffer> <RETURN> <C-]>
-autocmd FileType helpfile nmap <buffer> <BACKSPACE> <C-t>
+autocmd FileType help nmap <buffer> <RETURN> <C-]>
+autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
 
 autocmd FileType coffee,ruby                 setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd BufNewFile,BufReadPost coffee,python setlocal foldmethod=indent nofoldenable
