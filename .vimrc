@@ -167,7 +167,7 @@ set display=lastline " Show as much of the last line as possible and not these c
 
 set formatoptions-=o " Stop continuing the comments on pressing o and O
 
-set grepprg=grep\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git " Use cygwin grep
+set grepprg=grep\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git " Use cygwin grep
 
 set spell
 setlocal spell spelllang=en
@@ -349,6 +349,35 @@ xmap <silent> # :call VisualSearch('b')<RETURN>n
 " :Grep <something> " -> Grep for the given search query
 " :Grep " -> Grep for the word under the cursor
 " :'<,'>Grep " -> Grep in visual mode
+
+autocmd FileType qf nnoremap <buffer> l <RETURN>
+
+function! GetBufferList()
+	redir =>buflist
+	silent! ls
+	redir END
+	return buflist
+endfunction
+
+function! ToggleList(bufname, pfx)
+	let buflist = GetBufferList()
+	for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
+		if bufwinnr(bufnum) != -1
+			exec(a:pfx.'close')
+			return
+		endif
+	endfor
+	if a:pfx == 'l' && len(getloclist(0)) == 0
+		echohl ErrorMsg
+		echo "Location List is Empty."
+		return
+	endif
+	let winnr = winnr()
+	exec(a:pfx.'open')
+endfunction
+
+" nmap <silent> gr :call ToggleList("Location List", 'l')<CR>
+nmap <silent> gr :call ToggleList("Quickfix List", 'c')<CR>
 
 command! -count=0 -nargs=* Grep call s:Grep(<count>, <q-args>)
 
