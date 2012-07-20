@@ -387,15 +387,29 @@ command! -count=0 -nargs=* Grep call s:Grep(<count>, <q-args>)
 function! s:Grep(count, args)
 	if a:count > 0
 		" then we've selected something in visual mode
-		let query = s:LastSelectedText()
+		let search_text = s:LastSelectedText()
 	elseif empty(a:args)
 		" If no pattern is provided, search for the word under the cursor
-		let query = expand("<cword>")
+		let search_text = expand("<cword>")
 	else
-		let query = a:args
+		let search_text = a:args
 	end
 
-	exe 'grep -r "' . escape(query, '"') . '" .'
+	if has('unix')
+		let search_text = escape(search_text, '"')
+	else
+		" TODO: escape quotes using CMD's stupid style
+	end
+
+	if a:count > 0
+		let query = '"' . search_text . '"'
+	elseif empty(a:args)
+		let query = '-w "' . search_text . '"'
+	else
+		let query = '"' . search_text . '"'
+	end
+
+	exe 'grep -r ' . query . ' .'
 endfunction
 
 function! s:LastSelectedText()
