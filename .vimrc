@@ -177,11 +177,12 @@ colorscheme rdark " cannot live without it
 set fileencodings=utf-8,utf-16,utf-32,cp-1251,unicode
 set fileformat=unix
 
-" if has('win32')
-"	  set shell=C:/Users/Boris/cygwin/Cygwin.bat
-"	  set shellcmdflag=--login\ -c
-"	  set shellxquote=\"
-" endif
+" should do this for when Vim is started from a Cygwin shell
+if has('win32')
+	set shell=C:\Windows\system32\cmd.exe
+	set shellcmdflag=/c
+	set shellxquote=
+endif
 
 if has('win32')
 	let g:haddock_browser = "C:/Program Files (x86)/Mozilla Firefox/firefox.exe"
@@ -351,6 +352,8 @@ xmap <silent> # :call VisualSearch('b')<RETURN>n
 " :'<,'>Grep " -> Grep in visual mode
 
 autocmd FileType qf nnoremap <buffer> l <RETURN>
+autocmd FileType qf nnoremap <buffer> j j
+autocmd FileType qf nnoremap <buffer> k k
 
 function! GetBufferList()
 	redir =>buflist
@@ -392,7 +395,7 @@ function! s:Grep(count, args)
 		let query = a:args
 	end
 
-	exe 'grep -r '.query.' .'
+	exe 'grep -r "' . escape(query, '"') . '" .'
 endfunction
 
 function! s:LastSelectedText()
