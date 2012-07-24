@@ -260,8 +260,8 @@ nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
 nmap <Leader>a: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
 vmap <Leader>a: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
-nmap <Leader>a, :Tabularize /^.*,\s*\zs\s/l0<CR>
-vmap <Leader>a, :Tabularize /^.*,\s*\zs\s/l0<CR>
+nmap <Leader>a, :Tabularize /,\s*\zs\s/l0<CR>
+vmap <Leader>a, :Tabularize /,\s*\zs\s/l0<CR>
 
 " --------------------------------------------------------------------------------------------------
 " Tagbar
