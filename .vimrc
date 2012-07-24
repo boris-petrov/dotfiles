@@ -167,7 +167,7 @@ set display=lastline " Show as much of the last line as possible and not these c
 
 set formatoptions-=o " Stop continuing the comments on pressing o and O
 
-set grepprg=grep\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git " Use cygwin grep
+set grepprg=grep\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude-dir=tmp\ --exclude-dir=vendor " Use cygwin grep
 
 set spell
 setlocal spell spelllang=en
@@ -587,7 +587,7 @@ autocmd FileType nerdtree nmap <buffer> d md
 
 let g:ctrlp_map = 'gz'
 let g:ctrlp_working_path_mode = 2
-let g:ctrlp_custom_ignore = '\.git$\|node_modules$\|\.hg$\|\.svn$'
+let g:ctrlp_custom_ignore = '\.git$\|node_modules$\|tmp$\|vendor$\|\.hg$\|\.svn$'
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 
