@@ -217,3 +217,5 @@ export LD_LIBRARY_PATH=.:/usr/local/lib:/opt/java/jre/lib/i386:/opt/java/jre/lib
 export PATH=./node_modules/.bin:$PATH
 
 ulimit -c unlimited
+
+. ~/nvm/nvm.sh
