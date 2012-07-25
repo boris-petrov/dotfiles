@@ -70,6 +70,8 @@ alias cd...='cd ../..'
 alias cd....='cd ../../..'
 alias cd.....='cd ../../../..'
 
+alias be='bundle exec'
+
 export CC=colorgcc
 export EDITOR=vim
 export NODE_PATH=/usr/local/lib/node_modules
