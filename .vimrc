@@ -167,7 +167,7 @@ set display=lastline " Show as much of the last line as possible and not these c
 
 set formatoptions-=o " Stop continuing the comments on pressing o and O
 
-set grepprg=grep\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude-dir=tmp\ --exclude-dir=vendor " Use cygwin grep
+set grepprg=grep\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor " Use cygwin grep
 
 set spell
 setlocal spell spelllang=en
@@ -218,7 +218,7 @@ if has('win32')
 	command! Consolas set guifont=Consolas:h14:cDEFAULT
 	command! DejaVu set guifont=DejaVu_LGC_Sans_Mono:h13:cDEFAULT
 elseif has('unix')
-	set guifont=DejaVu\ LGC\ Sans\ Mono\ Book\ 13
+	set guifont=DejaVu\ LGC\ Sans\ Mono\ Book\ 14
 endif
 
 " --------------------------------------------------------------------------------------------------
@@ -226,7 +226,6 @@ endif
 " --------------------------------------------------------------------------------------------------
 
 autocmd FileType help setlocal nonumber " no line numbers when viewing help
-" These do not work?!
 autocmd FileType help nmap <buffer> <RETURN> <C-]>
 autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
 
