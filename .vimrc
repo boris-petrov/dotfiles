@@ -229,7 +229,7 @@ autocmd FileType help setlocal nonumber " no line numbers when viewing help
 autocmd FileType help nmap <buffer> <RETURN> <C-]>
 autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
 
-autocmd FileType coffee,ruby                 setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType coffee,ruby,eruby,html      setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd BufNewFile,BufReadPost coffee,python setlocal foldmethod=indent nofoldenable
 
 runtime macros/matchit.vim " smarter matching with % (ifs, elses...)
