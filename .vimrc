@@ -396,7 +396,7 @@ function! s:Grep(count, args)
 	end
 
 	if has('unix')
-		let search_text = escape(search_text, '"')
+		let search_text = escape(search_text, '"#%')
 	else
 		" TODO: escape quotes using CMD's stupid style
 	end
