@@ -159,7 +159,11 @@ set completeopt=menu,preview
 
 set diffopt+=iwhite " ignore whitespace in diff mode
 
-set undolevels=1000 " Because I make a lot of mistakes... for a long time
+" Persistent undo
+set undofile
+set undodir=~/.vim/undodir
+set undolevels=1000  " Because I make a lot of mistakes... for a long time
+set undoreload=10000 " maximum number lines to save for undo on a buffer reload
 
 set report=0 " Always report the number of lines changed
 
