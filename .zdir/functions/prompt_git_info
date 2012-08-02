@@ -3,17 +3,19 @@ if [ -n "$__CURRENT_GIT_BRANCH" ]; then
 	s+="$__CURRENT_GIT_BRANCH"
 	case "$__CURRENT_GIT_BRANCH_STATUS" in
 		ahead)
-		s+="↑"
+		s+="%{${fg[green]}%}↑"
 		;;
 		diverged)
-		s+="↕"
+		# s+="%{${fg[blue]}%}↕"
+		s+="%{${fg[blue]}%}|"
 		;;
 		behind)
-		s+="↓"
+		s+="%{${fg[green]}%}↓"
 		;;
 	esac
 	if [ -n "$__CURRENT_GIT_BRANCH_IS_DIRTY" ]; then
-		s+="⚡"
+		# s+="%{${fg[red]}%}⚡"
+		s+="%{${fg[red]}%}!"
 	fi
 	s+=""
 
