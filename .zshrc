@@ -23,11 +23,30 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE # Do not enter command lines into the history list if they begin with a blank.
 unsetopt HUP # Send the HUP signal to running jobs when the shell exits.
 setopt NOTIFY # Report the status of background jobs immediately, rather than waiting until just before printing a prompt.
+
+setopt PROMPT_SUBST # Enable substitutions of functions in prompt
+
 bindkey -v # vi-mode
 
-PROMPT="
-%{$fg[green]%}%n@%m %{$fg[yellow]%}%~
-%{$reset_color%}%(?..%{${fg[red]}%})%B%#%{$reset_color%} "
+##############################
+# Git status in prompt
+##############################
+autoload -Uz promptinit; promptinit
+
+fpath=($HOME/.zdir/functions $fpath)
+autoload -U ~/.zdir/functions/*(:t)
+
+add-zsh-hook chpwd chpwd_update_git_vars
+add-zsh-hook preexec preexec_update_git_vars
+add-zsh-hook precmd precmd_update_git_vars
+
+##############################
+# Prompt
+##############################
+
+PROMPT='
+%{$fg[green]%}%n@%m$(prompt_git_info) %{$fg[yellow]%}%~
+%{$reset_color%}%(?..%{${fg[red]}%})%B%#%{$reset_color%} '
 RPROMPT=""
 
 HISTFILE=~/.zsh_history
@@ -53,7 +72,7 @@ alias du='du -h'
 
 alias grep='grep --color --exclude-dir=node_modules --exclude-dir=.git'
 
-alias glog='git log --graph --oneline --decorate'
+alias glog='git log --graph --oneline --decorate --all'
 
 alias ls='ls -AhF --color=auto --group-directories-first'
 alias ll='ls -l'
