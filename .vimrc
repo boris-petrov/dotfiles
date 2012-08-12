@@ -36,6 +36,7 @@ Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'Raimondi/delimitMate'
 Bundle 'msanders/snipmate.vim'
+Bundle 'tpope/vim-endwise'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'tpope/vim-rails.git'
 
