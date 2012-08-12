@@ -32,6 +32,8 @@ Bundle 'AndrewRadev/coffee_tools.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
+Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'tpope/vim-unimpaired'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'tpope/vim-rails.git'
 
@@ -194,6 +196,8 @@ elseif has('unix')
 	let g:haddock_browser = "firefox"
 endif
 
+smapclear
+
 " --------------------------------------------------------------------------------------------------
 " Highlight extra whitespace
 " --------------------------------------------------------------------------------------------------
@@ -230,7 +234,7 @@ endif
 " --------------------------------------------------------------------------------------------------
 
 autocmd FileType help setlocal nonumber " no line numbers when viewing help
-autocmd FileType help nmap <buffer> <RETURN> <C-]>
+autocmd FileType help nmap <buffer> <CR> <C-]>
 autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
 
 autocmd FileType coffee,ruby,eruby,html      setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
@@ -259,12 +263,14 @@ autocmd FileType haskell compiler ghc
 " Tabularize
 " --------------------------------------------------------------------------------------------------
 
-nmap <Leader>a= :Tabularize /=<CR>
-vmap <Leader>a= :Tabularize /=<CR>
-nmap <Leader>a: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
-vmap <Leader>a: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
-nmap <Leader>a, :Tabularize /,\s*\zs\s/l0<CR>
-vmap <Leader>a, :Tabularize /,\s*\zs\s/l0<CR>
+nmap sa= :Tabularize /=<CR>
+vmap sa= :Tabularize /=<CR>
+nmap sa: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
+vmap sa: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
+nmap sa, :Tabularize /,\s*\zs\s/l0<CR>
+vmap sa, :Tabularize /,\s*\zs\s/l0<CR>
+nmap sa> :Tabularize /^[^=>]*\zs=>/<CR>
+vmap sa> :Tabularize /^[^=>]*\zs=>/<CR>
 
 " --------------------------------------------------------------------------------------------------
 " Tagbar
@@ -318,8 +324,8 @@ let g:pasta_enabled_filetypes = ['coffee']
 " --------------------------------------------------------------------------------------------------
 
 set sessionoptions=buffers,curdir,globals,localoptions,tabpages
-map <F9> :source Session.vim<RETURN>
-map <F6> :mksession!<RETURN>
+map <F9> :source Session.vim<CR>
+map <F6> :mksession!<CR>
 
 " --------------------------------------------------------------------------------------------------
 " Visual Search
@@ -341,8 +347,8 @@ function! VisualSearch(direction) range
 endfunction
 
 " Basically you press * or # to search for the current selection !! Really useful
-xmap <silent> * :call VisualSearch('f')<RETURN>n
-xmap <silent> # :call VisualSearch('b')<RETURN>n
+xmap <silent> * :call VisualSearch('f')<CR>n
+xmap <silent> # :call VisualSearch('b')<CR>n
 
 " --------------------------------------------------------------------------------------------------
 " Grep
@@ -354,8 +360,8 @@ xmap <silent> # :call VisualSearch('b')<RETURN>n
 " :Grep " -> Grep for the word under the cursor
 " :'<,'>Grep " -> Grep in visual mode
 
-autocmd FileType qf nnoremap <buffer> q :q<RETURN>
-autocmd FileType qf nnoremap <buffer> l <RETURN>
+autocmd FileType qf nnoremap <buffer> q :q<CR>
+autocmd FileType qf nnoremap <buffer> l <CR>
 autocmd FileType qf nnoremap <buffer> j j
 autocmd FileType qf nnoremap <buffer> k k
 
@@ -503,8 +509,8 @@ xnoremap <S-TAB> <
 " --------------------------------------------------------------------------------------------------
 
 inoremap <C-v> <C-r>"
-xnoremap <C-v> x<ESC>:set paste<RETURN>mui<C-R>+<ESC>mv'uV'v=:set nopaste<RETURN>
-nnoremap <C-v> :set paste<RETURN>mui<C-R>+<ESC>mv'uV'v=:set nopaste<RETURN>
+xnoremap <C-v> x<ESC>:set paste<CR>mui<C-R>+<ESC>mv'uV'v=:set nopaste<CR>
+nnoremap <C-v> :set paste<CR>mui<C-R>+<ESC>mv'uV'v=:set nopaste<CR>
 xnoremap <C-c> "+y
 xnoremap <C-x> "+x
 inoremap <C-a> <ESC>ggVG
@@ -542,7 +548,7 @@ xmap ' S'
 " Keymap
 " --------------------------------------------------------------------------------------------------
 
-nmap <silent> gk :call ToggleKeymap()<RETURN>
+nmap <silent> gk :call ToggleKeymap()<CR>
 
 function! ToggleKeymap()
 	if &keymap == ""
@@ -562,7 +568,7 @@ endfunction
 " Wrapping
 " --------------------------------------------------------------------------------------------------
 
-nmap <silent> gw :call ToggleHorizontalScrollbar()<RETURN>:<C-U>setlocal wrap! wrap?<RETURN>
+nmap <silent> gw :call ToggleHorizontalScrollbar()<CR>:<C-U>setlocal wrap! wrap?<CR>
 
 function! ToggleHorizontalScrollbar()
 	if &guioptions =~# "b"
@@ -576,7 +582,7 @@ endfunction
 " NERDTree (un)Mappings
 " --------------------------------------------------------------------------------------------------
 
-nnoremap gn :NERDTreeToggle<RETURN>
+nnoremap gn :NERDTreeToggle<CR>
 let g:NERDTreeMapPreviewVSplit=""
 let g:NERDTreeMapJumpFirstChild=""
 let g:NERDTreeMapJumpLastChild=""
@@ -589,10 +595,10 @@ autocmd FileType nerdtree nmap <buffer> d md
 " Ctrl-P Mappings
 " --------------------------------------------------------------------------------------------------
 
-let g:ctrlp_map = 'gz'
-let g:ctrlp_working_path_mode = 2
-let g:ctrlp_custom_ignore = '\.git$\|node_modules$\|tmp$\|vendor$\|\.hg$\|\.svn$'
-let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_map                   = 'gz'
+let g:ctrlp_working_path_mode     = 2
+let g:ctrlp_custom_ignore         = '\.git$\|node_modules$\|tmp$\|vendor$\|\.hg$\|\.svn$'
+let g:ctrlp_match_window_bottom   = 0
 let g:ctrlp_match_window_reversed = 0
 
 "--------------------------------------------------------
@@ -621,8 +627,13 @@ map K 4k
 nnoremap <C-j> <C-e>
 nnoremap <C-k> <C-y>
 
+nnoremap s <Nop>
+
+nmap sj :SplitjoinSplit<CR>
+nmap sk :SplitjoinJoin<CR>
+
 " Map <F5> to remove all trailing whitespace
-nnoremap <silent> <F5> :let _s=@/<RETURN>:%s/\s\+$//e<RETURN>:let @/=_s<RETURN>:nohl<RETURN>:set ff=unix<RETURN>:w<RETURN>
+nnoremap <silent> <F5> :let _s=@/<CR>:%s/\s\+$//e<CR>:let @/=_s<CR>:nohl<CR>:set ff=unix<CR>:w<CR>
 
 " free mappings - U, P, S, H, L, M, X, $, ^, &, -, _, +, |, \, ','
 
@@ -647,23 +658,23 @@ noremap Z $
 " inoremap { {}<C-o>h
 
 " Remove the Windows' ^M
-nnoremap <Leader>m :%s/<C-V><C-M>//ge<RETURN>
-nnoremap <Leader>v :e! $MYVIMRC<RETURN>
+nnoremap <Leader>m :%s/<C-V><C-M>//ge<CR>
+nnoremap <Leader>v :e! $MYVIMRC<CR>
 
 nnoremap gV <C-v>
 
 nnoremap gs <C-w>w
 inoremap <C-SPACE> <C-n>
-nnoremap <ESC> :noh<RETURN>
+nnoremap <ESC> :noh<CR>
 nnoremap vv V
 nnoremap V v$h
 nnoremap Y y$
 
 " Open new tab easily
-nnoremap <Leader>t :tabnew<RETURN>
+nnoremap <Leader>t :tabnew<CR>
 
-nnoremap <RETURN> o<ESC>
-nnoremap <S-RETURN> O<ESC>
+nnoremap <CR> o<ESC>
+nnoremap <S-CR> O<ESC>
 
 " Do not overwrite my register!
 nnoremap x "_x
@@ -679,7 +690,7 @@ noremap <S-SPACE> <PAGEUP>
 noremap <SPACE> <PAGEDOWN>
 
 " Quit like in bash
-nnoremap <C-d> :q<RETURN>
+nnoremap <C-d> :q<CR>
 
 " Returns the cursor where it was before the start of the editing
 nnoremap . .`[
