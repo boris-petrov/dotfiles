@@ -34,6 +34,8 @@ Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'Raimondi/delimitMate'
+Bundle 'msanders/snipmate.vim'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'tpope/vim-rails.git'
 
@@ -461,10 +463,16 @@ endfunction
 
 function! s:Repl()
 	let s:restore_reg = @"
-	return "\<Plug>VisualPasta@=RestoreRegister()\<cr>"
+	return "\<Plug>VisualPasta@=RestoreRegister()\<CR>"
 endfunction
 
-xmap <silent> <expr> p <sid>Repl()
+xmap <silent> <expr> p <SID>Repl()
+
+" --------------------------------------------------------------------------------------------------
+" delimitMate Mappings
+" --------------------------------------------------------------------------------------------------
+
+inoremap <expr> <CR> delimitMate#ShouldJump() ? "\<C-g>g" : "\n"
 
 " --------------------------------------------------------------------------------------------------
 " CamelCase Plugin Mappings
@@ -654,6 +662,7 @@ inoremap lk <ESC>
 inoremap <C-backspace> <C-w>
 inoremap <C-delete> <C-o>de
 
+" TODO: fix
 nnoremap gj J
 
 nnoremap gm zz
