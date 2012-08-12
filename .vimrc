@@ -496,6 +496,13 @@ map F _F
 let g:PreciseJump_match_target_hi = "PreciseJumpTarget"
 
 " --------------------------------------------------------------------------------------------------
+" Unimpaired Mappings
+" --------------------------------------------------------------------------------------------------
+
+nmap sh [q
+nmap sl ]q
+
+" --------------------------------------------------------------------------------------------------
 " Indenting
 " --------------------------------------------------------------------------------------------------
 
@@ -616,7 +623,7 @@ cab q1 q!
 " Misc Mappings
 " --------------------------------------------------------------------------------------------------
 
-" Always move through visual lines:
+" Always move through visual lines in normal mode:
 nnoremap j gj
 nnoremap k gk
 
@@ -663,7 +670,16 @@ nnoremap <Leader>v :e! $MYVIMRC<CR>
 
 nnoremap gV <C-v>
 
-nnoremap gs <C-w>w
+" Moving through tabs:
+nnoremap <C-l> gt
+nnoremap <C-h> gT
+
+" Moving through splits:
+nnoremap gh <C-w>h
+nnoremap gj <C-w>j
+nnoremap gk <C-w>k
+nnoremap gl <C-w>l
+
 inoremap <C-SPACE> <C-n>
 nnoremap <ESC> :noh<CR>
 nnoremap vv V
@@ -678,7 +694,6 @@ nnoremap <S-CR> O<ESC>
 
 " Do not overwrite my register!
 nnoremap x "_x
-nnoremap s "_s
 
 nnoremap Q @q
 
