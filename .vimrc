@@ -48,7 +48,6 @@ Bundle 'L9'
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
 
-" filetype on
 filetype indent on
 filetype plugin on
 
@@ -70,7 +69,7 @@ set tabstop=4 " be reasonable!
 set shiftwidth=4
 set softtabstop=4
 
-set timeoutlen=500 " half a second to wait if there are "colliding" mappings
+set timeoutlen=500 " half a second to wait if there are 'colliding' mappings
 
 " set list
 " set listchars=trail:-
@@ -199,7 +198,7 @@ elseif has('unix')
 	let g:haddock_browser = "firefox"
 endif
 
-smapclear
+smapclear " clear select mode mappings
 
 " --------------------------------------------------------------------------------------------------
 " Highlight extra whitespace
@@ -266,14 +265,34 @@ autocmd FileType haskell compiler ghc
 " Tabularize
 " --------------------------------------------------------------------------------------------------
 
-nmap sa= :Tabularize /=<CR>
-vmap sa= :Tabularize /=<CR>
-nmap sa: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
-vmap sa: :Tabularize /^[^:]*:\s*\zs\s/l0<CR>
-nmap sa, :Tabularize /,\s*\zs\s/l0<CR>
-vmap sa, :Tabularize /,\s*\zs\s/l0<CR>
-nmap sa> :Tabularize /^[^=>]*\zs=>/<CR>
-vmap sa> :Tabularize /^[^=>]*\zs=>/<CR>
+nnoremap sa :call <SID>Tabularize(0)<cr>
+xnoremap sa :<c-u>call <SID>Tabularize(1)<cr>
+
+function! s:Tabularize(visual)
+	let saved_cursor = getpos('.')
+
+	echohl ModeMsg | echo "-- ALIGN -- " | echohl None
+	let char = nr2char(getchar())
+
+	if     char == '=' | let alignment = 'equals'
+	elseif char == '>' | let alignment = 'ruby_hash'
+	elseif char == ',' | let alignment = 'commas'
+	elseif char == ':' | let alignment = 'colons'
+	elseif char == ' ' | let alignment = 'space'
+	else
+		" just try aligning by the character
+		let alignment = '/'.char
+	endif
+
+	if a:visual
+		exe "'<,'>Tabularize ".alignment
+	else
+		exe 'Tabularize '.alignment
+	endif
+
+	echo
+	call setpos('.', saved_cursor)
+endfunction
 
 " --------------------------------------------------------------------------------------------------
 " Tagbar
@@ -335,7 +354,7 @@ map <F6> :mksession!<CR>
 " --------------------------------------------------------------------------------------------------
 
 " From an idea by Michael Naumann
-function! VisualSearch(direction) range
+function! s:VisualSearch(direction) range
 	let l:saved_reg = @"
 	execute "normal! vgvy"
 	let l:pattern = escape(@", '\\/.*$^~[]')
@@ -350,8 +369,8 @@ function! VisualSearch(direction) range
 endfunction
 
 " Basically you press * or # to search for the current selection !! Really useful
-xmap <silent> * :call VisualSearch('f')<CR>n
-xmap <silent> # :call VisualSearch('b')<CR>n
+xmap <silent> * :call <SID>VisualSearch('f')<CR>n
+xmap <silent> # :call <SID>VisualSearch('b')<CR>n
 
 " --------------------------------------------------------------------------------------------------
 " Grep
@@ -368,15 +387,15 @@ autocmd FileType qf nnoremap <buffer> l <CR>
 autocmd FileType qf nnoremap <buffer> j j
 autocmd FileType qf nnoremap <buffer> k k
 
-function! GetBufferList()
+function! s:GetBufferList()
 	redir =>buflist
 	silent! ls
 	redir END
 	return buflist
 endfunction
 
-function! ToggleList(bufname, pfx)
-	let buflist = GetBufferList()
+function! s:ToggleList(bufname, pfx)
+	let buflist = <SID>GetBufferList()
 	for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
 		if bufwinnr(bufnum) != -1
 			exec(a:pfx.'close')
@@ -393,7 +412,7 @@ function! ToggleList(bufname, pfx)
 endfunction
 
 " nmap <silent> gr :call ToggleList("Location List", 'l')<CR>
-nmap <silent> gr :call ToggleList("Quickfix List", 'c')<CR>
+nmap <silent> gr :call <SID>ToggleList("Quickfix List", 'c')<CR>
 
 command! -count=0 -nargs=* Grep call s:Grep(<count>, <q-args>)
 
@@ -505,6 +524,13 @@ map F _F
 let g:PreciseJump_match_target_hi = "PreciseJumpTarget"
 
 " --------------------------------------------------------------------------------------------------
+" Splitjoin
+" --------------------------------------------------------------------------------------------------
+
+let g:splitjoin_normalize_whitespace = 1
+let g:splitjoin_align                = 1
+
+" --------------------------------------------------------------------------------------------------
 " Unimpaired Mappings
 " --------------------------------------------------------------------------------------------------
 
@@ -584,9 +610,9 @@ endfunction
 " Wrapping
 " --------------------------------------------------------------------------------------------------
 
-nmap <silent> gw :call ToggleHorizontalScrollbar()<CR>:<C-U>setlocal wrap! wrap?<CR>
+nmap <silent> gw :call <SID>ToggleHorizontalScrollbar()<CR>:<C-U>setlocal wrap! wrap?<CR>
 
-function! ToggleHorizontalScrollbar()
+function! s:ToggleHorizontalScrollbar()
 	if &guioptions =~# "b"
 		set guioptions-=b
 	else
@@ -599,9 +625,11 @@ endfunction
 " --------------------------------------------------------------------------------------------------
 
 nnoremap gn :NERDTreeToggle<CR>
+
 let g:NERDTreeMapPreviewVSplit=""
 let g:NERDTreeMapJumpFirstChild=""
 let g:NERDTreeMapJumpLastChild=""
+
 autocmd FileType nerdtree nmap <buffer> l o
 autocmd FileType nerdtree nmap <buffer> h x
 autocmd FileType nerdtree nmap <buffer> c ma
@@ -643,8 +671,6 @@ map K 4k
 nnoremap <C-j> <C-e>
 nnoremap <C-k> <C-y>
 
-nnoremap s <Nop>
-
 nmap sj :SplitjoinSplit<CR>
 nmap sk :SplitjoinJoin<CR>
 
@@ -663,8 +689,7 @@ inoremap lk <ESC>
 inoremap <C-backspace> <C-w>
 inoremap <C-delete> <C-o>de
 
-" TODO: fix
-nnoremap gj J
+nnoremap <Leader>j J
 
 nnoremap gm zz
 noremap z ^
@@ -719,4 +744,3 @@ nnoremap <C-d> :q<CR>
 
 " Returns the cursor where it was before the start of the editing
 nnoremap . .`[
-
