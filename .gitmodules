@@ -1,5 +1,5 @@
-[submodule "common/.vim/bundle/vim-pathogen"]
-	path = common/.vim/bundle/vim-pathogen
+[submodule "common/.vim/bundle/vim-pathogen.git"]
+	path = common/.vim/bundle/vim-pathogen.git
 	url = https://github.com/tpope/vim-pathogen.git
 [submodule "common/.vim/bundle/vim-fugitive"]
 	path = common/.vim/bundle/vim-fugitive
@@ -58,12 +58,12 @@
 [submodule "common/.vim/bundle/vim-endwise"]
 	path = common/.vim/bundle/vim-endwise
 	url = git://github.com/tpope/vim-endwise
-[submodule "common/.vim/bundle/PreciseJump"]
-	path = common/.vim/bundle/PreciseJump
+[submodule "common/.vim/bundle/PreciseJump.git"]
+	path = common/.vim/bundle/PreciseJump.git
 	url = git://github.com/vim-scripts/PreciseJump.git
-[submodule "common/.vim/bundle/smartword"]
-	path = common/.vim/bundle/smartword
+[submodule "common/.vim/bundle/smartword.git"]
+	path = common/.vim/bundle/smartword.git
 	url = git://github.com/vim-scripts/smartword.git
-[submodule "common/.vim/bundle/AutoTag"]
-	path = common/.vim/bundle/AutoTag
+[submodule "common/.vim/bundle/AutoTag.git"]
+	path = common/.vim/bundle/AutoTag.git
 	url = git://github.com/vim-scripts/AutoTag.git

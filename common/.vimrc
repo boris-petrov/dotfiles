@@ -8,7 +8,7 @@ set nocompatible
 
 filetype on
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime bundle/vim-pathogen.git/autoload/pathogen.vim
 call pathogen#infect()
 
 filetype indent on
