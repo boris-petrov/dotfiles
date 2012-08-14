@@ -44,6 +44,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'PreciseJump'
 Bundle 'smartword'
 Bundle 'L9'
+Bundle 'AutoTag'
 
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
@@ -295,9 +296,10 @@ function! s:Tabularize(visual)
 endfunction
 
 " --------------------------------------------------------------------------------------------------
-" Tagbar
+" Tags
 " --------------------------------------------------------------------------------------------------
 
+" Tagbar
 nnoremap <silent> gd :TagbarToggle<CR>
 autocmd FileType tagbar nmap <buffer> l <CR>
 let g:tagbar_autofocus             = 1
@@ -492,7 +494,7 @@ xmap <silent> <expr> p <SID>Repl()
 " delimitMate Mappings
 " --------------------------------------------------------------------------------------------------
 
-inoremap <expr> <CR> delimitMate#ShouldJump() ? "\<C-g>g" : "\n"
+imap <expr> <CR> delimitMate#ShouldJump() ? "\<C-g>g" : "\<CR>\<Plug>DiscretionaryEnd"
 
 " --------------------------------------------------------------------------------------------------
 " CamelCase Plugin Mappings
@@ -534,8 +536,13 @@ let g:splitjoin_align                = 1
 " Unimpaired Mappings
 " --------------------------------------------------------------------------------------------------
 
+" quickfix window
 nmap sh [q
 nmap sl ]q
+
+" tags
+nmap sk [t
+nmap sj ]t
 
 " --------------------------------------------------------------------------------------------------
 " Indenting
@@ -671,8 +678,11 @@ map K 4k
 nnoremap <C-j> <C-e>
 nnoremap <C-k> <C-y>
 
-nmap sj :SplitjoinSplit<CR>
-nmap sk :SplitjoinJoin<CR>
+nmap saj :SplitjoinSplit<CR>
+nmap sak :SplitjoinJoin<CR>
+
+nmap gt <C-]>
+nmap gT <Nop>
 
 " Map <F5> to remove all trailing whitespace
 nnoremap <silent> <F5> :let _s=@/<CR>:%s/\s\+$//e<CR>:let @/=_s<CR>:nohl<CR>:set ff=unix<CR>:w<CR>
