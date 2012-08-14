@@ -5,20 +5,14 @@ shopt -s dotglob
 SCRIPT=$(readlink -f $0)
 SCRIPTPATH=$(dirname $SCRIPT)
 
-if [ `uname -s` = "Linux" ]; then
-	for file in $SCRIPTPATH/common/* $SCRIPTPATH/Linux/*
+if [ `uname -s` = 'Linux' ]; then
+	for file in `find $SCRIPTPATH/common/* -maxdepth 0` `find $SCRIPTPATH/Linux/* -maxdepth 0`
 	do
-		if [ $file != "$SCRIPTPATH/.gitmodules" ]; then
-			if [ $file == "$SCRIPTPATH/lua.rc" ]; then
-				mkdir -p ~/.config/awesome
-				ln -sf $file ~/.config/awesome/$(basename $file)
-			else
-				ln -sf $file ~/$(basename $file)
-			fi
-		fi
+		BASENAME=$(basename $file)
+		ln -sf $file ~/$BASENAME
 	done
 
-elif [ `uname -o` = "Cygwin" ]; then
+elif [ `uname -o` = 'Cygwin' ]; then
 
 	for file in $SCRIPTPATH/common/* $SCRIPTPATH/Windows/*
 	do
