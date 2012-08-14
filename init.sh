@@ -6,17 +6,21 @@ SCRIPT=$(readlink -f $0)
 SCRIPTPATH=$(dirname $SCRIPT)
 
 if [ `uname -s` = "Linux" ]; then
-	for file in $SCRIPTPATH/*
+	for file in $SCRIPTPATH/common/* $SCRIPTPATH/Linux/*
 	do
-		if [ $file != "$SCRIPTPATH/init.sh" -a $file != "$SCRIPTPATH/README" -a $file != "$SCRIPTPATH/.git" -a $file != "$SCRIPTPATH/.minttyrc" -a $file != "$SCRIPTPATH/AutoHotkey.ahk" -a $file != "$SCRIPTPATH/prio.ini" -a $file != "$SCRIPTPATH/_vsvimrc" -a $file != "$SCRIPTPATH/DonationCoder" -a $file != "$SCRIPTPATH/CurrentSettings.vssettings" ]
-		then
-			ln -sf $file ~/$(basename $file)
+		if [ $file != "$SCRIPTPATH/.gitmodules" ]; then
+			if [ $file == "$SCRIPTPATH/lua.rc" ]; then
+				mkdir -p ~/.config/awesome
+				ln -sf $file ~/.config/awesome/$(basename $file)
+			else
+				ln -sf $file ~/$(basename $file)
+			fi
 		fi
 	done
 
 elif [ `uname -o` = "Cygwin" ]; then
 
-	for file in $SCRIPTPATH/*
+	for file in $SCRIPTPATH/common/* $SCRIPTPATH/Windows/*
 	do
 		if [ $file == "$SCRIPTPATH/.pentadactylrc" ]; then
 			cmd /c del %USERPROFILE%\\_pentadactylrc
