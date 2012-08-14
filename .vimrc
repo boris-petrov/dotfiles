@@ -2,52 +2,14 @@
 
 if has('win32')
 	let $VIMRUNTIME='C:\Program Files (x86)\Vim\vim73'
-	set runtimepath=$VIM/vimfiles,$VIMRUNTIME
-elseif has('unix')
-	set runtimepath=~/.vim,$VIMRUNTIME
 endif
 
 set nocompatible
 
-filetype off " required by Vundle
+filetype on
 
-set runtimepath+=~/.vim/bundle/vundle/,~/.vim,$VIMRUNTIME
-call vundle#rc()
-
-" let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'bkad/CamelCaseMotion'
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'sickill/vim-pasta'
-Bundle 'kien/ctrlp.vim'
-Bundle 'AndrewRadev/coffee_tools.vim'
-Bundle 'sjl/gundo.vim'
-Bundle 'godlygeek/tabular'
-Bundle 'majutsushi/tagbar'
-Bundle 'AndrewRadev/splitjoin.vim'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'Raimondi/delimitMate'
-Bundle 'msanders/snipmate.vim'
-Bundle 'tpope/vim-endwise'
-" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Bundle 'tpope/vim-rails.git'
-
-" vim-scripts repos
-Bundle 'PreciseJump'
-Bundle 'smartword'
-Bundle 'L9'
-Bundle 'AutoTag'
-
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 filetype indent on
 filetype plugin on
