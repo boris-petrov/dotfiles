@@ -2,6 +2,7 @@
 
 if has('win32')
 	let $VIMRUNTIME='C:\Program Files (x86)\Vim\vim73'
+	set runtimepath+=~/.vim
 endif
 
 set nocompatible
