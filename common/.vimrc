@@ -716,4 +716,4 @@ noremap <SPACE> <PAGEDOWN>
 nnoremap <C-d> :q<CR>
 
 " Returns the cursor where it was before the start of the editing
-nnoremap . .`[
+nmap . .`[
