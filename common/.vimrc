@@ -175,8 +175,9 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 " commentary Mappings
 " --------------------------------------------------------------------------------------------------
 
-xmap gc  <Plug>Commentary
 nmap gcc <Plug>CommentaryLine
+nmap gc  <Plug>Commentary
+xmap gc  <Plug>Commentary
 
 " --------------------------------------------------------------------------------------------------
 " Leader Variables
