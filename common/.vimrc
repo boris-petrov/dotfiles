@@ -172,6 +172,13 @@ highlight ExtraWhitespace guibg=red
 autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
 " --------------------------------------------------------------------------------------------------
+" commentary Mappings
+" --------------------------------------------------------------------------------------------------
+
+xmap gc  <Plug>Commentary
+nmap gcc <Plug>CommentaryLine
+
+" --------------------------------------------------------------------------------------------------
 " Leader Variables
 " --------------------------------------------------------------------------------------------------
 
@@ -189,8 +196,8 @@ if has('win32')
 	" set guifont=DejaVu_LGC_Sans_Mono:h13:cDEFAULT
 
 	command! Inconsolata set guifont=Inconsolata:h15:cDEFAULT
-	command! Consolas set guifont=Consolas:h14:cDEFAULT
-	command! DejaVu set guifont=DejaVu_LGC_Sans_Mono:h13:cDEFAULT
+	command! Consolas    set guifont=Consolas:h14:cDEFAULT
+	command! DejaVu      set guifont=DejaVu_LGC_Sans_Mono:h13:cDEFAULT
 elseif has('unix')
 	set guifont=DejaVu\ LGC\ Sans\ Mono\ Book\ 14
 endif
