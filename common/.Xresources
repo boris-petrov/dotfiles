@@ -1,18 +1,17 @@
-Xft.dpi: 96
-Xft.antialias: 1
-Xft.hinting: 1
-Xft.hintstyle: hintslight
+Xft.autohint:  0
 Xft.lcdfilter: lcddefault
-Xft.rgba: rgb
+Xft.hintstyle: hintfull
+Xft.hinting:   1
+Xft.antialias: 1
+Xft.dpi:       96
+Xft.rgba:      rgb
 
 URxvt.termName: rxvt-unicode
 
-URxvt.font: xft:Deja Vu LGC Sans Mono-13:antialias=true:autohint=true,xft
-URxvt.boldFont: xft:Deja Vu LGC Sans Mono-13:bold:antialias=true:autohint=true,xft
-URxvt.italicFont: xft:Deja Vu LGC Sans Mono-13:italic:antialias=true:autohint=true,xft
-URxvt.boldItalicFont: xft:Deja Vu LGC Sans Mono-13:bold:italic:antialias=true:autohint=true,xft
-
-URxvt.depth: 32
+URxvt.font:           xft:Inconsolata-17:xft
+URxvt.boldFont:       xft:Inconsolata-17:bold:xft
+URxvt.italicFont:     xft:Inconsolata-17:italic:xft
+URxvt.boldItalicFont: xft:Inconsolata-17:bold:italic:xft
 
 URxvt.fading: 20
 
