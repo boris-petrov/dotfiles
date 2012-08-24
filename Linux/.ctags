@@ -1,0 +1,13 @@
+--langdef=coffee
+--langmap=coffee:.coffee
+--regex-coffee=/(^|=[ \t])*class (\w+\.)*(\w+)([ \t]+extends[ \t]+\w+)?$/\3/c,class/
+--regex-coffee=/^[ \t]*(module\.)?(exports\.)?@?(\w+):.*[-=]>.*$/\3/m,method/
+--regex-coffee=/^[ \t]*(module\.)?(exports\.)?(\w+)[ \t]+=.*[-=]>.*$/\3/f,function/
+--regex-coffee=/^[ \t]*(\w+)[ \t]+\??=[^->]*$/\1/v,variable/
+--regex-coffee=/^[ \t]*@(\w+)[ \t]+\??=[^->]*$/\1/f,field/
+--regex-coffee=/^[ \t]*@(\w+):[^->]*$/\1/f,static field/
+--regex-coffee=/^[ \t]*(\w+):[^->]*$/\1/f,field/
+--regex-coffee=/(constructor: \()@(\w+)/\2/f,field/
+--regex-coffee=/(constructor: \()@\w+[ \t]*,[ \t]*@(\w+)/\2/f,field/
+--regex-coffee=/(constructor: \()@\w+[ \t]*,[ \t]*@\w+[ \t]*,[ \t]*@(\w+)/\2/f,field/
+--regex-coffee=/(constructor: \()@\w+[ \t]*,[ \t]*@\w+[ \t]*,[ \t]*@\w+[ \t]*,[ \t]*@(\w+)/\2/f,field/
