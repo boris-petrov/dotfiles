@@ -179,6 +179,8 @@ nmap gcc <Plug>CommentaryLine
 nmap gc  <Plug>Commentary
 xmap gc  <Plug>Commentary
 
+autocmd FileType cpp set commentstring=//\ %s
+
 " --------------------------------------------------------------------------------------------------
 " Leader Variables
 " --------------------------------------------------------------------------------------------------
@@ -312,7 +314,7 @@ autocmd FileType coffee xmap <buffer> x  <Plug>CoffeeToolsDeleteAndDedent
 
 let g:coffee_tools_function_text_object = 1
 
-" let g:pasta_enabled_filetypes = ['coffee']
+let g:pasta_enabled_filetypes = []
 
 " --------------------------------------------------------------------------------------------------
 " Session Options and Mappings
