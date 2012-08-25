@@ -8,10 +8,10 @@ Xft.rgba:      rgb
 
 URxvt.termName: rxvt-unicode
 
-URxvt.font:           xft:Inconsolata-17:xft
-URxvt.boldFont:       xft:Inconsolata-17:bold:xft
-URxvt.italicFont:     xft:Inconsolata-17:italic:xft
-URxvt.boldItalicFont: xft:Inconsolata-17:bold:italic:xft
+URxvt.font:           xft:Inconsolata-20:xft
+URxvt.boldFont:       xft:Inconsolata-20:bold:xft
+URxvt.italicFont:     xft:Inconsolata-20:italic:xft
+URxvt.boldItalicFont: xft:Inconsolata-20:bold:italic:xft
 
 URxvt.fading: 20
 
@@ -24,3 +24,13 @@ URxvt.saveLines:       10000
 URxvt.cursorColor:     Red
 URxvt.scrollBar_right: True
 
+URxvt.visualBell: False
+URxvt.loginShell: True
+
+URxvt.background:  Black
+URxvt.foreground:  Grey
+URxvt.cursorColor: Red
+
+URxvt.saveLines: 10000
+
+URxvt.perl-ext-common: default,clipboard

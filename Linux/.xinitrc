@@ -1,6 +1,5 @@
 xrdb -merge ~/.Xresources
 
-kbdd &
 autokey-gtk &
 launchy &
 thunderbird &

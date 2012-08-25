@@ -364,6 +364,30 @@ client.add_signal("manage", function (c, startup)
     end
 end)
 
-client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+-- Do not signal a particular window
+client.add_signal("manage", function (c, startup)
+    if c.class == "Pidgin" and string.find(c.name, "#", 1) == 1 then
+        c:add_signal("property::urgent", function (cl)
+            cl.urgent = false
+        end)
+    end
+end)
+
+client.add_signal("focus",   function(c) c.border_color = beautiful.border_focus  end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+dbus.request_name("session", "ru.gentoo.kbdd")
+dbus.add_match("session", "interface='ru.gentoo.kbdd',member='layoutChanged'")
+dbus.add_signal("ru.gentoo.kbdd", function(...)
+    local data = {...}
+    local layout = data[2]
+    lts = { [0] = "En", [1] = "Bg" }
+    kbdwidget.text = " "..lts[layout].." "
+    end
+)
+
 -- }}}
+
+awful.util.spawn_with_shell("killall kbdd; kbdd")
+
+-- wallpaper_cmd = { "awsetbg -f .config/awesome/themes/awesome-wallpaper.png" }

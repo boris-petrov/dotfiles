@@ -91,6 +91,8 @@ alias cd.....='cd ../../../..'
 
 alias be='bundle exec'
 
+alias mplayer=mplayer -softvol
+
 export CC=colorgcc
 export EDITOR=vim
 export NODE_PATH=/usr/local/lib/node_modules
