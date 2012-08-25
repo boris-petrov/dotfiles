@@ -9,7 +9,13 @@ if [ `uname -s` = 'Linux' ]; then
 	for file in `find $SCRIPTPATH/common/* -maxdepth 0` `find $SCRIPTPATH/Linux/* -maxdepth 0`
 	do
 		BASENAME=$(basename $file)
-		ln -sf $file ~/$BASENAME
+		if [ $file == "$SCRIPTPATH/common/prefs.js" ]; then
+			pushd ~/.mozilla/firefox/*.default > /dev/null
+			ln -sf $file prefs.js
+			popd > /dev/null
+		else
+			ln -sfn $file ~/$BASENAME
+		fi
 	done
 
 elif [ `uname -o` = 'Cygwin' ]; then

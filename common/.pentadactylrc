@@ -25,6 +25,7 @@ nmap H <C-o>
 nmap L <C-i>
 
 nmap gb <C-o>
+nmap <BS> <C-o>
 
 nmap -builtin <C-c> <C-v><C-c>
 imap -builtin <C-v> <C-v><C-v>
@@ -35,4 +36,3 @@ imap -builtin <C-v> <C-v><C-v>
 nmap <C-d> :q<RETURN>
 
 nmap -builtin <ESC> <C-c>:noh<RETURN>
-

@@ -8,4 +8,6 @@ setxkbmap -layout us,bg -variant ,phonetic -option grp:ctrl_shift_toggle
 
 xbindkeys
 
+dropboxd &
+
 exec dbus-launch awesome

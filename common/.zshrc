@@ -240,4 +240,4 @@ export DISPLAY=localhost:0
 
 ulimit -c unlimited
 
-. ~/nvm/nvm.sh
+[ -e "~/nvm/nvm.sh" ] && . ~/nvm/nvm.sh
