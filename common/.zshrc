@@ -91,7 +91,7 @@ alias cd.....='cd ../../../..'
 
 alias be='bundle exec'
 
-alias mplayer=mplayer -softvol
+alias mplayer='mplayer -softvol'
 
 export CC=colorgcc
 export EDITOR=vim
@@ -236,7 +236,6 @@ fi
 export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
 export LD_LIBRARY_PATH=.:/usr/local/lib:/opt/java/jre/lib/i386:/opt/java/jre/lib/i386/client
 export PATH=./node_modules/.bin:$PATH
-export DISPLAY=localhost:0
 
 ulimit -c unlimited
 

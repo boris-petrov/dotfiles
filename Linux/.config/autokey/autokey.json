@@ -19,8 +19,8 @@
         "menuTakesFocus": false, 
         "interfaceType": "XRecord", 
         "windowDefaultSize": [
-            640, 
-            502
+            1280, 
+            1005
         ], 
         "showToolbar": true, 
         "serviceRunning": true, 
@@ -30,7 +30,7 @@
             100
         ], 
         "workAroundApps": ".*VirtualBox.*|krdc.Krdc", 
-        "hPanePosition": 160, 
+        "hPanePosition": 321, 
         "isFirstRun": true
     }, 
     "userCodeDir": "/home/boris", 

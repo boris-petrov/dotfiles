@@ -218,6 +218,7 @@ autocmd FileType help nmap <buffer> <CR> <C-]>
 autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
 
 autocmd FileType coffee,ruby,eruby,html      setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType lua                         setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 autocmd BufNewFile,BufReadPost coffee,python setlocal foldmethod=indent nofoldenable
 
 runtime macros/matchit.vim " smarter matching with % (ifs, elses...)
