@@ -1,4 +1,4 @@
-set runtimepath=~/pentadactyl
+set runtimepath=~/.pentadactyl
 
 set complete=bhs
 set findcase=ignore
