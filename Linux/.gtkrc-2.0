@@ -1,0 +1,6 @@
+include "/usr/share/themes/Raleigh/gtk-2.0/gtkrc"
+
+style "vimfix" {
+	bg[NORMAL] = "Black" # this matches my gvim theme 'Normal' bg color.
+}
+widget "vim-main-window.*GtkForm" style "vimfix"
