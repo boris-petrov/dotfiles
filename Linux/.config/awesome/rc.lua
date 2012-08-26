@@ -38,7 +38,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal   = "urxvt"
@@ -270,9 +270,7 @@ awful.rules.rules = {
                      keys         = clientkeys,
                      buttons      = clientbuttons } },
     { rule = { class = "Firefox" },
-      properties = { tag = tags[1][2], switchtotag = true, focus = true,
-                     maximized_horizontal = true,
-                     maximized_vertical   = true } },
+      properties = { tag = tags[1][2], switchtotag = true, focus = true } },
     { rule = { class = "Luakit" },
       properties = { floating = true } },
     { rule = { class = "Thunderbird" },
@@ -328,5 +326,4 @@ end)
 -- }}}
 
 awful.util.spawn_with_shell("killall kbdd; kbdd")
-
--- wallpaper_cmd = { "awsetbg -f .config/awesome/themes/awesome-wallpaper.png" }
+awful.util.spawn_with_shell("awsetbg -c ~/.config/awesome/themes/wallpaper.jpg")
