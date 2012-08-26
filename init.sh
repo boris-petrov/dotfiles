@@ -9,13 +9,7 @@ if [ `uname -s` = 'Linux' ]; then
 	for file in `find $SCRIPTPATH/common/* -maxdepth 0` `find $SCRIPTPATH/Linux/* -maxdepth 0`
 	do
 		BASENAME=$(basename $file)
-		if [ $file == "$SCRIPTPATH/common/prefs.js" ]; then
-			pushd ~/.mozilla/firefox/*.default > /dev/null
-			ln -sf $file prefs.js
-			popd > /dev/null
-		else
-			ln -sfn $file ~/$BASENAME
-		fi
+		ln -sfn $file ~/$BASENAME
 	done
 
 elif [ `uname -o` = 'Cygwin' ]; then
@@ -25,9 +19,9 @@ elif [ `uname -o` = 'Cygwin' ]; then
 		if [ $file == "$SCRIPTPATH/common/.pentadactylrc" ]; then
 			cmd /c del %USERPROFILE%\\_pentadactylrc
 			cmd /c mklink %USERPROFILE%\\_pentadactylrc $(cygpath -w $SCRIPTPATH/common/.pentadactylrc)
-		elif [ $file == "$SCRIPTPATH/common/pentadactyl" ]; then
+		elif [ $file == "$SCRIPTPATH/common/.pentadactyl" ]; then
 			cmd /c rmdir %USERPROFILE%\\pentadactyl
-			cmd /c mklink /d %USERPROFILE%\\pentadactyl $(cygpath -w $SCRIPTPATH/common/pentadactyl)
+			cmd /c mklink /d %USERPROFILE%\\pentadactyl $(cygpath -w $SCRIPTPATH/common/.pentadactyl)
 		elif [ $file == "$SCRIPTPATH/common/.vim" ]; then
 			cmd /c rmdir %USERPROFILE%\\.vim
 			cmd /c mklink /d %USERPROFILE%\\.vim $(cygpath -w $SCRIPTPATH/common/.vim)
