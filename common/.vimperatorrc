@@ -1,0 +1,33 @@
+set noautocomplete
+set complete=bhs
+set hlsearch
+set nosmartcase
+set tabnumbers
+set gui=none,tabs
+set newtab=all
+set wildmode=
+
+colorscheme vimPgray
+
+nnoremap J 15j
+nnoremap K 15k
+nnoremap j 5j
+nnoremap k 5k
+
+nmap h gT
+nmap l gt
+nmap H <C-o>
+nmap L <C-i>
+
+nmap gb <C-o>
+nmap <BS> <C-o>
+
+nnoremap <C-c> <C-v><C-c>
+inoremap <C-v> <C-v><C-v>
+
+" TODO: how?!
+" cmap <RETURN> <TAB><RETURN>
+
+nmap <C-d> :q<RETURN>
+
+nnoremap <ESC> <C-c>:noh<RETURN>

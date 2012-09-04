@@ -12,7 +12,7 @@ set wildmode=
 
 javascript dactyl.beep = function() { return false; }
 
-colorscheme desert
+colorscheme vimPgray
 
 nmap -builtin J 15j
 nmap -builtin K 15k
