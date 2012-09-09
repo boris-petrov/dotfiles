@@ -40,10 +40,8 @@ end
 -- Themes define colours, icons, and wallpapers
 beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 
--- This is used later as the default terminal and editor to run.
-terminal   = "urxvt"
-editor     = os.getenv("EDITOR") or "nano"
-editor_cmd = terminal .. " -e " .. editor
+terminal         = "urxvt"
+hostile_takeover = "gvim /home/boris/documents/Hostile\\ Takeover.txt"
 
 modkey = "Mod1"
 
@@ -183,12 +181,13 @@ globalkeys = awful.util.table.join(
         end),
 
     -- Standard program
-    awful.key({ modkey, "Shift"   }, "Return", function () awful.util.spawn(terminal) end),
-    awful.key({ modkey, "Shift"   }, "r", awesome.restart),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit),
+    awful.key({ modkey, "Shift" }, "Return", function () awful.util.spawn(terminal) end),
+    awful.key({ modkey, "Shift" }, "r",      awesome.restart),
+    awful.key({ modkey, "Shift" }, "q",      awesome.quit),
+    awful.key({ modkey          }, "h",      function () awful.util.spawn(hostile_takeover) end),
 
-    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
-    awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
+    -- awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
+    -- awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1)      end),
     awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1)      end),
     awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1)         end),
@@ -201,7 +200,7 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey,                    }, "q",      function (c) c:kill()                         end),
     awful.key({ modkey, "Control", "Shift" }, "f",      awful.client.floating.toggle                     ),
     awful.key({ modkey, "Control", "Shift" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
-    awful.key({ modkey, "Shift"            }, "r",      function (c) c:redraw()                       end),
+    -- awful.key({ modkey, "Shift"            }, "r",      function (c) c:redraw()                       end),
     awful.key({ modkey,                    }, "a",      function (c) c.minimized = true               end),
     awful.key({ modkey,           }, "s",
         function (c)
@@ -248,7 +247,7 @@ for i = 1, keynumber do
 end
 
 clientbuttons = awful.util.table.join(
-    awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
+    awful.button({ },        1, function (c) client.focus = c; c:raise() end),
     awful.button({ modkey }, 1, awful.mouse.client.move),
     awful.button({ modkey }, 3, awful.mouse.client.resize)
 )
@@ -271,8 +270,6 @@ awful.rules.rules = {
                      buttons      = clientbuttons } },
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][2], switchtotag = true, focus = true } },
-    { rule = { class = "Luakit" },
-      properties = { floating = true } },
     { rule = { class = "Pidgin" },
       properties = { tag = tags[1][4], focus = false } },
     { rule = { class = "Deadbeef" },
@@ -281,6 +278,8 @@ awful.rules.rules = {
       properties = { tag = tags[1][8] } },
     { rule = { class = "Deluge" },
       properties = { tag = tags[1][9] } },
+    { rule = { class = "Luakit" },
+      properties = { floating = true } },
     { rule = { class = "Gvim" },
       properties = { size_hints_honor = false } },
     { rule = { class = "URxvt" },
@@ -319,10 +318,10 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 dbus.request_name("session", "ru.gentoo.kbdd")
 dbus.add_match("session", "interface='ru.gentoo.kbdd',member='layoutChanged'")
 dbus.add_signal("ru.gentoo.kbdd", function(...)
-    local data = {...}
+    local data = { ... }
     local layout = data[2]
-    lts = { [0] = "En", [1] = "Bg" }
-    kbdwidget.text = " "..lts[layout].." "
+    lts = { [0] = " En ", [1] = " Bg " }
+    kbdwidget.text = lts[layout]
 end)
 
 -- }}}
