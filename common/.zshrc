@@ -70,7 +70,7 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm 
 alias df='df -h'
 alias du='du -h'
 
-alias grep='grep --color --exclude-dir=node_modules --exclude-dir=.git --exclude=tags'
+alias grep='grep -I --color --exclude-dir=node_modules --exclude-dir=.git --exclude=tags'
 
 alias glog='git log --graph --oneline --decorate --all'
 
