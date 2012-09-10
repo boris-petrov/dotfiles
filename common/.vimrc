@@ -645,6 +645,8 @@ cab q1 q!
 " Misc Mappings
 " --------------------------------------------------------------------------------------------------
 
+nmap U <NOP>
+
 " Always move through visual lines in normal mode:
 nnoremap j gj
 nnoremap k gk
