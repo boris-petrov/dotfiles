@@ -10,4 +10,6 @@ xbindkeys
 
 dropboxd &
 
+qwit &
+
 exec dbus-launch awesome
