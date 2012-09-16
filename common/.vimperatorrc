@@ -1,5 +1,6 @@
 set noautocomplete
 set complete=bhs
+set focuscontent
 set hlsearch
 set nosmartcase
 set tabnumbers
