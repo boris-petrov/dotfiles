@@ -12,4 +12,6 @@ dropboxd &
 
 qwit &
 
+~/bin/fix_screens
+
 exec dbus-launch awesome

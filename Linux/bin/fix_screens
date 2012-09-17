@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if xrandr | grep -q '^VGA1 connected'; then
+  echo 'two screens'
+  xrandr --output LVDS1 --mode 1366x768
+  xrandr --output VGA1 --mode 1920x1080 --right-of LVDS1 --primary
+  xset -dpms
+else
+  echo 'laptop display'
+  xrandr --output LVDS1 --mode 1366x768 --primary
+  xset +dpms
+fi

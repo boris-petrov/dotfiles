@@ -210,8 +210,7 @@ if [ `uname -s` = "Linux" ]; then
   # To have paths colored instead of underlined
   ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
 
-  eval `ssh-agent`
-  ssh-add
+  source ssh-agent.zsh
 
 elif [ `uname -o` = "Cygwin" ]; then
 
@@ -236,7 +235,6 @@ fi
 export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
 export LD_LIBRARY_PATH=.:/usr/local/lib:/opt/java/jre/lib/i386:/opt/java/jre/lib/i386/client
 export PATH=./node_modules/.bin:$PATH
-export TERM=xterm-256color
 
 ulimit -c unlimited
 
