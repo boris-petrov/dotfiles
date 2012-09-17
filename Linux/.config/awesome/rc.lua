@@ -65,28 +65,13 @@ layouts =
 
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
-if screen.count() == 1 then
-    tags = {
-        layout = { layouts[4], layouts[4], layouts[4], layouts[1], layouts[4],
-                   layouts[4], layouts[4], layouts[4], layouts[4] }
-    }
+tags = {
+    layouts = { layouts[4], layouts[4], layouts[4], layouts[1], layouts[4],
+                layouts[4], layouts[4], layouts[4], layouts[4] }
+}
 
-    for s = 1, screen.count() do
-        tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, tags.layout)
-    end
-
-else
-    tags = {
-        settings = {
-            { layout = { layouts[4], layouts[4], layouts[4], layouts[1],
-                         layouts[4], layouts[4], layouts[4], layouts[4] } },
-            { layout = { layouts[4] } }
-        }
-    }
-
-    for s = 1, screen.count() do
-        tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, tags.settings[s].layout)
-    end
+for s = 1, screen.count() do
+    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, tags.layouts)
 end
 -- }}}
 
@@ -125,7 +110,7 @@ for s = 1, screen.count() do
     -- We need one layoutbox per screen.
     mylayoutbox[s] = awful.widget.layoutbox(s)
     mylayoutbox[s]:buttons(awful.util.table.join(
-                           awful.button({ }, 1, function () awful.layout.inc(layouts, 1) end),
+                           awful.button({ }, 1, function () awful.layout.inc(layouts,  1) end),
                            awful.button({ }, 3, function () awful.layout.inc(layouts, -1) end)))
     -- Create a taglist widget
     mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.label.all, mytaglist.buttons)
@@ -155,6 +140,8 @@ end
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+    awful.key({ modkey            }, "l", function () awful.util.spawn("xlock -mode blank") end),
+
     awful.key({ modkey,           }, "`", awful.tag.history.restore),
 
     awful.key({ modkey,           }, "j",
@@ -171,14 +158,9 @@ globalkeys = awful.util.table.join(
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end),
+    awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end),
+    awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto),
-    awful.key({ modkey,           }, "Tab",
-        function ()
-            awful.client.focus.history.previous()
-            if client.focus then
-                client.focus:raise()
-            end
-        end),
 
     -- Standard program
     awful.key({ modkey, "Shift" }, "Return", function () awful.util.spawn(terminal) end),
@@ -200,9 +182,10 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey,                    }, "q",      function (c) c:kill()                         end),
     awful.key({ modkey, "Control", "Shift" }, "f",      awful.client.floating.toggle                     ),
     awful.key({ modkey, "Control", "Shift" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
+    awful.key({ modkey,                    }, "o",      awful.client.movetoscreen                        ),
     -- awful.key({ modkey, "Shift"            }, "r",      function (c) c:redraw()                       end),
     awful.key({ modkey,                    }, "a",      function (c) c.minimized = true               end),
-    awful.key({ modkey,           }, "s",
+    awful.key({ modkey,                    }, "s",
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
@@ -212,7 +195,7 @@ clientkeys = awful.util.table.join(
 -- Compute the maximum number of digit we need, limited to 9
 keynumber = 0
 for s = 1, screen.count() do
-   keynumber = math.min(9, math.max(#tags[s], keynumber))
+   keynumber = math.min(9, math.max(#tags[s], keynumber));
 end
 
 -- Bind all key numbers to tags.
@@ -230,11 +213,9 @@ for i = 1, keynumber do
         awful.key({ modkey, "Shift" }, "#" .. i + 9,
                   function ()
                       if client.focus and tags[client.focus.screen][i] then
-                          awful.client.movetotag(tags[client.focus.screen][i])
-                          local screen = mouse.screen
-                          if tags[screen][i] then
-                              awful.tag.viewonly(tags[screen][i])
-                          end
+                          tag = tags[client.focus.screen][i]
+                          awful.client.movetotag(tag)
+                          awful.tag.viewonly(tag)
                       end
                   end),
         awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
@@ -242,8 +223,7 @@ for i = 1, keynumber do
                       if client.focus and tags[client.focus.screen][i] then
                           awful.client.toggletag(tags[client.focus.screen][i])
                       end
-                  end)
-    )
+                  end))
 end
 
 clientbuttons = awful.util.table.join(
@@ -269,13 +249,13 @@ awful.rules.rules = {
                      keys         = clientkeys,
                      buttons      = clientbuttons } },
     { rule = { class = "Firefox" },
-      properties = { tag = tags[1][2], switchtotag = true, focus = true } },
+      properties = { tag = tags[1][2], switchtotag = true } },
     { rule = { class = "Pidgin" },
       properties = { tag = tags[1][4], focus = false } },
     { rule = { class = "Deadbeef" },
       properties = { tag = tags[1][7] } },
     { rule = { class = "Thunderbird" },
-      properties = { tag = tags[1][8] } },
+      properties = { tag = tags[screen.count()][8] } },
     { rule = { class = "Deluge" },
       properties = { tag = tags[1][9] } },
     { rule = { class = "Luakit" },
