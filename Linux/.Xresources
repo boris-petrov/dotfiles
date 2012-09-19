@@ -6,7 +6,7 @@ Xft.antialias: 1
 Xft.dpi:       96
 Xft.rgba:      rgb
 
-URxvt.termName: rxvt-unicode
+URxvt.termName: xterm-256color
 
 URxvt.font:           xft:Inconsolata-20:xft
 URxvt.boldFont:       xft:Inconsolata-20:bold:xft
@@ -16,12 +16,6 @@ URxvt.boldItalicFont: xft:Inconsolata-20:bold:italic:xft
 URxvt.fading: 20
 
 URxvt.scrollBar:       True
-URxvt.visualBell:      False
-URxvt.loginShell:      True
-URxvt.background:      Black
-URxvt.foreground:      Grey
-URxvt.saveLines:       10000
-URxvt.cursorColor:     Red
 URxvt.scrollBar_right: True
 
 URxvt.visualBell: False
@@ -32,5 +26,9 @@ URxvt.foreground:  Grey
 URxvt.cursorColor: Red
 
 URxvt.saveLines: 10000
+
+URxvt.scrollTtyOutput:   false
+URxvt.scrollWithBuffer:  true
+URxvt.scrollTtyKeypress: true
 
 URxvt.perl-ext-common: default,clipboard

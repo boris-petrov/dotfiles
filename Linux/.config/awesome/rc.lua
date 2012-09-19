@@ -285,7 +285,7 @@ end)
 
 -- Do not signal a particular window
 client.add_signal("manage", function (c, startup)
-    if c.class == "Pidgin" and string.find(c.name, "#", 1) == 1 then
+    if c.class == "Pidgin" and c.name:match("#airian") then
         c:add_signal("property::urgent", function (cl)
             cl.urgent = false
         end)
