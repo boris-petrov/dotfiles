@@ -173,6 +173,25 @@ function xterm-bindings () {
 
 }
 
+function urxvt-bindings () {
+
+  # Ctrl+Left/Right to move by whole words
+  bindkey '^[Oc' forward-word
+  bindkey '^[Od' backward-word
+
+  # Ctrl+Backspace/Delete to delete whole words
+  bindkey '^[[3^' kill-word
+  bindkey '^H' backward-kill-word
+
+  # for Home and End
+  bindkey "^[[7~" beginning-of-line
+  bindkey "^[[8~" end-of-line
+
+  # for Delete key
+  bindkey "^[[3~" delete-char
+
+}
+
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
@@ -186,29 +205,22 @@ compdef -d git
 if [ `uname -s` = "Linux" ]; then
   # the next ones work with urxvt
 
-  if [ $TERM = "xterm" ] || [ $TERM = "xterm-256color" ]; then
-    xterm-bindings
-  else
-    # Ctrl+Left/Right to move by whole words
-    bindkey '^[Oc' forward-word
-    bindkey '^[Od' backward-word
-
-    # Ctrl+Backspace/Delete to delete whole words
-    bindkey '^[[3^' kill-word
-    bindkey '^H' backward-kill-word
-
-    # for Home and End
-    bindkey "^[[7~" beginning-of-line
-    bindkey "^[[8~" end-of-line
-
-    # for Delete key
-    bindkey "^[[3~" delete-char
-  fi
+  urxvt-bindings
 
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
   # To have paths colored instead of underlined
   ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+
+  # change title of urxvt to current dir
+  function settitle() {
+	printf "\e]0;$@\a"
+  }
+  function dir_in_title() {
+	settitle $PWD
+  }
+  chpwd_functions=(dir_in_title)
+  settitle $PWD
 
   source ssh-agent.zsh
 
@@ -231,10 +243,6 @@ elif [ `uname -o` = "Cygwin" ]; then
   alias vim=vi
   alias gvim=vim
 fi
-
-settitle() { printf "\e]0;$@\a" }
-dir_in_title() { settitle $PWD }
-chpwd_functions=(dir_in_title)
 
 export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
 export LD_LIBRARY_PATH=.:/usr/local/lib:/opt/java/jre/lib/i386:/opt/java/jre/lib/i386/client
