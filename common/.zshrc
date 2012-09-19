@@ -232,6 +232,10 @@ elif [ `uname -o` = "Cygwin" ]; then
   alias gvim=vim
 fi
 
+settitle() { printf "\e]0;$@\a" }
+dir_in_title() { settitle $PWD }
+chpwd_functions=(dir_in_title)
+
 export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
 export LD_LIBRARY_PATH=.:/usr/local/lib:/opt/java/jre/lib/i386:/opt/java/jre/lib/i386/client
 export PATH=./node_modules/.bin:$PATH
