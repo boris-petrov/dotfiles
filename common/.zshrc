@@ -250,4 +250,4 @@ export PATH=./node_modules/.bin:$PATH
 
 ulimit -c unlimited
 
-[ -e ~/nvm/nvm.sh ] && . ~/nvm/nvm.sh
+[ -x "$HOME/nvm/nvm.sh" ] && . "$HOME/nvm/nvm.sh"
