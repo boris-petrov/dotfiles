@@ -72,7 +72,7 @@ alias du='du -h'
 
 alias grep='grep -I --color --exclude-dir=node_modules --exclude-dir=.git --exclude=tags'
 
-alias glog='git log --graph --oneline --decorate --all'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 alias ls='ls -AhF --color=auto --group-directories-first'
 alias ll='ls -l'
@@ -214,10 +214,10 @@ if [ `uname -s` = "Linux" ]; then
 
   # change title of urxvt to current dir
   function settitle() {
-	printf "\e]0;$@\a"
+    printf "\e]0;$@\a"
   }
   function dir_in_title() {
-	settitle $PWD
+    settitle $PWD
   }
   chpwd_functions=(dir_in_title)
   settitle $PWD
