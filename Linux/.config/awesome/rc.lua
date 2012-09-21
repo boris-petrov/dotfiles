@@ -250,6 +250,8 @@ awful.rules.rules = {
                      buttons      = clientbuttons } },
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][2], switchtotag = true } },
+    { rule = { class = "Skype", name = "File Transfers" },
+      properties = { tag = tags[1][4], focus = false } },
     { rule = { class = "Pidgin" },
       properties = { tag = tags[1][4], focus = false } },
     { rule = { class = "Deadbeef" },
