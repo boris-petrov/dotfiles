@@ -10,7 +10,7 @@ xbindkeys
 
 dropboxd &
 
-qwit &
+turpial &
 
 ~/bin/fix_screens
 
