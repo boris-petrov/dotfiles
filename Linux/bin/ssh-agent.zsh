@@ -5,9 +5,9 @@ SSH_ENV=$HOME/.ssh/environment
 
 function start_agent {
   /usr/bin/env ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
-  ssh-add
   chmod 600 ${SSH_ENV}
   . ${SSH_ENV} > /dev/null
+  ssh-add
 }
 
 # Source SSH settings, if applicable
