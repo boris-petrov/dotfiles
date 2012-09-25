@@ -1,5 +1,6 @@
 --exclude=node_modules
 --exclude=.git
+--exclude=vendor
 
 --langdef=coffee
 --langmap=coffee:.coffee
