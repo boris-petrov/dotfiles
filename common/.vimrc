@@ -202,10 +202,10 @@ if has('win32')
 	command! Consolas    set guifont=Consolas:h14:cDEFAULT
 	command! DejaVu      set guifont=DejaVu_LGC_Sans_Mono:h13:cDEFAULT
 elseif has('unix')
-	" set guifont=DejaVu\ LGC\ Sans\ Mono\ Book\ 14
-	set guifont=Inconsolata\ 16
+	set guifont=DejaVu\ LGC\ Sans\ Mono\ Book\ 14
+	" set guifont=Inconsolata\ 14
 
-	command! Inconsolata set guifont=Inconsolata\ 16
+	command! Inconsolata set guifont=Inconsolata\ 14
 	command! DejaVu      set guifont=DejaVu\ LGC\ Sans\ Mono\ Book\ 14
 endif
 
@@ -535,15 +535,14 @@ xnoremap <S-TAB> <
 " Windows-like mappings
 " --------------------------------------------------------------------------------------------------
 
-inoremap <C-v> <C-r>"
-xnoremap <C-v> x<ESC>:set paste<CR>mui<C-R>+<ESC>mv'uV'v=:set nopaste<CR>
-nnoremap <C-v> :set paste<CR>mui<C-R>+<ESC>mv'uV'v=:set nopaste<CR>
+inoremap <C-v> <C-r><C-o>+
+xnoremap <C-v> x<ESC>i<C-r><C-o>+<ESC>
+nnoremap <C-v> i<C-r><C-o>+<ESC>
 xnoremap <C-c> "+y
 xnoremap <C-x> "+x
 inoremap <C-a> <ESC>ggVG
 xnoremap <C-a> <ESC>ggVG
 nnoremap <C-a> ggVG
-inoremap <C-z> <C-o>u
 
 " --------------------------------------------------------------------------------------------------
 " Surround Plugin Mappings
