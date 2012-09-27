@@ -11,6 +11,8 @@ require("aweror")
 -- remove borders when only a single window is visible
 require("remborders")
 
+require("obvious.battery")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -131,6 +133,7 @@ for s = 1, screen.count() do
         mylayoutbox[s],
         mytextclock,
         kbdwidget,
+        obvious.battery(),
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
