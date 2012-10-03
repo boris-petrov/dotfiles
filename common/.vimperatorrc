@@ -23,9 +23,6 @@ nmap L <C-i>
 nmap gb <C-o>
 nmap <BS> <C-o>
 
-nnoremap <C-c> <C-v><C-c>
-inoremap <C-v> <C-v><C-v>
-
 " TODO: how?!
 " cmap <RETURN> <TAB><RETURN>
 
