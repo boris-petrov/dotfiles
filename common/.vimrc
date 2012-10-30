@@ -608,11 +608,12 @@ endfunction
 " NERDTree (un)Mappings
 " --------------------------------------------------------------------------------------------------
 
-nnoremap gn :NERDTreeToggle<CR>
+nnoremap gn :NERDTreeTabsToggle<CR>
 
 let g:NERDTreeMapPreviewVSplit=""
 let g:NERDTreeMapJumpFirstChild=""
 let g:NERDTreeMapJumpLastChild=""
+let g:nerdtree_tabs_focus_on_files=1
 
 autocmd FileType nerdtree nmap <buffer> l o
 autocmd FileType nerdtree nmap <buffer> h x
