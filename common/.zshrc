@@ -246,7 +246,7 @@ fi
 
 export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
 export LD_LIBRARY_PATH=.:/usr/local/lib:/opt/java/jre/lib/i386:/opt/java/jre/lib/i386/client
-export PATH=./node_modules/.bin:$PATH
+export PATH=./node_modules/.bin:/home/boris/.gem/ruby/1.9.1/bin:$PATH
 
 ulimit -c unlimited
 
