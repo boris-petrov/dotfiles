@@ -1,0 +1,5 @@
+#!/bin/sh
+
+setxkbmap -layout us,bg -variant ,phonetic -option grp:ctrl_shift_toggle
+setxkbmap -option ctrl:swapcaps # Swap Left Control and Caps Lock
+# setxkbmap -option ctrl:nocaps # Make Caps Lock a Control key

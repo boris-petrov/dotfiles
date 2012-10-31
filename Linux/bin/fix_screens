@@ -11,3 +11,5 @@ else
   xrandr --output VGA1 --off
   xset +dpms
 fi
+
+~/bin/fix_layout
