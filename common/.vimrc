@@ -80,6 +80,7 @@ set wildignore=*.o,*.hi,*.dll,*.obj,*.lib,*.swp,*.zip,*.exe,*.so
 
 set wrap " line wrapping
 set linebreak " does not wrap in the middle of the word
+set showbreak=+>
 
 set errorbells " I like the bell
 set novisualbell " but not the visuals!
@@ -123,6 +124,7 @@ set shellslash " unix-like slashes
 set title
 set titlestring=%m%rgVim:\ %F
 
+set complete=.,w,b,u,k
 set completeopt=menu,preview
 
 set diffopt+=iwhite " ignore whitespace in diff mode
@@ -161,8 +163,6 @@ if has('win32')
 elseif has('unix')
 	let g:haddock_browser = "firefox"
 endif
-
-smapclear " clear select mode mappings
 
 " --------------------------------------------------------------------------------------------------
 " Highlight extra whitespace
