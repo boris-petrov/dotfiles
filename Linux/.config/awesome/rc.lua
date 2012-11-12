@@ -260,7 +260,10 @@ awful.rules.rules = {
     { rule = { class = "Skype", name = "File Transfers" },
       properties = { tag = tags[1][4], focus = false } },
     { rule = { class = "Pidgin" },
-      properties = { tag = tags[1][4], focus = false } },
+      properties = { focus = false },
+      callback = function(c)
+          awful.client.movetotag(tags[1][4], c)
+      end },
     { rule = { class = "Deadbeef" },
       properties = { tag = tags[1][7] } },
     { rule = { class = "Thunderbird" },
