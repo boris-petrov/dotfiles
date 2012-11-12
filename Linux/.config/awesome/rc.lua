@@ -253,6 +253,10 @@ awful.rules.rules = {
                      buttons      = clientbuttons } },
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][2], switchtotag = true } },
+    { rule = { class = "Firefox", instance = "Dialog" },
+      callback = function(c)
+          awful.client.movetotag(tags[mouse.screen][awful.tag.getidx()], c)
+      end },
     { rule = { class = "Skype", name = "File Transfers" },
       properties = { tag = tags[1][4], focus = false } },
     { rule = { class = "Pidgin" },
@@ -263,6 +267,10 @@ awful.rules.rules = {
       properties = { tag = tags[screen.count()][8] } },
     { rule = { class = "Deluge" },
       properties = { tag = tags[1][9] } },
+    { rule = { class = "Deluge", name = "Add Torrents" },
+      callback = function(c)
+          awful.client.movetotag(tags[mouse.screen][awful.tag.getidx()], c)
+      end },
     { rule = { class = "Luakit" },
       properties = { floating = true } },
     { rule = { class = "Gvim" },
