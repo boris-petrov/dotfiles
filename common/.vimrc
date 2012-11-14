@@ -739,4 +739,5 @@ noremap <SPACE> <PAGEDOWN>
 nnoremap <C-d> :q<CR>
 
 " Returns the cursor where it was before the start of the editing
-nmap . .`[
+runtime autoload/repeat.vim
+nnoremap . :call repeat#run(v:count)<cr>`]
