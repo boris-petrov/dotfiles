@@ -740,4 +740,4 @@ nnoremap <C-d> :q<CR>
 
 " Returns the cursor where it was before the start of the editing
 runtime autoload/repeat.vim
-nnoremap . :call repeat#run(v:count)<cr>`]
+nnoremap . mr:call repeat#run(v:count)<bar>call feedkeys('`r', 'n')<cr>
