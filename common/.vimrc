@@ -141,7 +141,7 @@ set display=lastline " Show as much of the last line as possible and not these c
 
 set formatoptions-=o " Stop continuing the comments on pressing o and O
 
-set grepprg=grep\ -I\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor\ --exclude=tags " Use cygwin grep
+set grepprg=grep\ -I\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude=tags
 
 set spell
 setlocal spell spelllang=en
@@ -220,6 +220,7 @@ autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
 autocmd FileType coffee,ruby,eruby,html      setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType lua                         setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 autocmd BufNewFile,BufReadPost coffee,python setlocal foldmethod=indent nofoldenable
+autocmd FileType ruby                        setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor
 
 runtime macros/matchit.vim " smarter matching with % (ifs, elses...)
 
