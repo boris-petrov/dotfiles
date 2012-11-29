@@ -68,7 +68,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm -w -w"
 
 alias df='df -h'
-alias du='du -h'
+alias du='du -ch'
 
 alias grep='grep -I --color --exclude-dir=node_modules --exclude-dir=.git --exclude=tags'
 
