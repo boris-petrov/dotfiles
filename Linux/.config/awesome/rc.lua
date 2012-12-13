@@ -274,6 +274,8 @@ awful.rules.rules = {
       callback = function(c)
           awful.client.movetotag(tags[mouse.screen][awful.tag.getidx()], c)
       end },
+    { rule = { class = "Fatrat" },
+      properties = { tag = tags[1][9] } },
     { rule = { class = "Luakit" },
       properties = { floating = true } },
     { rule = { class = "Gvim" },
