@@ -74,8 +74,9 @@ alias grep='grep -I --color --exclude-dir=node_modules --exclude-dir=.git --excl
 
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
-alias ls='ls -AhF --color=auto --group-directories-first'
+alias ls='ls -hF --color=auto --group-directories-first'
 alias ll='ls -l'
+alias la='ls -A'
 alias gcc=colorgcc
 
 alias gs='git status'
