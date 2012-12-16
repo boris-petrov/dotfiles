@@ -73,3 +73,6 @@
 [submodule "common/.vim/bundle/vim-nerdtree-tabs"]
 	path = common/.vim/bundle/vim-nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "common/.vim/bundle/rainbow_parentheses.vim"]
+	path = common/.vim/bundle/rainbow_parentheses.vim
+	url = git://github.com/kien/rainbow_parentheses.vim.git
