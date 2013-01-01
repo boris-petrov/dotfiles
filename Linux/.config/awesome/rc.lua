@@ -256,6 +256,10 @@ globalkeys = awful.util.table.join(globalkeys, ror.genkeys(modkey))
 root.keys(globalkeys)
 -- }}}
 
+move_to_current_tag = function(c)
+    awful.client.movetotag(tags[mouse.screen][awful.tag.getidx()], c)
+end
+
 -- {{{ Rules
 awful.rules.rules = {
     -- All clients will match this rule.
@@ -266,32 +270,25 @@ awful.rules.rules = {
                      keys         = clientkeys,
                      buttons      = clientbuttons } },
     { rule = { class = "Firefox" },
-      properties = { tag = tags[1][2], switchtotag = true } },
-    { rule = { class = "Firefox", instance = "Dialog" },
-      callback = function(c)
-          awful.client.movetotag(tags[mouse.screen][awful.tag.getidx()], c)
-      end },
+      properties = { tag = tags[1][2], switchtotag = true,  focus = true } },
+    { rule = { class = "Firefox", instance = "Dialog", name = "Password Required" },
+      properties = { tag = tags[1][2], switchtotag = false, focus = true } },
+    -- { rule = { class = "Firefox", instance = "Dialog" },
+    --   callback = move_to_current_tag },
     { rule = { class = "Skype", name = "File Transfers" },
-      properties = { tag = tags[1][4], focus = false } },
+      properties = { tag = tags[1][4], focus = false, minimized = true } },
     { rule = { class = "Pidgin" },
-      properties = { focus = false },
-      callback = function(c)
-          awful.client.movetotag(tags[1][4], c)
-      end },
+      properties = { tag = tags[1][4], switchtotag = false, focus = false } },
     { rule = { class = "Deadbeef" },
       properties = { tag = tags[1][7] } },
     { rule = { class = "Thunderbird" },
       properties = { tag = tags[screen.count()][8] } },
     { rule = { class = "Thunderbird", name = "Attach File(s)" },
-      callback = function(c)
-          awful.client.movetotag(tags[mouse.screen][awful.tag.getidx()], c)
-      end },
+      callback = move_to_current_tag },
     { rule = { class = "Deluge" },
       properties = { tag = tags[1][9] } },
     { rule = { class = "Deluge", name = "Add Torrents" },
-      callback = function(c)
-          awful.client.movetotag(tags[mouse.screen][awful.tag.getidx()], c)
-      end },
+      callback = move_to_current_tag },
     { rule = { class = "Fatrat" },
       properties = { tag = tags[1][9] } },
     { rule = { class = "Luakit" },
