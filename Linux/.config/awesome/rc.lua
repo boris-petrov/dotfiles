@@ -1,17 +1,22 @@
 -- Standard awesome library
-require("awful")
+local gears = require("gears")
+local awful = require("awful")
+awful.rules = require("awful.rules")
 require("awful.autofocus")
-require("awful.rules")
+-- Widget and layout library
+local wibox = require("wibox")
 -- Theme handling library
-require("beautiful")
+local beautiful = require("beautiful")
 -- Notification library
-require("naughty")
+local naughty = require("naughty")
 -- load the 'run or raise' function
-require("aweror")
+local ror = require("aweror")
 -- remove borders when only a single window is visible
 require("remborders")
 
-require("obvious.battery")
+-- require("obvious.battery")
+
+require("wibox")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -25,7 +30,7 @@ end
 -- Handle runtime errors after startup
 do
     local in_error = false
-    awesome.add_signal("debug::error", function (err)
+    awesome.connect_signal("debug::error", function (err)
         -- Make sure we don't go into an endless error loop
         if in_error then return end
         in_error = true
@@ -65,6 +70,13 @@ layouts =
 }
 -- }}}
 
+-- {{{ Wallpaper
+beautiful.wallpaper = awful.util.getdir("config") .. "/themes/wallpaper.jpg"
+for s = 1, screen.count() do
+    gears.wallpaper.centered(beautiful.wallpaper, s)
+end
+-- }}}
+
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
@@ -79,14 +91,13 @@ end
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = awful.widget.textclock({ align = "right" })
+mytextclock = awful.widget.textclock()
 
 -- Create a systray
-mysystray = widget({ type = "systray" })
+mysystray = wibox.widget.systray()
 
 -- Keyboard layout widget
-kbdwidget = widget({type = "textbox", name = "kbdwidget"})
-kbdwidget.border_width = 1
+kbdwidget = wibox.widget.textbox()
 kbdwidget.border_color = beautiful.fg_normal
 kbdwidget.text = " En "
 
@@ -95,11 +106,11 @@ mywibox = {}
 mylayoutbox = {}
 mytaglist = {}
 mytaglist.buttons = awful.util.table.join(
-                        awful.button({ }, 1, awful.tag.viewonly)
+                        awful.button({}, 1, awful.tag.viewonly)
                     )
 mytasklist = {}
 mytasklist.buttons = awful.util.table.join(
-                     awful.button({ }, 1, function (c)
+                     awful.button({}, 1, function (c)
                                               -- This will also un-minimize
                                               -- the client, if needed
                                               client.focus = c
@@ -107,7 +118,6 @@ mytasklist.buttons = awful.util.table.join(
                                           end))
 
 for s = 1, screen.count() do
-    -- Create a promptbox for each screen
     -- Create an imagebox widget which will contains an icon indicating which layout we're using.
     -- We need one layoutbox per screen.
     mylayoutbox[s] = awful.widget.layoutbox(s)
@@ -115,29 +125,33 @@ for s = 1, screen.count() do
                            awful.button({ }, 1, function () awful.layout.inc(layouts,  1) end),
                            awful.button({ }, 3, function () awful.layout.inc(layouts, -1) end)))
     -- Create a taglist widget
-    mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.label.all, mytaglist.buttons)
+    mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, mytaglist.buttons)
 
     -- Create a tasklist widget
-    mytasklist[s] = awful.widget.tasklist(function(c)
-                                              return awful.widget.tasklist.label.currenttags(c, s)
-                                          end, mytasklist.buttons)
+    mytasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, mytasklist.buttons)
 
     -- Create the wibox
     mywibox[s] = awful.wibox({ position = "top", screen = s })
-    -- Add widgets to the wibox - order matters
-    mywibox[s].widgets = {
-        {
-            mytaglist[s],
-            layout = awful.widget.layout.horizontal.leftright
-        },
-        mylayoutbox[s],
-        mytextclock,
-        kbdwidget,
-        obvious.battery(),
-        s == 1 and mysystray or nil,
-        mytasklist[s],
-        layout = awful.widget.layout.horizontal.rightleft
-    }
+
+    -- Widgets that are aligned to the left
+    local left_layout = wibox.layout.fixed.horizontal()
+    left_layout:add(mytaglist[s])
+    left_layout:add(mylayoutbox[s])
+
+    -- Widgets that are aligned to the right
+    local right_layout = wibox.layout.fixed.horizontal()
+    if s == 1 then right_layout:add(mysystray) end
+    right_layout:add(mytextclock)
+    right_layout:add(kbdwidget)
+    -- right_layout:add(obvious.battery())
+
+    -- Now bring it all together (with the tasklist in the middle)
+    local layout = wibox.layout.align.horizontal()
+    layout:set_left(left_layout)
+    layout:set_middle(mytasklist[s])
+    layout:set_right(right_layout)
+
+    mywibox[s]:set_widget(layout)
 end
 -- }}}
 
@@ -236,7 +250,7 @@ clientbuttons = awful.util.table.join(
 )
 
 -- generate and add the 'run or raise' key bindings to the globalkeys table
-globalkeys = awful.util.table.join(globalkeys, aweror.genkeys(modkey))
+globalkeys = awful.util.table.join(globalkeys, ror.genkeys(modkey))
 
 -- Set keys
 root.keys(globalkeys)
@@ -287,7 +301,7 @@ awful.rules.rules = {
 
 -- {{{ Signals
 -- Signal function to execute when a new client appears.
-client.add_signal("manage", function (c, startup)
+client.connect_signal("manage", function (c, startup)
     if not startup then
         -- Set the windows at the slave,
         -- i.e. put it at the end of others instead of setting it master.
@@ -302,20 +316,20 @@ client.add_signal("manage", function (c, startup)
 end)
 
 -- Do not signal a particular window
-client.add_signal("manage", function (c, startup)
+client.connect_signal("manage", function (c, startup)
     if c.class == "Pidgin" and c.name and c.name:match("#airian") then
-        c:add_signal("property::urgent", function (cl)
+        c:connect_signal("property::urgent", function (cl)
             cl.urgent = false
         end)
     end
 end)
 
-client.add_signal("focus",   function(c) c.border_color = beautiful.border_focus  end)
-client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+client.connect_signal("focus",   function(c) c.border_color = beautiful.border_focus  end)
+client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 dbus.request_name("session", "ru.gentoo.kbdd")
 dbus.add_match("session", "interface='ru.gentoo.kbdd',member='layoutChanged'")
-dbus.add_signal("ru.gentoo.kbdd", function(...)
+dbus.connect_signal("ru.gentoo.kbdd", function(...)
     local data = { ... }
     local layout = data[2]
     lts = { [0] = " En ", [1] = " Bg " }
@@ -325,4 +339,3 @@ end)
 -- }}}
 
 awful.util.spawn_with_shell("killall kbdd; kbdd")
-awful.util.spawn_with_shell("awsetbg -c ~/.config/awesome/themes/wallpaper.jpg")

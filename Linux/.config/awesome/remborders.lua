@@ -1,3 +1,6 @@
+local awful     = require("awful")
+local beautiful = require("beautiful")
+
 local function client_maximized(c)
     if c.maximized_horizontally and c.maximized_vertically then
         return true
@@ -35,7 +38,7 @@ end
 
 -- remove borders if only one window is visible
 for i = 1, screen.count() do
-    screen[i]:add_signal("arrange", function(s)
+    screen[i]:connect_signal("arrange", function(s)
         for _, c in ipairs(awful.client.visible(i)) do
             c.border_width = border_width(i, c)
         end
