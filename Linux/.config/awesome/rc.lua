@@ -98,8 +98,7 @@ mysystray = wibox.widget.systray()
 
 -- Keyboard layout widget
 kbdwidget = wibox.widget.textbox()
-kbdwidget.border_color = beautiful.fg_normal
-kbdwidget.text = " En "
+kbdwidget:set_text(" En ")
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -140,10 +139,10 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
-    if s == 1 then right_layout:add(mysystray) end
-    right_layout:add(mytextclock)
     right_layout:add(kbdwidget)
     -- right_layout:add(obvious.battery())
+    if s == 1 then right_layout:add(mysystray) end
+    right_layout:add(mytextclock)
 
     -- Now bring it all together (with the tasklist in the middle)
     local layout = wibox.layout.align.horizontal()
@@ -334,7 +333,7 @@ dbus.connect_signal("ru.gentoo.kbdd", function(...)
     local data = { ... }
     local layout = data[2]
     lts = { [0] = " En ", [1] = " Bg " }
-    kbdwidget.text = lts[layout]
+    kbdwidget:set_text(lts[layout])
 end)
 
 -- }}}
