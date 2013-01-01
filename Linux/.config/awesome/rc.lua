@@ -282,6 +282,10 @@ awful.rules.rules = {
       properties = { tag = tags[1][7] } },
     { rule = { class = "Thunderbird" },
       properties = { tag = tags[screen.count()][8] } },
+    { rule = { class = "Thunderbird", name = "Attach File(s)" },
+      callback = function(c)
+          awful.client.movetotag(tags[mouse.screen][awful.tag.getidx()], c)
+      end },
     { rule = { class = "Deluge" },
       properties = { tag = tags[1][9] } },
     { rule = { class = "Deluge", name = "Add Torrents" },
