@@ -6,6 +6,8 @@
     "abbreviation": {
         "wordChars": "[\\w]", 
         "abbreviations": [
+            ":\u043f", 
+            ":p", 
             ":\u041f", 
             ":P"
         ], 

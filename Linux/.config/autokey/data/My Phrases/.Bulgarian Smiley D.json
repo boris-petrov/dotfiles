@@ -7,7 +7,9 @@
         "wordChars": "[\\w]", 
         "abbreviations": [
             ":\u0414", 
-            ":D"
+            ":D", 
+            ":d", 
+            ":\u0434"
         ], 
         "immediate": true, 
         "ignoreCase": false, 
