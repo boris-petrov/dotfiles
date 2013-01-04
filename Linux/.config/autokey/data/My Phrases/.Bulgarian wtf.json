@@ -6,7 +6,8 @@
     "abbreviation": {
         "wordChars": "[\\w]", 
         "abbreviations": [
-            "\u0432\u0442\u0444"
+            "\u0432\u0442\u0444", 
+            "wtf"
         ], 
         "immediate": true, 
         "ignoreCase": false, 
