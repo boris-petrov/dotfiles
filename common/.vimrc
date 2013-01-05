@@ -586,7 +586,7 @@ xmap ' S'
 " Keymap
 " --------------------------------------------------------------------------------------------------
 
-nmap <silent> gk :call ToggleKeymap()<CR>
+nmap <silent> ,k :call ToggleKeymap()<CR>
 
 function! ToggleKeymap()
 	if &keymap == ""
