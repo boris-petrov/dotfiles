@@ -8,6 +8,8 @@ Xft.rgba:      rgb
 
 URxvt.termName: xterm-256color
 
+URxvt.iconFile: /home/boris/dotfiles/Linux/icons/terminal.png
+
 URxvt.font:           xft:Inconsolata-20:xft
 URxvt.boldFont:       xft:Inconsolata-20:bold:xft
 URxvt.italicFont:     xft:Inconsolata-20:italic:xft
