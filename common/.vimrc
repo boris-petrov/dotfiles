@@ -56,7 +56,7 @@ set magic " why the hell can't I set verymagic?!
 set number " line numbers
 set numberwidth=1 " Make line number column as narrow as possible
 
-set guioptions=c
+set guioptions=ci
 
 set showtabline=0 " Never show tabline
 
