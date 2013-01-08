@@ -633,6 +633,16 @@ autocmd FileType nerdtree nmap <buffer> c ma
 autocmd FileType nerdtree nmap <buffer> d md
 
 " --------------------------------------------------------------------------------------------------
+" Gitv mappings
+" --------------------------------------------------------------------------------------------------
+
+autocmd FileType gitv nmap <buffer> l <CR>
+autocmd FileType git setlocal foldlevel=99
+highlight diffAdded guifg=Green
+highlight diffRemoved guifg=Red
+highlight diffFile guifg=Yellow
+
+" --------------------------------------------------------------------------------------------------
 " Ctrl-P Mappings
 " --------------------------------------------------------------------------------------------------
 
