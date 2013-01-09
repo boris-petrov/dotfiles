@@ -252,3 +252,4 @@ export PATH=./node_modules/.bin:/home/boris/.gem/ruby/1.9.1/bin:$PATH
 ulimit -c unlimited
 
 [ -x "$HOME/nvm/nvm.sh" ] && . "$HOME/nvm/nvm.sh"
+[ -x "$HOME/.rvm" ] && PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
