@@ -159,3 +159,9 @@ hi link cssBoxAttr Constant
 hi link cssTextAttr Constant
 hi link cssColorAttr Constant
 hi link cssFontAttr Constant
+
+" Diff
+hi DiffAdd    guibg=Green
+hi DiffDelete guibg=Red
+hi DiffChange guibg=Yellow
+hi DiffText   guibg=Blue
