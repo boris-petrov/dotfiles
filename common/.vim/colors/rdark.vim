@@ -161,7 +161,7 @@ hi link cssColorAttr Constant
 hi link cssFontAttr Constant
 
 " Diff
-hi DiffAdd    guibg=Green
-hi DiffDelete guibg=Red
-hi DiffChange guibg=Yellow
-hi DiffText   guibg=Blue
+hi DiffAdd    guifg=Green  guibg=#0f0f0f
+hi DiffDelete guifg=Red    guibg=#0f0f0f
+hi DiffChange guifg=Yellow guibg=#0f0f0f
+hi DiffText   guifg=Blue   guibg=#0f0f0f
