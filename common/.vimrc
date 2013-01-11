@@ -205,7 +205,7 @@ elseif has('unix')
 	set guifont=DejaVu\ LGC\ Sans\ Mono\ Book\ 14
 	" set guifont=Inconsolata\ 14
 
-	command! Inconsolata set guifont=Inconsolata\ 14
+	command! Inconsolata set guifont=Inconsolata\ 17
 	command! DejaVu      set guifont=DejaVu\ LGC\ Sans\ Mono\ Book\ 14
 endif
 
