@@ -716,8 +716,6 @@ inoremap <C-delete> <C-o>de
 nnoremap <Leader>j J
 
 nnoremap gm zz
-noremap z ^
-noremap Z $
 
 " inoremap ( ()<C-o>h
 " inoremap [ []<C-o>h
