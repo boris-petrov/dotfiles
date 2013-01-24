@@ -652,6 +652,7 @@ highlight diffFile guifg=Yellow
 cab Gs Gstatus
 cab Gc Gcommit
 cab Gd Gdiff
+autocmd FileType gitcommit nmap <buffer> d <CR>:Gd<CR>
 
 " --------------------------------------------------------------------------------------------------
 " Ctrl-P Mappings
