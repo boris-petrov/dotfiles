@@ -222,7 +222,7 @@ autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
 autocmd FileType coffee,ruby,eruby,html      setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType lua                         setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 autocmd BufNewFile,BufReadPost coffee,python setlocal foldmethod=indent nofoldenable
-autocmd FileType ruby,coffee                 setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor
+autocmd FileType ruby,coffee,slim            setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor
 
 autocmd VimEnter * RainbowParenthesesToggle
 autocmd Syntax * RainbowParenthesesLoadRound
