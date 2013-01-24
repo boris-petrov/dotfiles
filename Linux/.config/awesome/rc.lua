@@ -270,7 +270,8 @@ awful.rules.rules = {
       properties = { tag = tags[1][2], switchtotag = true } },
     { rule = { class = "Firefox", instance = "Dialog", name = "Password Required" },
       properties = { switchtotag = false } },
-    { rule = { class = "Plugin-container" }, properties = { floating = true } }, -- Flash player
+    { rule = { class = "Plugin-container" },  properties = { floating = true } }, -- Firefox Flash player
+    { rule = { class = "Exe", name = "exe" }, properties = { floating = true } }, -- Chrome Flash player
     -- { rule = { class = "Firefox", instance = "Dialog" },
     --   callback = move_to_current_tag },
     { rule = { class = "Skype", name = "File Transfers" },
