@@ -164,6 +164,8 @@ elseif has('unix')
 	let g:haddock_browser = "firefox"
 endif
 
+command! -range=% -nargs=0 Space2Tab execute '<line1>,<line2>s#^\( \{'.&ts.'\}\)\+#\=repeat("\t", len(submatch(0))/' . &ts . ')'
+
 " --------------------------------------------------------------------------------------------------
 " Highlight extra whitespace
 " --------------------------------------------------------------------------------------------------
