@@ -48,7 +48,8 @@ beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 terminal         = "urxvt"
 hostile_takeover = "gvim /home/boris/documents/Hostile\\ Takeover.txt"
 
-modkey = "Mod1"
+modkey     = "Mod1"
+win_modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
@@ -247,7 +248,7 @@ clientbuttons = awful.util.table.join(
 )
 
 -- generate and add the 'run or raise' key bindings to the globalkeys table
-globalkeys = awful.util.table.join(globalkeys, ror.genkeys(modkey))
+globalkeys = awful.util.table.join(globalkeys, ror.genkeys(win_modkey))
 
 -- Set keys
 root.keys(globalkeys)
