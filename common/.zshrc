@@ -181,12 +181,12 @@ function urxvt-bindings () {
   bindkey '^[Od' backward-word
 
   # Ctrl+Backspace/Delete to delete whole words
-  bindkey '^[[3^' kill-word
-  bindkey '^H' backward-kill-word
+  # bindkey '^[[3^' kill-word
+  # bindkey '^H' backward-kill-word
 
   # for Home and End
-  bindkey "^[[7~" beginning-of-line
-  bindkey "^[[8~" end-of-line
+  # bindkey "^[[7~" beginning-of-line
+  # bindkey "^[[8~" end-of-line
 
   # for Delete key
   bindkey "^[[3~" delete-char
@@ -196,8 +196,16 @@ function urxvt-bindings () {
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-bindkey -M viins '^[[A' up-line-or-beginning-search
+# bindkey -M viins '^[[A' up-line-or-beginning-search
 bindkey -M viins '^[[B' down-line-or-beginning-search
+bindkey -M viins '^k'   up-line-or-beginning-search
+bindkey -M viins '^h'   backward-kill-word
+bindkey -M viins '^l'   kill-word
+bindkey -M viins '^e'   end-of-line
+bindkey -M viins '^a'   beginning-of-line
+
+bindkey -M viins '\ef'  forward-word  # Alt-f
+bindkey -M viins '\eb'  backward-word # Alt-b
 
 export PATH="/usr/lib/colorgcc/bin:$PATH"
 
