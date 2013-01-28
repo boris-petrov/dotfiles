@@ -31,6 +31,7 @@ bindkey -v # vi-mode
 ##############################
 # Git status in prompt
 ##############################
+
 autoload -Uz promptinit; promptinit
 
 fpath=($HOME/.zdir/functions $fpath)
@@ -93,6 +94,7 @@ alias cd.....='cd ../../../..'
 alias be='bundle exec'
 
 alias mplayer='mplayer -softvol -softvol-max 200'
+alias smplayer='smplayer -softvol -softvol-max 200'
 
 export CC=colorgcc
 export EDITOR=vim
@@ -176,9 +178,23 @@ function xterm-bindings () {
 
 function urxvt-bindings () {
 
+  bindkey -M viins '^[[A' delete-char
+  bindkey -M viins '^?'   delete-char
+  bindkey -M viins '^M'   delete-char
+
+  bindkey -M viins '^[[B' down-line-or-beginning-search
+  bindkey -M viins '^k'   up-line-or-beginning-search
+  bindkey -M viins '^h'   backward-delete-char
+  bindkey -M viins '^l'   delete-char
+  bindkey -M viins '^e'   end-of-line
+  bindkey -M viins '^a'   beginning-of-line
+
+  bindkey -M viins '\ef'  forward-word  # Alt-f
+  bindkey -M viins '\eb'  backward-word # Alt-b
+
   # Ctrl+Left/Right to move by whole words
-  bindkey '^[Oc' forward-word
-  bindkey '^[Od' backward-word
+  # bindkey '^[Oc' forward-word
+  # bindkey '^[Od' backward-word
 
   # Ctrl+Backspace/Delete to delete whole words
   # bindkey '^[[3^' kill-word
@@ -189,23 +205,12 @@ function urxvt-bindings () {
   # bindkey "^[[8~" end-of-line
 
   # for Delete key
-  bindkey "^[[3~" delete-char
+  # bindkey "^[[3~" delete-char
 
 }
 
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-
-# bindkey -M viins '^[[A' up-line-or-beginning-search
-bindkey -M viins '^[[B' down-line-or-beginning-search
-bindkey -M viins '^k'   up-line-or-beginning-search
-bindkey -M viins '^h'   backward-kill-word
-bindkey -M viins '^l'   kill-word
-bindkey -M viins '^e'   end-of-line
-bindkey -M viins '^a'   beginning-of-line
-
-bindkey -M viins '\ef'  forward-word  # Alt-f
-bindkey -M viins '\eb'  backward-word # Alt-b
 
 export PATH="/usr/lib/colorgcc/bin:$PATH"
 
