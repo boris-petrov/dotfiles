@@ -127,8 +127,6 @@ set titlestring=%m%rgVim:\ %F
 set complete=.,w,b,u,k
 set completeopt=menu,preview
 
-set diffopt+=iwhite " ignore whitespace in diff mode
-
 " Persistent undo
 set undofile
 set undodir=~/.vim/undodir
