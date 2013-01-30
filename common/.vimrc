@@ -650,6 +650,7 @@ highlight diffFile guifg=Yellow
 cab Gs Gstatus
 cab Gc Gcommit
 cab Gd Gdiff
+autocmd BufEnter *.git/COMMIT_EDITMSG exe 'normal! gg' | startinsert
 autocmd FileType gitcommit nmap <buffer> d <CR>:Gdiff<CR>
 nmap gs :Gstatus<CR>
 
