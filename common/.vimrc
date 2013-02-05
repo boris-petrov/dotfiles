@@ -651,8 +651,11 @@ cab Gs Gstatus
 cab Gc Gcommit
 cab Gd Gdiff
 autocmd BufEnter *.git/COMMIT_EDITMSG exe 'normal! gg' | startinsert
-autocmd FileType gitcommit nmap <buffer> d <CR>:Gdiff<CR>
-nmap gs :Gstatus<CR>
+autocmd FileType gitcommit nmap <buffer> d <CR>:Gdiff<CR><C-w>hgg
+autocmd FileType gitcommit nmap <buffer> j <C-n>
+autocmd FileType gitcommit nmap <buffer> k <C-p>
+autocmd FileType gitcommit nmap <buffer> l <CR>
+nmap gs :Gstatus<CR><C-n>
 
 " --------------------------------------------------------------------------------------------------
 " Ctrl-P Mappings
