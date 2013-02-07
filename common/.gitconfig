@@ -8,14 +8,14 @@
 [merge]
 	tool = meld
 [alias]
-    co = checkout
-    st = status
+	co = checkout
+	st = status
 	br = branch
 	l = log --graph --decorate --pretty=oneline --abbrev-commit
 [push]
 	default = tracking
 [log]
-    date = iso
+	date = iso
 [format]
 	pretty = %C(blue)%h%C(red) %an %C(green)%ad%C(reset)%d%n%B
 [core]
