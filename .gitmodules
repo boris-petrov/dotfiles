@@ -79,3 +79,6 @@
 [submodule "Linux/.config/awesome/vicious"]
 	path = Linux/.config/awesome/vicious
 	url = http://git.sysphere.org/vicious
+[submodule "Linux/.config/awesome/screenful"]
+	path = Linux/.config/awesome/screenful
+	url = git://github.com/dluksza/screenful.git
