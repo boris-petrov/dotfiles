@@ -67,9 +67,6 @@
 [submodule "common/.vim/bundle/vim-commentary"]
 	path = common/.vim/bundle/vim-commentary
 	url = git://github.com/tpope/vim-commentary.git
-[submodule "Linux/.config/awesome/obvious"]
-	path = Linux/.config/awesome/obvious
-	url = git://git.mercenariesguild.net/obvious.git
 [submodule "common/.vim/bundle/vim-nerdtree-tabs"]
 	path = common/.vim/bundle/vim-nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
@@ -79,3 +76,6 @@
 [submodule "common/.vim/bundle/gitv"]
 	path = common/.vim/bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
+[submodule "Linux/.config/awesome/vicious"]
+	path = Linux/.config/awesome/vicious
+	url = http://git.sysphere.org/vicious

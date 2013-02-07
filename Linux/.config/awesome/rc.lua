@@ -14,7 +14,7 @@ local ror = require("aweror")
 -- remove borders when only a single window is visible
 require("remborders")
 
--- require("obvious.battery")
+local vicious = require("vicious")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -99,6 +99,10 @@ mysystray = wibox.widget.systray()
 kbdwidget = wibox.widget.textbox()
 kbdwidget:set_text(" En ")
 
+-- Battery widget
+batwidget = wibox.widget.textbox()
+vicious.register(batwidget, vicious.widgets.bat, "$2% - $3 |", 61, "BAT0")
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mylayoutbox = {}
@@ -138,8 +142,8 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
+    right_layout:add(batwidget)
     right_layout:add(kbdwidget)
-    -- right_layout:add(obvious.battery())
     if s == 1 then right_layout:add(mysystray) end
     right_layout:add(mytextclock)
 
