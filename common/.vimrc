@@ -650,7 +650,7 @@ highlight diffFile guifg=Yellow
 cab Gs Gstatus
 cab Gc Gcommit
 cab Gd Gdiff
-autocmd BufEnter *.git/COMMIT_EDITMSG exe 'normal! gg' | startinsert
+autocmd BufEnter *.git/COMMIT_EDITMSG exe 'normal! gg' | if getline('.') =~ '^\s*$' | startinsert | endif
 autocmd FileType gitcommit nmap <buffer> d <CR>:Gdiff<CR><C-w>hgg
 autocmd FileType gitcommit nmap <buffer> j <C-n>
 autocmd FileType gitcommit nmap <buffer> k <C-p>
