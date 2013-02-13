@@ -82,3 +82,6 @@
 [submodule "Linux/.config/awesome/screenful"]
 	path = Linux/.config/awesome/screenful
 	url = git://github.com/dluksza/screenful.git
+[submodule "common/.vim/bundle/slim"]
+	path = common/.vim/bundle/slim
+	url = git://github.com/slim-template/vim-slim.git
