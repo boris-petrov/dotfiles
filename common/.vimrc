@@ -655,12 +655,12 @@ autocmd FileType gitcommit nmap <buffer> d <CR>:Gdiff<CR><C-w>hgg
 autocmd FileType gitcommit nmap <buffer> j <C-n>
 autocmd FileType gitcommit nmap <buffer> k <C-p>
 autocmd FileType gitcommit nmap <buffer> l <CR>
-autocmd FileType fugitiveblame nmap <buffer> j j<C-w>lj<C-w>h
-autocmd FileType fugitiveblame nmap <buffer> J J<C-w>lJ<C-w>h
-autocmd FileType fugitiveblame nmap <buffer> k k<C-w>lk<C-w>h
-autocmd FileType fugitiveblame nmap <buffer> K K<C-w>lK<C-w>h
-autocmd FileType fugitiveblame nmap <buffer> gg gg<C-w>lgg<C-w>h
-autocmd FileType fugitiveblame nmap <buffer> G G<C-w>lG<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> j j<C-w>lj<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> J 4j<C-w>l4j<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> k k<C-w>lk<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> K 4k<C-w>l4k<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> gg gg<C-w>lgg<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> G G<C-w>lG<C-w>h
 nmap gs :Gstatus<CR><C-n>
 
 " --------------------------------------------------------------------------------------------------
