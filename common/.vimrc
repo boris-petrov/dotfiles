@@ -456,8 +456,8 @@ endfunction
 " Pasting Options
 " --------------------------------------------------------------------------------------------------
 
-nmap p <Plug>AfterPasta
-nmap P <Plug>BeforePasta
+let g:whitespaste_paste_before_command = "normal \<Plug>BeforePasta"
+let g:whitespaste_paste_after_command  = "normal \<Plug>AfterPasta"
 
 let s:cpo_save=&cpo
 set cpo&vim
