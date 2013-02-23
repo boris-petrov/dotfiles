@@ -7,7 +7,6 @@ setopt ALWAYS_TO_END # If a completion with the cursor in the word was started a
 setopt AUTO_LIST
 unsetopt LIST_AMBIGUOUS # If this option is set completions are shown only if the completions don't have an unambiguous prefix or suffix that could be inserted in the command line.
 setopt AUTO_MENU
-
 setopt APPEND_HISTORY
 unsetopt AUTO_CD # If a command is not in the hash table, and there exists an executable directory by that name, perform the cd command to that directory.
 setopt AUTO_PUSHD # Make cd push the old directory onto the directory stack.
@@ -21,9 +20,8 @@ setopt COMPLETE_ALIASES
 setopt GLOB_DOTS # Do not require a leading . in a filename to be matched explicitly.
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE # Do not enter command lines into the history list if they begin with a blank.
-unsetopt HUP # Send the HUP signal to running jobs when the shell exits.
+setopt HUP # Send the HUP signal to running jobs when the shell exits.
 setopt NOTIFY # Report the status of background jobs immediately, rather than waiting until just before printing a prompt.
-
 setopt PROMPT_SUBST # Enable substitutions of functions in prompt
 
 bindkey -v # vi-mode
@@ -98,7 +96,6 @@ alias smplayer='smplayer -softvol -softvol-max 200'
 
 export CC=colorgcc
 export EDITOR=vim
-export NODE_PATH=/usr/local/lib/node_modules
 
 # Extract Stuff
 extract () {
@@ -165,7 +162,7 @@ function xterm-bindings () {
 
   # Ctrl+Backspace/Delete to delete whole words
   bindkey '\e[3;5~' kill-word
-  bindkey '\C-_' backward-kill-word
+  bindkey '\C-_'    backward-kill-word
 
   # for Home and End
   bindkey "\e[H" beginning-of-line
@@ -212,8 +209,6 @@ function urxvt-bindings () {
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-export PATH="/usr/lib/colorgcc/bin:$PATH"
-
 compdef -d git
 
 if [ `uname -s` = "Linux" ]; then
@@ -238,6 +233,8 @@ if [ `uname -s` = "Linux" ]; then
 
   source ssh-agent.zsh
 
+  alias vi=vim
+
 elif [ `uname -o` = "Cygwin" ]; then
 
   xterm-bindings
@@ -258,11 +255,20 @@ elif [ `uname -o` = "Cygwin" ]; then
   alias gvim=vim
 fi
 
-export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
-export LD_LIBRARY_PATH=.:/usr/local/lib:/opt/java/jre/lib/i386:/opt/java/jre/lib/i386/client
-export PATH=./node_modules/.bin:/home/boris/.gem/ruby/1.9.1/bin:$PATH
+export LD_LIBRARY_PATH=.:/usr/local/lib:$LD_LIBRARY_PATH
 
 ulimit -c unlimited
 
+##############################
+# nodejs and ruby specific stuff
+##############################
+
+export PATH=./node_modules/.bin:$HOME/.gem/ruby/1.9.1/bin:$PATH
+export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
+
 [ -x "$HOME/nvm/nvm.sh" ] && . "$HOME/nvm/nvm.sh"
-[ -x "$HOME/.rvm" ] && PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+if [ -x "$HOME/.rbenv/bin/rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
