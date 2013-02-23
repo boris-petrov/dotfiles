@@ -82,8 +82,8 @@ set wrap " line wrapping
 set linebreak " does not wrap in the middle of the word
 set showbreak=+>
 
-set errorbells " I like the bell
-set novisualbell " but not the visuals!
+set noerrorbells " No bells
+set novisualbell " No visuals
 
 " set virtualedit=onemore
 
@@ -217,10 +217,10 @@ autocmd FileType help setlocal nonumber " no line numbers when viewing help
 autocmd FileType help nmap <buffer> <CR> <C-]>
 autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
 
-autocmd FileType coffee,ruby,eruby,html      setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd FileType lua                         setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-autocmd BufNewFile,BufReadPost coffee,python setlocal foldmethod=indent nofoldenable
-autocmd FileType ruby,coffee,slim            setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor
+autocmd FileType coffee,ruby,eruby,html,zsh,sh setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType lua                           setlocal expandtab
+autocmd FileType coffee,python,slim            setlocal foldmethod=indent nofoldenable
+autocmd FileType ruby,coffee,slim              setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor
 
 autocmd VimEnter * RainbowParenthesesToggle
 autocmd Syntax * RainbowParenthesesLoadRound
@@ -243,9 +243,6 @@ autocmd FileType haskell compiler ghc
 
 " Saves txt and hs files after leaving insert mode if there were any changes
 " autocmd InsertLeave *.{txt,hs} :up
-
-" autocmd BufLeave *.hs execute "mksession!"
-" autocmd BufEnter *.hs execute "so Session.vim"
 
 " --------------------------------------------------------------------------------------------------
 " Tabularize
@@ -341,6 +338,9 @@ let g:pasta_enabled_filetypes = []
 set sessionoptions=buffers,curdir,globals,localoptions,tabpages
 map <F9> :source Session.vim<CR>
 map <F6> :mksession!<CR>
+
+" autocmd BufLeave *.hs execute "mksession!"
+" autocmd BufEnter *.hs execute "so Session.vim"
 
 " --------------------------------------------------------------------------------------------------
 " Visual Search
@@ -461,6 +461,7 @@ let g:whitespaste_paste_after_command  = "normal \<Plug>AfterPasta"
 
 let s:cpo_save=&cpo
 set cpo&vim
+
 "------------------------------------------------------------------------
 " I haven't found how to hide this function (yet)
 function! RestoreRegister()
