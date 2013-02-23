@@ -36,4 +36,4 @@ imap -builtin <C-v> <C-v><C-v>
 nmap <C-d> :q<RETURN>
 
 nmap -builtin <ESC> <C-c>:noh<RETURN>
-nmap w :tabopen wikipedia
+nmap w :tabopen wikipedia 
