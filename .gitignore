@@ -1,6 +1,4 @@
-Linux/.config/autokey/autokey.pid
-Linux/.config/autokey/autokey.log
-Linux/.config/awesome/themes
+Linux/.config/*
 Linux/.purple
 common/.vim/.netrwhist
 common/.vim/undodir
