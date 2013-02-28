@@ -91,8 +91,8 @@ alias cd.....='cd ../../../..'
 
 alias be='bundle exec'
 
-alias mplayer='mplayer -softvol -softvol-max 200'
-alias smplayer='smplayer -softvol -softvol-max 200'
+alias mplayer='mplayer -softvol -softvol-max 400'
+alias smplayer='smplayer -softvol -softvol-max 400'
 
 export CC=colorgcc
 export EDITOR=vim
