@@ -226,7 +226,7 @@ autocmd VimEnter * RainbowParenthesesToggle
 autocmd Syntax * RainbowParenthesesLoadRound
 autocmd Syntax * RainbowParenthesesLoadSquare
 autocmd Syntax * RainbowParenthesesLoadBraces
-autocmd Syntax * RainbowParenthesesLoadChevrons
+autocmd FileType cpp RainbowParenthesesLoadChevrons
 
 runtime macros/matchit.vim " smarter matching with % (ifs, elses...)
 
