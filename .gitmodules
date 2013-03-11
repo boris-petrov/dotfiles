@@ -88,3 +88,6 @@
 [submodule "common/.vim/bundle/whitespaste"]
 	path = common/.vim/bundle/whitespaste
 	url = git://github.com/AndrewRadev/whitespaste.vim.git
+[submodule "common/.vim/bundle/vim-clojure-static"]
+	path = common/.vim/bundle/vim-clojure-static
+	url = git://github.com/guns/vim-clojure-static.git
