@@ -96,6 +96,9 @@ end
 -- {{{ Wibox
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
+-- Calendar widget to attach to the textclock
+local calendar2 = require('calendar2')
+calendar2.addCalendarToWidget(mytextclock)
 
 -- Create a systray
 mysystray = wibox.widget.systray()
