@@ -14,6 +14,8 @@ local ror = require("aweror")
 -- remove borders when only a single window is visible
 require("remborders")
 
+require("utils")
+
 local vicious = require("vicious")
 
 require("awful.remote")
@@ -103,8 +105,12 @@ kbdwidget = wibox.widget.textbox()
 kbdwidget:set_text(" En ")
 
 -- Battery widget
-batwidget = wibox.widget.textbox()
-vicious.register(batwidget, vicious.widgets.bat, "$2% - $3 |", 61, "BAT0")
+if directoryExists('/sys/class/power_supply/BAT0') then
+    batwidget = wibox.widget.textbox()
+    vicious.register(batwidget, vicious.widgets.bat, "$2% - $3 |", 61, "BAT0")
+else
+    batwidget = nil
+end
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -145,7 +151,7 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
-    right_layout:add(batwidget)
+    if batwidget ~= nil then right_layout:add(batwidget) end
     right_layout:add(kbdwidget)
     if s == 1 then right_layout:add(mysystray) end
     right_layout:add(mytextclock)
