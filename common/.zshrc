@@ -176,8 +176,6 @@ function xterm-bindings () {
 function urxvt-bindings () {
 
   bindkey -M viins '^[[A' delete-char
-  bindkey -M viins '^?'   delete-char
-  bindkey -M viins '^M'   delete-char
 
   bindkey -M viins '^[[B' down-line-or-beginning-search
   bindkey -M viins '^k'   up-line-or-beginning-search
@@ -186,7 +184,7 @@ function urxvt-bindings () {
   bindkey -M viins '^e'   end-of-line
   bindkey -M viins '^a'   beginning-of-line
 
-  bindkey -M viins '\ef'  forward-word  # Alt-f
+  bindkey -M viins '\en'  forward-word  # Alt-n
   bindkey -M viins '\eb'  backward-word # Alt-b
 
   # Ctrl+Left/Right to move by whole words
