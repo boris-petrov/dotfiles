@@ -5,6 +5,7 @@ launchy &
 thunderbird &
 dropboxd &
 turpial &
+liferea &
 
 ~/bin/fix_screens
 
