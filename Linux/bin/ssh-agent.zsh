@@ -7,14 +7,18 @@ function start_agent {
   /usr/bin/env ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
   chmod 600 ${SSH_ENV}
   . ${SSH_ENV} > /dev/null
-  ssh-add -t 3600
+  ssh-add -t 7200
 }
 
 # Source SSH settings, if applicable
 
 if [ -f "${SSH_ENV}" ]; then
   . ${SSH_ENV} > /dev/null
-  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+  ps ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+    start_agent
+  }
+  ssh-add -l > /dev/null || {
+    kill ${SSH_AGENT_PID}
     start_agent
   }
 else
