@@ -286,7 +286,7 @@ awful.rules.rules = {
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][2], switchtotag = true } },
     { rule = { class = "Firefox", instance = "Dialog", name = "Password Required" },
-      properties = { switchtotag = false } },
+      properties = { tag = tags[1][2], switchtotag = false } },
     { rule = { class = "Plugin-container" },  properties = { floating = true } }, -- Firefox Flash player
     { rule = { class = "Exe", name = "exe" }, properties = { floating = true } }, -- Chrome Flash player
     -- { rule = { class = "Firefox", instance = "Dialog" },
