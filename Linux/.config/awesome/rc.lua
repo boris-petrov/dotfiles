@@ -299,6 +299,42 @@ awful.rules.rules = {
           -- just specifying "tag = ..." doesn't work on multiple monitors
           awful.client.movetotag(tags[1][4], c)
       end },
+    { rule = { class = "Pidgin", role = "buddy_list" },
+        properties = { switchtotag = true, floating = true, focus = true,
+                       maximized_vertical = true, maximized_horizontal = false },
+        callback = function (c)
+            local cl_width = 250  -- width of buddy list window
+            local def_left = true -- default placement. note: you have to restart
+                                  -- pidgin for changes to take effect
+
+            local scr_area = screen[c.screen].workarea
+            local cl_strut = c:struts()
+            local geometry = nil
+
+            -- adjust scr_area for this client's struts
+            if cl_strut ~= nil then
+                if cl_strut.left ~= nil and cl_strut.left > 0 then
+                    geometry = { x = scr_area.x - cl_strut.left, y = scr_area.y,
+                                 width = cl_strut.left }
+                elseif cl_strut.right ~= nil and cl_strut.right > 0 then
+                    geometry = { x = scr_area.x + scr_area.width, y = scr_area.y,
+                                 width = cl_strut.right }
+                end
+            end
+            -- scr_area is unaffected, so we can use the naive coordinates
+            if geometry == nil then
+                if def_left then
+                    c:struts({ left = cl_width, right = 0 })
+                    geometry = { x= scr_area.x, y = scr_area.y,
+                                 width = cl_width }
+                else
+                    c:struts({ right = cl_width, left = 0 })
+                    geometry = { x = scr_area.x + scr_area.width - cl_width, y = scr_area.y,
+                                 width = cl_width }
+                end
+            end
+            c:geometry(geometry)
+        end },
     { rule = { class = "Deadbeef" },
       properties = { tag = tags[1][7] } },
     { rule = { class = "Thunderbird" },
