@@ -207,8 +207,6 @@ function urxvt-bindings () {
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-compdef -d git
-
 if [ `uname -s` = "Linux" ]; then
   # the next ones work with urxvt
 
