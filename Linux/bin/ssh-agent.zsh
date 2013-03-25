@@ -3,10 +3,13 @@
 
 SSH_ENV=$HOME/.ssh/environment
 
-function start_agent {
+function start-agent {
   /usr/bin/env ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
   chmod 600 ${SSH_ENV}
   . ${SSH_ENV} > /dev/null
+}
+
+function add-key {
   ssh-add -t 7200
 }
 
@@ -15,12 +18,14 @@ function start_agent {
 if [ -f "${SSH_ENV}" ]; then
   . ${SSH_ENV} > /dev/null
   ps ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-    start_agent
+    start-agent
+    add-key
   }
   ssh-add -l > /dev/null || {
-    kill ${SSH_AGENT_PID}
-    start_agent
+    add-key
   }
 else
-  start_agent
+  killall ssh-agent
+  start-agent
+  add-key
 fi
