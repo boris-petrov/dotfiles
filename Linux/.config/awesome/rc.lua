@@ -345,6 +345,8 @@ awful.rules.rules = {
       properties = { tag = tags[1][9] } },
     { rule = { class = "Deluge", name = "Add Torrents" },
       callback = move_to_current_tag },
+    { rule = { class = "Flareget" },
+      properties = { tag = tags[1][9] } },
     { rule = { class = "Luakit" },
       properties = { floating = true } },
     { rule = { class = "Gvim" },
