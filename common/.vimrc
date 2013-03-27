@@ -217,10 +217,10 @@ autocmd FileType help setlocal nonumber " no line numbers when viewing help
 autocmd FileType help nmap <buffer> <CR> <C-]>
 autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
 
-autocmd FileType coffee,ruby,eruby,html,zsh,sh setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType cpp,java                      setlocal noexpandtab
-autocmd FileType coffee,python,slim            setlocal foldmethod=indent nofoldenable
-autocmd FileType ruby,coffee,slim              setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor
+autocmd FileType coffee,ruby,eruby,html,zsh,sh,yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType cpp,java,vim                       setlocal noexpandtab
+autocmd FileType coffee,python,slim                 setlocal foldmethod=indent nofoldenable
+autocmd FileType ruby,coffee,slim,eco               setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor
 
 autocmd VimEnter * RainbowParenthesesToggle
 autocmd Syntax * RainbowParenthesesLoadRound
