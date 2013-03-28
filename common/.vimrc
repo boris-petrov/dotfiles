@@ -689,6 +689,8 @@ cab q1 q!
 " Misc Mappings
 " --------------------------------------------------------------------------------------------------
 
+nnoremap - :Switch<CR>
+
 nmap U <NOP>
 
 " Always move through visual lines in normal mode:

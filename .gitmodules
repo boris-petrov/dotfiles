@@ -91,3 +91,6 @@
 [submodule "common/.vim/bundle/vim-clojure-static"]
 	path = common/.vim/bundle/vim-clojure-static
 	url = git://github.com/guns/vim-clojure-static.git
+[submodule "common/.vim/bundle/switch"]
+	path = common/.vim/bundle/switch
+	url = git://github.com/AndrewRadev/switch.vim.git
