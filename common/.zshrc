@@ -1,5 +1,6 @@
 autoload -U compinit colors select-word-style
-compinit
+
+compinit -d /tmp/dumpfile
 colors
 select-word-style bash
 
