@@ -37,3 +37,5 @@ nmap <C-d> :q<RETURN>
 
 nmap -builtin <ESC> <C-c>:noh<RETURN>
 nmap w :tabopen wikipedia 
+
+nmap b :bmarks<RETURN>
