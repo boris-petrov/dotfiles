@@ -228,9 +228,14 @@ if [ `uname -s` = "Linux" ]; then
   chpwd_functions=(dir_in_title)
   settitle $PWD
 
-  source ssh-agent.zsh
-
   alias vi=vim
+
+  hook_function() {
+    [[ $3 = git* ]] && source ssh-agent.zsh
+    [[ $3 = ssh* ]] && source ssh-agent.zsh
+  }
+
+  add-zsh-hook preexec hook_function
 
 elif [ `uname -o` = "Cygwin" ]; then
 
