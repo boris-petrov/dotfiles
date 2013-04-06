@@ -652,10 +652,10 @@ cab Gs Gstatus
 cab Gc Gcommit
 cab Gd Gdiff
 autocmd BufEnter *.git/COMMIT_EDITMSG exe 'normal! gg' | if getline('.') =~ '^\s*$' | startinsert | endif
-autocmd FileType gitcommit nmap <buffer> d <CR>:Gdiff<CR><C-w>hgg
-autocmd FileType gitcommit nmap <buffer> j <C-n>
-autocmd FileType gitcommit nmap <buffer> k <C-p>
-autocmd FileType gitcommit nmap <buffer> l <CR>
+autocmd BufEnter *.git/index nmap <buffer> d <CR>:Gdiff<CR><C-w>hgg
+autocmd BufEnter *.git/index nmap <buffer> j <C-n>
+autocmd BufEnter *.git/index nmap <buffer> k <C-p>
+autocmd BufEnter *.git/index nmap <buffer> l <CR>
 autocmd FileType fugitiveblame nnoremap <buffer> j j<C-w>lj<C-w>h
 autocmd FileType fugitiveblame nnoremap <buffer> J 4j<C-w>l4j<C-w>h
 autocmd FileType fugitiveblame nnoremap <buffer> k k<C-w>lk<C-w>h
