@@ -1,3 +1,6 @@
+gtk-enable-mnemonics=0
+gtk-enable-accels=0
+
 include "/usr/share/themes/Raleigh/gtk-2.0/gtkrc"
 
 style "vimfix" {
