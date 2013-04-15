@@ -82,36 +82,18 @@ hi Comment guifg=#9933CC gui=italic
 " TODO: the constant's color is very much the same as the normal text's
 hi Constant guifg=#339999
 " hi Number guifg=#8ae234
-hi Statement guifg=#729fcf gui=none
+hi Statement guifg=#FF6600 gui=none
 hi Identifier guifg=#FFCC00
-hi PreProc guifg=#fcaf3e
+hi PreProc guifg=White
 hi Function guifg=#fcaf3e
 hi Type guifg=Red gui=none
 hi Keyword guifg=#eeeeec
-hi Special guifg=#888a85
+hi Special guifg=Green
+hi SpecialChar guifg=#729fcf
 hi Error guifg=#eeeeec guibg=#cc0000
 hi Structure guifg=#AAFFFF
 hi Include guifg=#AAFFFF
 hi String guifg=#66FF00
-
-" PHP
-hi phpRegionDelimiter guifg=#ad7fa8
-hi phpPropertySelector guifg=#888a85
-hi phpPropertySelectorInString guifg=#888a85
-hi phpOperator guifg=#888a85
-hi phpArrayPair guifg=#888a85
-hi phpAssignByRef guifg=#888a85
-hi phpRelation guifg=#888a85
-hi phpMemberSelector guifg=#888a85
-hi phpUnknownSelector guifg=#888a85
-hi phpVarSelector guifg=#babdb6
-hi phpSemicolon guifg=#888a85 gui=none
-hi phpFunctions guifg=#d3d7cf
-hi phpParent guifg=#888a85
-
-" JavaScript
-hi javaScriptBraces guifg=#888a85
-hi javaScriptOperator guifg=#888a85
 
 " HTML
 hi htmlTag guifg=#888a85
