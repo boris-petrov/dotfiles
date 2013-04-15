@@ -327,6 +327,10 @@ autocmd FileType coffee nmap <buffer> dd <Plug>CoffeeToolsDeleteAndDedent
 autocmd FileType coffee xmap <buffer> d  <Plug>CoffeeToolsDeleteAndDedent
 autocmd FileType coffee xmap <buffer> x  <Plug>CoffeeToolsDeleteAndDedent
 
+autocmd FileType coffee hi! link Keyword   Statement
+autocmd FileType coffee hi! link Structure Type
+autocmd FileType coffee hi! def link coffeeObjAssign Special
+
 let g:coffee_tools_function_text_object = 1
 
 let g:pasta_enabled_filetypes = []
