@@ -94,3 +94,6 @@
 [submodule "common/.vim/bundle/switch"]
 	path = common/.vim/bundle/switch
 	url = git://github.com/AndrewRadev/switch.vim.git
+[submodule "common/.vim/bundle/syntastic"]
+	path = common/.vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
