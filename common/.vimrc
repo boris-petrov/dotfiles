@@ -172,7 +172,14 @@ highlight ExtraWhitespace guibg=red
 autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
 " --------------------------------------------------------------------------------------------------
-" commentary Mappings
+" syntastic settings
+" --------------------------------------------------------------------------------------------------
+
+let g:syntastic_enable_balloons = 0
+let g:syntastic_auto_loc_list = 1
+
+" --------------------------------------------------------------------------------------------------
+" commentary mappings
 " --------------------------------------------------------------------------------------------------
 
 nmap gcc <Plug>CommentaryLine
@@ -182,7 +189,7 @@ xmap gc  <Plug>Commentary
 autocmd FileType cpp set commentstring=//\ %s
 
 " --------------------------------------------------------------------------------------------------
-" Leader Variables
+" leader variables
 " --------------------------------------------------------------------------------------------------
 
 let mapleader = ","
@@ -210,7 +217,7 @@ elseif has('unix')
 endif
 
 " --------------------------------------------------------------------------------------------------
-" Autocommands
+" autocommands
 " --------------------------------------------------------------------------------------------------
 
 autocmd FileType help setlocal nonumber " no line numbers when viewing help
@@ -334,6 +341,8 @@ autocmd FileType coffee hi! def link coffeeObjAssign Special
 let g:coffee_tools_function_text_object = 1
 
 let g:pasta_enabled_filetypes = []
+
+let g:syntastic_coffee_checkers = ['iced']
 
 " --------------------------------------------------------------------------------------------------
 " Session Options and Mappings
