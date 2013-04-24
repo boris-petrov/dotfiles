@@ -1,13 +1,12 @@
 set runtimepath=~/.pentadactyl
 
+set autocomplete=
 set complete=bhs
 set findcase=ignore
-set novisualbell
+set guioptions+=M
 set hlfind
-set autocomplete=
 set newtab=all
 set wildcase=.?:ignore
-set guioptions+=M
 set wildmode=
 
 javascript dactyl.beep = function() { return false; }
@@ -18,6 +17,22 @@ nmap -builtin J 15j
 nmap -builtin K 15k
 nmap -builtin j 5j
 nmap -builtin k 5k
+
+"" swap p/P
+nmap -builtin p P
+nmap -builtin P p
+
+"" U list closed tabs
+nmap -builtin U :undo<Space>
+
+"" open addons manager
+nmap -builtin ,a :dialog addons<CR>
+
+"" private mode
+nmap -builtin ,p :set private!<CR>
+
+"" about:config
+nmap -builtin ,c :tabopen about:config<CR>
 
 nmap h gT
 nmap l gt
@@ -30,10 +45,7 @@ nmap <BS> <C-o>
 nmap -builtin <C-c> <C-v><C-c>
 imap -builtin <C-v> <C-v><C-v>
 
-" TODO: how?!
-" cmap <RETURN> <TAB><RETURN>
-
-nmap <C-d> :q<RETURN>
+cmap -builtin <TAB> <TAB><RETURN>
 
 nmap -builtin <ESC> <C-c>:noh<RETURN>
 nmap w :tabopen wikipedia 
