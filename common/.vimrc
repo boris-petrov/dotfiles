@@ -178,6 +178,7 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 let g:syntastic_enable_balloons = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_cpp_checkers=[]
+let g:syntastic_java_checkers=[]
 
 " --------------------------------------------------------------------------------------------------
 " commentary mappings
