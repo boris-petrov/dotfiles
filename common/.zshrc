@@ -95,6 +95,9 @@ alias be='bundle exec'
 alias mplayer='mplayer -softvol -softvol-max 400'
 alias smplayer='smplayer -softvol -softvol-max 400'
 
+alias reboot='sudo systemctl reboot'
+alias halt='sudo systemctl poweroff'
+
 export CC=colorgcc
 export EDITOR=vim
 
