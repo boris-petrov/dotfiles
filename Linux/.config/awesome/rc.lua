@@ -9,8 +9,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
--- load the 'run or raise' function
-local ror = require("aweror")
 -- remove borders when only a single window is visible
 require("remborders")
 
@@ -278,7 +276,20 @@ clientbuttons = awful.util.table.join(
 )
 
 -- generate and add the 'run or raise' key bindings to the globalkeys table
-globalkeys = awful.util.table.join(globalkeys, ror.genkeys(win_modkey))
+
+local ror = function(klass, key, program)
+    return awful.key({ win_modkey }, key, function()
+        awful.client.run_or_raise(program, function(c)
+            return awful.rules.match(c, { class = klass })
+        end)
+    end)
+end
+
+globalkeys = awful.util.table.join(globalkeys,
+    ror("Firefox",  "f", "firefox"),
+    ror("Deadbeef", "w", "deadbeef"),
+    ror("Deluge",   "b", "deluge")
+)
 
 -- Set keys
 root.keys(globalkeys)
