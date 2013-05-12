@@ -21,7 +21,15 @@ local vicious = require("vicious")
 require("awful.remote")
 require("screenful/screenful")
 
+focus_client = function(c)
+    -- This will also un-minimize
+    -- the client, if needed
+    client.focus = c
+    c:raise()
+end
+
 -- {{{ Error handling
+
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
@@ -44,9 +52,11 @@ do
         in_error = false
     end)
 end
+
 -- }}}
 
 -- {{{ Variable definitions
+
 -- Themes define colours, icons, and wallpapers
 beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 
@@ -72,16 +82,20 @@ layouts =
     -- awful.layout.suit.max.fullscreen,
     -- awful.layout.suit.magnifier
 }
+
 -- }}}
 
 -- {{{ Wallpaper
+
 beautiful.wallpaper = awful.util.getdir("config") .. "/themes/wallpaper.jpg"
 for s = 1, screen.count() do
     gears.wallpaper.centered(beautiful.wallpaper, s)
 end
+
 -- }}}
 
 -- {{{ Tags
+
 -- Define a tag table which hold all screen tags.
 tags = {
     layouts = { layouts[4], layouts[4], layouts[4], layouts[3], layouts[2],
@@ -91,9 +105,11 @@ tags = {
 for s = 1, screen.count() do
     tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, tags.layouts)
 end
+
 -- }}}
 
 -- {{{ Wibox
+
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
 -- Calendar widget to attach to the textclock
@@ -124,12 +140,8 @@ mytaglist.buttons = awful.util.table.join(
                     )
 mytasklist = {}
 mytasklist.buttons = awful.util.table.join(
-                     awful.button({}, 1, function(c)
-                                              -- This will also un-minimize
-                                              -- the client, if needed
-                                              client.focus = c
-                                              c:raise()
-                                          end))
+                        awful.button({}, 1, focus_client)
+                     )
 
 for s = 1, screen.count() do
     -- Create an imagebox widget which will contains an icon indicating which layout we're using.
@@ -167,9 +179,11 @@ for s = 1, screen.count() do
 
     mywibox[s]:set_widget(layout)
 end
+
 -- }}}
 
 -- {{{ Key bindings
+
 globalkeys = awful.util.table.join(
     awful.key({ alt_modkey }, "l", function() awful.util.spawn("xlock -mode blank") end),
 
@@ -177,7 +191,7 @@ globalkeys = awful.util.table.join(
 
     awful.key({ alt_modkey }, "j",
         function()
-            awful.client.focus.byidx( 1)
+            awful.client.focus.byidx(1)
             if client.focus then client.focus:raise() end
         end),
     awful.key({ alt_modkey }, "k",
@@ -258,7 +272,7 @@ for i = 1, keynumber do
 end
 
 clientbuttons = awful.util.table.join(
-    awful.button({ },            1, function(c) client.focus = c; c:raise() end),
+    awful.button({ },            1, focus_client),
     awful.button({ alt_modkey }, 1, awful.mouse.client.move),
     awful.button({ alt_modkey }, 3, awful.mouse.client.resize)
 )
@@ -268,6 +282,7 @@ globalkeys = awful.util.table.join(globalkeys, ror.genkeys(win_modkey))
 
 -- Set keys
 root.keys(globalkeys)
+
 -- }}}
 
 move_to_current_tag = function(c)
@@ -275,6 +290,7 @@ move_to_current_tag = function(c)
 end
 
 -- {{{ Rules
+
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
@@ -300,7 +316,7 @@ awful.rules.rules = {
           awful.client.movetotag(tags[1][4], c)
       end },
     { rule = { class = "Pidgin", role = "buddy_list" },
-        properties = { switchtotag = true, floating = true, focus = true,
+        properties = { tag = tags[1][4], switchtotag = true, floating = true, focus = true,
                        maximized_vertical = true, maximized_horizontal = false },
         callback = function (c)
             local cl_width = 250  -- width of buddy list window
@@ -354,21 +370,18 @@ awful.rules.rules = {
     { rule = { class = "URxvt" },
       properties = { size_hints_honor = false } }
 }
+
 -- }}}
 
 -- {{{ Signals
--- Signal function to execute when a new client appears.
-client.connect_signal("manage", function(c, startup)
-    if not startup then
-        -- Set the windows at the slave,
-        -- i.e. put it at the end of others instead of setting it master.
-        -- awful.client.setslave(c)
 
-        -- Put windows in a smart way, only if they does not set an initial position.
-        if not c.size_hints.user_position and not c.size_hints.program_position then
-            awful.placement.no_overlap(c)
-            awful.placement.no_offscreen(c)
-        end
+-- Put windows in a smart way, only if they do not set an initial position.
+client.connect_signal("manage", function(c, startup)
+    if not startup and not c.size_hints.user_position and
+        not c.size_hints.program_position then
+
+        awful.placement.no_overlap(c)
+        awful.placement.no_offscreen(c)
     end
 end)
 
