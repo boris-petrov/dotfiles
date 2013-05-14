@@ -221,14 +221,11 @@ globalkeys = awful.util.table.join(
 )
 
 clientkeys = awful.util.table.join(
-    awful.key({ alt_modkey,                    }, "f",      function(c) c.fullscreen = not c.fullscreen  end),
-    awful.key({ alt_modkey,                    }, "q",      function(c) c:kill()                         end),
-    awful.key({ alt_modkey, "Control", "Shift" }, "f",      awful.client.floating.toggle                     ),
-    awful.key({ alt_modkey, "Control", "Shift" }, "Return", function(c) c:swap(awful.client.getmaster()) end),
-    awful.key({ alt_modkey,                    }, "o",      awful.client.movetoscreen                        ),
-    -- awful.key({ alt_modkey, "Shift"            }, "r",      function(c) c:redraw()                       end),
-    awful.key({ alt_modkey,                    }, "a",      function(c) c.minimized = true               end),
-    awful.key({ alt_modkey,                    }, "s",
+    awful.key({ alt_modkey }, "f", function(c) c.fullscreen = not c.fullscreen  end),
+    awful.key({ alt_modkey }, "q", function(c) c:kill()                         end),
+    awful.key({ alt_modkey }, "o", awful.client.movetoscreen                       ),
+    awful.key({ alt_modkey }, "a", function(c) c.minimized = true               end),
+    awful.key({ alt_modkey }, "s",
         function(c)
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
@@ -259,12 +256,6 @@ for i = 1, keynumber do
                           tag = tags[client.focus.screen][i]
                           awful.client.movetotag(tag)
                           awful.tag.viewonly(tag)
-                      end
-                  end),
-        awful.key({ alt_modkey, "Control", "Shift" }, "#" .. i + 9,
-                  function()
-                      if client.focus and tags[client.focus.screen][i] then
-                          awful.client.toggletag(tags[client.focus.screen][i])
                       end
                   end))
 end
