@@ -49,9 +49,6 @@
 [submodule "common/.vim/bundle/delimitMate"]
 	path = common/.vim/bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate
-[submodule "common/.vim/bundle/snipmate.vim"]
-	path = common/.vim/bundle/snipmate.vim
-	url = git://github.com/msanders/snipmate.vim
 [submodule "common/.vim/bundle/vim-endwise"]
 	path = common/.vim/bundle/vim-endwise
 	url = git://github.com/tpope/vim-endwise
@@ -97,3 +94,15 @@
 [submodule "common/.vim/bundle/syntastic"]
 	path = common/.vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "common/.vim/bundle/snipmate"]
+	path = common/.vim/bundle/snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule "common/.vim/bundle/vim-addon-mw-utils"]
+	path = common/.vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "common/.vim/bundle/vim-snippets"]
+	path = common/.vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "common/.vim/bundle/tlib_vim"]
+	path = common/.vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
