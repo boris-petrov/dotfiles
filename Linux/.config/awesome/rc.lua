@@ -185,6 +185,8 @@ end
 globalkeys = awful.util.table.join(
     awful.key({ alt_modkey }, "l", function() awful.util.spawn("xlock -mode blank") end),
 
+    awful.key({ },            "Print", function() awful.util.spawn("scrot -e 'mv $f ~ 2>/dev/null'") end),
+
     awful.key({ alt_modkey }, "`", awful.tag.history.restore),
 
     awful.key({ alt_modkey }, "j",
