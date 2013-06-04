@@ -139,7 +139,7 @@ set display=lastline " Show as much of the last line as possible and not these c
 
 set formatoptions-=o " Stop continuing the comments on pressing o and O
 
-set grepprg=grep\ -I\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude=tags
+set grepprg=pcregrep\ -I\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude=tags
 
 set spell
 set spelllang=en
@@ -425,31 +425,27 @@ nmap <silent> gr :call <SID>ToggleList("Quickfix List", 'c')<CR>
 command! -count=0 -nargs=* Grep call s:Grep(<count>, <q-args>)
 
 function! s:Grep(count, args)
-	if a:count > 0
-		" then we've selected something in visual mode
-		let search_text = s:LastSelectedText()
-	elseif empty(a:args)
-		" If no pattern is provided, search for the word under the cursor
-		let search_text = expand("<cword>")
-	else
-		let search_text = a:args
-	end
+	try
+		if a:count > 0
+			" then we've selected something in visual mode
+			let query = s:LastSelectedText()
+			if a:count > 1
+				" Then it's multiline, we need some magic
+				setlocal grepprg+=\ -M
+				let query = substitute(query, "\n", '.*?\\n.*?', 'g')
+			endif
+		elseif empty(a:args)
+			" If no pattern is provided, search for the word under the cursor
+			let query = expand("<cword>")
+		else
+			let query = a:args
+		end
 
-	if has('unix')
-		let search_text = escape(search_text, '"#%')
-	else
-		" TODO: escape quotes using CMD's stupid style
-	end
+		exe 'grep -r '.shellescape(query).' .'
 
-	if a:count > 0
-		let query = '"' . search_text . '"'
-	elseif empty(a:args)
-		let query = '-w "' . search_text . '"'
-	else
-		let query = '"' . search_text . '"'
-	end
-
-	exe 'grep -r ' . query . ' .'
+	finally
+		setlocal grepprg-=\ -M
+	endtry
 endfunction
 
 function! s:LastSelectedText()
