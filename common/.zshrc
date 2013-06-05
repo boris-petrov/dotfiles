@@ -267,7 +267,7 @@ ulimit -c unlimited
 # nodejs and ruby specific stuff
 ##############################
 
-export PATH=./node_modules/.bin:$HOME/.gem/ruby/1.9.1/bin:$PATH
+export PATH=$HOME/bin:./node_modules/.bin:$HOME/.gem/ruby/1.9.1/bin:$PATH
 export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
 
 [ -x "$HOME/nvm/nvm.sh" ] && . "$HOME/nvm/nvm.sh"
