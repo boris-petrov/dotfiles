@@ -96,6 +96,7 @@ alias mplayer='mplayer -softvol -softvol-max 400'
 alias smplayer='smplayer -softvol -softvol-max 400'
 
 alias reboot='sudo systemctl reboot'
+alias suspend='systemctl suspend'
 alias halt='sudo systemctl poweroff'
 
 export CC=colorgcc
