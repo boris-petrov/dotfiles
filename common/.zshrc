@@ -95,6 +95,8 @@ alias be='bundle exec'
 alias mplayer='mplayer -softvol -softvol-max 400'
 alias smplayer='smplayer -softvol -softvol-max 400'
 
+alias feh='feh -.'
+
 alias reboot='sudo systemctl reboot'
 alias suspend='systemctl suspend'
 alias halt='sudo systemctl poweroff'
