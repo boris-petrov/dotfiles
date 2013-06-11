@@ -774,6 +774,7 @@ nnoremap <S-CR> O<ESC>
 
 " Do not overwrite my register!
 nnoremap x "_x
+nnoremap s "_s
 
 nnoremap Q @q
 
