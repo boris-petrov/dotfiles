@@ -139,7 +139,7 @@ set display=lastline " Show as much of the last line as possible and not these c
 
 set formatoptions-=o " Stop continuing the comments on pressing o and O
 
-set grepprg=pcregrep\ -I\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude=tags\ --buffer-size=32M
+set grepprg=grep\ -I\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude=tags
 
 set spell
 set spelllang=en
@@ -429,11 +429,6 @@ function! s:Grep(count, args)
 		if a:count > 0
 			" then we've selected something in visual mode
 			let query = s:LastSelectedText()
-			if a:count > 1
-				" Then it's multiline, we need some magic
-				set grepprg+=\ -M
-				let query = substitute(query, "\n", '.*?\\n.*?', 'g')
-			endif
 		elseif empty(a:args)
 			" If no pattern is provided, search for the word under the cursor
 			set grepprg+=\ -w
@@ -445,7 +440,6 @@ function! s:Grep(count, args)
 		exe 'grep -r '.shellescape(query).' .'
 
 	finally
-		set grepprg-=\ -M
 		set grepprg-=\ -w
 	endtry
 endfunction
