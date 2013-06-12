@@ -436,6 +436,7 @@ function! s:Grep(count, args)
 			endif
 		elseif empty(a:args)
 			" If no pattern is provided, search for the word under the cursor
+			setlocal grepprg+=\ -w
 			let query = expand("<cword>")
 		else
 			let query = a:args
@@ -445,6 +446,7 @@ function! s:Grep(count, args)
 
 	finally
 		setlocal grepprg-=\ -M
+		setlocal grepprg-=\ -w
 	endtry
 endfunction
 
