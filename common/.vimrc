@@ -431,12 +431,12 @@ function! s:Grep(count, args)
 			let query = s:LastSelectedText()
 			if a:count > 1
 				" Then it's multiline, we need some magic
-				setlocal grepprg+=\ -M
+				set grepprg+=\ -M
 				let query = substitute(query, "\n", '.*?\\n.*?', 'g')
 			endif
 		elseif empty(a:args)
 			" If no pattern is provided, search for the word under the cursor
-			setlocal grepprg+=\ -w
+			set grepprg+=\ -w
 			let query = expand("<cword>")
 		else
 			let query = a:args
@@ -445,8 +445,8 @@ function! s:Grep(count, args)
 		exe 'grep -r '.shellescape(query).' .'
 
 	finally
-		setlocal grepprg-=\ -M
-		setlocal grepprg-=\ -w
+		set grepprg-=\ -M
+		set grepprg-=\ -w
 	endtry
 endfunction
 
