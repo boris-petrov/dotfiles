@@ -4,7 +4,7 @@ autokey-gtk &
 launchy &
 thunderbird &
 dropboxd &
-turpial &
+polly &
 liferea &
 
 xset r rate 300 20
