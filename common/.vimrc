@@ -426,6 +426,7 @@ command! -count=0 -nargs=* Grep call s:Grep(<count>, <q-args>)
 
 function! s:Grep(count, args)
 	try
+		let original_grepprg = &grepprg
 		if a:count > 0
 			" then we've selected something in visual mode
 			let query = s:LastSelectedText()
@@ -440,7 +441,7 @@ function! s:Grep(count, args)
 		exe 'grep -r '.shellescape(query).' .'
 
 	finally
-		set grepprg-=\ -w
+		let &grepprg = original_grepprg
 	endtry
 endfunction
 
