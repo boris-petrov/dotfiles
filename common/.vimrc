@@ -430,6 +430,7 @@ function! s:Grep(count, args)
 		if a:count > 0
 			" then we've selected something in visual mode
 			let query = s:LastSelectedText()
+			set grepprg+=\ -F
 		elseif empty(a:args)
 			" If no pattern is provided, search for the word under the cursor
 			set grepprg+=\ -w
