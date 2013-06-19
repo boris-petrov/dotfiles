@@ -106,3 +106,6 @@
 [submodule "common/.vim/bundle/tlib_vim"]
 	path = common/.vim/bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
+[submodule "common/.vim/bundle/ruby"]
+	path = common/.vim/bundle/ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
