@@ -139,7 +139,7 @@ set display=lastline " Show as much of the last line as possible and not these c
 
 set formatoptions-=o " Stop continuing the comments on pressing o and O
 
-set grepprg=grep\ -I\ -n\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude=tags
+set grepprg=grep\ -I\ -n\ -s\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude=tags
 
 set spell
 set spelllang=en

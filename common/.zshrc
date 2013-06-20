@@ -70,7 +70,7 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm 
 alias df='df -h'
 alias du='du -ch'
 
-alias grep='grep -I --color --exclude-dir=node_modules --exclude-dir=.git --exclude=tags'
+alias grep='grep -I -n -s --color --exclude-dir=node_modules --exclude-dir=.git --exclude=tags --exclude-dir=coverage --exclude-dir=tmp --exclude-dir=log --exclude-dir=vendor --exclude-dir=public'
 
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
