@@ -10,12 +10,9 @@ set nocompatible
 filetype on
 
 runtime bundle/vim-pathogen.git/autoload/pathogen.vim
-call pathogen#infect()
-
-filetype indent on
-filetype plugin on
-
+execute pathogen#infect()
 syntax on
+filetype plugin indent on
 
 set hidden
 
@@ -237,7 +234,7 @@ autocmd Syntax * RainbowParenthesesLoadSquare
 autocmd Syntax * RainbowParenthesesLoadBraces
 autocmd FileType cpp RainbowParenthesesLoadChevrons
 
-runtime macros/matchit.vim " smarter matching with % (ifs, elses...)
+runtime! macros/matchit.vim " smarter matching with % (ifs, elses...)
 
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
