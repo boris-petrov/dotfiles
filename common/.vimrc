@@ -386,9 +386,9 @@ xmap <silent> # :call <SID>VisualSearch('b')<CR>n
 
 " Can be called in several ways:
 "
-" :Grep <something> " -> Grep for the given search query
-" :Grep " -> Grep for the word under the cursor
-" :'<,'>Grep " -> Grep in visual mode
+" :Grep <something> -> Grep for the given search query
+" :Grep -> Grep for the word under the cursor
+" :'<,'>Grep -> Grep in visual mode
 
 autocmd FileType qf nnoremap <buffer> q :q<CR>
 autocmd FileType qf nnoremap <buffer> l <CR>
@@ -678,8 +678,10 @@ nmap gs :Gstatus<CR><C-n>
 " --------------------------------------------------------------------------------------------------
 
 let g:ctrlp_map                   = 'gz'
-let g:ctrlp_working_path_mode     = 2
-let g:ctrlp_custom_ignore         = '\.git$\|node_modules$\|tmp$\|vendor$\|\.hg$\|\.svn$'
+let g:ctrlp_working_path_mode     = 'ra'
+let g:ctrlp_custom_ignore         = {
+	\ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|tmp|vendor)$',
+	\ }
 let g:ctrlp_match_window_bottom   = 0
 let g:ctrlp_match_window_reversed = 0
 
