@@ -2,9 +2,10 @@ set noautocomplete
 set complete=bhs
 set focuscontent
 set hlsearch
+set status=input,location,bookmark,history,position
+set showstatuslinks=2
 set nosmartcase
-set tabnumbers
-set gui=none,tabs
+set gui=tabs
 set newtab=all
 set wildmode=
 
@@ -15,6 +16,22 @@ nnoremap K 15k
 nnoremap j 5j
 nnoremap k 5k
 
+"" swap p/P
+nnoremap p P
+nnoremap P p
+
+"" U list closed tabs
+nnoremap U :undo<Space>
+
+"" open addons manager
+nnoremap ,a :tabnew about:addons<CR>
+
+"" private mode
+nnoewmap ,p :set private!<CR>
+
+"" about:config
+nnoremap ,c :tabnew about:config<CR>
+
 nmap h gT
 nmap l gt
 nmap H <C-o>
@@ -23,9 +40,9 @@ nmap L <C-i>
 nmap gb <C-o>
 nmap <BS> <C-o>
 
-" TODO: how?!
-" cmap <RETURN> <TAB><RETURN>
-
-nmap <C-d> :q<RETURN>
+cnoremap <TAB> <TAB><RETURN>
 
 nnoremap <ESC> <C-c>:noh<RETURN>
+nmap w :tabnew wikipedia 
+
+nmap b :bmarks<RETURN>

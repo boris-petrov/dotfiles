@@ -26,13 +26,13 @@ nmap -builtin P p
 nmap -builtin U :undo<Space>
 
 "" open addons manager
-nmap -builtin ,a :dialog addons<CR>
+nmap -builtin ,a :tabnew about:addons<CR>
 
 "" private mode
 nmap -builtin ,p :set private!<CR>
 
 "" about:config
-nmap -builtin ,c :tabopen about:config<CR>
+nmap -builtin ,c :tabnew about:config<CR>
 
 nmap h gT
 nmap l gt
