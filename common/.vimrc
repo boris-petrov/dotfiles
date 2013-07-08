@@ -395,7 +395,7 @@ xmap <silent> # :call <SID>VisualSearch('b')<CR>n
 " :Grep -> Grep for the word under the cursor
 " :'<,'>Grep -> Grep in visual mode
 
-autocmd FileType qf nnoremap <buffer> q :q<CR>
+autocmd FileType qf nnoremap <buffer> q :cclose \| :lclose<CR>
 autocmd FileType qf nnoremap <buffer> l <CR>
 autocmd FileType qf nnoremap <buffer> j j
 autocmd FileType qf nnoremap <buffer> k k
