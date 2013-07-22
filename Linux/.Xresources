@@ -21,7 +21,6 @@ URxvt.scrollBar:       True
 URxvt.scrollBar_right: True
 
 URxvt.visualBell: False
-URxvt.loginShell: True
 
 URxvt.background:  Black
 URxvt.foreground:  Grey
