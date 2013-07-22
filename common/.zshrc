@@ -105,26 +105,41 @@ export CC=colorgcc
 export EDITOR=vim
 
 # Extract Stuff
-extract () {
-  if [ -f $1 ]; then
-    case $1 in
-      *.tar.*) tar xvf $1 ;;
-      *.tbz2) tar xvjf $1 ;;
-      *.tgz) tar xvzf $1 ;;
-      *.txz) tar xvJf $1 ;;
-      *.bz2) bunzip2 $1 ;;
-      *.rar) unrar e $1 ;;
-      *.gz) gunzip $1 ;;
-      *.zip) unzip $1 ;;
-      *.Z) uncompress $1 ;;
-      *.7z) 7z x $1 ;;
-      *) echo "'$1' cannot be extracted via extract()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
+extract() {
+  local c e i
 
+  (($#)) || return
+
+  for i; do
+    c=''
+    e=1
+
+    if [[ ! -r $i ]]; then
+      echo "$0: file is unreadable: \`$i'" >&2
+      continue
+    fi
+
+    case $i in
+    *.t@(gz|lz|xz|b@(2|z?(2))|a@(z|r?(.@(Z|bz?(2)|gz|lzma|xz)))))
+           c='bsdtar xvf';;
+    *.7z)  c='7z x';;
+    *.Z)   c='uncompress';;
+    *.bz2) c='bunzip2';;
+    *.exe) c='cabextract';;
+    *.gz)  c='gunzip';;
+    *.rar) c='unrar x';;
+    *.xz)  c='unxz';;
+    *.zip) c='unzip';;
+    *)     echo "$0: unrecognized file extension: \`$i'" >&2
+           continue;;
+    esac
+
+    command $c "$i"
+    e=$?
+  done
+
+  return $e
+}
 up-line-or-beginning-search () {
   if [[ $LBUFFER == *$'\n'* ]]; then
     zle .up-line-or-history
