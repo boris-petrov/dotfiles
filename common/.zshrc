@@ -67,12 +67,13 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm -w -w"
 
+alias diff='colordiff'
+alias mkdir='mkdir -p -v'
+
 alias df='df -hPT'
 alias du='du -ch'
 
 alias grep='grep -I -n -s --color --exclude-dir=node_modules --exclude-dir=.git --exclude=tags --exclude-dir=coverage --exclude-dir=tmp --exclude-dir=log --exclude-dir=vendor --exclude-dir=public'
-
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 alias ls='ls -hF --color=auto --group-directories-first'
 alias ll='ls -l'
@@ -84,6 +85,7 @@ alias gd='git diff'
 alias ga='git add'
 alias gc='git commit -v'
 alias gl='git log'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 alias cd..='cd ..'
 alias cd...='cd ../..'
