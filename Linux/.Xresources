@@ -1,19 +1,19 @@
-Xft.autohint:  0
-Xft.lcdfilter: lcddefault
+Xft.antialias: True
+Xft.hinting:   True
+Xft.autohint:  False
 Xft.hintstyle: hintfull
-Xft.hinting:   1
-Xft.antialias: 1
-Xft.dpi:       96
 Xft.rgba:      rgb
+Xft.lcdfilter: lcddefault
+Xft.dpi:       96
 
 URxvt.termName: xterm-256color
 
 URxvt.iconFile: /home/boris/dotfiles/Linux/icons/terminal.png
 
-URxvt.font:           xft:Inconsolata-16:xft
-URxvt.boldFont:       xft:Inconsolata-16:bold:xft
-URxvt.italicFont:     xft:Inconsolata-16:italic:xft
-URxvt.boldItalicFont: xft:Inconsolata-16:bold:italic:xft
+URxvt.font:           xft:Inconsolata-16
+URxvt.boldFont:       xft:Inconsolata-16:bold
+URxvt.italicFont:     xft:Inconsolata-16:italic
+URxvt.boldItalicFont: xft:Inconsolata-16:bold:italic
 
 URxvt.fading: 20
 
@@ -28,9 +28,9 @@ URxvt.cursorColor: Red
 
 URxvt.saveLines: 10000
 
-URxvt.scrollTtyOutput:   false
-URxvt.scrollWithBuffer:  true
-URxvt.scrollTtyKeypress: true
+URxvt.scrollTtyOutput:   False
+URxvt.scrollWithBuffer:  True
+URxvt.scrollTtyKeypress: True
 
 URxvt.perl-ext-common: default,clipboard
 
