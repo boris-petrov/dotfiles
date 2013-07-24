@@ -4,6 +4,10 @@ compinit -d /tmp/dumpfile
 colors
 select-word-style bash
 
+##############################
+# Options
+##############################
+
 setopt ALWAYS_TO_END # If a completion with the cursor in the word was started and it results in only one match, the cursor is placed at the end of the word.
 setopt AUTO_LIST
 unsetopt LIST_AMBIGUOUS # If this option is set completions are shown only if the completions don't have an unambiguous prefix or suffix that could be inserted in the command line.
@@ -27,6 +31,10 @@ setopt PROMPT_SUBST # Enable substitutions of functions in prompt
 
 bindkey -v # vi-mode
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
 ##############################
 # Git status in prompt
 ##############################
@@ -49,11 +57,11 @@ PROMPT='
 %{$reset_color%}%(?..%{${fg[red]}%})%B%#%{$reset_color%} '
 RPROMPT=""
 
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-
 eval $(dircolors)
+
+##############################
+# Completion
+##############################
 
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
@@ -66,6 +74,10 @@ zstyle ':completion:*' menu select
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm -w -w"
+
+##############################
+# Aliases
+##############################
 
 alias diff='colordiff'
 alias mkdir='mkdir -p -v'
@@ -103,8 +115,11 @@ alias reboot='sudo systemctl reboot'
 alias suspend='systemctl suspend'
 alias halt='sudo systemctl poweroff'
 
-export CC=colorgcc
-export EDITOR=vim
+alias vi=vim
+
+##############################
+# Functions
+##############################
 
 # Extract Stuff
 extract() {
@@ -177,7 +192,6 @@ down-line-or-beginning-search () {
 }
 
 function xterm-bindings () {
-
   # Ctrl+Left/Right to move by whole words
   bindkey '\e[1;5C' forward-word
   bindkey '\e[1;5D' backward-word
@@ -192,7 +206,6 @@ function xterm-bindings () {
 
   # for Delete key
   bindkey "\e[3~" delete-char
-
 }
 
 function urxvt-bindings () {
@@ -226,12 +239,26 @@ function urxvt-bindings () {
 
 }
 
+# Color manpages
+man() {
+  env LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+    man "$@"
+}
+
+##############################
+##############################
+
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
 if [ `uname -s` = "Linux" ]; then
   # the next ones work with urxvt
-
   urxvt-bindings
 
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -249,8 +276,6 @@ if [ `uname -s` = "Linux" ]; then
   chpwd_functions=(dir_in_title)
   settitle $PWD
 
-  alias vi=vim
-
   hook_function() {
     [[ $3 = git* ]] && source ssh-agent.zsh
     [[ $3 = ssh* ]] && source ssh-agent.zsh
@@ -259,7 +284,6 @@ if [ `uname -s` = "Linux" ]; then
   add-zsh-hook preexec hook_function
 
 elif [ `uname -o` = "Cygwin" ]; then
-
   xterm-bindings
 
   export VBOX_USER_HOME='C:\Users\Boris\.VirtualBox\'
@@ -273,29 +297,16 @@ elif [ `uname -o` = "Cygwin" ]; then
   }
   settitle $(pwd)
 
-  alias vi='/cygdrive/c/Program\ Files\ \(x86\)/Vim/vim73/gvim.exe'
-  alias vim=vi
+  alias vim='/cygdrive/c/Program\ Files\ \(x86\)/Vim/vim73/gvim.exe'
   alias gvim=vim
 fi
+
+export CC=colorgcc
+export EDITOR=vim
 
 export LD_LIBRARY_PATH=.:/usr/local/lib:$LD_LIBRARY_PATH
 
 ulimit -c unlimited
-
-##############################
-# Color manpages
-##############################
-
-man() {
-  env LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-    LESS_TERMCAP_md=$(printf "\e[1;31m") \
-    LESS_TERMCAP_me=$(printf "\e[0m") \
-    LESS_TERMCAP_se=$(printf "\e[0m") \
-    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-    LESS_TERMCAP_ue=$(printf "\e[0m") \
-    LESS_TERMCAP_us=$(printf "\e[1;32m") \
-    man "$@"
-}
 
 ##############################
 # nodejs and ruby specific stuff
