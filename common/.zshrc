@@ -122,21 +122,20 @@ extract() {
     fi
 
     case $i in
-    *.t@(gz|lz|xz|b@(2|z?(2))|a@(z|r?(.@(Z|bz?(2)|gz|lzma|xz)))))
-           c='bsdtar xvf';;
-    *.7z)  c='7z x';;
-    *.Z)   c='uncompress';;
-    *.bz2) c='bunzip2';;
-    *.exe) c='cabextract';;
-    *.gz)  c='gunzip';;
-    *.rar) c='unrar x';;
-    *.xz)  c='unxz';;
-    *.zip) c='unzip';;
+    *.t(gz|lz|xz|b2|bz2|ar.*))
+           bsdtar xvf $i;;
+    *.7z)  7z x $i;;
+    *.Z)   uncompress $i;;
+    *.bz2) bunzip2 $i;;
+    *.exe) cabextract $i;;
+    *.gz)  gunzip $i;;
+    *.rar) unrar x $i;;
+    *.xz)  unxz $i;;
+    *.zip) unzip $i;;
     *)     echo "$0: unrecognized file extension: \`$i'" >&2
            continue;;
     esac
 
-    command $c "$i"
     e=$?
   done
 
