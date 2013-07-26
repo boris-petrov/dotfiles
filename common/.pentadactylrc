@@ -46,6 +46,7 @@ nmap -builtin <C-c> <C-v><C-c>
 imap -builtin <C-v> <C-v><C-v>
 
 cmap -builtin <TAB> <TAB><RETURN>
+cmap -builtin <C-k> <UP>
 
 nmap -builtin <ESC> <C-c>:noh<RETURN>
 nmap w :tabopen wikipedia 
