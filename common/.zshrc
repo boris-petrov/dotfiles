@@ -8,24 +8,10 @@ select-word-style bash
 # Options
 ##############################
 
-setopt ALWAYS_TO_END # If a completion with the cursor in the word was started and it results in only one match, the cursor is placed at the end of the word.
-setopt AUTO_LIST
 unsetopt LIST_AMBIGUOUS # If this option is set completions are shown only if the completions don't have an unambiguous prefix or suffix that could be inserted in the command line.
-setopt AUTO_MENU
-setopt APPEND_HISTORY
-unsetopt AUTO_CD # If a command is not in the hash table, and there exists an executable directory by that name, perform the cd command to that directory.
-setopt AUTO_PUSHD # Make cd push the old directory onto the directory stack.
 unsetopt AUTO_REMOVE_SLASH
-unsetopt BEEP
 unsetopt BG_NICE # Run all background jobs at a lower priority. This option is set by default.
-setopt CHASE_LINKS # Resolve symbolic links to their true values.
-setopt CLOBBER # Allows > redirection to truncate existing files, and >> to create files.
-unsetopt CORRECT # Do NOT try to correct the spelling of commands.
-setopt COMPLETE_ALIASES
-setopt GLOB_DOTS # Do not require a leading . in a filename to be matched explicitly.
-setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE # Do not enter command lines into the history list if they begin with a blank.
-setopt HUP # Send the HUP signal to running jobs when the shell exits.
 setopt NOTIFY # Report the status of background jobs immediately, rather than waiting until just before printing a prompt.
 setopt PROMPT_SUBST # Enable substitutions of functions in prompt
 
