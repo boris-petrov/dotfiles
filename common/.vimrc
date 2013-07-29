@@ -431,14 +431,14 @@ command! -count=0 -nargs=* Grep call s:Grep(<count>, <q-args>)
 
 function! s:Grep(count, args)
 	try
-		let original_grepprg = &grepprg
+		let l:original_grepprg = &grepprg
 		if a:count > 0
 			" then we've selected something in visual mode
 			let query = s:LastSelectedText()
-			setlocal grepprg+=\ -F
+			let &grepprg = l:original_grepprg . " -F"
 		elseif empty(a:args)
 			" If no pattern is provided, search for the word under the cursor
-			setlocal grepprg+=\ -w
+			let &grepprg = l:original_grepprg . " -w"
 			let query = expand("<cword>")
 		else
 			let query = a:args
@@ -447,7 +447,7 @@ function! s:Grep(count, args)
 		exe 'grep -r '.shellescape(query).' .'
 
 	finally
-		let &l:grepprg = original_grepprg
+		let &grepprg = l:original_grepprg
 	endtry
 endfunction
 
