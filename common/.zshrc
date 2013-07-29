@@ -12,7 +12,7 @@ unsetopt LIST_AMBIGUOUS # If this option is set completions are shown only if th
 unsetopt AUTO_REMOVE_SLASH
 unsetopt BG_NICE # Run all background jobs at a lower priority. This option is set by default.
 setopt HIST_IGNORE_SPACE # Do not enter command lines into the history list if they begin with a blank.
-setopt NOTIFY # Report the status of background jobs immediately, rather than waiting until just before printing a prompt.
+unsetopt HUP # Send the HUP signal to running jobs when the shell exits.
 setopt PROMPT_SUBST # Enable substitutions of functions in prompt
 
 bindkey -v # vi-mode
