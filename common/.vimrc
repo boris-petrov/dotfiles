@@ -229,6 +229,7 @@ endif
 autocmd FileType help setlocal nonumber " no line numbers when viewing help
 autocmd FileType help nmap <buffer> <CR> <C-]>
 autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
+autocmd FileType help nmap <buffer> q :q<CR>
 
 autocmd FileType coffee,ruby,eruby,html,zsh,sh,yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType cpp,java,vim                       setlocal noexpandtab
