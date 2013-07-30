@@ -611,9 +611,9 @@ xmap ' S'
 " Keymap
 " --------------------------------------------------------------------------------------------------
 
-nmap <silent> ,k :call ToggleKeymap()<CR>
+nmap <silent> ,k :call <SID>ToggleKeymap()<CR>
 
-function! ToggleKeymap()
+function! s:ToggleKeymap()
 	if &keymap == ""
 		set keymap=bulgarian-phonetic
 		if has('win32')
