@@ -7,8 +7,7 @@ dropboxd &
 hotot-qt &
 liferea &
 kbdd
-autocutsel -fork
-autocutsel -selection PRIMARY -fork
+parcellite &
 
 xset r rate 300 20
 
