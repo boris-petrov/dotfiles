@@ -439,7 +439,7 @@ function! s:Grep(count, args)
 			let &grepprg = l:original_grepprg . " -F"
 		elseif empty(a:args)
 			" If no pattern is provided, search for the word under the cursor
-			let &grepprg = l:original_grepprg . " -w"
+			let &grepprg = l:original_grepprg . " -w -F"
 			let query = expand("<cword>")
 		else
 			let query = a:args
