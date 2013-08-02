@@ -575,8 +575,8 @@ xnoremap <S-TAB> <
 inoremap <C-v> <C-r><C-o>+
 xnoremap <C-v> x<ESC>i<C-r><C-o>+<ESC>
 nnoremap <C-v> i<C-r><C-o>+<ESC>
-xnoremap <C-c> "*y
-xnoremap <C-x> "*x
+xnoremap <silent> <C-c> "zy:call system('loliclip -ci', @z)<CR>:call system('loliclip -pi', @z)<CR>
+xnoremap <silent> <C-x> "zx:call system('loliclip -ci', @z)<CR>:call system('loliclip -pi', @z)<CR>
 inoremap <C-a> <ESC>ggVG
 xnoremap <C-a> <ESC>ggVG
 nnoremap <C-a> ggVG
