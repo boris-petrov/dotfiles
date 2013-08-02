@@ -7,7 +7,7 @@ dropboxd &
 hotot-qt &
 liferea &
 kbdd
-parcellite &
+loliclip &
 
 xset r rate 300 20
 
