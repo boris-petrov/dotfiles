@@ -143,6 +143,7 @@ extract() {
 
   return $e
 }
+
 up-line-or-beginning-search () {
   if [[ $LBUFFER == *$'\n'* ]]; then
     zle .up-line-or-history
@@ -250,8 +251,13 @@ if [ `uname -s` = "Linux" ]; then
 
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-  # To have paths colored instead of underlined
+  # zsh highlighting
+  ZSH_HIGHLIGHT_STYLES[precommand]='fg=green'
   ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+  ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=cyan'
+  ZSH_HIGHLIGHT_STYLES[path_approx]='fg=red'
+  ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=magenta'
+  ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=magenta'
 
   # change title of urxvt to current dir
   function settitle() {
