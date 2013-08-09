@@ -109,3 +109,6 @@
 [submodule "common/.vim/bundle/ruby"]
 	path = common/.vim/bundle/ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "common/.vim/bundle/CSApprox"]
+	path = common/.vim/bundle/CSApprox
+	url = https://github.com/godlygeek/csapprox.git
