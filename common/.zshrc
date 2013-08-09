@@ -76,6 +76,7 @@ alias grep='grep -I -n -s --color --exclude-dir=node_modules --exclude-dir=.git 
 alias ls='ls -hF --color=auto --group-directories-first'
 alias ll='ls -l'
 alias la='ls -A'
+alias mv='mv -i'
 alias gcc=colorgcc
 
 alias gs='git status'
