@@ -8,7 +8,6 @@ hotot-qt &
 liferea &
 kbdd
 loliclip &
-urxvtd --quiet --opendisplay --fork
 
 xset r rate 300 20
 

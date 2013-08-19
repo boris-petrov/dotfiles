@@ -58,7 +58,7 @@ end
 -- Themes define colours, icons, and wallpapers
 beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 
-terminal         = "urxvtc"
+terminal         = "urxvt"
 hostile_takeover = "gvim /home/boris/documents/Hostile\\ Takeover.txt"
 
 alt_modkey = "Mod1"
