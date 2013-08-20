@@ -532,13 +532,11 @@ ounmap b
 ounmap e
 
 " --------------------------------------------------------------------------------------------------
-" PreciseJump Plugin Mappings
+" EasyMotion Plugin Mappings
 " --------------------------------------------------------------------------------------------------
 
-let g:PreciseJump_target_keys = '123456789abcdefghijklmnopqrstuwxzABCDEFGHIJKLMNOPQRSTUWXZ'
-map f _f
-map F _F
-let g:PreciseJump_match_target_hi = "PreciseJumpTarget"
+map f ,,f
+map F ,,F
 
 " --------------------------------------------------------------------------------------------------
 " Splitjoin

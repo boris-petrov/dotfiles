@@ -52,9 +52,6 @@
 [submodule "common/.vim/bundle/vim-endwise"]
 	path = common/.vim/bundle/vim-endwise
 	url = git://github.com/tpope/vim-endwise
-[submodule "common/.vim/bundle/PreciseJump.git"]
-	path = common/.vim/bundle/PreciseJump.git
-	url = git://github.com/vim-scripts/PreciseJump.git
 [submodule "common/.vim/bundle/smartword.git"]
 	path = common/.vim/bundle/smartword.git
 	url = git://github.com/vim-scripts/smartword.git
@@ -115,3 +112,6 @@
 [submodule "common/.vim/bundle/SearchComplete"]
 	path = common/.vim/bundle/SearchComplete
 	url = git://github.com/vim-scripts/SearchComplete.git
+[submodule "common/.vim/bundle/easymotion"]
+	path = common/.vim/bundle/easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
