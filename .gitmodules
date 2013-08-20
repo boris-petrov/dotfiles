@@ -112,3 +112,6 @@
 [submodule "common/.vim/bundle/CSApprox"]
 	path = common/.vim/bundle/CSApprox
 	url = https://github.com/godlygeek/csapprox.git
+[submodule "common/.vim/bundle/SearchComplete"]
+	path = common/.vim/bundle/SearchComplete
+	url = git://github.com/vim-scripts/SearchComplete.git
