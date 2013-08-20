@@ -676,6 +676,7 @@ cab Gc Gcommit
 cab Gd Gdiff
 autocmd BufEnter *.git/COMMIT_EDITMSG exe 'normal! gg' | if getline('.') =~ '^\s*$' | startinsert | endif
 autocmd BufEnter *.git/index nmap <buffer> d <CR>:Gdiff<CR><C-w>hgg
+autocmd BufEnter *.git/index nmap <buffer> C cvc
 autocmd BufEnter *.git/index nmap <buffer> j <C-n>
 autocmd BufEnter *.git/index nmap <buffer> k <C-p>
 autocmd BufEnter *.git/index nmap <buffer> l <CR>
