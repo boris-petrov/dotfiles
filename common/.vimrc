@@ -19,8 +19,6 @@ set hidden
 set splitbelow
 set splitright
 
-set mousehide " hide my mouse when typing!
-
 set nobackup " don't need these
 set nowritebackup
 set noswapfile
@@ -36,7 +34,6 @@ set timeoutlen=500 " half a second to wait if there are 'colliding' mappings
 " set listchars=trail:-
 
 set matchpairs+=<:>
-set noshowmatch
 
 set autoindent " indents a line as the previous one
 set cindent
@@ -45,9 +42,7 @@ set shiftround " indenting to tabs-width
 set incsearch
 set hlsearch
 set ignorecase
-set nosmartcase
 " set infercase
-set wrapscan
 set magic " why the hell can't I set verymagic?!
 
 set number " line numbers
@@ -58,13 +53,10 @@ set guioptions=ci
 set showtabline=0 " Never show tabline
 
 set showcmd " shows incomplete commands
-set showmode " shows current mode
-set selectmode= " Select mode? Go away!
 
 set autoread " auto reloads file when changes detected
 
 set cursorline " highligths the current line
-set nocursorcolumn " don't do that horrible thing
 
 set scrolloff=7
 set scrolljump=7
@@ -75,31 +67,21 @@ set wildchar=<Tab>
 set wildmode=longest,list
 set wildignore=*.o,*.hi,*.dll,*.obj,*.lib,*.swp,*.zip,*.exe,*.so
 
-set wrap " line wrapping
 set linebreak " does not wrap in the middle of the word
 set showbreak=+>
 
-set noerrorbells " No bells
-set novisualbell " No visuals
-
 " set virtualedit=onemore
-
-set noautochdir " do not change the current dir to the one the file being edited is in
 
 set lazyredraw " faster macros
 set ttyfast " nicer redraw
 
 set nojoinspaces " do not put 2 spaces after dot when joining lines
 
-set notildeop
-
-set more " I like the more prompt
 " set shortmess=a " all abbreviations, but I like the other things
 
 set nostartofline " keeps my cursor where it is
 
 set gdefault " replacing is global by default
-set noedcompatible
 
 " set iskeyword+=_,$,@,%,# " none of these are word dividers
 
@@ -144,7 +126,6 @@ set spelllang=en
 colorscheme rdark " cannot live without it
 
 set fileencodings=utf-8,utf-16,utf-32,cp-1251,unicode
-set fileformat=unix
 
 " should do this for when Vim is started from a Cygwin shell
 if has('win32')
@@ -192,13 +173,12 @@ nmap gcc <Plug>CommentaryLine
 nmap gc  <Plug>Commentary
 xmap gc  <Plug>Commentary
 
-autocmd FileType cpp set commentstring=//\ %s
+autocmd FileType cpp setlocal commentstring=//\ %s
 
 " --------------------------------------------------------------------------------------------------
 " leader variables
 " --------------------------------------------------------------------------------------------------
 
-let mapleader = ","
 let g:mapleader = ","
 
 " --------------------------------------------------------------------------------------------------
@@ -236,11 +216,14 @@ autocmd FileType cpp,java,vim                       setlocal noexpandtab
 autocmd FileType coffee,python,slim                 setlocal foldmethod=indent nofoldenable
 autocmd FileType coffee,ruby,eruby,html,slim,eco    setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor\ --exclude-dir=public
 
-autocmd VimEnter * RainbowParenthesesToggle
-autocmd Syntax * RainbowParenthesesLoadRound
-autocmd Syntax * RainbowParenthesesLoadSquare
-autocmd Syntax * RainbowParenthesesLoadBraces
-autocmd FileType cpp RainbowParenthesesLoadChevrons
+augroup RainbowParentheses
+	autocmd!
+	autocmd VimEnter * RainbowParenthesesToggle
+	autocmd Syntax * RainbowParenthesesLoadRound
+	autocmd Syntax * RainbowParenthesesLoadSquare
+	autocmd Syntax * RainbowParenthesesLoadBraces
+	autocmd FileType cpp RainbowParenthesesLoadChevrons
+augroup END
 
 runtime! macros/matchit.vim " smarter matching with % (ifs, elses...)
 
@@ -346,8 +329,6 @@ autocmd FileType coffee hi! link Structure Type
 autocmd FileType coffee hi! def link coffeeObjAssign Special
 
 let g:coffee_tools_function_text_object = 1
-
-let g:pasta_enabled_filetypes = []
 
 let g:syntastic_coffee_checkers  = ['iced']
 let g:syntastic_coffee_iced_args = '-cp'
@@ -475,7 +456,7 @@ endfunction
 function! HasPaste()
 	if &paste
 		return 'PASTE MODE  '
-	en
+	endif
 	return ''
 endfunction
 
@@ -750,12 +731,6 @@ inoremap <C-backspace> <C-w>
 inoremap <C-delete> <C-o>de
 
 nnoremap <Leader>j J
-
-nnoremap gm zz
-
-" inoremap ( ()<C-o>h
-" inoremap [ []<C-o>h
-" inoremap { {}<C-o>h
 
 " Remove the Windows' ^M
 nnoremap <Leader>m :%s/<C-V><C-M>//ge<CR>
