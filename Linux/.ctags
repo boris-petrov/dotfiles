@@ -1,5 +1,8 @@
 --recurse=yes
 --tag-relative=yes
+--fields=+iaS
+--c++-kinds=+p
+--extra=+q
 
 --exclude=node_modules
 --exclude=.git
