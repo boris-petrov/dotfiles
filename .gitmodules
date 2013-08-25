@@ -54,7 +54,7 @@
 	url = git://github.com/tpope/vim-endwise
 [submodule "common/.vim/bundle/smartword.git"]
 	path = common/.vim/bundle/smartword.git
-	url = git://github.com/vim-scripts/smartword.git
+	url = git://github.com/kana/vim-smartword.git
 [submodule "common/.vim/bundle/AutoTag.git"]
 	path = common/.vim/bundle/AutoTag.git
 	url = git://github.com/cuzelac/AutoTag.git
