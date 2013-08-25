@@ -103,8 +103,7 @@ set shellslash " unix-like slashes
 set title
 set titlestring=%m%rgVim:\ %F
 
-set complete=.,w,b,u,k
-set completeopt=menu,preview
+set completeopt=menu
 
 " Persistent undo
 set undofile
@@ -154,6 +153,22 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 " --------------------------------------------------------------------------------------------------
 
 let g:SuperTabDefaultCompletionType = 'context'
+
+" --------------------------------------------------------------------------------------------------
+" AutoComplPop settings
+" --------------------------------------------------------------------------------------------------
+
+let g:acp_behaviorKeywordLength = -1
+
+" --------------------------------------------------------------------------------------------------
+" OmniCppComplete settings
+" --------------------------------------------------------------------------------------------------
+
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std"]
 
 " --------------------------------------------------------------------------------------------------
 " syntastic settings
