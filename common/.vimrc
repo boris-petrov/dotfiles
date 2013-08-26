@@ -152,7 +152,8 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 " SuperTab settings
 " --------------------------------------------------------------------------------------------------
 
-let g:SuperTabDefaultCompletionType = 'context'
+autocmd FileType *   let g:SuperTabDefaultCompletionType = '<C-p>'
+autocmd FileType cpp let g:SuperTabDefaultCompletionType = 'context'
 
 " --------------------------------------------------------------------------------------------------
 " AutoComplPop settings
