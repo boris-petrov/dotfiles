@@ -104,6 +104,8 @@ alias halt='sudo systemctl poweroff'
 
 alias vi=vim
 
+alias htop='TERM=screen htop' # fix for tmux redrawing issue
+
 ##############################
 # Functions
 ##############################
