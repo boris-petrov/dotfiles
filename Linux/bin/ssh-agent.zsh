@@ -10,7 +10,7 @@ function start-agent {
 }
 
 function add-key {
-  ssh-add -t 7200
+  ssh-add -t 14400
 }
 
 # Source SSH settings, if applicable
