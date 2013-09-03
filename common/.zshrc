@@ -106,6 +106,8 @@ alias vi=vim
 
 alias htop='TERM=screen htop' # fix for tmux redrawing issue
 
+alias sudo='sudo -E'
+
 ##############################
 # Functions
 ##############################
