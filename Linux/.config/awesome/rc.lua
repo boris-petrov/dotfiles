@@ -367,6 +367,8 @@ awful.rules.rules = {
       callback = move_to_current_tag },
     { rule = { class = "Flareget" },
       properties = { tag = tags[1][9] } },
+    { rule = { class = "Flareget", name = "New Download" },
+      callback = move_to_current_tag },
     { rule = { class = "Luakit" },
       properties = { floating = true } },
     { rule = { class = "Gvim" },
