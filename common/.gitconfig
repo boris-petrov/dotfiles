@@ -12,6 +12,8 @@
 	st = status
 	br = branch
 	l = log --graph --decorate --pretty=oneline --abbrev-commit
+	cleanup = !git branch --merged master | grep -v 'master$' | xargs git branch -d
+	unstage = reset HEAD --
 [push]
 	default = tracking
 [log]
