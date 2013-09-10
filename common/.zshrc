@@ -214,6 +214,8 @@ function urxvt-bindings () {
   bindkey -M viins '\en'  forward-word  # Alt-n
   bindkey -M viins '\eb'  backward-word # Alt-b
 
+  bindkey ^R history-incremental-search-backward
+
   # Ctrl+Left/Right to move by whole words
   # bindkey '^[Oc' forward-word
   # bindkey '^[Od' backward-word
