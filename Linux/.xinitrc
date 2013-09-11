@@ -8,6 +8,7 @@ hotot-qt &
 liferea &
 kbdd
 loliclip &
+rsibreak
 
 xset r rate 300 20
 
