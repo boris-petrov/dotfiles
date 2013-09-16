@@ -10,8 +10,6 @@ kbdd
 loliclip &
 rsibreak
 
-xset r rate 300 20
-
 ~/bin/fix_screens
 
 exec awesome
