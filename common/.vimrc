@@ -718,6 +718,11 @@ cab q1 q!
 " Misc Mappings
 " --------------------------------------------------------------------------------------------------
 
+" Map F1 to ESC
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+cnoremap <F1> <ESC>
+
 nnoremap - :Switch<CR>
 
 nmap U <NOP>
