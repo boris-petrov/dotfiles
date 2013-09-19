@@ -485,9 +485,6 @@ endfunction
 let g:whitespaste_paste_before_command = "normal \<Plug>BeforePasta"
 let g:whitespaste_paste_after_command  = "normal \<Plug>AfterPasta"
 
-let s:cpo_save=&cpo
-set cpo&vim
-
 " --------------------------------------------------------------------------------------------------
 " delimitMate Mappings
 " --------------------------------------------------------------------------------------------------
