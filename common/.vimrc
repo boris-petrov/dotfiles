@@ -482,8 +482,12 @@ function! HasPaste()
 	return ''
 endfunction
 
+" Disable vim-pasta and use it through whitespaste
+let g:pasta_enabled_filetypes = []
+
 let g:whitespaste_paste_before_command = "normal \<Plug>BeforePasta"
 let g:whitespaste_paste_after_command  = "normal \<Plug>AfterPasta"
+let g:whitespaste_paste_visual_command = "normal gv\<Plug>VisualPasta"
 
 " --------------------------------------------------------------------------------------------------
 " delimitMate Mappings
