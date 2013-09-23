@@ -96,7 +96,7 @@ end
 
 -- Define a tag table which hold all screen tags.
 tags = {
-    layouts = { layouts[4], layouts[4], layouts[4], layouts[3], layouts[2],
+    layouts = { layouts[4], layouts[4], layouts[4], layouts[3], layouts[4],
                 layouts[4], layouts[4], layouts[4], layouts[4] }
 }
 
