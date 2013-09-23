@@ -303,14 +303,18 @@ awful.rules.rules = {
                      focus        = true,
                      keys         = clientkeys,
                      buttons      = clientbuttons } },
+
+    -- Browsers
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][2], switchtotag = true } },
     { rule = { class = "Firefox", instance = "Dialog", name = "Password Required" },
       properties = { tag = tags[1][2], switchtotag = false } },
+    -- { rule = { class = "Firefox", instance = "Dialog" },
+    --   callback = move_to_current_tag },
     { rule = { class = "Plugin-container" },  properties = { floating = true } }, -- Firefox Flash player
     { rule = { class = "Exe", name = "exe" }, properties = { floating = true } }, -- Chrome Flash player
-    -- { rule = { class = "Firefox", instance = "Dialog" },
-        --   callback = move_to_current_tag },
+
+    -- Chat
     { rule = { class = "Skype", name = "File Transfers" },
       properties = { tag = tags[1][4], focus = false, minimized = true } },
     { rule = { class = "Pidgin" },
@@ -355,12 +359,18 @@ awful.rules.rules = {
             end
             c:geometry(geometry)
         end },
+
+    -- Music
     { rule = { class = "Deadbeef" },
       properties = { tag = tags[1][7] } },
+
+    -- Mail
     { rule = { class = "Thunderbird" },
       properties = { tag = tags[screen.count()][8] } },
     { rule = { class = "Thunderbird", name = "Attach File(s)" },
       callback = move_to_current_tag },
+
+    -- Downloads
     { rule = { class = "Deluge" },
       properties = { tag = tags[1][9] } },
     { rule = { class = "Deluge", name = "Add Torrents" },
@@ -369,6 +379,8 @@ awful.rules.rules = {
       properties = { tag = tags[1][9] } },
     { rule = { class = "Flareget", name = "New Download" },
       callback = move_to_current_tag },
+
+    -- Other
     { rule = { class = "Luakit" },
       properties = { floating = true } },
     { rule = { class = "Gvim" },
