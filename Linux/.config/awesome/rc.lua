@@ -403,12 +403,25 @@ client.connect_signal("manage", function(c, startup)
     end
 end)
 
--- Do not signal a particular window
 client.connect_signal("manage", function(c, startup)
-    if c.class == "Pidgin" and c.name and c.name:match("#airian") then
-        c:connect_signal("property::urgent", function(cl)
-            cl.urgent = false
-        end)
+    if c.class == "Pidgin" then
+        -- Switch to the second layout for chat windows
+        local start_dbus_send
+        local change_language_on_focus
+        start_dbus_send = function()
+            awesome.disconnect_signal("refresh", start_dbus_send)
+            awful.util.spawn("dbus-send --type=method_call --dest=ru.gentoo.KbddService /ru/gentoo/KbddService ru.gentoo.kbdd.set_layout uint32:1")
+        end
+        change_language_on_focus = function(cl)
+            cl:disconnect_signal("focus", change_language_on_focus)
+            awesome.connect_signal("refresh", start_dbus_send)
+        end
+        c:connect_signal("focus", change_language_on_focus)
+
+        -- Do not signal a particular window
+        if c.name and c.name:match("#airian") then
+            c:connect_signal("property::urgent", function(cl) cl.urgent = false end)
+        end
     end
 end)
 
