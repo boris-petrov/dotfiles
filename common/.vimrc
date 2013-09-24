@@ -252,7 +252,7 @@ runtime! macros/matchit.vim " smarter matching with % (ifs, elses...)
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
 			\ if line("'\"") > 0 && line ("'\"") <= line("$") |
-			\	exe "normal! g'\"" |
+			\	exe "keepjumps normal! g'\"" |
 			\ endif
 
 " When .vimrc is edited, reload it
