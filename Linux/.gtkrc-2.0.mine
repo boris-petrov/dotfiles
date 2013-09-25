@@ -1,9 +1,17 @@
-gtk-enable-mnemonics=0
-gtk-enable-accels=0
+gtk-font-name = "DejaVu Sans 10"
 
-include "/usr/share/themes/Raleigh/gtk-2.0/gtkrc"
+gtk-key-theme-name = "Emacs"
+
+gtk-enable-mnemonics = 0
+gtk-enable-accels    = 0
 
 style "vimfix" {
 	bg[NORMAL] = "Black" # this matches my gvim theme 'Normal' bg color.
 }
 widget "vim-main-window.*GtkForm" style "vimfix"
+
+binding "pidgin-chat-window-bindings"
+{
+	bind "<ctrl>j" { "message_send" () }
+}
+widget "*pidgin_conv_entry" binding "pidgin-chat-window-bindings"
