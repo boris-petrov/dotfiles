@@ -1,5 +1,5 @@
-xmap so :<c-u>call <SID>ExtractVar()<cr>
-nmap si :<c-u>call <SID>InlineVar()<cr>
+xmap <Plug>ExtractVar :<C-u>call <SID>ExtractVar()<CR>
+nmap <Plug>InlineVar :<C-u>call <SID>InlineVar()<CR>
 
 function! s:ExtractVar()
   let original_reg      = getreg('z')

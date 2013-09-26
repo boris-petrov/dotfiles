@@ -706,6 +706,9 @@ cnoremap <F1> <ESC>
 
 nnoremap - :Switch<CR>
 
+xmap so <Plug>ExtractVar
+nmap si <Plug>InlineVar
+
 nmap U <NOP>
 
 " Always move through visual lines in normal mode:
