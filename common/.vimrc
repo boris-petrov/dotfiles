@@ -234,7 +234,7 @@ autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
 autocmd FileType help nmap <buffer> q :q<CR>
 
 autocmd FileType coffee,ruby,eruby,html,zsh,sh,yaml,scss setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType cpp,java,vim                            setlocal noexpandtab
+autocmd FileType cpp,java,vim,go                         setlocal noexpandtab
 autocmd FileType coffee,python,slim                      setlocal foldmethod=indent nofoldenable
 autocmd FileType coffee,ruby,eruby,html,slim,eco,scss    setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor\ --exclude-dir=public
 
