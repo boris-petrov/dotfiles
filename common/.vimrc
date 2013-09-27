@@ -496,6 +496,15 @@ let g:whitespaste_paste_visual_command = "normal gv\<Plug>VisualPasta"
 imap <expr> <CR> delimitMate#ShouldJump() ? "\<C-g>g" : "\<CR>\<Plug>DiscretionaryEnd"
 
 " --------------------------------------------------------------------------------------------------
+" anzu Mappings
+" --------------------------------------------------------------------------------------------------
+
+nmap n <Plug>(anzu-n-with-echo)
+nmap N <Plug>(anzu-N-with-echo)
+nmap * <Plug>(anzu-star-with-echo)
+nmap # <Plug>(anzu-sharp-with-echo)
+
+" --------------------------------------------------------------------------------------------------
 " CamelCase Plugin Mappings
 " --------------------------------------------------------------------------------------------------
 
@@ -791,4 +800,4 @@ nnoremap <C-d> :q<CR>
 
 " Returns the cursor where it was before the start of the editing
 runtime autoload/repeat.vim
-nnoremap . mr:call repeat#run(v:count)<bar>call feedkeys('`r', 'n')<cr>
+nnoremap . mr:call repeat#run(v:count)<bar>call feedkeys('`r', 'n')<CR>

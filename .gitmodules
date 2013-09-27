@@ -121,3 +121,6 @@
 [submodule "common/.vim/bundle/OmniCppComplete"]
 	path = common/.vim/bundle/OmniCppComplete
 	url = git://github.com/vim-scripts/OmniCppComplete.git
+[submodule "common/.vim/bundle/anzu"]
+	path = common/.vim/bundle/anzu
+	url = git://github.com/osyo-manga/vim-anzu.git
