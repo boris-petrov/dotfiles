@@ -5,7 +5,6 @@
 --extra=+q
 
 --exclude=node_modules
---exclude=.git
 --exclude=vendor
 --exclude=coverage
 
