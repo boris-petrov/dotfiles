@@ -120,7 +120,7 @@ set formatoptions-=o " Stop continuing the comments on pressing o and O
 set grepprg=grep\ -I\ -n\ -s\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude=tags
 
 set spell
-set spelllang=en
+set spelllang=en,bg
 
 colorscheme rdark " cannot live without it
 
