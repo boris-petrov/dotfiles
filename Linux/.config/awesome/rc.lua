@@ -386,7 +386,11 @@ awful.rules.rules = {
     { rule = { class = "Gvim" },
       properties = { size_hints_honor = false } },
     { rule = { class = "URxvt" },
-      properties = { size_hints_honor = false } }
+      properties = { size_hints_honor = false } },
+
+    -- Don't move dialogs from the current tag
+    { rule = { instance = "Dialog" },
+      callback = move_to_current_tag }
 }
 
 -- }}}
