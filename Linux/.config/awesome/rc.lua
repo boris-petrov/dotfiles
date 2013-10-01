@@ -367,21 +367,17 @@ awful.rules.rules = {
       callback = move_to_current_tag },
 
     -- Downloads
-    { rule = { class = "Deluge" },
+    { rule_any = { class = { "Deluge", "Flareget" } },
       properties = { tag = tags[1][9] } },
     { rule = { class = "Deluge", name = "Add Torrents" },
       callback = move_to_current_tag },
-    { rule = { class = "Flareget" },
-      properties = { tag = tags[1][9] } },
     { rule = { class = "Flareget", name = "New Download" },
       callback = move_to_current_tag },
 
     -- Other
     { rule = { class = "Luakit" },
       properties = { floating = true } },
-    { rule = { class = "Gvim" },
-      properties = { size_hints_honor = false } },
-    { rule = { class = "URxvt" },
+    { rule_any = { class = { "Gvim", "URxvt" } },
       properties = { size_hints_honor = false } },
 
     -- Don't move dialogs from the current tag
