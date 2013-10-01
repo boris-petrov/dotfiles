@@ -385,8 +385,8 @@ awful.rules.rules = {
       properties = { size_hints_honor = false } },
 
     -- Don't move dialogs from the current tag
-    { rule = { instance = "Dialog" },
-      callback = move_to_current_tag }
+    { rule_any = { instance = { "Dialog" }, type = { "dialog" } },
+      callback = move_to_current_tag },
 }
 
 -- }}}
