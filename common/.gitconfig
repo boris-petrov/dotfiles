@@ -6,6 +6,7 @@
 [diff]
 	tool = meld
 [merge]
+	ff = no
 	tool = meld
 [alias]
 	co = checkout
