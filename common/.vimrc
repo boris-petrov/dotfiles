@@ -342,10 +342,6 @@ nnoremap <F4> :GundoToggle<CR>
 let coffee_compiler     = 'iced'
 let coffee_compile_vert = 1
 
-autocmd FileType coffee nmap <buffer> dd <Plug>CoffeeToolsDeleteAndDedent
-autocmd FileType coffee xmap <buffer> d  <Plug>CoffeeToolsDeleteAndDedent
-autocmd FileType coffee xmap <buffer> x  <Plug>CoffeeToolsDeleteAndDedent
-
 autocmd FileType coffee hi! link Keyword   Statement
 autocmd FileType coffee hi! link Structure Type
 autocmd FileType coffee hi! def link coffeeObjAssign Special
