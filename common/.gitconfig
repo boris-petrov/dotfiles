@@ -25,7 +25,7 @@
 	pretty = %C(blue)%h%C(red) %an %C(green)%ad%C(reset)%d%n%B
 [core]
 	autocrlf = input
-	whitespace = fix,trailing-space
+	whitespace = fix,space-before-tab,trailing-space,cr-at-eol
 [branch]
 	autosetuprebase = always
 [color]
