@@ -70,6 +70,7 @@ alias mkdir='mkdir -p -v'
 
 alias df='df -hPT'
 alias du='du -ch'
+alias free='free -h'
 
 alias grep='grep -I -n -s --color --exclude-dir=node_modules --exclude-dir=.git --exclude=tags --exclude-dir=coverage --exclude-dir=tmp --exclude-dir=log --exclude-dir=vendor --exclude-dir=public'
 
