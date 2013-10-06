@@ -483,13 +483,20 @@ let g:whitespaste_paste_visual_command = "normal gv\<Plug>VisualPasta"
 imap <expr> <CR> delimitMate#ShouldJump() ? "\<C-g>g" : "\<CR>\<Plug>DiscretionaryEnd"
 
 " --------------------------------------------------------------------------------------------------
+" vim-airline config
+" --------------------------------------------------------------------------------------------------
+
+let g:airline#extensions#tabline#enabled = 0
+let g:airline_powerline_fonts = 1
+
+" --------------------------------------------------------------------------------------------------
 " anzu Mappings
 " --------------------------------------------------------------------------------------------------
 
-nmap n <Plug>(anzu-n-with-echo)
-nmap N <Plug>(anzu-N-with-echo)
-nmap * <Plug>(anzu-star-with-echo)
-nmap # <Plug>(anzu-sharp-with-echo)
+nmap n <Plug>(anzu-n)
+nmap N <Plug>(anzu-N)
+nmap * <Plug>(anzu-star)
+nmap # <Plug>(anzu-sharp)
 
 " --------------------------------------------------------------------------------------------------
 " CamelCase Plugin Mappings
@@ -758,7 +765,7 @@ nnoremap gk <C-w>k
 nnoremap gl <C-w>l
 
 inoremap <C-SPACE> <C-n>
-nnoremap <ESC> :noh<CR>
+nmap <ESC> :noh<CR><Plug>(anzu-clear-search-status)
 nnoremap vv V
 nnoremap V v$h
 nnoremap Y y$
