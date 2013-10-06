@@ -90,7 +90,6 @@ set ruler
 set rulerformat=%l/%L,%v%=%P
 
 set laststatus=2 " Always show statusline
-set statusline=\ %{HasPaste()}%<%f%m%r\ %k%1*%y%2*\ %{fugitive#statusline()}%*%=%-([%l/%L],%v\ (%P)%)
 
 set history=200
 set viminfo='20,\"50 " read/write a .viminfo file, don't store more than 50 lines of registers
@@ -469,14 +468,6 @@ endfunction
 " --------------------------------------------------------------------------------------------------
 " Pasting Options
 " --------------------------------------------------------------------------------------------------
-
-" Returns true if paste mode is enabled
-function! HasPaste()
-	if &paste
-		return 'PASTE MODE  '
-	endif
-	return ''
-endfunction
 
 " Disable vim-pasta and use it through whitespaste
 let g:pasta_enabled_filetypes = []
