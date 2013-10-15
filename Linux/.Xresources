@@ -10,10 +10,10 @@ URxvt.termName: xterm-256color
 
 URxvt.iconFile: /home/boris/dotfiles/Linux/icons/terminal.png
 
-URxvt.font:           xft:Inconsolatazi4-16
-URxvt.boldFont:       xft:Inconsolatazi4-16:bold
-URxvt.italicFont:     xft:Inconsolatazi4-16:italic
-URxvt.boldItalicFont: xft:Inconsolatazi4-16:bold:italic
+URxvt.font:           xft:Inconsolata-17
+URxvt.boldFont:       xft:Inconsolata-17:bold
+URxvt.italicFont:     xft:Inconsolata-17:italic
+URxvt.boldItalicFont: xft:Inconsolata-17:bold:italic
 
 URxvt.fading: 20
 
