@@ -365,6 +365,8 @@ awful.rules.rules = {
       properties = { tag = tags[screen.count()][8] } },
     { rule = { class = "Thunderbird", name = "Attach File(s)" },
       callback = move_to_current_tag },
+    { rule = { class = "Thunderbird", instance = "Msgcompose" },
+      callback = move_to_current_tag },
 
     -- Downloads
     { rule_any = { class = { "Deluge", "Flareget" } },
