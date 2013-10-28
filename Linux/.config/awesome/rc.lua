@@ -60,6 +60,7 @@ beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 
 terminal         = "urxvt"
 hostile_takeover = "gvim /home/boris/documents/Hostile\\ Takeover.txt"
+dmenu            = "dmenu_run"
 
 alt_modkey = "Mod1"
 win_modkey = "Mod4"
@@ -212,6 +213,7 @@ globalkeys = awful.util.table.join(
     awful.key({ alt_modkey, "Shift" }, "r",      awesome.restart),
     awful.key({ alt_modkey, "Shift" }, "q",      awesome.quit),
     awful.key({ alt_modkey          }, "h",      function() awful.util.spawn(hostile_takeover) end),
+    awful.key({ alt_modkey          }, "d",      function() awful.util.spawn(dmenu) end),
 
     -- awful.key({ alt_modkey,           }, "l",     function() awful.tag.incmwfact( 0.05)   end),
     -- awful.key({ alt_modkey,           }, "h",     function() awful.tag.incmwfact(-0.05)   end),

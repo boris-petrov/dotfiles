@@ -1,7 +1,6 @@
 xrdb -merge ~/.Xresources
 
 autokey-gtk &
-launchy &
 thunderbird &
 dropboxd &
 hotot-qt &
