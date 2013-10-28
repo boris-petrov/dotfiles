@@ -16,9 +16,6 @@ require("utils")
 
 local vicious = require("vicious")
 
-require("awful.remote")
-require("screenful/screenful")
-
 focus_client = function(c)
     -- This will also un-minimize
     -- the client, if needed

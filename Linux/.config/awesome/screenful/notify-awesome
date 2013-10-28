@@ -1,0 +1,12 @@
+#!/bin/sh
+
+USER='boris'
+
+function notify {
+  set -x
+  xhost local:$USER
+  export DISPLAY=:0.0
+  su $USER -c "/home/$USER/bin/fix_screens"
+}
+
+notify &
