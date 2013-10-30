@@ -16,6 +16,10 @@ require("utils")
 
 local vicious = require("vicious")
 
+function colorize(color, string)
+    return '<span color="'..color..'">'..string..'</span>'
+end
+
 focus_client = function(c)
     -- This will also un-minimize
     -- the client, if needed
@@ -122,7 +126,7 @@ kbdwidget:set_text(" En ")
 -- Battery widget
 if directoryExists('/sys/class/power_supply/BAT0') then
     batwidget = wibox.widget.textbox()
-    vicious.register(batwidget, vicious.widgets.bat, "$2% - $3 |", 61, "BAT0")
+    vicious.register(batwidget, vicious.widgets.bat, "$2% - $3 "..colorize("#ee1111", "|"), 61, "BAT0")
 else
     batwidget = nil
 end
