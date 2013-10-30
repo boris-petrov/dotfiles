@@ -1,12 +1,10 @@
 #!/bin/sh
 
-shopt -s dotglob
-
 SCRIPT=$(readlink -f $0)
 SCRIPTPATH=$(dirname $SCRIPT)
 
 if [ `uname -s` = 'Linux' ]; then
-	for file in `find $SCRIPTPATH/common/* -maxdepth 0` `find $SCRIPTPATH/Linux/* -maxdepth 0`
+	for file in `find $SCRIPTPATH/common/ -maxdepth 1` `find $SCRIPTPATH/Linux/ -maxdepth 1`
 	do
 		BASENAME=$(basename $file)
 		ln -sfn $file ~/$BASENAME
@@ -54,3 +52,4 @@ elif [ `uname -o` = 'Cygwin' ]; then
 
 fi
 
+git submodule update --init --recursive
