@@ -93,8 +93,8 @@ alias cd.....='cd ../../../..'
 
 alias be='bundle exec'
 
-alias mplayer='mplayer -softvol -softvol-max 400'
-alias smplayer='smplayer -softvol -softvol-max 400'
+alias mplayer_softvol='mplayer -softvol -softvol-max 400'
+alias smplayer_softvol='smplayer -softvol -softvol-max 400'
 
 alias feh='feh -.'
 
