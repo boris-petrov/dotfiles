@@ -108,6 +108,8 @@ alias htop='TERM=screen htop' # fix for tmux redrawing issue
 
 alias sudo='sudo -E '
 
+alias packer='sudo packer' # in order to use sudoers config and not ask for password
+
 which() {
   (alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
 }
