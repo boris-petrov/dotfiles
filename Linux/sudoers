@@ -1,0 +1,5 @@
+Cmnd_Alias PROGS = /usr/bin/wifi-menu,/usr/bin/pacman,/usr/bin/packer
+Defaults! PROGS setenv
+root ALL=(ALL) ALL
+boris ALL=(ALL) ALL
+boris ALL = NOPASSWD: PROGS
