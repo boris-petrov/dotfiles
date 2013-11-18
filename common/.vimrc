@@ -347,8 +347,7 @@ autocmd FileType coffee hi! def link coffeeObjAssign Special
 
 let g:coffee_tools_function_text_object = 1
 
-let g:syntastic_coffee_checkers  = ['iced']
-let g:syntastic_coffee_iced_args = '-cp'
+let g:syntastic_coffee_checkers = ['iced']
 
 " --------------------------------------------------------------------------------------------------
 " Session Options and Mappings
