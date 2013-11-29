@@ -1,14 +1,17 @@
 packer
 
-zathura feh libreoffice smplayer kbgoffice
-cups system-config-printer
+archlinux-keyring
+zathura feh libreoffice smplayer kbgoffice deadbeef
+cups gutenprint system-config-printer
 profile-sync-daemon chromium-pepper-flash-stable firefox
-pidgin skype skype4pidgin
+pidgin skype skype4pidgin kbdd pidgin-otr
 dropbox liferea xcmenu-git thunderbird hotot netcfg htop autokey-gtk arandr
-awesome dmenu
+awesome dmenu xlockmore
 aspell hunspell
-gvim colordiff colorgcc git
-zsh rxvt-unicode-pixbuf urxvt-clipboard
-deluge
+gvim colordiff colorgcc git ctags
+zsh rxvt-unicode-pixbuf urxvt-clipboard zsh-syntax-highlighting tmux
+jre ntp openssh sudo wget ntfs-3g xsel unrar oxygen-icons
+deluge fatrat
+freerdp
 
 https://wiki.archlinux.org/index.php/Infinality-bundle%2Bfonts
