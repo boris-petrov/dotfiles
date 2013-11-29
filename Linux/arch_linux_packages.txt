@@ -1,0 +1,12 @@
+packer
+
+zathura feh libreoffice
+cups system-config-printer
+profile-sync-daemon chromium-pepper-flash-stable firefox
+pidgin skype skype4pidgin
+dropbox liferea xcmenu-git thunderbird hotot
+autokey-gtk awesome arandr
+aspell hunspell
+gvim colordiff colorgcc
+netcfg
+git zsh htop
