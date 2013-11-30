@@ -11,7 +11,7 @@ aspell hunspell
 gvim colordiff colorgcc git ctags
 zsh rxvt-unicode-pixbuf urxvt-clipboard zsh-syntax-highlighting tmux
 jre ntp openssh sudo wget ntfs-3g xsel unrar oxygen-icons
-deluge fatrat
+deluge flareget
 freerdp
 
 https://wiki.archlinux.org/index.php/Infinality-bundle%2Bfonts
