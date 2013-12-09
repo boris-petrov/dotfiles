@@ -310,8 +310,8 @@ awful.rules.rules = {
     -- Browsers
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][2], switchtotag = true } },
-    { rule = { class = "Plugin-container" },  properties = { floating = true } }, -- Firefox Flash player
-    { rule = { class = "Exe", name = "exe" }, properties = { floating = true } }, -- Chrome Flash player
+    { rule = { instance = "plugin-container" }, properties = { floating = true } }, -- Firefox Flash player
+    { rule = { instance = "exe" },              properties = { floating = true } }, -- Chrome Flash player
 
     -- Chat
     { rule = { class = "Skype", name = "File Transfers" },
