@@ -124,3 +124,6 @@
 [submodule "common/.vim/bundle/vim-airline"]
 	path = common/.vim/bundle/vim-airline
 	url = git://github.com/bling/vim-airline
+[submodule "common/zsh-syntax-highlighting"]
+	path = common/zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting.git

@@ -9,7 +9,7 @@ dropbox liferea xcmenu-git thunderbird hotot netcfg htop autokey-gtk arandr
 awesome dmenu xlockmore
 aspell hunspell
 gvim colordiff colorgcc git ctags
-zsh rxvt-unicode-pixbuf urxvt-clipboard zsh-syntax-highlighting tmux
+zsh rxvt-unicode-pixbuf urxvt-clipboard tmux
 jre ntp openssh sudo wget ntfs-3g xsel unrar oxygen-icons
 deluge flareget
 freerdp
