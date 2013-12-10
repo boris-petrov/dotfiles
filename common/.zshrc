@@ -30,9 +30,8 @@ autoload -Uz promptinit; promptinit
 fpath=($HOME/.zdir/functions $fpath)
 autoload -U ~/.zdir/functions/*(:t)
 
-add-zsh-hook chpwd chpwd_update_git_vars
-add-zsh-hook preexec preexec_update_git_vars
-add-zsh-hook precmd precmd_update_git_vars
+add-zsh-hook chpwd update_current_git_vars
+add-zsh-hook precmd update_current_git_vars
 
 ##############################
 # Prompt
