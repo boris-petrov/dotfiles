@@ -27,7 +27,7 @@ nnoremap U :undo<Space>
 nnoremap ,a :tabnew about:addons<CR>
 
 "" private mode
-nnoewmap ,p :set private!<CR>
+nnoremap ,p :set private!<CR>
 
 "" about:config
 nnoremap ,c :tabnew about:config<CR>
