@@ -440,3 +440,5 @@ dbus.connect_signal("ru.gentoo.kbdd", function(...)
 end)
 
 -- }}}
+
+awful.util.spawn_with_shell("killall kbdd; kbdd")

@@ -5,7 +5,6 @@ thunderbird &
 dropboxd &
 hotot-qt &
 liferea &
-kbdd
 xcmenu &
 rsibreak
 
