@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /usr/bin/chromium --enable-seccomp-sandbox
+exec /usr/bin/chromium --enable-seccomp-sandbox $@
