@@ -313,6 +313,9 @@ export EDITOR=vim
 
 export LD_LIBRARY_PATH=.:/usr/local/lib:$LD_LIBRARY_PATH
 
+export XDG_USER_CONFIG=~/.config
+export XDG_USER_DATA=~/.config
+
 ulimit -c unlimited
 
 ##############################
