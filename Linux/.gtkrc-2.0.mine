@@ -2,6 +2,10 @@ gtk-theme-name="Raleigh"
 gtk-icon-theme-name="oxygen"
 
 gtk-font-name="DejaVu Sans 10"
+style "font" {
+	font_name = "DejaVu Sans 10"
+}
+widget_class "*" style "font"
 
 gtk-key-theme-name="Emacs"
 
