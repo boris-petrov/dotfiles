@@ -756,7 +756,7 @@ nnoremap gl <C-w>l
 
 inoremap <C-SPACE> <C-n>
 if has("gui_running")
-	nmap <ESC> :noh<CR><Plug>(anzu-clear-search-status)
+	nmap <ESC> :noh<CR>
 endif
 nnoremap vv V
 nnoremap V v$h
