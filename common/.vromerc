@@ -1,0 +1,32 @@
+map j 5j
+map k 5k
+map J 15j
+map K 15k
+
+unmap <C-f>
+iunmap <M-w>
+
+map d dc
+
+map <BackSpace> H
+
+imap jk <Esc>
+
+" Go to last tab
+map ` <C-^>
+
+map h gT
+map l gt
+
+map R <C-r>
+
+map p <M-p>
+map P p
+
+set showstatus=1
+
+set useletters=0
+
+set searchengines+={"wiki":"http://en.wikipedia.org/wiki/{{keyword}}"}
+
+set completion_items=url,search-engine,bookmarks,search
