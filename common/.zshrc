@@ -109,8 +109,6 @@ alias sudo='sudo -E '
 
 alias packer='sudo packer' # in order to use sudoers config and not ask for password
 
-alias hideprev='history -d $((HISTCMD-2)) && history -d $((HISTCMD-1))' # Hide the previous command you just ran
-
 which() {
   (alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
 }
