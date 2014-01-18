@@ -134,7 +134,7 @@ extract() {
     fi
 
     case $i in
-    *.t(gz|lz|xz|b2|bz2|ar.*))
+    *.t(gz|lz|xz|b2|bz2|ar|ar.*))
            bsdtar xvf $i;;
     *.7z)  7z x $i;;
     *.Z)   uncompress $i;;
