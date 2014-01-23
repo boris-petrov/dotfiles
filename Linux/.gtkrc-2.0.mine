@@ -9,9 +9,6 @@ widget_class "*" style "font"
 
 gtk-key-theme-name="Emacs"
 
-gtk-enable-mnemonics = 0
-gtk-enable-accels    = 0
-
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
