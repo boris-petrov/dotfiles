@@ -313,6 +313,7 @@ export LD_LIBRARY_PATH=.:/usr/local/lib:$LD_LIBRARY_PATH
 
 export XDG_USER_CONFIG=~/.config
 export XDG_USER_DATA=~/.config
+export XDG_DATA_HOME=~/.local
 
 ulimit -c unlimited
 

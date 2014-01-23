@@ -1,4 +1,5 @@
 Linux/.config/*
+Linux/.local/*
 Linux/.purple
 common/.vim/.netrwhist
 common/.vim/undodir

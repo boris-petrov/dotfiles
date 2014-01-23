@@ -1,0 +1,16 @@
+[Default Applications]
+x-scheme-handler/mailto=userapp-Thunderbird-MUN1KW.desktop
+message/rfc822=userapp-Thunderbird-MUN1KW.desktop
+application/x-extension-eml=userapp-Thunderbird-MUN1KW.desktop
+x-scheme-handler/http=chromium.desktop
+x-scheme-handler/https=chromium.desktop
+text/html=chromium.desktop
+application/pdf=zathura-pdf-poppler.desktop
+image/jpeg=feh.desktop
+x-scheme-handler/magnet=deluge.desktop
+application/x-bittorrent=deluge.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-MUN1KW.desktop;
+message/rfc822=userapp-Thunderbird-MUN1KW.desktop;
+application/x-extension-eml=userapp-Thunderbird-MUN1KW.desktop;
