@@ -23,6 +23,8 @@ map R <C-r>
 map p <M-p>
 map P p
 
+map b gb
+
 set showstatus=1
 
 set useletters=0
