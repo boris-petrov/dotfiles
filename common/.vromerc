@@ -32,3 +32,5 @@ set useletters=0
 set searchengines+={"wiki":"http://en.wikipedia.org/wiki/{{keyword}}"}
 
 set completion_items=url,search-engine,bookmarks,search
+
+set disable_autofocus
