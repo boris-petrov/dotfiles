@@ -282,8 +282,7 @@ if [ `uname -s` = "Linux" ]; then
   settitle $PWD
 
   hook_function() {
-    [[ $3 = git* ]] && source ssh-agent.zsh
-    [[ $3 = ssh* ]] && source ssh-agent.zsh
+    [[ $3 = git* || $3 = ssh* || $3 = scp* ]] && source ssh-agent.zsh
   }
 
   add-zsh-hook preexec hook_function
