@@ -6,7 +6,6 @@ dropboxd &
 hotot-qt &
 liferea &
 xcmenu &
-rsibreak
 
 ~/bin/fix_screens
 
