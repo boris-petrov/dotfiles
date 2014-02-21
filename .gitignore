@@ -4,6 +4,7 @@ Linux/.purple
 common/.vim/.netrwhist
 common/.vim/undodir
 common/.vim/spell
+common/.vim/bundle
 common/.pentadactyl/info
 common/.vimperator/info
 Linux/.kde4

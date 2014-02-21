@@ -6,13 +6,56 @@ if has('win32')
 endif
 
 set nocompatible
+filetype off
 
-filetype on
+set runtimepath+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-runtime bundle/vim-pathogen.git/autoload/pathogen.vim
-execute pathogen#infect()
-syntax on
+Bundle 'gmarik/vundle'
+
+Bundle 'cuzelac/AutoTag'
+Bundle 'bkad/CamelCaseMotion'
+Bundle 'AndrewRadev/coffee_tools.vim'
+Bundle 'godlygeek/csapprox'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'gregsexton/gitv'
+Bundle 'sjl/gundo.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'boris-petrov/rainbow_parentheses.vim'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'slim-template/vim-slim'
+Bundle 'kana/vim-smartword'
+Bundle 'garbas/vim-snipmate'
+Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'ervandew/supertab'
+Bundle 'AndrewRadev/switch.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'godlygeek/tabular'
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'bling/vim-airline'
+Bundle 'guns/vim-clojure-static'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'sickill/vim-pasta'
+Bundle 'tpope/vim-repeat'
+Bundle 'honza/vim-snippets'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'AndrewRadev/whitespaste.vim'
+
+Bundle 'AutoComplPop'
+Bundle 'OmniCppComplete'
+Bundle 'taglist.vim'
+
 filetype plugin indent on
+
+syntax on
 
 set hidden
 
