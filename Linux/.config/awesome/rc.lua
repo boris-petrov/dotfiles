@@ -283,6 +283,7 @@ end
 
 globalkeys = awful.util.table.join(globalkeys,
     ror("Firefox",  "f", "firefox"),
+    ror("Chromium", "c", "chromium"),
     ror("Deadbeef", "w", "deadbeef"),
     ror("Deluge",   "b", "deluge")
 )
