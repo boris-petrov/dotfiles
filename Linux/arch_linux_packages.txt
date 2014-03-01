@@ -19,3 +19,4 @@ sudo pip2 install requests-cache
 sudo pip2 install pygments
 
 https://wiki.archlinux.org/index.php/Infinality-bundle%2Bfonts
+otf-inconsolatazi4-ib
