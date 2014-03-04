@@ -164,7 +164,7 @@ set grepprg=grep\ -I\ -n\ -s\ --color\ --exclude-dir=node_modules\ --exclude-dir
 set spell
 set spelllang=en,bg
 
-set synmaxcol=200 " do not syntax-highlight lines after the 140th symbols
+set synmaxcol=200 " do not syntax-highlight lines after the 200th symbols
 
 colorscheme rdark " cannot live without it
 
