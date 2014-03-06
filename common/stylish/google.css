@@ -3,11 +3,12 @@ background: #262626 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAE/C
 color: #fff !important;
 }
 
-
 a, a:visited {color:#cccccc !important;}
 #ires a:visited {color:#996666 !important;}
 
+#res a {text-decoration:underline;}
 
+#res h3 {font-size: medium !important;}
 
 #gbx2 {
 background:#161616 !Important; 
@@ -113,6 +114,9 @@ a.gss_ifl {color:#0E4289 !important;}
 color:#F0F0F0 !important;
 }
 #search .s em {
+color:red !important;
+}
+#search .fl b {
 color:red !important;
 }
 #search .r em {
