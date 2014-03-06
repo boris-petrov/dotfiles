@@ -350,28 +350,15 @@ nnoremap <silent> ga :BufExplorer<CR>
 " Tags
 " --------------------------------------------------------------------------------------------------
 
-" Tagbar
-nnoremap <silent> gd :TagbarToggle<CR>
-autocmd FileType tagbar nmap <buffer> l <CR>
-let g:tagbar_autofocus             = 1
-let g:tagbar_updateonsave_maxlines = 0
-let g:tagbar_autoclose             = 1
+" Taglist
+nnoremap <silent> gd :TlistToggle<CR>
 
-if executable('coffeetags')
-	let g:tagbar_type_coffee = {
-				\ 'ctagsbin' : 'coffeetags',
-				\ 'ctagsargs' : '',
-				\ 'kinds' : [
-				\ 'f:functions',
-				\ 'o:object',
-				\ ],
-				\ 'sro' : ".",
-				\ 'kind2scope' : {
-				\ 'f' : 'object',
-				\ 'o' : 'object',
-				\ }
-				\ }
-endif
+let g:Tlist_Use_Right_Window=1
+let g:Tlist_Close_On_Select=1
+let g:Tlist_Exit_OnlyWindow=1
+autocmd FileType taglist nmap <buffer> l <CR>
+
+let g:tlist_coffee_settings = 'coffee;c:class;m:method;f:function'
 
 " --------------------------------------------------------------------------------------------------
 " Gundo
