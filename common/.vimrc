@@ -48,6 +48,7 @@ Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'AndrewRadev/whitespaste.vim'
+Bundle 'FelikZ/ctrlp-py-matcher'
 
 Bundle 'AutoComplPop'
 Bundle 'OmniCppComplete'
@@ -708,6 +709,11 @@ let g:ctrlp_custom_ignore         = {
 	\ }
 let g:ctrlp_match_window_bottom   = 0
 let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_match_func            = { 'match': 'pymatcher#PyMatch' }
+
+let g:ctrlp_lazy_update = 100
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_max_files = 0
 
 "--------------------------------------------------------
 " Abbreviations
