@@ -160,7 +160,11 @@ set display=lastline " Show as much of the last line as possible and not these c
 
 set formatoptions-=o " Stop continuing the comments on pressing o and O
 
-set grepprg=grep\ -I\ -n\ -s\ --color\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude-dir=.svn\ --exclude=tags
+if executable('ag')
+	set grepprg=ag\ --hidden\ --nocolor
+else
+	set grepprg=grep\ -I\ -n\ -s\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude-dir=.svn\ --exclude=tags
+endif
 
 set spell
 set spelllang=en,bg
@@ -281,7 +285,9 @@ autocmd FileType help nmap <buffer> q :q<CR>
 autocmd FileType coffee,ruby,eruby,html,zsh,sh,yaml,scss setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType cs,cpp,java,vim,go                      setlocal noexpandtab
 autocmd FileType coffee,python,slim                      setlocal foldmethod=indent nofoldenable
-autocmd FileType coffee,ruby,eruby,html,slim,eco,scss    setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor\ --exclude-dir=public
+if !executable('ag')
+	autocmd FileType coffee,ruby,eruby,html,slim,eco,scss setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor\ --exclude-dir=public
+endif
 
 augroup RainbowParentheses
 	autocmd!
@@ -461,25 +467,19 @@ nmap <silent> gr :call <SID>ToggleList("Quickfix List", 'c')<CR>
 command! -count=0 -nargs=* Grep call s:Grep(<count>, <q-args>)
 
 function! s:Grep(count, args)
-	try
-		let l:original_grepprg = &grepprg
-		if a:count > 0
-			" then we've selected something in visual mode
-			let query = s:LastSelectedText()
-			let &grepprg = l:original_grepprg . " -F"
-		elseif empty(a:args)
-			" If no pattern is provided, search for the word under the cursor
-			let &grepprg = l:original_grepprg . " -w -F"
-			let query = expand("<cword>")
-		else
-			let query = a:args
-		end
+	let options = ''
+	if a:count > 0
+		" then we've selected something in visual mode
+		let query = s:LastSelectedText()
+	elseif empty(a:args)
+		" If no pattern is provided, search for the word under the cursor
+		let query = expand("<cword>")
+		let options = '-w '
+	else
+		let query = a:args
+	end
 
-		exe 'grep -r '.shellescape(query).' .'
-
-	finally
-		let &grepprg = l:original_grepprg
-	endtry
+	exe 'grep '.options.shellescape(query).' .'
 endfunction
 
 function! s:LastSelectedText()
@@ -714,6 +714,10 @@ let g:ctrlp_match_func            = { 'match': 'pymatcher#PyMatch' }
 let g:ctrlp_lazy_update = 100
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_files = 0
+
+if executable('ag')
+	let g:ctrlp_user_command = 'ag %s -i -l --hidden --nocolor'
+endif
 
 "--------------------------------------------------------
 " Abbreviations
