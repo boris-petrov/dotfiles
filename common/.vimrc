@@ -806,6 +806,7 @@ nnoremap Y y$
 
 " Open new tab easily
 nnoremap <Leader>t :tabnew<CR>
+nnoremap <Leader>T :tabedit %<cr>gT:quit<cr>
 
 nnoremap <CR> o<ESC>
 nnoremap <S-CR> O<ESC>
