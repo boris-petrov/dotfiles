@@ -1,0 +1,9 @@
+.git
+node_modules
+.svn
+tags
+log
+coverage
+tmp
+vendor
+public
