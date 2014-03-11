@@ -740,6 +740,9 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 cnoremap <F1> <ESC>
 
+" Saving read-only files
+cnoremap sudow w !sudo tee % >/dev/null
+
 nnoremap - :Switch<CR>
 
 xmap so <Plug>ExtractVar
