@@ -472,10 +472,11 @@ function! s:Grep(count, args)
 	if a:count > 0
 		" then we've selected something in visual mode
 		let query = s:LastSelectedText()
+		let options = '--literal '
 	elseif empty(a:args)
 		" If no pattern is provided, search for the word under the cursor
 		let query = expand("<cword>")
-		let options = '-w '
+		let options = '--word-regexp --literal '
 	else
 		let query = a:args
 	end
