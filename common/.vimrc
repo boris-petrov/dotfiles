@@ -41,7 +41,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
-Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'sickill/vim-pasta'
 Bundle 'tpope/vim-repeat'
 Bundle 'honza/vim-snippets'
@@ -319,8 +318,8 @@ autocmd FileType haskell compiler ghc
 " Tabularize
 " --------------------------------------------------------------------------------------------------
 
-nnoremap sa :call <SID>Tabularize(0)<cr>
-xnoremap sa :<c-u>call <SID>Tabularize(1)<cr>
+nnoremap sa :call <SID>Tabularize(0)<CR>
+xnoremap sa :<c-u>call <SID>Tabularize(1)<CR>
 
 function! s:Tabularize(visual)
 	let saved_cursor = getpos('.')
@@ -655,12 +654,11 @@ endfunction
 " NERDTree (un)Mappings
 " --------------------------------------------------------------------------------------------------
 
-nnoremap gn :NERDTreeTabsToggle<CR>
+nnoremap <silent> gn :NERDTreeToggle<CR>:silent NERDTreeMirror<CR>
 
-let g:NERDTreeMapPreviewVSplit     = ""
-let g:NERDTreeMapJumpFirstChild    = ""
-let g:NERDTreeMapJumpLastChild     = ""
-let g:nerdtree_tabs_focus_on_files = 1
+let g:NERDTreeMapPreviewVSplit  = ""
+let g:NERDTreeMapJumpFirstChild = ""
+let g:NERDTreeMapJumpLastChild  = ""
 
 autocmd FileType nerdtree nmap <buffer> l o
 autocmd FileType nerdtree nmap <buffer> h x
@@ -811,7 +809,7 @@ nnoremap Y y$
 
 " Open new tab easily
 nnoremap <Leader>t :tabnew<CR>
-nnoremap <Leader>T :tabedit %<cr>gT:quit<cr>
+nnoremap <Leader>T :tabedit %<CR>gT:quit<CR>
 
 nnoremap <CR> o<ESC>
 nnoremap <S-CR> O<ESC>
