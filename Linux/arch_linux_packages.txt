@@ -3,7 +3,7 @@ packer
 archlinux-keyring
 zathura feh libreoffice smplayer kbgoffice deadbeef
 cups gutenprint system-config-printer
-profile-sync-daemon chromium-pepper-flash-stable firefox
+profile-sync-daemon chromium-pepper-flash firefox
 pidgin skype skype4pidgin kbdd pidgin-otr
 dropbox liferea xcmenu-git thunderbird hotot netcfg htop autokey-gtk arandr xdg-utils
 awesome dmenu xlockmore
