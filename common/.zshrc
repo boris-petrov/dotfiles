@@ -73,7 +73,7 @@ alias free='free -h'
 
 alias grep='grep -I -n -s --color --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.svn --exclude=.tags --exclude-dir=coverage --exclude-dir=tmp --exclude-dir=log --exclude-dir=vendor --exclude-dir=public'
 
-alias ctags='ctags -f.ctags'
+alias ctags='ctags -f.tags'
 
 alias ls='ls -hF --color=auto --group-directories-first'
 alias ll='ls -l'
