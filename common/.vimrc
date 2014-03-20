@@ -424,14 +424,12 @@ xmap <silent> # :call <SID>VisualSearch('b')<CR>n
 " QuickFix list
 " --------------------------------------------------------------------------------------------------
 
-" Can be called in several ways:
-"
-" :Grep <something> -> Grep for the given search query
-" :Grep -> Grep for the word under the cursor
-" :'<,'>Grep -> Grep in visual mode
+let g:qfenter_open_map  = ['l', '<CR>']
+let g:qfenter_vopen_map = []
+let g:qfenter_hopen_map = ['s']
+let g:qfenter_topen_map = ['t']
 
 autocmd FileType qf nnoremap <buffer> q :cclose \| :lclose<CR>
-autocmd FileType qf nnoremap <buffer> l <CR>
 autocmd FileType qf nnoremap <buffer> j j
 autocmd FileType qf nnoremap <buffer> k k
 
