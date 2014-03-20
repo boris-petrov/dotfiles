@@ -421,7 +421,7 @@ xmap <silent> * :call <SID>VisualSearch('f')<CR>n
 xmap <silent> # :call <SID>VisualSearch('b')<CR>n
 
 " --------------------------------------------------------------------------------------------------
-" Grep
+" QuickFix list
 " --------------------------------------------------------------------------------------------------
 
 " Can be called in several ways:
@@ -462,7 +462,17 @@ endfunction
 " nmap <silent> gr :call ToggleList("Location List", 'l')<CR>
 nmap <silent> gr :call <SID>ToggleList("Quickfix List", 'c')<CR>
 
+" --------------------------------------------------------------------------------------------------
+" Ag
+" --------------------------------------------------------------------------------------------------
+
 command! -count=0 -nargs=* Grep call s:Grep(<count>, <q-args>)
+
+" Can be called in several ways:
+"
+" :Grep <something> -> Grep for the given search query
+" :Grep -> Grep for the word under the cursor
+" :'<,'>Grep -> Grep in visual mode
 
 function! s:Grep(count, args)
 	let options = ''
