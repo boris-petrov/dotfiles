@@ -163,7 +163,7 @@ else
 	set grepprg=grep\ -I\ -n\ -s\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude-dir=.svn\ --exclude=.tags
 endif
 
-set tags+=./.tags
+set tags+=./.tags,.tags
 
 set spell
 set spelllang=en,bg
