@@ -1,7 +1,7 @@
 .git
 node_modules
 .svn
-tags
+.tags
 log
 coverage
 tmp
