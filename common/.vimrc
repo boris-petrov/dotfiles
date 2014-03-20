@@ -45,6 +45,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'AndrewRadev/whitespaste.vim'
 Bundle 'FelikZ/ctrlp-py-matcher'
 Bundle 'sheerun/vim-polyglot'
+Bundle 'yssl/QFEnter'
 
 Bundle 'AutoComplPop'
 Bundle 'OmniCppComplete'
