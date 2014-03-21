@@ -507,15 +507,10 @@ function! s:LastSelectedText()
 endfunction
 
 " --------------------------------------------------------------------------------------------------
-" Pasting Options
+" pasta config
 " --------------------------------------------------------------------------------------------------
 
-" Disable vim-pasta and use it through whitespaste
-let g:pasta_enabled_filetypes = []
-
-let g:whitespaste_paste_before_command = "normal \<Plug>BeforePasta"
-let g:whitespaste_paste_after_command  = "normal \<Plug>AfterPasta"
-let g:whitespaste_paste_visual_command = "normal gv\<Plug>VisualPasta"
+let g:pasta_disabled_filetypes = []
 
 " --------------------------------------------------------------------------------------------------
 " delimitMate Mappings
