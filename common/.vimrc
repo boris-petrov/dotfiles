@@ -524,6 +524,9 @@ imap <expr> <CR> delimitMate#ShouldJump() ? "\<C-g>g" : "\<CR>\<Plug>Discretiona
 
 let g:airline#extensions#tabline#enabled = 0
 let g:airline_powerline_fonts = 1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_section_z=''
 
 " --------------------------------------------------------------------------------------------------
 " CamelCase Plugin Mappings
