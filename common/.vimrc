@@ -512,6 +512,26 @@ endfunction
 
 let g:pasta_disabled_filetypes = []
 
+"------------------------------------------------------------------------
+" I haven't found how to hide this function (yet)
+function! RestoreRegister()
+	if &clipboard == 'unnamed'
+		let @* = s:restore_reg
+	elseif &clipboard == 'unnamedplus'
+		let @+ = s:restore_reg
+	else
+		let @" = s:restore_reg
+	endif
+	return ''
+endfunction
+
+function! s:Repl()
+	let s:restore_reg = @"
+	return "\<Plug>VisualPasta@=RestoreRegister()\<CR>"
+endfunction
+
+xmap <silent> <expr> p <SID>Repl()
+
 " --------------------------------------------------------------------------------------------------
 " delimitMate Mappings
 " --------------------------------------------------------------------------------------------------
