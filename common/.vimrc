@@ -509,7 +509,11 @@ endfunction
 " pasta config
 " --------------------------------------------------------------------------------------------------
 
+let g:pasta_enabled_filetypes = []
 let g:pasta_disabled_filetypes = []
+
+nmap p <Plug>AfterPasta
+nmap P <Plug>BeforePasta
 
 "------------------------------------------------------------------------
 " I haven't found how to hide this function (yet)
