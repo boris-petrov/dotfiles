@@ -3,9 +3,10 @@ packer
 archlinux-keyring
 zathura feh libreoffice smplayer kbgoffice deadbeef
 cups gutenprint system-config-printer
-profile-sync-daemon chromium-pepper-flash firefox
+networkmanager network-manager-applet
+anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox
 pidgin skype skype4pidgin kbdd-latest-git pidgin-otr purple-whatsapp
-dropbox liferea xcmenu-git thunderbird hotot netcfg htop autokey-gtk arandr xdg-utils
+dropbox liferea xcmenu-git thunderbird hotot htop autokey-gtk arandr xdg-utils
 awesome dmenu xlockmore
 aspell hunspell
 gvim colordiff colorgcc git ctags the_silver_searcher
