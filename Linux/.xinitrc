@@ -1,5 +1,6 @@
 xrdb -merge ~/.Xresources
 
+nm-applet &
 autokey-gtk &
 thunderbird &
 dropboxd &
