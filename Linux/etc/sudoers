@@ -1,4 +1,4 @@
-Cmnd_Alias PROGS = /usr/bin/wifi-menu,/usr/bin/pacman,/usr/bin/packer,/usr/bin/systemctl poweroff,/usr/bin/systemctl reboot
+Cmnd_Alias PROGS = /usr/bin/pacman,/usr/bin/packer,/usr/bin/systemctl poweroff,/usr/bin/systemctl reboot
 Defaults! PROGS setenv
 root ALL=(ALL) ALL
 boris ALL=(ALL) ALL
