@@ -6,11 +6,21 @@ SCRIPTPATH=$(dirname $SCRIPT)
 if [[ `uname -s` == 'Linux' || `uname -s` == 'Darwin' ]]; then
 	for file in `find $SCRIPTPATH/common/ -maxdepth 1` `find $SCRIPTPATH/Linux/ -maxdepth 1`
 	do
-		if [[ $file == "$SCRIPTPATH/Linux/etc" ]]; then
-			sudo cp -r $file /
-		else
-			BASENAME=$(basename $file)
-			ln -sfn $file ~/$BASENAME
+		if [[ $file != "$SCRIPTPATH/common/Chrome" &&
+					$file != "$SCRIPTPATH/common" &&
+					$file != "$SCRIPTPATH/Linux" &&
+					$file != "$SCRIPTPATH/Linux/icons" &&
+					$file != "$SCRIPTPATH/common/stylish" &&
+					$file != "$SCRIPTPATH/common/zsh-syntax-highlighting" &&
+					$file != "$SCRIPTPATH/common/Thunderbird Addons.txt" &&
+					$file != "$SCRIPTPATH/Linux/arch_linux_packages.txt"
+			]]; then
+			if [[ $file == "$SCRIPTPATH/Linux/etc" ]]; then
+				sudo cp -r $file /
+			else
+				BASENAME=$(basename $file)
+				ln -sfn $file ~/$BASENAME
+			fi
 		fi
 	done
 
