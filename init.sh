@@ -13,7 +13,7 @@ if [[ `uname -s` == 'Linux' || `uname -s` == 'Darwin' ]]; then
 					$file != "$SCRIPTPATH/common/stylish" &&
 					$file != "$SCRIPTPATH/common/zsh-syntax-highlighting" &&
 					$file != "$SCRIPTPATH/common/Thunderbird Addons.txt" &&
-					$file != "$SCRIPTPATH/Linux/arch_linux_packages.txt"
+					$file != "$SCRIPTPATH/Linux/prepare_system.sh"
 			]]; then
 			if [[ $file == "$SCRIPTPATH/Linux/etc" ]]; then
 				sudo cp -r $file /
