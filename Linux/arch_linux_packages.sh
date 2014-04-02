@@ -58,6 +58,9 @@ pushd Linux/.config/awesome
 popd
 popd
 
+# enable Vim persistent undo
+mkdir .vim/undodir
+
 # install ruby's bundler
 sudo gem install bundler
 
