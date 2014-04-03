@@ -45,6 +45,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'FelikZ/ctrlp-py-matcher'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'yssl/QFEnter'
+Bundle 'AndrewRadev/sideways.vim'
 
 Bundle 'AutoComplPop'
 Bundle 'OmniCppComplete'
@@ -420,6 +421,13 @@ endfunction
 " Basically you press * or # to search for the current selection !! Really useful
 xmap <silent> * :call <SID>VisualSearch('f')<CR>n
 xmap <silent> # :call <SID>VisualSearch('b')<CR>n
+
+" --------------------------------------------------------------------------------------------------
+" Sideways
+" --------------------------------------------------------------------------------------------------
+
+nnoremap <Leader>< :SidewaysLeft<CR>
+nnoremap <Leader>> :SidewaysRight<CR>
 
 " --------------------------------------------------------------------------------------------------
 " QuickFix list
