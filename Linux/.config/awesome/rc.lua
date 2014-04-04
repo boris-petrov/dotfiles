@@ -56,9 +56,6 @@ end
 
 -- {{{ Variable definitions
 
--- Themes define colours, icons, and wallpapers
-beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
-
 terminal         = "urxvt"
 hostile_takeover = "gvim /home/boris/documents/Hostile\\ Takeover.txt"
 dmenu            = "dmenu_run"
@@ -87,6 +84,8 @@ layouts =
 
 -- {{{ Wallpaper
 
+-- Themes define colours, icons, and wallpapers
+beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 beautiful.wallpaper = awful.util.getdir("config") .. "/themes/wallpaper.jpg"
 gears.wallpaper.centered(beautiful.wallpaper, nil, "000000") -- black background
 
