@@ -26,8 +26,8 @@ packer -S cups gutenprint system-config-printer
 packer -S networkmanager network-manager-applet
 packer -S anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox
 packer -S pidgin skype skype4pidgin-svn-dbus kbdd-latest-git pidgin-otr purple-whatsapp
-packer -S dropbox liferea xcmenu-git thunderbird hotot-qt4 htop autokey-gtk arandr xdg-utils
-packer -S xorg-server xorg-xinit slim awesome dmenu xlockmore
+packer -S dropbox liferea xcmenu-git thunderbird hotot-qt4 htop autokey-gtk xdg-utils lxappearance
+packer -S xorg-server xorg-xinit slim awesome dmenu xlockmore arandr
 packer -S aspell hunspell
 packer -S gvim colordiff colorgcc git ctags the_silver_searcher
 packer -S zsh rxvt-unicode-pixbuf urxvt-clipboard tmux
@@ -82,3 +82,4 @@ sudo systemctl enable ntpd
 sudo systemctl enable NetworkManager
 
 # should install aspell and hunspell dictionaries from Dropbox directory
+# should run lxappearance so a ~/.gtkrc-2.0 is created
