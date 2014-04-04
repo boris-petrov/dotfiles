@@ -87,7 +87,9 @@ layouts =
 -- Themes define colours, icons, and wallpapers
 beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 beautiful.wallpaper = awful.util.getdir("config") .. "/themes/wallpaper.jpg"
-gears.wallpaper.centered(beautiful.wallpaper, nil, "000000") -- black background
+for s = 1, screen.count() do
+    gears.wallpaper.centered(beautiful.wallpaper, s, "000000") -- black background
+end
 
 -- }}}
 
