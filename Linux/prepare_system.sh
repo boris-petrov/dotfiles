@@ -83,3 +83,4 @@ sudo systemctl enable NetworkManager
 
 # should install aspell and hunspell dictionaries from Dropbox directory
 # should run lxappearance so a ~/.gtkrc-2.0 is created
+# should execute 'cp ~/Dropbox/Private/wallpaper.jpg ~/.config/awesome/themes/'
