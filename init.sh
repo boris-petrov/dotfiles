@@ -15,7 +15,8 @@ if [[ `uname -s` == 'Linux' || `uname -s` == 'Darwin' ]]; then
 					"$file" != "$SCRIPTPATH/common/ThunderbirdAddons.txt" &&
 					"$file" != "$SCRIPTPATH/Linux/prepare_system.sh"
 			]]; then
-			if [[ "$file" == "$SCRIPTPATH/Linux/etc" ]]; then
+			if [[ "$file" == "$SCRIPTPATH/Linux/etc" ||
+						"$file" == "$SCRIPTPATH/Linux/usr" ]]; then
 				sudo cp -r "$file" /
 			else
 				BASENAME=$(basename "$file")
