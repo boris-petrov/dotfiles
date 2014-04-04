@@ -21,7 +21,8 @@ if [[ `uname -s` == 'Linux' || `uname -s` == 'Darwin' ]]; then
 			else
 				BASENAME=$(basename "$file")
 				if [[ -d "$file" && -d ~/$BASENAME ]]; then
-					cp -rf ~/$BASENAME/* "$file" && rm -rf ~/$BASENAME
+					cp -rf ~/$BASENAME/* "$file"
+					rm -rf ~/$BASENAME
 				fi
 				ln -sfn "$file" ~/$BASENAME
 			fi
