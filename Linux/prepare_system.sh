@@ -87,3 +87,4 @@ sudo systemctl enable NetworkManager
 # should copy Pidgin stuff from Dropbox folder to ~/.purple
 # should install Thunderbird add-ons
 # should install Chrome's Stylish styles
+# should use Chrome's Page Monitor sites
