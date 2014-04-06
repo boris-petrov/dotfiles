@@ -86,3 +86,4 @@ sudo systemctl enable NetworkManager
 # should execute 'cp ~/Dropbox/Private/wallpaper.jpg ~/.config/awesome/themes/'
 # should copy Pidgin stuff from Dropbox folder to ~/.purple
 # should install Thunderbird add-ons
+# should install Chrome's Stylish styles
