@@ -23,8 +23,8 @@ gtk-xft-hinting=1
 gtk-xft-hintstyle="hintfull"
 gtk-xft-rgba="rgb"
 
-gtk-enable-mnemonics=0
-gtk-enable-accels=0
+gtk-enable-mnemonics=1
+gtk-enable-accels=1
 
 style "vimfix" {
 	bg[NORMAL] = "Black" # this matches my gvim theme 'Normal' bg color.
