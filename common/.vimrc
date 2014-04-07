@@ -166,7 +166,7 @@ endif
 set tags+=./.tags,.tags
 
 set spell
-set spelllang=en,bg
+set spelllang=en_us,bg
 
 set synmaxcol=200 " do not syntax-highlight lines after the 200th symbols
 
