@@ -1,0 +1,3 @@
+http://userstyles.org/styles/36026/google-dark
+http://userstyles.org/styles/36778/modernwiki-night
+http://userstyles.org/styles/37035/github-dark
