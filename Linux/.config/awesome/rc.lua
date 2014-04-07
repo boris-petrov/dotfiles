@@ -123,11 +123,14 @@ kbdwidget = wibox.widget.textbox()
 kbdwidget:set_text(" En ")
 
 -- Battery widget
-if directoryExists('/sys/class/power_supply/BAT0') then
-    batwidget = wibox.widget.textbox()
-    vicious.register(batwidget, vicious.widgets.bat, "$2% - $3 "..colorize("#ee1111", "|"), 61, "BAT0")
-else
-    batwidget = nil
+batwidget = nil
+for s = 0, 1 do
+    local battery = 'BAT'..s
+    if directoryExists('/sys/class/power_supply/'..battery) then
+        batwidget = wibox.widget.textbox()
+        vicious.register(batwidget, vicious.widgets.bat, "$2% - $3 "..colorize("#ee1111", "|"), 61, battery)
+        break
+    end
 end
 
 -- Create a wibox for each screen and add it
