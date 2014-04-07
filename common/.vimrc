@@ -291,7 +291,7 @@ endif
 
 augroup RainbowParentheses
 	autocmd!
-	autocmd VimEnter * RainbowParenthesesToggle
+	autocmd FileType * RainbowParenthesesActivate
 	autocmd Syntax * RainbowParenthesesLoadRound
 	autocmd Syntax * RainbowParenthesesLoadSquare
 	autocmd Syntax * RainbowParenthesesLoadBraces
