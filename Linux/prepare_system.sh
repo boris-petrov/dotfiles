@@ -20,7 +20,7 @@ sudo pacman -Syy
 
 # install packages
 packer -S archlinux-keyring
-packer -S xf86-video-intel xf86-input-synaptics
+packer -S xf86-video-intel xf86-input-synaptics acpi
 packer -S zathura feh libreoffice smplayer kbgoffice deadbeef
 packer -S cups gutenprint system-config-printer
 packer -S networkmanager network-manager-applet
