@@ -4,4 +4,9 @@ setxkbmap -layout us,bg -variant ,phonetic -option grp:ctrl_shift_toggle
 setxkbmap -option ctrl:swapcaps # Swap Left Control and Caps Lock
 # setxkbmap -option ctrl:nocaps # Make Caps Lock a Control key
 
+# set keyboard repeat rate
 xset r rate 300 20
+# Energy Star features on
+xset +dpms
+# screensaver on
+xset s on
