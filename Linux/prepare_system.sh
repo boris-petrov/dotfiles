@@ -20,7 +20,7 @@ sudo pacman -Syy
 
 # install packages
 packer -S archlinux-keyring
-packer -S xf86-video-intel xf86-input-synaptics acpi
+packer -S xf86-video-intel xf86-input-synaptics acpi acpid laptop-mode-tools
 packer -S alsa-utils smplayer deadbeef
 packer -S zathura feh libreoffice kbgoffice
 packer -S cups gutenprint system-config-printer
@@ -80,7 +80,11 @@ lesskey
 sudo systemctl enable slim
 sudo systemctl enable sshd
 sudo systemctl enable ntpd
+
+# TODO: if on laptop:
 sudo systemctl enable NetworkManager
+sudo systemctl enable acpid
+sudo systemctl enable laptop-mode
 
 # should install aspell and hunspell dictionaries from Dropbox directory
 # should run lxappearance so a ~/.gtkrc-2.0 is created
