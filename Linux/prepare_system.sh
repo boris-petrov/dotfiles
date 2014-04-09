@@ -80,6 +80,7 @@ lesskey
 sudo systemctl enable slim
 sudo systemctl enable sshd
 sudo systemctl enable ntpd
+sudo systemctl enable cups
 
 # TODO: if on laptop:
 sudo systemctl enable NetworkManager
