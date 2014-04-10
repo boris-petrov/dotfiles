@@ -327,10 +327,3 @@ ulimit -c unlimited
 
 export PATH=$HOME/bin:./node_modules/.bin:$HOME/.gem/ruby/2.1.0/bin:$PATH
 export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
-
-[ -x "$HOME/nvm/nvm.sh" ] && . "$HOME/nvm/nvm.sh"
-
-if [ -x "$HOME/.rbenv/bin/rbenv" ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
