@@ -21,7 +21,7 @@ sudo pacman -Syy
 # install packages
 packer -S archlinux-keyring
 packer -S xf86-video-intel xf86-input-synaptics acpi acpid laptop-mode-tools
-packer -S alsa-utils smplayer deadbeef
+packer -S alsa-utils alsa-plugins libsamplerate smplayer deadbeef
 packer -S zathura feh libreoffice kbgoffice
 packer -S cups gutenprint system-config-printer
 packer -S networkmanager network-manager-applet
