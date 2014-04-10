@@ -46,6 +46,7 @@ Bundle 'FelikZ/ctrlp-py-matcher'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'yssl/QFEnter'
 Bundle 'AndrewRadev/sideways.vim'
+Bundle 'wellle/targets.vim'
 
 Bundle 'AutoComplPop'
 Bundle 'OmniCppComplete'
