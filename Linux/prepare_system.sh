@@ -19,26 +19,26 @@ sudo pacman-key --lsign-key 962DDE58
 sudo pacman -Syy
 
 # install packages
-packer -S archlinux-keyring
-packer -S xf86-video-intel xf86-input-synaptics acpi acpid laptop-mode-tools
-packer -S alsa-utils alsa-plugins libsamplerate smplayer deadbeef
-packer -S zathura feh libreoffice kbgoffice
-packer -S cups gutenprint system-config-printer
-packer -S networkmanager network-manager-applet
-packer -S anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox
-packer -S pidgin skype skype4pidgin-svn-dbus kbdd-latest-git pidgin-otr purple-whatsapp
-packer -S dropbox liferea xcmenu-git thunderbird hotot-qt4 htop autokey-gtk xdg-utils lxappearance
-packer -S xorg-server xorg-xinit slim awesome dmenu xlockmore arandr
-packer -S aspell hunspell
-packer -S gvim colordiff colorgcc git ctags the_silver_searcher
-packer -S zsh rxvt-unicode-pixbuf urxvt-clipboard tmux
-packer -S jre ntp openssh sudo wget ntfs-3g xsel oxygen-icons
-packer -S zip unrar unzip
-packer -S deluge flareget
-packer -S freerdp realvnc-viewer
-packer -S python2-pip python2-howdoi
-packer -S infinality-bundle infinality-bundle-multilib ibfonts-meta-base otf-inconsolatazi4-ibx
-packer -S nodejs
+packer -S archlinux-keyring \
+          xf86-video-intel xf86-input-synaptics acpi acpid laptop-mode-tools \
+          alsa-utils alsa-plugins libsamplerate smplayer deadbeef \
+          zathura feh libreoffice kbgoffice \
+          cups gutenprint system-config-printer \
+          networkmanager network-manager-applet \
+          anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox \
+          pidgin skype skype4pidgin-svn-dbus kbdd-latest-git pidgin-otr purple-whatsapp \
+          dropbox liferea xcmenu-git thunderbird hotot-qt4 htop autokey-gtk xdg-utils lxappearance \
+          xorg-server xorg-xinit slim awesome dmenu xlockmore arandr \
+          aspell hunspell \
+          gvim colordiff colorgcc git ctags the_silver_searcher \
+          zsh rxvt-unicode-pixbuf urxvt-clipboard tmux \
+          jre ntp openssh sudo wget ntfs-3g xsel oxygen-icons \
+          zip unrar unzip \
+          deluge flareget \
+          freerdp realvnc-viewer \
+          python2-pip python2-howdoi \
+          infinality-bundle infinality-bundle-multilib ibfonts-meta-base otf-inconsolatazi4-ibx \
+          nodejs
 
 # install howdoi dependencies
 sudo pip2 install requests-cache
