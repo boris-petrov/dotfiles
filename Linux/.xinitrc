@@ -9,6 +9,6 @@ liferea &
 xcmenu &
 ~/code/vrome/system/ruby/bin/vrome &
 
-~/bin/fix_screens
+~/bin/fix_layout
 
 exec awesome

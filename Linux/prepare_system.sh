@@ -50,13 +50,10 @@ sudo sh install.sh
 rm install.sh
 sudo npm install -g coffee-script
 
-# clone my dotfiles, install them and install screenful
+# clone my dotfiles and install them
 git clone git@github.com:boris-petrov/dotfiles.git
 pushd dotfiles
 ./init.sh
-pushd Linux/.config/awesome
-./install-screenful.sh
-popd
 popd
 
 # enable Vim persistent undo
