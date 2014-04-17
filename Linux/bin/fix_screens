@@ -1,15 +1,46 @@
-#!/bin/sh
+#!/bin/bash
+#
+# Copyright (C) 2014 Sascha Teske <sascha.teske@gmail.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
 
-if xrandr | grep -q '^VGA1 connected'; then
-  echo 'two screens'
-  xrandr --output LVDS1 --auto
-  xrandr --output VGA1 --auto --right-of LVDS1 --primary
-  xset -dpms
-else
-  echo 'laptop display'
-  xrandr --output LVDS1 --auto --primary
-  xrandr --output VGA1 --off
-  xset +dpms
-fi
+XRANDR='xrandr'
+CMD="${XRANDR}"
+PREV=''
+declare -A VOUTS
+eval VOUTS=$(${XRANDR}|awk 'BEGIN {printf("(")} /^\S.*connected/{printf("[%s]=%s ", $1, $2)} END{printf(")")}')
 
-~/bin/fix_layout
+xrandr_params_for() {
+  if [ "${2}" == 'connected' ]; then
+    if [ "${PREV}" == '' ]; then
+      CMD="${CMD} --output ${1} --auto --primary"
+    else
+      CMD="${CMD} --output ${1} --auto --right-of ${PREV}"
+    fi
+    PREV=${1}
+
+    return 0
+  else
+    CMD="${CMD} --output ${1} --off"
+
+    return 1
+  fi
+}
+
+for VOUT in ${!VOUTS[*]}
+do
+  xrandr_params_for ${VOUT} ${VOUTS[${VOUT}]}
+done
+
+set -x
+${CMD}
+set +x
