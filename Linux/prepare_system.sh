@@ -32,7 +32,7 @@ packer -S archlinux-keyring \
           aspell hunspell \
           gvim colordiff colorgcc git ctags the_silver_searcher \
           zsh rxvt-unicode-pixbuf urxvt-clipboard tmux \
-          jre ntp openssh sudo wget ntfs-3g xsel oxygen-icons \
+          jdk ntp openssh sudo wget ntfs-3g xsel oxygen-icons \
           zip unrar unzip \
           deluge flareget \
           freerdp realvnc-viewer \
