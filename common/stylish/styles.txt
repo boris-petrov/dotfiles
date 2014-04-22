@@ -1,4 +1,4 @@
-http://userstyles.org/styles/36026/google-dark
+http://userstyles.org/styles/100469/dark-and-clean-google
 http://userstyles.org/styles/36778/modernwiki-night
 http://userstyles.org/styles/37035/github-dark
 http://userstyles.org/styles/65209/bitbucket-org-dark-theme
