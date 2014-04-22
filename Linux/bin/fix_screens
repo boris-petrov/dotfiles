@@ -44,3 +44,5 @@ done
 set -x
 ${CMD}
 set +x
+
+~/bin/fix_layout
