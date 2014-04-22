@@ -1,1 +1,5 @@
 defaults.pcm.rate_converter "samplerate_best"
+
+# defaults.pcm.card 1
+# defaults.pcm.device 1
+# defaults.ctl.card 1

@@ -95,3 +95,4 @@ sudo systemctl enable laptop-mode
 # should install Chrome's Stylish styles from ~/dotfiles/common/stylish/*
 # should use Chrome's Page Monitor sites from ~/dotfiles/common/Chrome/Page Monitor.html
 # should remove the 3 "group i = AltGr" lines in /usr/share/X11/xkb/compat/basic
+# should set default soundcard in ~/.asoundrc
