@@ -22,7 +22,8 @@ sudo pacman -Syy
 packer -S archlinux-keyring \
           xf86-video-intel xf86-input-synaptics acpi acpid laptop-mode-tools \
           alsa-utils alsa-plugins libsamplerate smplayer deadbeef \
-          zathura feh libreoffice kbgoffice \
+          zathura zathura-djvu zathura-pdf-poppler zathura-ps \
+          feh libreoffice kbgoffice \
           cups gutenprint system-config-printer \
           networkmanager network-manager-applet \
           anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox \
@@ -96,3 +97,4 @@ sudo systemctl enable laptop-mode
 # should use Chrome's Page Monitor sites from ~/dotfiles/common/Chrome/Page Monitor.html
 # should remove the 3 "group i = AltGr" lines in /usr/share/X11/xkb/compat/basic
 # should set default soundcard in ~/.asoundrc
+# should set Chrome/Thunderbird fonts, encodings
