@@ -410,7 +410,7 @@ client.connect_signal("manage", function(c, startup)
 end)
 
 client.connect_signal("manage", function(c, startup)
-    if c.class == "Pidgin" then
+    if c.class == "Pidgin" and (not c.name or not c.name:match("Buddy List")) then
         -- Switch to the second layout for chat windows
         local start_dbus_send
         local change_language_on_focus
