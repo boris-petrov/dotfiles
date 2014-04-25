@@ -740,18 +740,18 @@ nmap gs :Gstatus<CR><C-n>
 " Ctrl-P Mappings
 " --------------------------------------------------------------------------------------------------
 
-let g:ctrlp_map                   = 'gz'
-let g:ctrlp_working_path_mode     = 'ra'
-let g:ctrlp_custom_ignore         = {
+let g:ctrlp_map           = 'gz'
+let g:ctrlp_custom_ignore = {
 	\ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|tmp|vendor)$',
 	\ }
 let g:ctrlp_match_window_bottom   = 0
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_match_func            = { 'match': 'pymatcher#PyMatch' }
 
-let g:ctrlp_lazy_update         = 100
+let g:ctrlp_lazy_update         = 200
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_max_files           = 0
+
+let g:ctrlp_by_filename = 1
 
 if executable('ag')
 	let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
