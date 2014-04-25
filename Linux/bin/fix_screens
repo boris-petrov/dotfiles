@@ -17,12 +17,12 @@ XRANDR='xrandr'
 CMD="${XRANDR}"
 PREV=''
 declare -A VOUTS
-eval VOUTS=$(${XRANDR}|awk 'BEGIN {printf("(")} /^\S.*connected/{printf("[%s]=%s ", $1, $2)} END{printf(")")}')
+VOUTS=$(${XRANDR} | awk '/^\S.*connected/{printf("%s= %s\n", $1, $2)}' | sort -k 2 -sdr | sed 's/ //' | xargs)
 
 xrandr_params_for() {
   if [ "${2}" == 'connected' ]; then
     if [ "${PREV}" == '' ]; then
-      CMD="${CMD} --output ${1} --auto --primary"
+      CMD="${CMD} --output ${1} --auto"
     else
       CMD="${CMD} --output ${1} --auto --right-of ${PREV}"
     fi
@@ -36,13 +36,16 @@ xrandr_params_for() {
   fi
 }
 
-for VOUT in ${!VOUTS[*]}
+for VOUT in $VOUTS
 do
-  xrandr_params_for ${VOUT} ${VOUTS[${VOUT}]}
+  set -- "$VOUT"
+  IFS='='; declare -a ARRAY=($*)
+
+  xrandr_params_for ${ARRAY[0]} ${ARRAY[1]}
 done
 
 set -x
-${CMD}
+eval "$CMD --primary"
 set +x
 
 ~/bin/fix_layout
