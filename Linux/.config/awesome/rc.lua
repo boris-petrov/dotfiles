@@ -284,10 +284,11 @@ local ror = function(klass, key, program)
 end
 
 globalkeys = awful.util.table.join(globalkeys,
-    ror("Firefox",  "f", "firefox"),
-    ror("Chromium", "c", "chromium"),
-    ror("Deadbeef", "w", "deadbeef"),
-    ror("Deluge",   "b", "deluge")
+    ror("Firefox",           "f", "firefox"),
+    ror("Chromium",          "c", "chromium"),
+    ror("Deadbeef",          "w", "deadbeef"),
+    ror("Deluge",            "b", "deluge"),
+    ror("Clipboard History", "h", "xcmenuctrl")
 )
 
 -- Set keys

@@ -319,6 +319,8 @@ export XDG_USER_CONFIG=~/.config
 export XDG_USER_DATA=~/.config
 export XDG_DATA_HOME=~/.local
 
+export XCMENUCTRL_DMENU='dmenu -i -l 15'
+
 ulimit -c unlimited
 
 ##############################
