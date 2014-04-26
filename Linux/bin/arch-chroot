@@ -1,0 +1,19 @@
+#!/bin/sh
+
+mount | grep boris > /dev/null
+
+if [[ $? != 0 ]]; then
+  pushd /home/boris/mnt
+  mount -t proc proc proc/
+  # mount --rbind /sys sys/
+  mount --rbind /dev dev/
+  popd
+fi
+
+cp /home/boris/.Xauthority /home/boris/mnt/home/boris/
+
+chroot --userspec=boris:users /home/boris/mnt
+
+# pushd /home/boris/mnt
+# umount {./proc,./sys,./dev/pts,./dev}
+# popd
