@@ -369,6 +369,9 @@ autocmd FileType taglist nmap <buffer> l <CR>
 
 let g:tlist_coffee_settings = 'coffee;c:class;m:method;f:function'
 
+" AutoTag
+let g:autotagTagsFile = '.tags'
+
 " --------------------------------------------------------------------------------------------------
 " Gundo
 " --------------------------------------------------------------------------------------------------
