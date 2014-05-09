@@ -2,3 +2,4 @@ Auto Compress File
 Enigmail
 FireTray
 Thunderbird Conversations
+Muttator
