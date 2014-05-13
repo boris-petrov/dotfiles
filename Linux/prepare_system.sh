@@ -32,7 +32,7 @@ packer -S archlinux-keyring \
           xorg-server xorg-xinit slim awesome dmenu xlockmore arandr \
           aspell hunspell \
           gvim colordiff colorgcc git ctags the_silver_searcher \
-          zsh rxvt-unicode-pixbuf urxvt-clipboard tmux \
+          zsh rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
           jdk ntp openssh sudo wget ntfs-3g xsel oxygen-icons \
           zip unrar unzip \
           deluge flareget \

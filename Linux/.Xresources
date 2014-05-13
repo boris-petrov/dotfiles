@@ -32,7 +32,10 @@ URxvt.scrollTtyOutput:   False
 URxvt.scrollWithBuffer:  True
 URxvt.scrollTtyKeypress: True
 
-URxvt.perl-ext-common: default,clipboard
+URxvt.perl-ext-common: default,clipboard,font-size
+
+URxvt.keysym.C-Up:   perl:font-size:increase
+URxvt.keysym.C-Down: perl:font-size:decrease
 
 /* URxvt.keysym.M-c: perl:clipboard:copy */
 /* URxvt.keysym.M-v: perl:clipboard:paste */
