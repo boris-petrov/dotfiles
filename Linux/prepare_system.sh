@@ -26,7 +26,7 @@ packer -S archlinux-keyring \
           feh libreoffice kbgoffice \
           cups gutenprint system-config-printer \
           networkmanager network-manager-applet \
-          anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox \
+          anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox flashplugin \
           pidgin skype skype4pidgin-svn-dbus kbdd-latest-git pidgin-otr purple-whatsapp \
           dropbox liferea xcmenu-git thunderbird hotot-qt4 htop autokey-gtk xdg-utils lxappearance \
           xorg-server xorg-xinit slim awesome dmenu xlockmore arandr \
