@@ -1,4 +1,4 @@
-function directoryExists(path)
+function fileExists(path)
     local f = io.open(path, "r")
     if f ~= nil then
         io.close(f)

@@ -88,7 +88,7 @@ layouts =
 -- {{{ Wallpaper
 
 beautiful.wallpaper = awful.util.getdir("config") .. "/themes/wallpaper.jpg"
-if directoryExists(beautiful.wallpaper) then
+if fileExists(beautiful.wallpaper) then
     for s = 1, screen.count() do
         gears.wallpaper.centered(beautiful.wallpaper, s, "000000") -- black background
     end
@@ -129,7 +129,7 @@ kbdwidget:set_text(" En ")
 batwidget = nil
 for s = 0, 1 do
     local battery = 'BAT'..s
-    if directoryExists('/sys/class/power_supply/'..battery) then
+    if fileExists('/sys/class/power_supply/'..battery) then
         batwidget = wibox.widget.textbox()
         vicious.register(batwidget, vicious.widgets.bat, "$2% - $3 "..colorize("#ee1111", "|"), 61, battery)
         break
