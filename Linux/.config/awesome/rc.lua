@@ -88,8 +88,10 @@ layouts =
 -- {{{ Wallpaper
 
 beautiful.wallpaper = awful.util.getdir("config") .. "/themes/wallpaper.jpg"
-for s = 1, screen.count() do
-    gears.wallpaper.centered(beautiful.wallpaper, s, "000000") -- black background
+if directoryExists(beautiful.wallpaper) then
+    for s = 1, screen.count() do
+        gears.wallpaper.centered(beautiful.wallpaper, s, "000000") -- black background
+    end
 end
 
 -- }}}
