@@ -16,6 +16,9 @@ require("utils")
 
 local vicious = require("vicious")
 
+-- Themes define colours, icons, and wallpapers
+beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
+
 function colorize(color, string)
     return '<span color="'..color..'">'..string..'</span>'
 end
@@ -84,8 +87,6 @@ layouts =
 
 -- {{{ Wallpaper
 
--- Themes define colours, icons, and wallpapers
-beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 beautiful.wallpaper = awful.util.getdir("config") .. "/themes/wallpaper.jpg"
 for s = 1, screen.count() do
     gears.wallpaper.centered(beautiful.wallpaper, s, "000000") -- black background
