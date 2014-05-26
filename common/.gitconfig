@@ -27,6 +27,7 @@
 [core]
 	autocrlf = input
 	whitespace = fix,space-before-tab,trailing-space,cr-at-eol
+	excludesfile = ~/.gitignore_global
 [branch]
 	autosetuprebase = always
 [color]
