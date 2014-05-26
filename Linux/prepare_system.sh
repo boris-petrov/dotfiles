@@ -2,14 +2,25 @@
 
 cd
 
+sudo pacman -S wget git
+
 # install packer
 wget https://aur.archlinux.org/packages/pa/packer/packer.tar.gz
 tar -xzf packer.tar.gz
 pushd packer
 makepkg -s
-pacman -U packer-*
+sudo pacman -U packer-*
 popd
 rm -rf packer packer.tar.gz
+
+# clone my dotfiles, install them and install screenful
+git clone git@github.com:boris-petrov/dotfiles.git
+pushd dotfiles
+./init.sh
+pushd Linux/.config/awesome
+./install-screenful.sh
+popd
+popd
 
 # for infinality packages
 sudo pacman-key -r 962DDE58
@@ -31,15 +42,15 @@ packer -S archlinux-keyring \
           dropbox liferea xcmenu-git thunderbird hotot-qt4 htop autokey-gtk xdg-utils lxappearance \
           xorg-server xorg-xinit slim awesome dmenu xlockmore arandr \
           aspell hunspell \
-          gvim colordiff colorgcc git ctags the_silver_searcher \
+          gvim colordiff colorgcc ctags the_silver_searcher \
           zsh rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
-          jdk ntp openssh sudo wget ntfs-3g xsel oxygen-icons \
+          jdk ntp openssh sudo ntfs-3g xsel oxygen-icons \
           zip unrar unzip \
           deluge flareget \
           freerdp realvnc-viewer \
           python2-pip python2-howdoi \
           infinality-bundle infinality-bundle-multilib ibfonts-meta-base otf-inconsolatazi4-ibx \
-          nodejs
+          nodejs ruby python
 
 # install howdoi dependencies
 sudo pip2 install requests-cache
@@ -51,17 +62,8 @@ sudo sh install.sh
 rm install.sh
 sudo npm install -g coffee-script
 
-# clone my dotfiles, install them and install screenful
-git clone git@github.com:boris-petrov/dotfiles.git
-pushd dotfiles
-./init.sh
-pushd Linux/.config/awesome
-./install-screenful.sh
-popd
-popd
-
 # enable Vim persistent undo
-mkdir .vim/undodir
+mkdir -p .vim/undodir
 
 # install ruby's bundler
 sudo gem install bundler
@@ -88,6 +90,7 @@ sudo systemctl enable NetworkManager
 sudo systemctl enable acpid
 sudo systemctl enable laptop-mode
 
+# should execute "set spell" in Vim in order to download its dictionaries
 # should install aspell and hunspell dictionaries from Dropbox directory
 # should run lxappearance so a ~/.gtkrc-2.0 is created
 # should execute 'cp ~/Dropbox/Private/wallpaper.jpg ~/.config/awesome/themes/'
