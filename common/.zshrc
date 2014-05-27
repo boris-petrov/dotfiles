@@ -327,5 +327,5 @@ ulimit -c unlimited
 # nodejs and ruby specific stuff
 ##############################
 
-export PATH=$HOME/bin:./node_modules/.bin:$HOME/.gem/ruby/2.1.0/bin:$PATH
+export PATH=./node_modules/.bin:$HOME/.gem/ruby/2.1.0/bin:$PATH
 export NODE_PATH=/usr/lib/node_modules:/usr/lib:.
