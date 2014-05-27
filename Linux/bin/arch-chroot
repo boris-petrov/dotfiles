@@ -7,6 +7,7 @@ if [[ $? != 0 ]]; then
   mount -t proc proc proc/
   # mount --rbind /sys sys/
   mount --rbind /dev dev/
+  mount --bind /etc/resolv.conf etc/resolv.conf
   popd
 fi
 
