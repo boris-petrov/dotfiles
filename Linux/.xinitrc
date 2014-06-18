@@ -1,3 +1,5 @@
+source $HOME/.profile
+
 xrdb -merge ~/.Xresources
 
 nm-applet &

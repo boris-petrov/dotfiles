@@ -1,2 +1,1 @@
-source $HOME/.profile
-source $HOME/.zshrc
+emulate sh -c "source $HOME/.profile"
