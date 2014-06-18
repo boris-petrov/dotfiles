@@ -17,7 +17,7 @@ if [[ `uname -s` == 'Linux' || `uname -s` == 'Darwin' ]]; then
 			]]; then
 			if [[ "$file" == "$SCRIPTPATH/Linux/etc" ||
 						"$file" == "$SCRIPTPATH/Linux/usr" ]]; then
-				sudo cp -r "$file" /
+				sudo cp -rf "$file" /
 			else
 				BASENAME=$(basename "$file")
 				if [[ -d "$file" && -d ~/$BASENAME ]]; then
