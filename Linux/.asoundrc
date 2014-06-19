@@ -1,5 +1,6 @@
 defaults.pcm.rate_converter "samplerate_best"
 
+# can be seen from the output of 'aplay -l'
 # defaults.pcm.card 1
 # defaults.pcm.device 1
 # defaults.ctl.card 1
