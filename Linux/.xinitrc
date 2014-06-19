@@ -1,6 +1,6 @@
-source $HOME/.profile
+source $HOME/.zprofile
 
-xrdb -merge ~/.Xresources
+xrdb -merge $HOME/.Xresources
 
 nm-applet &
 autokey-gtk &
@@ -9,8 +9,8 @@ dropboxd &
 hotot-qt &
 liferea &
 xcmenu &
-~/code/vrome/system/ruby/bin/vrome &
+$HOME/code/vrome/system/ruby/bin/vrome &
 
-~/bin/fix_screens
+$HOME/bin/fix_screens
 
 exec awesome

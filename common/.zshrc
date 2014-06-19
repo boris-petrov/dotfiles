@@ -17,7 +17,7 @@ setopt PROMPT_SUBST # Enable substitutions of functions in prompt
 
 bindkey -v # vi-mode
 
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -28,7 +28,7 @@ SAVEHIST=10000
 autoload -Uz promptinit; promptinit
 
 fpath=($HOME/.zdir/functions $fpath)
-autoload -U ~/.zdir/functions/*(:t)
+autoload -U $HOME/.zdir/functions/*(:t)
 
 add-zsh-hook chpwd update_current_git_vars
 add-zsh-hook precmd update_current_git_vars
@@ -49,7 +49,7 @@ eval $(dircolors)
 ##############################
 
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
+zstyle ':completion:*' cache-path $HOME/.zsh/cache
 
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
