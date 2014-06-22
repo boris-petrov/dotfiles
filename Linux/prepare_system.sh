@@ -49,13 +49,8 @@ packer -S archlinux-keyring \
           zip unrar unzip \
           deluge flareget \
           freerdp realvnc-viewer \
-          python2-pip python2-howdoi \
           infinality-bundle infinality-bundle-multilib ibfonts-meta-base otf-inconsolatazi4-ibx \
           nodejs ruby python
-
-# install howdoi dependencies
-sudo pip2 install requests-cache
-sudo pip2 install pygments
 
 # install npm
 wget https://www.npmjs.org/install.sh
