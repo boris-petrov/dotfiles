@@ -32,7 +32,9 @@ sudo pacman -Syy
 # install packages
 packer -S archlinux-keyring \
           xf86-video-intel xf86-input-synaptics acpi acpid laptop-mode-tools \
-          alsa-utils alsa-plugins libsamplerate smplayer deadbeef \
+          pulseaudio pulseaudio-alsa lib32-libpulse pavucontrol \
+          alsa-utils alsa-plugins lib32-alsa-plugins libsamplerate \
+          smplayer deadbeef \
           zathura zathura-djvu zathura-pdf-poppler zathura-ps \
           libreoffice-common libreoffice-en-US libreoffice-impress libreoffice-writer \
           kbgoffice \
