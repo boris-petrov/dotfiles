@@ -90,14 +90,15 @@ sudo systemctl enable NetworkManager
 sudo systemctl enable acpid
 sudo systemctl enable laptop-mode
 
-# should execute "set spell" in Vim in order to download its dictionaries
-# should install aspell and hunspell dictionaries from Dropbox directory
-# should run lxappearance so a ~/.gtkrc-2.0 is created
-# should execute 'cp ~/Dropbox/Private/wallpaper.jpg ~/.config/awesome/themes/'
-# should copy Pidgin stuff from Dropbox folder to ~/.purple
-# should install Thunderbird add-ons from ~/dotfiles/common/ThunderbirdAddons.txt
-# should install Chrome's Stylish styles from ~/dotfiles/common/stylish/*
-# should use Chrome's Page Monitor sites from ~/dotfiles/common/Chrome/Page Monitor.html
-# should remove the 3 "group i = AltGr" lines in /usr/share/X11/xkb/compat/basic
-# should set default soundcard in ~/.asoundrc
-# should set Chrome/Thunderbird fonts, encodings
+# execute "set spell" in Vim in order to download its dictionaries
+# install aspell and hunspell dictionaries from Dropbox directory
+# run lxappearance so a ~/.gtkrc-2.0 is created and edit it to just include ~/.gtkrc-2.0.mine
+# execute "cp ~/Dropbox/Private/wallpaper.jpg ~/.config/awesome/themes/"
+# copy Pidgin stuff from Dropbox folder to ~/.purple
+# install Thunderbird add-ons from ~/dotfiles/common/ThunderbirdAddons.txt
+# install Chrome's Stylish styles from ~/dotfiles/common/stylish/*
+# use Chrome's Page Monitor sites from ~/dotfiles/common/Chrome/Page Monitor.html
+# remove the 3 "group i = AltGr" lines in /usr/share/X11/xkb/compat/basic
+# set default soundcard in ~/.asoundrc
+# set Chrome/Thunderbird/lxappearance fonts, encodings
+# remove the "audio" tag from /usr/share/hotot/index.html
