@@ -1,9 +1,9 @@
 gtk-theme-name="Raleigh"
 gtk-icon-theme-name="oxygen"
 
-gtk-font-name="DejaVu Sans 10"
+gtk-font-name="DejaVu Sans Book 11"
 style "font" {
-	font_name = "DejaVu Sans 10"
+	font_name = "DejaVu Sans Book 11"
 }
 widget_class "*" style "font"
 
