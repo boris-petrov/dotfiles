@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="musicaudiosink" mtime="1404283890" type="string">
+		<stringvalue>alsasink</stringvalue>
+	</entry>
+	<entry name="audiosrc" mtime="1404283551" type="string">
+		<stringvalue>alsasrc</stringvalue>
+	</entry>
+	<entry name="videosrc" mtime="1404283551" type="string">
+		<stringvalue>v4l2src</stringvalue>
+	</entry>
+	<entry name="videosink" mtime="1404283551" type="string">
+		<stringvalue>autovideosink</stringvalue>
+	</entry>
+	<entry name="audiosink" mtime="1404283551" type="string">
+		<stringvalue>alsasink</stringvalue>
+	</entry>
+</gconf>

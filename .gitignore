@@ -8,3 +8,4 @@ common/.vim/bundle
 common/.pentadactyl/info
 common/.vimperator/info
 Linux/.kde4
+Linux/.gconf
