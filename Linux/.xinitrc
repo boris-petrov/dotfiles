@@ -2,6 +2,7 @@ source $HOME/.zprofile
 
 xrdb -merge $HOME/.Xresources
 
+kbdd
 nm-applet &
 autokey-gtk &
 thunderbird &
