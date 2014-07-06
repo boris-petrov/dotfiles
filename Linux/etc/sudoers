@@ -3,3 +3,4 @@ Defaults! PROGS setenv
 root ALL=(ALL) ALL
 boris ALL=(ALL) ALL
 boris ALL = NOPASSWD: PROGS
+boris ALL=(_skype) NOPASSWD: /usr/bin/skype

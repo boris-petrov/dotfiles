@@ -41,7 +41,7 @@ packer -S archlinux-keyring \
           cups gutenprint system-config-printer \
           networkmanager network-manager-applet \
           anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox flashplugin \
-          pidgin skype skype4pidgin-svn-dbus kbdd-latest-git pidgin-otr purple-whatsapp \
+          pidgin skype-secure skype4pidgin-svn-dbus kbdd-latest-git pidgin-otr purple-whatsapp \
           dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
           xorg-server xorg-xinit slim awesome dmenu xlockmore arandr \
           aspell hunspell \
@@ -100,3 +100,4 @@ sudo systemctl enable laptop-mode
 # set default soundcard in ~/.asoundrc
 # set Chrome/Thunderbird/lxappearance fonts, encodings
 # use "git@github.com:boris-petrov/Hotot.git" as gitroot when installing hotot-qt4-git
+# set Pidgin's Skype plugin to use "sskype" instead of "skype" as an executable
