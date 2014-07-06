@@ -34,12 +34,13 @@ packer -S archlinux-keyring \
           xf86-video-intel xf86-input-synaptics acpi acpid laptop-mode-tools \
           alsa-utils alsa-plugins libsamplerate smplayer deadbeef \
           zathura zathura-djvu zathura-pdf-poppler zathura-ps \
-          feh libreoffice kbgoffice \
+          libreoffice-common libreoffice-en-US libreoffice-impress libreoffice-writer \
+          kbgoffice \
           cups gutenprint system-config-printer \
           networkmanager network-manager-applet \
           anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox flashplugin \
           pidgin skype skype4pidgin-svn-dbus kbdd-latest-git pidgin-otr purple-whatsapp \
-          dropbox liferea xcmenu-git thunderbird hotot-qt4 htop autokey-gtk xdg-utils lxappearance \
+          dropbox liferea xcmenu-git thunderbird hotot-qt4 htop autokey-gtk xdg-utils lxappearance feh \
           xorg-server xorg-xinit slim awesome dmenu xlockmore arandr \
           aspell hunspell \
           gvim colordiff colorgcc ctags the_silver_searcher \
@@ -92,7 +93,7 @@ sudo systemctl enable laptop-mode
 
 # execute "set spell" in Vim in order to download its dictionaries
 # install aspell and hunspell dictionaries from Dropbox directory
-# run lxappearance so a ~/.gtkrc-2.0 is created and edit it to just include ~/.gtkrc-2.0.mine
+# execute "lxappearance" so a ~/.gtkrc-2.0 is created and edit it to just include ~/.gtkrc-2.0.mine
 # execute "cp ~/Dropbox/Private/wallpaper.jpg ~/.config/awesome/themes/"
 # copy Pidgin stuff from Dropbox folder to ~/.purple
 # install Thunderbird add-ons from ~/dotfiles/common/ThunderbirdAddons.txt
