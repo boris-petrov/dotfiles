@@ -3,6 +3,7 @@ source $HOME/.zprofile
 xrdb -merge $HOME/.Xresources
 
 kbdd
+start-pulseaudio-x11
 nm-applet &
 autokey-gtk &
 thunderbird &
