@@ -40,7 +40,7 @@ packer -S archlinux-keyring \
           networkmanager network-manager-applet \
           anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox flashplugin \
           pidgin skype skype4pidgin-svn-dbus kbdd-latest-git pidgin-otr purple-whatsapp \
-          dropbox liferea xcmenu-git thunderbird hotot-qt4 htop autokey-gtk xdg-utils lxappearance feh \
+          dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
           xorg-server xorg-xinit slim awesome dmenu xlockmore arandr \
           aspell hunspell \
           gvim colordiff colorgcc ctags the_silver_searcher \
@@ -102,4 +102,4 @@ sudo systemctl enable laptop-mode
 # remove the 3 "group i = AltGr" lines in /usr/share/X11/xkb/compat/basic
 # set default soundcard in ~/.asoundrc
 # set Chrome/Thunderbird/lxappearance fonts, encodings
-# remove the "audio" tag from /usr/share/hotot/index.html
+# use "git@github.com:boris-petrov/Hotot.git" as gitroot when installing hotot-qt4-git
