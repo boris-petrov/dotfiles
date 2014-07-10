@@ -90,7 +90,6 @@ sudo systemctl enable laptop-mode
 
 # execute "set spell" in Vim in order to download its dictionaries
 # install aspell and hunspell dictionaries from Dropbox directory
-# execute "lxappearance" so a ~/.gtkrc-2.0 is created and edit it to just include ~/.gtkrc-2.0.mine
 # execute "cp ~/Dropbox/Private/wallpaper.jpg ~/.config/awesome/themes/"
 # copy Pidgin stuff from Dropbox folder to ~/.purple
 # install Thunderbird add-ons from ~/dotfiles/common/ThunderbirdAddons.txt
@@ -98,6 +97,6 @@ sudo systemctl enable laptop-mode
 # use Chrome's Page Monitor sites from ~/dotfiles/common/Chrome/Page Monitor.html
 # remove the 3 "group i = AltGr" lines in /usr/share/X11/xkb/compat/basic
 # set default soundcard in ~/.asoundrc
-# set Chrome/Thunderbird/lxappearance fonts, encodings
-# use "git@github.com:boris-petrov/Hotot.git" as gitroot when installing hotot-qt4-git
+# set Chrome/Thunderbird fonts, encodings
+# use "git@github.com:boris-petrov/Hotot.git" as _gitroot when installing hotot-qt4-git
 # set Pidgin's Skype plugin to use "sskype" instead of "skype" as an executable
