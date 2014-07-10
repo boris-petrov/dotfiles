@@ -266,7 +266,7 @@
 			</pref>
 		</pref>
 		<pref name='filelocations'>
-			<pref name='last_save_folder' type='path' value='/home/boris'/>
+			<pref name='last_save_folder' type='path' value='/home/boris/autoreceive'/>
 			<pref name='last_open_folder' type='path' value='/home/boris/Downloads'/>
 			<pref name='last_icon_folder' type='path' value=''/>
 		</pref>
