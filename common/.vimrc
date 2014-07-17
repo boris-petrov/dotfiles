@@ -731,12 +731,12 @@ autocmd BufEnter *.git/index nmap <buffer> ca cva
 autocmd BufEnter *.git/index nmap <buffer> j <C-n>
 autocmd BufEnter *.git/index nmap <buffer> k <C-p>
 autocmd BufEnter *.git/index nmap <buffer> l <CR>
-autocmd FileType fugitiveblame nnoremap <buffer> j j<C-w>lj<C-w>h
-autocmd FileType fugitiveblame nnoremap <buffer> J 4j<C-w>l4j<C-w>h
-autocmd FileType fugitiveblame nnoremap <buffer> k k<C-w>lk<C-w>h
-autocmd FileType fugitiveblame nnoremap <buffer> K 4k<C-w>l4k<C-w>h
-autocmd FileType fugitiveblame nnoremap <buffer> gg gg<C-w>lgg<C-w>h
-autocmd FileType fugitiveblame nnoremap <buffer> G G<C-w>lG<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> j  <C-w>lj<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> J  <C-w>l4j<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> k  <C-w>lk<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> K  <C-w>l4k<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> gg <C-w>lgg<C-w>h
+autocmd FileType fugitiveblame nnoremap <buffer> G  <C-w>lG<C-w>h
 nmap gs :Gstatus<CR><C-n>
 
 " --------------------------------------------------------------------------------------------------
