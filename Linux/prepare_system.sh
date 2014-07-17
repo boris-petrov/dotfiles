@@ -45,7 +45,7 @@ packer -S archlinux-keyring \
           dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
           xorg-server xorg-xinit slim awesome dmenu xlockmore arandr \
           aspell hunspell \
-          gvim colordiff colorgcc ctags the_silver_searcher \
+          gvim colordiff ctags the_silver_searcher \
           zsh rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
           jdk ntp openssh sudo ntfs-3g xsel oxygen-icons \
           zip unrar unzip \
