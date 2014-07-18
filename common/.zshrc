@@ -64,7 +64,7 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm 
 # Aliases
 ##############################
 
-alias diff='colordiff'
+alias diff='colordiff -bup'
 alias mkdir='mkdir -p -v'
 
 alias df='df -hPT'
