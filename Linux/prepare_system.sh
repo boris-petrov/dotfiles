@@ -51,7 +51,7 @@ packer -S archlinux-keyring \
           zip unrar unzip \
           deluge flareget \
           freerdp realvnc-viewer \
-          infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx \
+          infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
           nodejs ruby python
 
 # install npm
