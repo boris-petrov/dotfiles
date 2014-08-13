@@ -2,6 +2,7 @@
 --tag-relative=yes
 --fields=+iaS
 --extra=+q
+--c++-kinds=+p
 
 --exclude=node_modules
 --exclude=vendor
