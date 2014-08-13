@@ -91,7 +91,7 @@ set number " line numbers
 set numberwidth=1 " Make line number column as narrow as possible
 
 " fix problems in terminal Vim
-set t_RV= ttymouse=xterm2
+set t_RV= ttymouse=xterm2 t_Co=256
 
 set guioptions=ci
 
