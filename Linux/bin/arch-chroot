@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# rsync -aE "root@192.168.1.47:/" mnt --exclude='/dev/*' --exclude='/proc/*' --exclude='/sys/*' --exclude='/tmp/*' --exclude=/'run/*' --exclude='/mnt/*' --exclude='/media/*' --exclude='/lost+found/*' --exclude='/home/*' --exclude='/var/*'
+# rsync -aE --delete "root@192.168.1.47:/" mnt --exclude='/dev/*' --exclude='/proc/*' --exclude='/sys/*' --exclude='/tmp/*' --exclude=/'run/*' --exclude='/mnt/*' --exclude='/media/*' --exclude='/lost+found/*' --exclude='/home/*' --exclude='/var/*'
 # after that change in mnt/etc/{shadow,passwd,group,gshadow} the user with ID 1000 to be 'boris'
 
 mount | grep boris > /dev/null
