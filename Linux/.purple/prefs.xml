@@ -268,7 +268,7 @@
 		<pref name='filelocations'>
 			<pref name='last_save_folder' type='path' value='/home/boris/autoreceive'/>
 			<pref name='last_open_folder' type='path' value='/home/boris/Downloads'/>
-			<pref name='last_icon_folder' type='path' value=''/>
+			<pref name='last_icon_folder' type='path' value='/home/boris/Dropbox/Private/avatars'/>
 		</pref>
 		<pref name='smileys'>
 			<pref name='theme' type='string' value='QIP-pidgin'/>
@@ -341,7 +341,7 @@
 				<pref name='width' type='int' value='520'/>
 				<pref name='height' type='int' value='321'/>
 			</pref>
-			<pref name='buddyicon' type='path' value='/home/boris/Dropbox/Private/avatar_orange.jpg'/>
+			<pref name='buddyicon' type='path' value='/home/boris/Dropbox/Private/avatars/avatar_orange.jpg'/>
 		</pref>
 		<pref name='blist'>
 			<pref name='show_buddy_icons' type='bool' value='1'/>
