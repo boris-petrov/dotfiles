@@ -13,7 +13,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'cuzelac/AutoTag'
+Bundle 'craigemery/vim-autotag'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'AndrewRadev/coffee_tools.vim'
 Bundle 'godlygeek/csapprox'
