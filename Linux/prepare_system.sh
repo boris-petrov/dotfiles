@@ -43,7 +43,7 @@ packer -S archlinux-keyring \
           anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox flashplugin \
           pidgin skype-secure skype4pidgin-svn-dbus kbdd-latest-git pidgin-otr purple-whatsapp \
           dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
-          xorg-server xorg-xinit slim awesome dmenu xlockmore arandr \
+          xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
           aspell hunspell \
           gvim colordiff ctags the_silver_searcher \
           zsh rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
