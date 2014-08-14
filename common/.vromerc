@@ -29,7 +29,7 @@ set showstatus=1
 
 set useletters=0
 
-set searchengines+={"wiki":"http://en.wikipedia.org/wiki/{{keyword}}"}
+set searchengines+={"wiki":"https://www.wikipedia.org/wiki/Special:Search/{{keyword}}"}
 
 set completion_items=url,search-engine,bookmarks,search
 
