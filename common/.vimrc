@@ -783,6 +783,8 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 cnoremap <F1> <ESC>
 
+nmap <Leader>cl :let @+=expand("%:p")<CR>
+
 " Saving read-only files
 cnoremap sudow w !sudo tee % >/dev/null
 
