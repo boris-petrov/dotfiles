@@ -100,3 +100,9 @@ sudo systemctl enable laptop-mode
 # set Chrome/Thunderbird fonts, encodings
 # use "git@github.com:boris-petrov/Hotot.git" as _gitroot when installing hotot-qt4-git
 # set Pidgin's Skype plugin to use "sskype" instead of "skype" as an executable
+
+# Do this so Skype audio works:
+# As the main user, copy /etc/pulse/default.pa to ~/.config/pulse/default.pa and add:
+# load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1
+# As the _skype user, create ~/.config/pulse/client.conf and add:
+# default-server = 127.0.0.1
