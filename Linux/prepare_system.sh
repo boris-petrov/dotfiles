@@ -52,7 +52,7 @@ packer -S archlinux-keyring \
           deluge flareget \
           freerdp realvnc-viewer \
           infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
-          nodejs ruby python
+          nodejs ruby python gdb
 
 # install npm
 wget https://www.npmjs.org/install.sh
