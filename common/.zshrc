@@ -71,6 +71,8 @@ alias df='df -hPT'
 alias du='du -ch'
 alias free='free -h'
 
+alias tmux='tmux -u -2 -q'
+
 alias ctags='ctags -f.tags'
 
 alias ls='ls -hF --color=auto --group-directories-first'
