@@ -434,8 +434,8 @@ xmap <silent> # :call <SID>VisualSearch('b')<CR>n
 " Sideways
 " --------------------------------------------------------------------------------------------------
 
-nnoremap <Leader>< :SidewaysLeft<CR>
-nnoremap <Leader>> :SidewaysRight<CR>
+nnoremap s< :SidewaysLeft<CR>
+nnoremap s> :SidewaysRight<CR>
 
 " --------------------------------------------------------------------------------------------------
 " QuickFix list
