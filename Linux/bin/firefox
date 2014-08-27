@@ -1,0 +1,3 @@
+#!/bin/sh
+profile-cleaner f
+exec /usr/bin/firefox
