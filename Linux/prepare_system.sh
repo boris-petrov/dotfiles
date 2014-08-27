@@ -40,7 +40,7 @@ packer -S archlinux-keyring \
           kbgoffice \
           cups gutenprint system-config-printer \
           networkmanager network-manager-applet \
-          anything-sync-daemon profile-sync-daemon chromium-pepper-flash firefox flashplugin \
+          anything-sync-daemon profile-sync-daemon profile-cleaner chromium-pepper-flash firefox flashplugin \
           pidgin skype-secure skype4pidgin-svn-dbus kbdd-latest-git pidgin-otr purple-whatsapp \
           dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
           xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
