@@ -1,2 +1,3 @@
 #!/bin/sh
+profile-cleaner c
 exec /usr/bin/chromium --ignore-gpu-blacklist --disable-device-discovery-notifications --disable-sync-synced-notifications $@
