@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /usr/bin/chromium --enable-seccomp-sandbox --ignore-gpu-blacklist --enable-webgl $@
+exec /usr/bin/chromium --ignore-gpu-blacklist --disable-device-discovery-notifications --disable-sync-synced-notifications $@
