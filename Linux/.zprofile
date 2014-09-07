@@ -2,8 +2,6 @@ export TERM=xterm-256color
 
 export EDITOR=vim
 
-export LD_LIBRARY_PATH=.:/usr/local/lib:$LD_LIBRARY_PATH
-
 export XCMENUCTRL_DMENU='dmenu -i -l 15'
 
 export PATH=./node_modules/.bin:$HOME/.gem/ruby/2.1.0/bin:$HOME/bin:$PATH
