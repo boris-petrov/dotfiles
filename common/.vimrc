@@ -248,6 +248,7 @@ nmap gc  <Plug>Commentary
 xmap gc  <Plug>Commentary
 
 autocmd FileType cpp setlocal commentstring=//\ %s
+autocmd FileType c   setlocal commentstring=//\ %s
 autocmd FileType cs  setlocal commentstring=//\ %s
 
 " --------------------------------------------------------------------------------------------------
