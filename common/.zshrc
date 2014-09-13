@@ -119,6 +119,8 @@ which() {
 }
 export which
 
+GREP_OPTIONS="--binary-files=without-match --line-number --no-messages --color=auto --exclude-dir=.git --exclude-dir=.svn --exclude-dir=.hg --exclude=.tags"
+
 ##############################
 # Functions
 ##############################
