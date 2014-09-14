@@ -700,9 +700,11 @@ endfunction
 
 nnoremap <silent> gn :NERDTreeToggle<CR>:silent NERDTreeMirror<CR>
 
-let g:NERDTreeMapPreviewVSplit  = ""
-let g:NERDTreeMapJumpFirstChild = ""
-let g:NERDTreeMapJumpLastChild  = ""
+let NERDTreeMapJumpFirstChild = ""
+let NERDTreeMapJumpLastChild = ""
+let NERDTreeRespectWildIgnore = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeAutoDeleteBuffer = 1
 
 autocmd FileType nerdtree nmap <buffer> l o
 autocmd FileType nerdtree nmap <buffer> h x
