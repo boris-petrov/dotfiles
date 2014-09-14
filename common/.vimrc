@@ -23,6 +23,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'gregsexton/gitv'
 Plugin 'sjl/gundo.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'boris-petrov/rainbow_parentheses.vim'
 Plugin 'kana/vim-smartword'
 Plugin 'garbas/vim-snipmate'
@@ -698,13 +699,15 @@ endfunction
 " NERDTree (un)Mappings
 " --------------------------------------------------------------------------------------------------
 
-nnoremap <silent> gn :NERDTreeToggle<CR>:silent NERDTreeMirror<CR>
+nnoremap <silent> gn :NERDTreeMirrorToggle<CR>
 
 let NERDTreeMapJumpFirstChild = ""
 let NERDTreeMapJumpLastChild = ""
 let NERDTreeRespectWildIgnore = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeAutoDeleteBuffer = 1
+let nerdtree_tabs_open_on_new_tab = 0
+let nerdtree_tabs_open_on_console_startup = 1
 
 autocmd FileType nerdtree nmap <buffer> l o
 autocmd FileType nerdtree nmap <buffer> h x
