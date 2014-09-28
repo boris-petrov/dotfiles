@@ -3,4 +3,7 @@ Defaults! PROGS setenv
 root ALL=(ALL) ALL
 boris ALL=(ALL) ALL
 boris ALL = NOPASSWD: PROGS
-boris ALL=(_skype) NOPASSWD: /usr/bin/skype
+
+## Read drop-in files from /etc/sudoers.d
+## (the '#' here does not indicate a comment)
+#includedir /etc/sudoers.d
