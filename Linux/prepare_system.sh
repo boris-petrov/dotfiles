@@ -71,7 +71,7 @@ mkdir -p code/vrome
 pushd code/vrome
 git clone git@github.com:jinzhu/vrome.git
 sudo bundle
-rake build
+bundle exec rake build
 popd
 
 # add less keybindings
