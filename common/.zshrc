@@ -119,6 +119,11 @@ which() {
 }
 export which
 
+file() {
+  (/usr/bin/file $@; /usr/bin/file -bi $@) | xargs -0 echo
+}
+export file
+
 GREP_OPTIONS="--binary-files=without-match --line-number --no-messages --color=auto --exclude-dir=.git --exclude-dir=.svn --exclude-dir=.hg --exclude=.tags"
 
 ##############################
