@@ -31,7 +31,11 @@ sudo pacman -Syy
 
 # install packages
 packer -S archlinux-keyring \
-          xf86-video-intel xf86-input-synaptics acpi acpid laptop-mode-tools \
+          # ONE of the next two lines should be chosen
+          xf86-video-intel mesa-libgl mesa-vdpau lib32-mesa-libgl lib32-mesa-vdpau \
+          nvidia lib32-nvidia-libgl \
+          # the next is for laptops only
+          xf86-input-synaptics acpi acpid laptop-mode-tools \
           pulseaudio pulseaudio-alsa lib32-libpulse pavucontrol \
           alsa-utils alsa-plugins lib32-alsa-plugins libsamplerate \
           smplayer deadbeef \
@@ -47,12 +51,12 @@ packer -S archlinux-keyring \
           aspell hunspell \
           gvim colordiff ctags the_silver_searcher \
           zsh rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
-          jdk ntp openssh sudo ntfs-3g xsel oxygen-icons \
+          ntp openssh sudo ntfs-3g oxygen-icons \
           zip unrar unzip \
           deluge flareget \
           freerdp realvnc-viewer \
           infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
-          nodejs ruby python gdb
+          jdk nodejs ruby python gdb
 
 # install npm
 wget https://www.npmjs.org/install.sh
