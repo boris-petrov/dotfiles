@@ -220,7 +220,8 @@ function xterm-bindings () {
 
 function urxvt-bindings () {
 
-  bindkey -M viins '^[[A' delete-char
+  bindkey -M viins '^[[A'  delete-char
+  bindkey -M viins '^[[3~' delete-char # delete key
 
   bindkey -M viins '^[[B' down-line-or-beginning-search
   bindkey -M viins '^k'   up-line-or-beginning-search
