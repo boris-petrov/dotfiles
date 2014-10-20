@@ -125,6 +125,13 @@ local mysystray = wibox.widget.systray()
 local kbdwidget = wibox.widget.textbox()
 kbdwidget:set_text(" En ")
 
+-- Separator widget
+local separator_widget_text = wibox.widget.textbox()
+separator_widget_text:set_text(" |")
+local separator_widget = wibox.widget.background()
+separator_widget:set_widget(separator_widget_text)
+separator_widget:set_fg("#ffff00")
+
 -- Battery widget
 local batwidget = obvious.battery()
 
@@ -163,7 +170,10 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
-    if batwidget ~= nil then right_layout:add(batwidget) end
+    if batwidget ~= nil then
+        right_layout:add(batwidget)
+        right_layout:add(separator_widget)
+    end
     right_layout:add(kbdwidget)
     if s == 1 then right_layout:add(mysystray) end
     right_layout:add(mytextclock)
