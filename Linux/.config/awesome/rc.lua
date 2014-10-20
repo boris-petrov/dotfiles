@@ -14,7 +14,7 @@ require("remborders")
 
 require("utils")
 
-local vicious = require("vicious")
+local obvious = require("obvious")
 
 -- Themes define colours, icons, and wallpapers
 beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
@@ -126,15 +126,7 @@ kbdwidget = wibox.widget.textbox()
 kbdwidget:set_text(" En ")
 
 -- Battery widget
-batwidget = nil
-for s = 0, 1 do
-    local battery = 'BAT'..s
-    if fileExists('/sys/class/power_supply/'..battery) then
-        batwidget = wibox.widget.textbox()
-        vicious.register(batwidget, vicious.widgets.bat, "$2% - $3 "..colorize("#ee1111", "|"), 61, battery)
-        break
-    end
-end
+batwidget = obvious.battery()
 
 -- Create a wibox for each screen and add it
 mywibox = {}

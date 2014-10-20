@@ -1,9 +1,9 @@
-[submodule "Linux/.config/awesome/vicious"]
-	path = Linux/.config/awesome/vicious
-	url = http://git.sysphere.org/vicious
 [submodule "common/zsh-syntax-highlighting"]
 	path = common/zsh-syntax-highlighting
 	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "common/.vim/bundle/Vundle.vim"]
 	path = common/.vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim
+[submodule "Linux/.config/awesome/obvious"]
+	path = Linux/.config/awesome/obvious
+	url = https://github.com/hoelzro/obvious.git
