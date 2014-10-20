@@ -122,8 +122,12 @@ calendar2.addCalendarToWidget(mytextclock)
 local mysystray = wibox.widget.systray()
 
 -- Keyboard layout widget
-local kbdwidget = wibox.widget.textbox()
-kbdwidget:set_text(" En ")
+local lts = { [0] = { [0] = " En ", [1] = "#ff0000" }, [1] = { [0] = " Bg ", [1] = "#00ff00" } }
+local kbdwidget_text = wibox.widget.textbox()
+kbdwidget_text:set_text(lts[0][0])
+local kbdwidget = wibox.widget.background()
+kbdwidget:set_widget(kbdwidget_text)
+kbdwidget:set_fg(lts[0][1])
 
 -- Separator widget
 local separator_widget_text = wibox.widget.textbox()
@@ -440,14 +444,13 @@ end)
 client.connect_signal("focus",   function(c) c.border_color = beautiful.border_focus  end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
-lts = { [0] = " En ", [1] = " Bg " }
-
 dbus.request_name("session", "ru.gentoo.kbdd")
 dbus.add_match("session", "interface='ru.gentoo.kbdd',member='layoutChanged'")
 dbus.connect_signal("ru.gentoo.kbdd", function(...)
     local data = { ... }
     local layout = data[2]
-    kbdwidget:set_text(lts[layout])
+    kbdwidget_text:set_text(lts[layout][0])
+    kbdwidget:set_fg(lts[layout][1])
 end)
 
 -- }}}
