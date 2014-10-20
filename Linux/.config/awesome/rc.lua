@@ -23,7 +23,7 @@ function colorize(color, string)
     return '<span color="'..color..'">'..string..'</span>'
 end
 
-focus_client = function(c)
+local focus_client = function(c)
     -- This will also un-minimize
     -- the client, if needed
     client.focus = c
@@ -59,15 +59,15 @@ end
 
 -- {{{ Variable definitions
 
-terminal         = "urxvt"
-hostile_takeover = "gvim /home/boris/documents/Hostile\\ Takeover.txt"
-dmenu            = "dmenu_run"
+local terminal         = "urxvt"
+local hostile_takeover = "gvim /home/boris/documents/Hostile\\ Takeover.txt"
+local dmenu            = "dmenu_run"
 
-alt_modkey = "Mod1"
-win_modkey = "Mod4"
+local alt_modkey = "Mod1"
+local win_modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
-layouts =
+local layouts =
 {
     awful.layout.suit.tile,
     awful.layout.suit.tile.bottom,
@@ -99,7 +99,7 @@ end
 -- {{{ Tags
 
 -- Define a tag table which hold all screen tags.
-tags = {
+local tags = {
     layouts = { layouts[4], layouts[4], layouts[4], layouts[3], layouts[4],
                 layouts[4], layouts[4], layouts[4], layouts[4] }
 }
@@ -113,29 +113,29 @@ end
 -- {{{ Wibox
 
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
+local mytextclock = awful.widget.textclock()
 -- Calendar widget to attach to the textclock
 local calendar2 = require('calendar2')
 calendar2.addCalendarToWidget(mytextclock)
 
 -- Create a systray
-mysystray = wibox.widget.systray()
+local mysystray = wibox.widget.systray()
 
 -- Keyboard layout widget
-kbdwidget = wibox.widget.textbox()
+local kbdwidget = wibox.widget.textbox()
 kbdwidget:set_text(" En ")
 
 -- Battery widget
-batwidget = obvious.battery()
+local batwidget = obvious.battery()
 
 -- Create a wibox for each screen and add it
-mywibox = {}
-mylayoutbox = {}
-mytaglist = {}
+local mywibox = {}
+local mylayoutbox = {}
+local mytaglist = {}
 mytaglist.buttons = awful.util.table.join(
                         awful.button({}, 1, awful.tag.viewonly)
                     )
-mytasklist = {}
+local mytasklist = {}
 mytasklist.buttons = awful.util.table.join(
                         awful.button({}, 1, focus_client)
                      )
@@ -181,7 +181,7 @@ end
 
 -- {{{ Key bindings
 
-globalkeys = awful.util.table.join(
+local globalkeys = awful.util.table.join(
     awful.key({ alt_modkey }, "l", function() awful.util.spawn("xlock -mode blank") end),
 
     awful.key({ },            "Print", function() awful.util.spawn("scrot -e 'mv $f ~ 2>/dev/null'") end),
@@ -222,7 +222,7 @@ globalkeys = awful.util.table.join(
     awful.key({ alt_modkey, "Control" }, "space", function() awful.layout.inc(layouts, 1) end)
 )
 
-clientkeys = awful.util.table.join(
+local clientkeys = awful.util.table.join(
     awful.key({ alt_modkey }, "f", function(c) c.fullscreen = not c.fullscreen  end),
     awful.key({ alt_modkey }, "q", function(c) c:kill()                         end),
     awful.key({ alt_modkey }, "o", awful.client.movetoscreen                       ),
@@ -235,7 +235,7 @@ clientkeys = awful.util.table.join(
 )
 
 -- Compute the maximum number of digit we need, limited to 9
-keynumber = 0
+local keynumber = 0
 for s = 1, screen.count() do
    keynumber = math.min(9, math.max(#tags[s], keynumber))
 end
@@ -262,7 +262,7 @@ for i = 1, keynumber do
                   end))
 end
 
-clientbuttons = awful.util.table.join(
+local clientbuttons = awful.util.table.join(
     awful.button({ },            1, focus_client),
     awful.button({ alt_modkey }, 1, awful.mouse.client.move),
     awful.button({ alt_modkey }, 3, awful.mouse.client.resize)
