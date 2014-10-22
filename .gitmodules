@@ -7,3 +7,6 @@
 [submodule "Linux/.config/awesome/obvious"]
 	path = Linux/.config/awesome/obvious
 	url = git://github.com/hoelzro/obvious.git
+[submodule "Linux/.config/awesome/apw"]
+	path = Linux/.config/awesome/apw
+	url = git://github.com/mokasin/apw.git

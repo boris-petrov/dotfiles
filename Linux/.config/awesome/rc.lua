@@ -16,6 +16,8 @@ require("utils")
 
 local obvious = require("obvious")
 
+local APW = require("apw/widget")
+
 -- Themes define colours, icons, and wallpapers
 beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 
@@ -180,6 +182,7 @@ for s = 1, screen.count() do
     end
     right_layout:add(kbdwidget)
     if s == 1 then right_layout:add(mysystray) end
+    right_layout:add(APW)
     right_layout:add(mytextclock)
 
     -- Now bring it all together (with the tasklist in the middle)
@@ -196,6 +199,10 @@ end
 -- {{{ Key bindings
 
 local globalkeys = awful.util.table.join(
+    awful.key({ alt_modkey }, "Up",   APW.Up),
+    awful.key({ alt_modkey }, "Down", APW.Down),
+    awful.key({ alt_modkey }, "m",    APW.ToggleMute),
+
     awful.key({ alt_modkey }, "l", function() awful.util.spawn("xlock -mode blank") end),
 
     awful.key({ },            "Print", function() awful.util.spawn("scrot -e 'mv $f ~ 2>/dev/null'") end),
