@@ -31,6 +31,7 @@ sudo pacman -Syy
 
 # install packages
 packer -S archlinux-keyring \
+          intel-ucode \
           # ONE of the next two lines should be chosen
           xf86-video-intel mesa-libgl mesa-vdpau lib32-mesa-libgl lib32-mesa-vdpau \
           nvidia lib32-nvidia-libgl \
