@@ -176,7 +176,7 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
-    if batwidget ~= nil then
+    if obvious.battery.get_data().charge then -- i.e. if there is a battery
         right_layout:add(batwidget)
         right_layout:add(separator_widget)
     end
