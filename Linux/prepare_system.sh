@@ -33,9 +33,9 @@ sudo pacman -Syy
 packer -S archlinux-keyring \
           intel-ucode \
           # ONE of the next two lines should be chosen
-          xf86-video-intel mesa-libgl mesa-vdpau lib32-mesa-libgl lib32-mesa-vdpau \
-          nvidia lib32-nvidia-libgl \
-          # the next is for laptops only
+          xf86-video-intel mesa-libgl lib32-mesa-libgl mesa-vdpau lib32-mesa-vdpau libva-intel-driver \
+          nvidia lib32-nvidia-libgl libva-vdpau-driver \
+          # the next line is for laptops only
           xf86-input-synaptics acpi acpid laptop-mode-tools \
           pulseaudio pulseaudio-alsa lib32-libpulse pavucontrol \
           alsa-utils alsa-plugins lib32-alsa-plugins libsamplerate \
