@@ -4,9 +4,18 @@
 --extra=+q
 --c++-kinds=+p
 
---exclude=node_modules
---exclude=vendor
---exclude=coverage
+--exclude=node_modules/**
+--exclude=**/node_modules/**
+--exclude=vendor/**
+--exclude=**/vendor/**
+--exclude=build/**
+--exclude=**/build/**
+--exclude=coverage/**
+--exclude=**/coverage/**
+--exclude=var/**
+--exclude=**/var/**
+--exclude=log/**
+--exclude=**/log/**
 
 --langdef=coffee
 --langmap=coffee:.coffee
