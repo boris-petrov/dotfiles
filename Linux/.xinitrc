@@ -4,6 +4,7 @@ xrdb -merge $HOME/.Xresources
 
 kbdd
 start-pulseaudio-x11
+syndaemon -t -k -i 1 -d
 nm-applet &
 autokey-gtk &
 thunderbird &
