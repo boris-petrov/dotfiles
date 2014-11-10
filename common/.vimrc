@@ -764,10 +764,6 @@ let g:ctrlp_clear_cache_on_exit = 0
 
 let g:ctrlp_by_filename = 1
 
-if executable('ag')
-	let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-endif
-
 "--------------------------------------------------------
 " Abbreviations
 " -------------------------------------------------------
