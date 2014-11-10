@@ -112,7 +112,7 @@ set scrolljump=7
 set wildmenu
 set wildchar=<Tab>
 set wildmode=longest,list
-set wildignore=*.o,*.hi,*.dll,*.obj,*.lib,*.swp,*.zip,*.exe,*.so,*.a,*.tar*,*.gif,*.jpg,*.png,*.jar,*.class
+set wildignore=*/tmp/*,*.obj,*.o,*.hi,*.dll,*.so,*.lib,*.a,*.swp,*.zip,*.tar*,*.exe,*.out,*.gif,*.jpg,*.bmp,*.png,*.jar,*.class
 
 set linebreak " does not wrap in the middle of the word
 set showbreak=+>
@@ -753,7 +753,7 @@ nmap gs :Gstatus<CR><C-n>
 
 let g:ctrlp_map           = 'gz'
 let g:ctrlp_custom_ignore = {
-	\ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|tmp|vendor|build|log|var)$',
+	\ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|vendor|build|log|var)$',
 	\ }
 let g:ctrlp_match_window_bottom   = 0
 let g:ctrlp_match_window_reversed = 0
