@@ -112,7 +112,7 @@ set scrolljump=7
 set wildmenu
 set wildchar=<Tab>
 set wildmode=longest,list
-set wildignore=*.o,*.hi,*.dll,*.obj,*.lib,*.swp,*.zip,*.exe,*.so
+set wildignore=*.o,*.hi,*.dll,*.obj,*.lib,*.swp,*.zip,*.exe,*.so,*.a,*.tar*,*.gif,*.jpg,*.png,*.jar,*.class
 
 set linebreak " does not wrap in the middle of the word
 set showbreak=+>
