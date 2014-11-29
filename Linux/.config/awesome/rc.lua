@@ -176,13 +176,13 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
+    right_layout:add(APW)
     if obvious.battery.get_data().charge then -- i.e. if there is a battery
         right_layout:add(batwidget)
         right_layout:add(separator_widget)
     end
     right_layout:add(kbdwidget)
     if s == 1 then right_layout:add(mysystray) end
-    right_layout:add(APW)
     right_layout:add(mytextclock)
 
     -- Now bring it all together (with the tasklist in the middle)
