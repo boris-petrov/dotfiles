@@ -46,7 +46,7 @@ packer -S archlinux-keyring \
           cups gutenprint system-config-printer \
           networkmanager network-manager-applet \
           anything-sync-daemon profile-sync-daemon profile-cleaner chromium-pepper-flash firefox flashplugin \
-          pidgin skype-secure skype4pidgin-svn kbdd-latest-git pidgin-otr purple-whatsapp \
+          pidgin skype-secure skype4pidgin-svn kbdd-latest-git pidgin-otr purple-whatsapp-git \
           dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
           xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
           aspell hunspell \
