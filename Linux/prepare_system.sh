@@ -40,6 +40,7 @@ packer -S archlinux-keyring \
           pulseaudio pulseaudio-alsa lib32-libpulse pavucontrol \
           alsa-utils alsa-plugins lib32-alsa-plugins libsamplerate \
           smplayer deadbeef \
+          udisks2 udiskie dosfstools \
           zathura zathura-djvu zathura-pdf-poppler zathura-ps \
           libreoffice-common libreoffice-en-US libreoffice-impress libreoffice-writer \
           kbgoffice \
