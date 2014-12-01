@@ -113,6 +113,11 @@
 				<pref name='threshold' type='int' value='20'/>
 				<pref name='hide_buddies' type='bool' value='1'/>
 			</pref>
+			<pref name='nss_prefs'>
+				<pref name='cipher_list' type='stringlist'/>
+				<pref name='min_tls' type='int' value='769'/>
+				<pref name='max_tls' type='int' value='771'/>
+			</pref>
 		</pref>
 		<pref name='lopl'/>
 		<pref name='prpl'>
