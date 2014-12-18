@@ -37,6 +37,9 @@ packer -S archlinux-keyring \
           nvidia lib32-nvidia-libgl libva-vdpau-driver \
           # the next line is for laptops only
           xf86-input-synaptics acpi acpid laptop-mode-tools \
+          # instead of "libacr38ucontrol", install the drivers
+          # for the correct model of the USB stick
+          libacr38ucontrol lsb-release scinterface-bin deb2targz \
           pulseaudio pulseaudio-alsa lib32-libpulse pavucontrol \
           alsa-utils alsa-plugins lib32-alsa-plugins libsamplerate \
           smplayer deadbeef \
@@ -88,6 +91,7 @@ sudo systemctl enable slim
 sudo systemctl enable sshd
 sudo systemctl enable ntpd
 sudo systemctl enable cups
+sudo systemctl enable pcscd
 
 # TODO: if on laptop:
 sudo systemctl enable NetworkManager
