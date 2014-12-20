@@ -48,6 +48,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'yssl/QFEnter'
 Plugin 'AndrewRadev/sideways.vim'
 Plugin 'wellle/targets.vim'
+Plugin 'AndrewRadev/vim-eco'
 
 Plugin 'AutoComplPop'
 Plugin 'OmniCppComplete'
