@@ -15,7 +15,6 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'craigemery/vim-autotag'
 Plugin 'bkad/CamelCaseMotion'
-Plugin 'AndrewRadev/coffee_tools.vim'
 Plugin 'godlygeek/csapprox'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
