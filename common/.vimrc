@@ -393,8 +393,6 @@ autocmd FileType coffee hi! link Keyword   Statement
 autocmd FileType coffee hi! link Structure Type
 autocmd FileType coffee hi! def link coffeeObjAssign Special
 
-let g:coffee_tools_function_text_object = 1
-
 let g:syntastic_coffee_checkers = ['iced']
 
 " --------------------------------------------------------------------------------------------------
