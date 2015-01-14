@@ -1,6 +1,7 @@
 Linux/.config/*
 Linux/.local/*
 Linux/.purple
+Linux/.gnupg
 common/.vim/.netrwhist
 common/.vim/undodir
 common/.vim/spell
