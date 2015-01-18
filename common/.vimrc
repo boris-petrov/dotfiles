@@ -48,6 +48,7 @@ Plugin 'yssl/QFEnter'
 Plugin 'AndrewRadev/sideways.vim'
 Plugin 'wellle/targets.vim'
 Plugin 'AndrewRadev/vim-eco'
+Plugin 'dietsche/vim-lastplace'
 
 Plugin 'AutoComplPop'
 Plugin 'OmniCppComplete'
@@ -305,12 +306,6 @@ augroup RainbowParentheses
 augroup END
 
 runtime! macros/matchit.vim " smarter matching with % (ifs, elses...)
-
-" When editing a file, always jump to the last cursor position
-autocmd BufReadPost *
-			\ if line("'\"") > 0 && line ("'\"") <= line("$") |
-			\	exe "keepjumps normal! g'\"" |
-			\ endif
 
 " When .vimrc is edited, reload it
 autocmd! BufWritePost $MYVIMRC source $MYVIMRC
