@@ -1,3 +1,3 @@
 #!/bin/sh
-ps aux | grep chromium | grep -v grep > /dev/null || profile-cleaner c
+ps aux | grep chromium | grep -v grep | grep -v $0 > /dev/null || profile-cleaner c
 exec /usr/bin/chromium --ignore-gpu-blacklist --disable-device-discovery-notifications --disable-sync-synced-notifications $@
