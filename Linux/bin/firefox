@@ -1,3 +1,3 @@
 #!/bin/sh
-ps aux | grep firefox | grep -v grep > /dev/null || profile-cleaner f
+ps aux | grep firefox | grep -v grep | grep -v $0 > /dev/null || profile-cleaner f
 exec /usr/bin/firefox
