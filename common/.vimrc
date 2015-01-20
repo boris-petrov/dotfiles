@@ -782,7 +782,7 @@ nmap <Leader>cl :let @+=expand("%:p")<CR>
 " Saving read-only files
 cnoremap sudow w !sudo tee % >/dev/null
 
-nnoremap - :Switch<CR>
+let g:switch_mapping = '-'
 
 xmap so <Plug>ExtractVar
 nmap si <Plug>InlineVar
