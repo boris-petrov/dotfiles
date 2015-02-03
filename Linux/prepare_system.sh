@@ -4,14 +4,14 @@ cd
 
 sudo pacman -S wget git
 
-# install packer
-wget https://aur.archlinux.org/packages/pa/packer/packer.tar.gz
-tar -xzf packer.tar.gz
-pushd packer
+# install apacman
+wget https://aur.archlinux.org/packages/ap/apacman/apacman.tar.gz
+tar -xzf apacman.tar.gz
+pushd apacman
 makepkg -s
-sudo pacman -U packer-*
+sudo pacman -U apacman-*
 popd
-rm -rf packer packer.tar.gz
+rm -rf apacman apacman.tar.gz
 
 # clone my dotfiles, install them and install screenful
 git clone git@github.com:boris-petrov/dotfiles.git
@@ -30,38 +30,38 @@ sudo pacman-key --lsign-key 962DDE58
 sudo pacman -Syy
 
 # install packages
-packer -S archlinux-keyring \
-          intel-ucode \
-          # ONE of the next two lines should be chosen
-          xf86-video-intel mesa-libgl lib32-mesa-libgl mesa-vdpau lib32-mesa-vdpau libva-intel-driver \
-          nvidia lib32-nvidia-libgl libva-vdpau-driver \
-          # the next line is for laptops only
-          xf86-input-synaptics acpi acpid laptop-mode-tools \
-          # instead of "libacr38ucontrol", install the drivers
-          # for the correct model of the USB stick
-          libacr38ucontrol lsb-release scinterface-bin deb2targz \
-          pulseaudio pulseaudio-alsa lib32-libpulse pavucontrol \
-          alsa-utils alsa-plugins lib32-alsa-plugins libsamplerate \
-          smplayer deadbeef \
-          udisks2 udiskie dosfstools \
-          zathura zathura-djvu zathura-pdf-poppler zathura-ps \
-          libreoffice-common libreoffice-en-US libreoffice-impress libreoffice-writer libreoffice-still-calc \
-          kbgoffice \
-          cups gutenprint system-config-printer \
-          networkmanager network-manager-applet \
-          anything-sync-daemon profile-sync-daemon profile-cleaner chromium-pepper-flash firefox flashplugin \
-          pidgin skype-secure skype4pidgin-svn kbdd-latest-git pidgin-otr purple-whatsapp-git \
-          dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
-          xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
-          aspell hunspell \
-          gvim colordiff ctags the_silver_searcher \
-          zsh rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
-          ntp openssh sudo ntfs-3g oxygen-icons \
-          zip unrar unzip \
-          deluge flareget \
-          freerdp realvnc-viewer \
-          infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
-          jdk nodejs ruby python gdb
+apacman -S archlinux-keyring \
+  intel-ucode \
+  # ONE of the next two lines should be chosen
+  xf86-video-intel mesa-libgl lib32-mesa-libgl mesa-vdpau lib32-mesa-vdpau libva-intel-driver \
+  nvidia lib32-nvidia-libgl libva-vdpau-driver \
+  # the next line is for laptops only
+  xf86-input-synaptics acpi acpid laptop-mode-tools \
+  # instead of "libacr38ucontrol", install the drivers
+  # for the correct model of the USB stick
+  libacr38ucontrol lsb-release scinterface-bin deb2targz \
+  pulseaudio pulseaudio-alsa lib32-libpulse pavucontrol \
+  alsa-utils alsa-plugins lib32-alsa-plugins libsamplerate \
+  smplayer deadbeef \
+  udisks2 udiskie dosfstools \
+  zathura zathura-djvu zathura-pdf-poppler zathura-ps \
+  libreoffice-common libreoffice-en-US libreoffice-impress libreoffice-writer libreoffice-still-calc \
+  kbgoffice \
+  cups gutenprint system-config-printer \
+  networkmanager network-manager-applet \
+  anything-sync-daemon profile-sync-daemon profile-cleaner chromium-pepper-flash firefox flashplugin \
+  pidgin skype-secure skype4pidgin-svn kbdd-latest-git pidgin-otr purple-whatsapp-git \
+  dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
+  xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
+  aspell hunspell \
+  gvim colordiff ctags the_silver_searcher \
+  zsh rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
+  ntp openssh sudo ntfs-3g oxygen-icons \
+  zip unrar unzip \
+  deluge flareget \
+  freerdp realvnc-viewer \
+  infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
+  jdk nodejs ruby python gdb
 
 # install npm
 wget https://www.npmjs.org/install.sh
