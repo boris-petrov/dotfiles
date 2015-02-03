@@ -39,7 +39,7 @@ apacman -S archlinux-keyring \
   xf86-input-synaptics acpi acpid laptop-mode-tools \
   # instead of "libacr38ucontrol", install the drivers
   # for the correct model of the USB stick
-  libacr38ucontrol lsb-release scinterface-bin deb2targz \
+  libacr38ucontrol lsb-release deb2targz scinterface-bin \
   pulseaudio pulseaudio-alsa lib32-libpulse pavucontrol \
   alsa-utils alsa-plugins lib32-alsa-plugins libsamplerate \
   smplayer deadbeef \
