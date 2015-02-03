@@ -63,7 +63,7 @@ end
 
 local terminal         = "urxvt"
 local hostile_takeover = "gvim /home/boris/documents/Hostile\\ Takeover.txt"
-local dmenu            = "dmenu_run"
+local dmenu            = "dmenu_run -i"
 
 local alt_modkey = "Mod1"
 local win_modkey = "Mod4"
