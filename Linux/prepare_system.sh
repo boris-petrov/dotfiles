@@ -45,8 +45,7 @@ apacman -S archlinux-keyring \
   smplayer deadbeef \
   udisks2 udiskie dosfstools \
   zathura zathura-djvu zathura-pdf-poppler zathura-ps \
-  libreoffice-common libreoffice-en-US libreoffice-impress libreoffice-writer libreoffice-still-calc \
-  kbgoffice \
+  libreoffice-fresh kbgoffice \
   cups gutenprint system-config-printer \
   networkmanager network-manager-applet \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium-pepper-flash firefox flashplugin \
