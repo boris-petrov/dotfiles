@@ -62,10 +62,6 @@ apacman -S archlinux-keyring \
   infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
   jdk nodejs ruby python gdb
 
-# install npm
-wget https://www.npmjs.org/install.sh
-sudo sh install.sh
-rm install.sh
 sudo npm install -g coffee-script
 
 # enable Vim persistent undo
