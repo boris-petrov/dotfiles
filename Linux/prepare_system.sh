@@ -62,7 +62,7 @@ apacman -S archlinux-keyring \
   infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
   jdk nodejs ruby python gdb
 
-sudo npm install -g coffee-script
+sudo npm install -g gulp coffee-script
 
 # enable Vim persistent undo
 mkdir -p .vim/undodir
