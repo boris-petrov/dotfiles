@@ -2,8 +2,10 @@
 
 cd
 
-sudo pacman -S wget git
+# run as root
+pacman -S sudo wget git
 
+# from here on run as normal user
 # install apacman
 wget https://aur.archlinux.org/packages/ap/apacman/apacman.tar.gz
 tar -xzf apacman.tar.gz
@@ -50,12 +52,13 @@ apacman -S archlinux-keyring \
   networkmanager network-manager-applet \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium-pepper-flash firefox flashplugin \
   pidgin skype-secure skype4pidgin-svn kbdd-latest-git pidgin-otr purple-whatsapp-git \
+  # use "git@github.com:boris-petrov/Hotot.git" as _gitroot when installing hotot-qt4-git
   dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
   aspell hunspell \
   gvim colordiff ctags the_silver_searcher \
   zsh rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
-  ntp openssh sudo ntfs-3g oxygen-icons \
+  ntp openssh ntfs-3g oxygen-icons \
   zip unrar unzip \
   deluge flareget \
   freerdp realvnc-viewer \
@@ -103,7 +106,6 @@ sudo systemctl enable laptop-mode
 # remove the 3 "group i = AltGr" lines in /usr/share/X11/xkb/compat/basic
 # set default soundcard in ~/.asoundrc
 # set Chrome/Thunderbird fonts, encodings
-# use "git@github.com:boris-petrov/Hotot.git" as _gitroot when installing hotot-qt4-git
 # set Pidgin's Skype plugin to use "sskype" instead of "skype" as an executable
 
 # Do this so Skype audio works:
