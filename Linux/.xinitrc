@@ -9,7 +9,7 @@ udiskie --smart-tray &
 nm-applet &
 autokey-gtk &
 thunderbird &
-dropboxd &
+dropbox &
 hotot-qt &
 liferea &
 xcmenu &
