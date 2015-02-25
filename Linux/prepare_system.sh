@@ -63,7 +63,8 @@ apacman -S archlinux-keyring \
   deluge flareget \
   freerdp realvnc-viewer \
   infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
-  jdk nodejs ruby python gdb
+  jdk nodejs ruby python gdb \
+  extundelete
 
 sudo npm install -g gulp coffee-script
 
