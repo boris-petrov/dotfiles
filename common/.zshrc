@@ -114,6 +114,8 @@ alias sudo='sudo -E '
 
 alias apacman='sudo apacman' # in order to use sudoers config and not ask for password
 
+alias grep='grep --no-messages --color=auto'
+
 which() {
   (alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
 }
@@ -123,8 +125,6 @@ file() {
   (/usr/bin/file $@; /usr/bin/file -bi $@) | xargs -0 echo
 }
 export file
-
-GREP_OPTIONS="--binary-files=without-match --line-number --no-messages --color=auto --exclude-dir=.git --exclude-dir=.svn --exclude-dir=.hg --exclude=.tags"
 
 ##############################
 # Functions
