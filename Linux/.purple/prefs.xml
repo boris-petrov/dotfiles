@@ -346,7 +346,7 @@
 				<pref name='width' type='int' value='520'/>
 				<pref name='height' type='int' value='321'/>
 			</pref>
-			<pref name='buddyicon' type='path' value='/home/boris/Dropbox/Private/avatars/avatar_orange.jpg'/>
+			<pref name='buddyicon' type='path' value='/home/boris/Dropbox/Private/avatars/avatar-parrot-small.jpg'/>
 		</pref>
 		<pref name='blist'>
 			<pref name='show_buddy_icons' type='bool' value='1'/>
