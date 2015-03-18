@@ -60,7 +60,7 @@ apacman -S archlinux-keyring \
   ntp openssh ntfs-3g oxygen-icons \
   zip unrar unzip \
   deluge flareget \
-  freerdp realvnc-viewer \
+  freerdp realvnc-viewer-bin \
   infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
   jdk nodejs ruby python gdb \
   extundelete haveged
