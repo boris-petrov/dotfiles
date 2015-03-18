@@ -2,8 +2,7 @@
 
 cd
 
-# run as root
-pacman -S sudo wget git
+sudo pacman -S wget git
 
 # from here on run as normal user
 # install apacman
@@ -25,8 +24,8 @@ popd
 popd
 
 # for infinality packages
-sudo pacman-key -r 962DDE58
-sudo pacman-key --lsign-key 962DDE58
+sudo pacman-key -r A9244FB5E93F11F0E975337FAE6866C7962DDE58
+sudo pacman-key --lsign-key A9244FB5E93F11F0E975337FAE6866C7962DDE58
 
 # refresh repositories
 sudo pacman -Syy
@@ -50,7 +49,7 @@ apacman -S archlinux-keyring \
   libreoffice-fresh kbgoffice \
   cups gutenprint system-config-printer \
   networkmanager network-manager-applet \
-  anything-sync-daemon profile-sync-daemon profile-cleaner chromium-pepper-flash firefox flashplugin \
+  anything-sync-daemon profile-sync-daemon profile-cleaner chromium chromium-pepper-flash firefox flashplugin \
   pidgin skype-secure skype4pidgin-svn kbdd-latest-git pidgin-otr purple-whatsapp-git \
   # use "git@github.com:boris-petrov/Hotot.git" as _gitroot when installing hotot-qt4-git
   dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
@@ -64,21 +63,21 @@ apacman -S archlinux-keyring \
   freerdp realvnc-viewer \
   infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
   jdk nodejs ruby python gdb \
-  extundelete
+  extundelete haveged
 
-sudo npm install -g gulp coffee-script
+sudo npm install -g gulp coffee-script iced-coffee-script npm-check-updates
 
 # enable Vim persistent undo
 mkdir -p .vim/undodir
 
 # install ruby's bundler
-sudo gem install bundler
+gem install bundler
 
 # install vrome
 mkdir -p code/vrome
 pushd code/vrome
-git clone git@github.com:jinzhu/vrome.git
-sudo bundle
+git clone git@github.com:jinzhu/vrome.git .
+bundle
 bundle exec rake build
 popd
 
@@ -86,10 +85,13 @@ popd
 lesskey
 
 # enable services
+sudo systemctl enable asd
+sudo systemctl enable psd
 sudo systemctl enable slim
 sudo systemctl enable sshd
 sudo systemctl enable ntpd
 sudo systemctl enable cups
+sudo systemctl enable haveged
 sudo systemctl enable pcscd
 
 # TODO: if on laptop:
@@ -107,7 +109,6 @@ sudo systemctl enable laptop-mode
 # remove the 3 "group i = AltGr" lines in /usr/share/X11/xkb/compat/basic
 # set default soundcard in ~/.asoundrc
 # set Chrome/Thunderbird fonts, encodings
-# set Pidgin's Skype plugin to use "sskype" instead of "skype" as an executable
 
 # Do this so Skype audio works:
 # As the main user, copy /etc/pulse/default.pa to ~/.config/pulse/default.pa and add:
