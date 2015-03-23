@@ -13,7 +13,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'craigemery/vim-autotag'
+Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'bkad/CamelCaseMotion'
 Plugin 'godlygeek/csapprox'
 Plugin 'kien/ctrlp.vim'
