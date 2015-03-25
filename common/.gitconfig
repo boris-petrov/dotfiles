@@ -19,7 +19,7 @@
 [pull]
 	rebase = true
 [push]
-	default = tracking
+	default = simple
 [log]
 	date = iso
 [format]
