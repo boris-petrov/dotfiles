@@ -89,7 +89,7 @@ sudo systemctl enable psd
 sudo systemctl enable slim
 sudo systemctl enable sshd
 sudo systemctl enable ntpd
-sudo systemctl enable cups
+sudo systemctl enable cups-browsed
 sudo systemctl enable haveged
 sudo systemctl enable pcscd
 
