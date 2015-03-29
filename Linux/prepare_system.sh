@@ -4,7 +4,6 @@ cd
 
 sudo pacman -S wget git
 
-# from here on run as normal user
 # install apacman
 wget https://aur.archlinux.org/packages/ap/apacman/apacman.tar.gz
 tar -xzf apacman.tar.gz
