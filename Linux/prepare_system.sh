@@ -1,5 +1,7 @@
 #!/bin/bash
 
+trap 'exit' ERR
+
 cd
 
 sudo pacman -S wget git
