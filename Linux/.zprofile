@@ -1,5 +1,7 @@
 export TERM=xterm-256color
 
+export NO_AT_BRIDGE=1 # avoids gtk3 programs spawning the at-spi* daemons
+
 export EDITOR=vim
 
 export XCMENUCTRL_DMENU='dmenu -i -l 15'
