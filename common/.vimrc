@@ -623,8 +623,8 @@ xnoremap <S-TAB> <
 inoremap <C-v> <C-r><C-o>+
 xnoremap <C-v> x<ESC>i<C-r><C-o>+<ESC>
 nnoremap <C-v> i<C-r><C-o>+<ESC>
-xnoremap <silent> <C-c> "zy:call system('xcmenu -ci', @z)<CR>:call system('xcmenu -pi', @z)<CR>
-xnoremap <silent> <C-x> "zx:call system('xcmenu -ci', @z)<CR>:call system('xcmenu -pi', @z)<CR>
+xnoremap <silent> <C-c> "+y
+xnoremap <silent> <C-x> "+x
 inoremap <C-a> <ESC>ggVG
 xnoremap <C-a> <ESC>ggVG
 nnoremap <C-a> ggVG
