@@ -49,6 +49,7 @@ Plugin 'AndrewRadev/sideways.vim'
 Plugin 'wellle/targets.vim'
 Plugin 'AndrewRadev/vim-eco'
 Plugin 'dietsche/vim-lastplace'
+Plugin 'michaeljsmith/vim-indent-object'
 
 Plugin 'AutoComplPop'
 Plugin 'OmniCppComplete'
