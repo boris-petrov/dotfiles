@@ -1,5 +1,5 @@
-gtk-theme-name="Raleigh"
-gtk-icon-theme-name="oxygen"
+gtk-theme-name=Raleigh
+gtk-icon-theme-name=oxygen
 
 gtk-font-name="DejaVu Sans Book 11"
 style "font" {
@@ -7,8 +7,9 @@ style "font" {
 }
 widget_class "*" style "font"
 
-gtk-key-theme-name="Emacs"
+gtk-key-theme-name=Emacs
 
+gtk-cursor-theme-name=Adwaita
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
@@ -20,8 +21,8 @@ gtk-enable-input-feedback-sounds=1
 
 gtk-xft-antialias=1
 gtk-xft-hinting=1
-gtk-xft-hintstyle="hintfull"
-gtk-xft-rgba="rgb"
+gtk-xft-hintstyle=hintfull
+gtk-xft-rgba=rgb
 
 gtk-enable-mnemonics=1
 gtk-enable-accels=1
