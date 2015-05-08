@@ -64,7 +64,7 @@ apacman -S archlinux-keyring \
   freerdp realvnc-viewer-bin \
   infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
   jdk nodejs ruby python python-pip gdb \
-  extundelete haveged
+  extundelete haveged rsibreak-git
 
 sudo npm install -g gulp coffee-script iced-coffee-script npm-check-updates
 

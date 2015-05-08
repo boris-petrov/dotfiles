@@ -13,6 +13,7 @@ dropbox &
 hotot-qt &
 liferea &
 xcmenu &
+rsibreak &
 $HOME/code/vrome/system/ruby/bin/vrome &
 
 $HOME/bin/fix_screens
