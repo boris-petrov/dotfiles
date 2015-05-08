@@ -16,6 +16,8 @@
 --exclude=**/var/**
 --exclude=log/**
 --exclude=**/log/**
+--exclude=env/**
+--exclude=**/env/**
 
 --langdef=coffee
 --langmap=coffee:.coffee

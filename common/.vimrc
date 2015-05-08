@@ -295,7 +295,7 @@ autocmd FileType coffee,ruby,eruby,html,zsh,sh,yaml,scss setlocal tabstop=2 shif
 autocmd FileType cs,java,vim,go,groovy                   setlocal noexpandtab
 autocmd FileType coffee,python,slim                      setlocal foldmethod=indent nofoldenable
 if !executable('ag')
-	autocmd FileType coffee,ruby,eruby,html,slim,eco,scss setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor\ --exclude-dir=public
+	autocmd FileType coffee,ruby,eruby,html,slim,eco,scss setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor\ --exclude-dir=public\ --exclude-dir=env
 endif
 
 augroup RainbowParentheses
@@ -749,7 +749,7 @@ nmap gs :Gstatus<CR><C-n>
 
 let g:ctrlp_map           = 'gz'
 let g:ctrlp_custom_ignore = {
-	\ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|vendor|build|log|var)$',
+	\ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|vendor|build|log|var|env)$',
 	\ }
 let g:ctrlp_match_window_bottom   = 0
 let g:ctrlp_match_window_reversed = 0
