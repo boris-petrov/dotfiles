@@ -63,7 +63,7 @@ apacman -S archlinux-keyring \
   deluge flareget \
   freerdp realvnc-viewer-bin \
   infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
-  jdk nodejs ruby python gdb \
+  jdk nodejs ruby python python-pip gdb \
   extundelete haveged
 
 sudo npm install -g gulp coffee-script iced-coffee-script npm-check-updates
@@ -72,7 +72,10 @@ sudo npm install -g gulp coffee-script iced-coffee-script npm-check-updates
 mkdir -p .vim/undodir
 
 # install ruby's bundler
-gem install bundler
+sudo gem install bundler
+
+# install pep8 for Python checking
+sudo pip3 install pep8
 
 # install vrome
 mkdir -p code/vrome
