@@ -203,14 +203,12 @@ command! -range=% -nargs=0 Space2Tab execute '<line1>,<line2>s#^\( \{'.&ts.'\}\)
 " --------------------------------------------------------------------------------------------------
 
 highlight ExtraWhitespace guibg=red
-autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
 " --------------------------------------------------------------------------------------------------
 " SuperTab settings
 " --------------------------------------------------------------------------------------------------
 
-autocmd WinEnter *     let g:SuperTabDefaultCompletionType = '<C-p>'
-autocmd WinEnter *.cpp let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabContextDefaultCompletionType = '<c-x><c-u>'
 
 " --------------------------------------------------------------------------------------------------
 " AutoComplPop settings
@@ -251,10 +249,6 @@ nmap gcc <Plug>CommentaryLine
 nmap gc  <Plug>Commentary
 xmap gc  <Plug>Commentary
 
-autocmd FileType cpp setlocal commentstring=//\ %s
-autocmd FileType c   setlocal commentstring=//\ %s
-autocmd FileType cs  setlocal commentstring=//\ %s
-
 " --------------------------------------------------------------------------------------------------
 " leader variables
 " --------------------------------------------------------------------------------------------------
@@ -283,36 +277,80 @@ elseif has('unix')
 endif
 
 " --------------------------------------------------------------------------------------------------
-" autocommands
+" Autocommands
 " --------------------------------------------------------------------------------------------------
 
-autocmd FileType help setlocal nonumber " no line numbers when viewing help
-autocmd FileType help nmap <buffer> <CR> <C-]>
-autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
-autocmd FileType help nmap <buffer> q :q<CR>
-
-autocmd FileType coffee,ruby,eruby,html,zsh,sh,yaml,scss setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType cs,java,vim,go,groovy                   setlocal noexpandtab
-autocmd FileType coffee,python,slim                      setlocal foldmethod=indent nofoldenable
-if !executable('ag')
-	autocmd FileType coffee,ruby,eruby,html,slim,eco,scss setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor\ --exclude-dir=public\ --exclude-dir=env
-endif
-
-augroup RainbowParentheses
+augroup MyAutocmds
 	autocmd!
+	autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+
+	autocmd WinEnter *      let g:SuperTabDefaultCompletionType = '<C-p>'
+	autocmd WinEnter *.cpp  let g:SuperTabDefaultCompletionType = 'context'
+	autocmd WinEnter *.java let g:SuperTabDefaultCompletionType = 'context'
+
+	autocmd FileType cpp setlocal commentstring=//\ %s
+	autocmd FileType c   setlocal commentstring=//\ %s
+	autocmd FileType cs  setlocal commentstring=//\ %s
+
+	autocmd FileType help setlocal nonumber " no line numbers when viewing help
+	autocmd FileType help nmap <buffer> <CR> <C-]>
+	autocmd FileType help nmap <buffer> <BACKSPACE> <C-t>
+	autocmd FileType help nmap <buffer> q :q<CR>
+
+	autocmd FileType coffee,ruby,eruby,html,zsh,sh,yaml,scss setlocal tabstop=2 shiftwidth=2 softtabstop=2
+	autocmd FileType cs,java,vim,go,groovy                   setlocal noexpandtab
+	autocmd FileType coffee,python,slim                      setlocal foldmethod=indent nofoldenable
+	if !executable('ag')
+		autocmd FileType coffee,ruby,eruby,html,slim,eco,scss setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor\ --exclude-dir=public\ --exclude-dir=env
+	endif
+
 	autocmd FileType * RainbowParenthesesActivate
 	autocmd Syntax * RainbowParenthesesLoadRound
 	autocmd Syntax * RainbowParenthesesLoadSquare
 	autocmd Syntax * RainbowParenthesesLoadBraces
 	autocmd FileType cpp RainbowParenthesesLoadChevrons
+
+	autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+	autocmd FileType haskell compiler ghc
+
+	autocmd FileType taglist nmap <buffer> l <CR>
+
+	autocmd FileType coffee hi! link Keyword   Statement
+	autocmd FileType coffee hi! link Structure Type
+	autocmd FileType coffee hi! def link coffeeObjAssign Special
+
+	autocmd FileType qf nnoremap <buffer> q :cclose \| :lclose<CR>
+	autocmd FileType qf nnoremap <buffer> j j
+	autocmd FileType qf nnoremap <buffer> k k
+
+	autocmd FileType nerdtree nmap <buffer> l o
+	autocmd FileType nerdtree nmap <buffer> h x
+	autocmd FileType nerdtree nmap <buffer> c ma
+	autocmd FileType nerdtree nmap <buffer> d md
+
+	autocmd FileType gitv nmap <buffer> l <CR>
+	autocmd FileType git setlocal foldlevel=99
+
+	autocmd BufEnter *.git/COMMIT_EDITMSG exe 'normal! gg' | if getline('.') =~ '^\s*$' | startinsert | endif
+	autocmd BufEnter *.git/COMMIT_EDITMSG nmap <buffer> q :q<CR>
+	autocmd BufEnter *.git/index nmap <buffer> d <CR>:Gdiff<CR><C-w>hgg
+	autocmd BufEnter *.git/index nmap <buffer> C cvc
+	autocmd BufEnter *.git/index nmap <buffer> ca cva
+	autocmd BufEnter *.git/index nmap <buffer> j <C-n>
+	autocmd BufEnter *.git/index nmap <buffer> k <C-p>
+	autocmd BufEnter *.git/index nmap <buffer> l <CR>
+	autocmd FileType fugitiveblame nnoremap <buffer> j  <C-w>lj<C-w>h
+	autocmd FileType fugitiveblame nnoremap <buffer> J  <C-w>l4j<C-w>h
+	autocmd FileType fugitiveblame nnoremap <buffer> k  <C-w>lk<C-w>h
+	autocmd FileType fugitiveblame nnoremap <buffer> K  <C-w>l4k<C-w>h
+	autocmd FileType fugitiveblame nnoremap <buffer> gg <C-w>lgg<C-w>h
+	autocmd FileType fugitiveblame nnoremap <buffer> G  <C-w>lG<C-w>h
 augroup END
 
 runtime! macros/matchit.vim " smarter matching with % (ifs, elses...)
 
 " When .vimrc is edited, reload it
-autocmd! BufWritePost $MYVIMRC source $MYVIMRC
-
-autocmd FileType haskell compiler ghc
 
 " Saves txt and hs files after leaving insert mode if there were any changes
 " autocmd InsertLeave *.{txt,hs} :up
@@ -366,7 +404,6 @@ nnoremap <silent> gd :TlistToggle<CR>
 let g:Tlist_Use_Right_Window=1
 let g:Tlist_Close_On_Select=1
 let g:Tlist_Exit_OnlyWindow=1
-autocmd FileType taglist nmap <buffer> l <CR>
 
 let g:tlist_coffee_settings = 'coffee;c:class;m:method;f:function'
 
@@ -386,10 +423,6 @@ nnoremap <F4> :GundoToggle<CR>
 
 let coffee_compiler     = 'iced'
 let coffee_compile_vert = 1
-
-autocmd FileType coffee hi! link Keyword   Statement
-autocmd FileType coffee hi! link Structure Type
-autocmd FileType coffee hi! def link coffeeObjAssign Special
 
 let g:syntastic_coffee_checkers = ['iced']
 
@@ -442,10 +475,6 @@ let g:qfenter_open_map  = ['l', '<CR>']
 let g:qfenter_vopen_map = []
 let g:qfenter_hopen_map = ['s']
 let g:qfenter_topen_map = ['t']
-
-autocmd FileType qf nnoremap <buffer> q :cclose \| :lclose<CR>
-autocmd FileType qf nnoremap <buffer> j j
-autocmd FileType qf nnoremap <buffer> k k
 
 function! s:GetBufferList()
 	redir =>buflist
@@ -705,17 +734,10 @@ let NERDTreeAutoDeleteBuffer = 1
 let nerdtree_tabs_open_on_new_tab = 0
 let nerdtree_tabs_open_on_console_startup = 1
 
-autocmd FileType nerdtree nmap <buffer> l o
-autocmd FileType nerdtree nmap <buffer> h x
-autocmd FileType nerdtree nmap <buffer> c ma
-autocmd FileType nerdtree nmap <buffer> d md
-
 " --------------------------------------------------------------------------------------------------
 " Gitv mappings
 " --------------------------------------------------------------------------------------------------
 
-autocmd FileType gitv nmap <buffer> l <CR>
-autocmd FileType git setlocal foldlevel=99
 highlight diffAdded guifg=Green
 highlight diffRemoved guifg=Red
 highlight diffFile guifg=Yellow
@@ -727,20 +749,7 @@ highlight diffFile guifg=Yellow
 cab Gs Gstatus
 cab Gc Gcommit
 cab Gd Gdiff
-autocmd BufEnter *.git/COMMIT_EDITMSG exe 'normal! gg' | if getline('.') =~ '^\s*$' | startinsert | endif
-autocmd BufEnter *.git/COMMIT_EDITMSG nmap <buffer> q :q<CR>
-autocmd BufEnter *.git/index nmap <buffer> d <CR>:Gdiff<CR><C-w>hgg
-autocmd BufEnter *.git/index nmap <buffer> C cvc
-autocmd BufEnter *.git/index nmap <buffer> ca cva
-autocmd BufEnter *.git/index nmap <buffer> j <C-n>
-autocmd BufEnter *.git/index nmap <buffer> k <C-p>
-autocmd BufEnter *.git/index nmap <buffer> l <CR>
-autocmd FileType fugitiveblame nnoremap <buffer> j  <C-w>lj<C-w>h
-autocmd FileType fugitiveblame nnoremap <buffer> J  <C-w>l4j<C-w>h
-autocmd FileType fugitiveblame nnoremap <buffer> k  <C-w>lk<C-w>h
-autocmd FileType fugitiveblame nnoremap <buffer> K  <C-w>l4k<C-w>h
-autocmd FileType fugitiveblame nnoremap <buffer> gg <C-w>lgg<C-w>h
-autocmd FileType fugitiveblame nnoremap <buffer> G  <C-w>lG<C-w>h
+
 nmap gs :Gstatus<CR><C-n>
 
 " --------------------------------------------------------------------------------------------------
