@@ -850,7 +850,7 @@ nnoremap gj <C-w>j
 nnoremap gk <C-w>k
 nnoremap gl <C-w>l
 
-inoremap <C-SPACE> <C-n>
+imap <C-SPACE> <Tab>
 if has("gui_running")
 	nmap <ESC> :noh<CR>
 endif
