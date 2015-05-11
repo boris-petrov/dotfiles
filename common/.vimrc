@@ -287,6 +287,10 @@ augroup MyAutocmds
 	autocmd BufEnter * let b:SuperTabDefaultCompletionType = '<C-p>'
 	autocmd BufEnter *.cpp,*.java let b:SuperTabDefaultCompletionType = 'context'
 
+	autocmd BufWritePre *.java :%JavaFormat
+	autocmd BufWritePost *.java :setf java
+	autocmd BufWritePost *.java :Validate
+
 	autocmd FileType cpp setlocal commentstring=//\ %s
 	autocmd FileType c   setlocal commentstring=//\ %s
 	autocmd FileType cs  setlocal commentstring=//\ %s
