@@ -284,9 +284,8 @@ augroup MyAutocmds
 	autocmd!
 	autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
-	autocmd WinEnter *      let g:SuperTabDefaultCompletionType = '<C-p>'
-	autocmd WinEnter *.cpp  let g:SuperTabDefaultCompletionType = 'context'
-	autocmd WinEnter *.java let g:SuperTabDefaultCompletionType = 'context'
+	autocmd BufEnter * let b:SuperTabDefaultCompletionType = '<C-p>'
+	autocmd BufEnter *.cpp,*.java let b:SuperTabDefaultCompletionType = 'context'
 
 	autocmd FileType cpp setlocal commentstring=//\ %s
 	autocmd FileType c   setlocal commentstring=//\ %s
