@@ -3,6 +3,7 @@
 --fields=+iaS
 --extra=+q
 --c++-kinds=+p
+--python-kinds=-i
 
 --exclude=node_modules/**
 --exclude=**/node_modules/**
