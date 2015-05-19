@@ -1,5 +1,6 @@
 .git
 node_modules
+bower_components
 .svn
 .tags
 log
@@ -8,3 +9,4 @@ tmp
 vendor
 public
 build
+dist
