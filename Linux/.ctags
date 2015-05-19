@@ -7,6 +7,10 @@
 
 --exclude=node_modules/**
 --exclude=**/node_modules/**
+--exclude=bower_components/**
+--exclude=**/bower_components/**
+--exclude=dist/**
+--exclude=**/dist/**
 --exclude=vendor/**
 --exclude=**/vendor/**
 --exclude=build/**
@@ -19,6 +23,8 @@
 --exclude=**/log/**
 --exclude=env/**
 --exclude=**/env/**
+--exclude=tmp/**
+--exclude=**/tmp/**
 
 --langdef=coffee
 --langmap=coffee:.coffee
