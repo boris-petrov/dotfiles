@@ -762,7 +762,7 @@ nmap gs :Gstatus<CR><C-n>
 
 let g:ctrlp_map           = 'gz'
 let g:ctrlp_custom_ignore = {
-	\ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|vendor|build|log|var|env)$',
+	\ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|vendor|build|dist|temp|tmp|log|var|env)$',
 	\ }
 let g:ctrlp_match_window_bottom   = 0
 let g:ctrlp_match_window_reversed = 0
