@@ -114,7 +114,7 @@ set scrolljump=7
 set wildmenu
 set wildchar=<Tab>
 set wildmode=longest,list
-set wildignore=*/tmp/*,*.obj,*.o,*.hi,*.dll,*.so,*.lib,*.a,*.swp,*.zip,*.tar*,*.exe,*.out,*.sqlite3,*.gif,*.jpg,*.bmp,*.png,*.jar,*.class
+set wildignore=*/tmp/*,*.obj,*.o,*.hi,*.dll,*.so,*.lib,*.a,*.swp,*.zip,*.tar*,*.exe,*.out,*.sqlite*,*.gif,*.jpg,*.bmp,*.png,*.jar,*.class,*.pyc
 
 set linebreak " does not wrap in the middle of the word
 set showbreak=+>
@@ -734,6 +734,7 @@ let NERDTreeMapJumpLastChild = ""
 let NERDTreeRespectWildIgnore = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeIgnore=['__pycache__']
 let nerdtree_tabs_open_on_new_tab = 0
 let nerdtree_tabs_open_on_console_startup = 1
 
