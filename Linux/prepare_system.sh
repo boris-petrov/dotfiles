@@ -66,7 +66,7 @@ apacman -S archlinux-keyring \
   jdk nodejs npm ruby python python-pip gdb \
   extundelete haveged rsibreak-git
 
-sudo npm install -g gulp coffee-script iced-coffee-script npm-check-updates
+sudo npm install -g gulp coffee-script iced-coffee-script npm-check-updates bower
 
 # enable Vim persistent undo
 mkdir -p .vim/undodir
