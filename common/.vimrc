@@ -291,9 +291,7 @@ augroup MyAutocmds
 	autocmd BufWritePost *.java :setf java
 	autocmd BufWritePost *.java :Validate
 
-	autocmd FileType cpp setlocal commentstring=//\ %s
-	autocmd FileType c   setlocal commentstring=//\ %s
-	autocmd FileType cs  setlocal commentstring=//\ %s
+	autocmd FileType cpp,c,cs,groovy setlocal commentstring=//\ %s
 
 	autocmd FileType help setlocal nonumber " no line numbers when viewing help
 	autocmd FileType help nmap <buffer> <CR> <C-]>
