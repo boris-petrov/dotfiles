@@ -1,0 +1,46 @@
+" Faster moving:
+map J 4j
+map K 4k
+
+inoremap hj <ESC>
+inoremap jh <ESC>
+inoremap jk <ESC>
+inoremap kj <ESC>
+inoremap kl <ESC>
+inoremap lk <ESC>
+
+nnoremap ,j J
+
+nnoremap gV <C-v>
+
+nnoremap vv V
+nnoremap V v$h
+nnoremap Y y$
+
+noremap <S-SPACE> <PAGEUP>
+noremap <SPACE> <PAGEDOWN>
+
+nnoremap <CR> o<ESC>
+nnoremap <S-CR> O<ESC>
+
+nnoremap d( ds(
+nnoremap d) ds(
+nnoremap d[ ds[
+nnoremap d] ds[
+nnoremap d{ ds{
+nnoremap d} ds{
+nnoremap d< ds<
+nnoremap d> ds<
+nnoremap d" ds"
+nnoremap d' ds'
+
+vnoremap ) S)
+vnoremap ( S)
+vnoremap ] S]
+vnoremap [ S]
+vnoremap } S}
+vnoremap { S}
+vnoremap > S>
+vnoremap < S>
+vnoremap " S"
+vnoremap ' S'
