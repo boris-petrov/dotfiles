@@ -771,8 +771,6 @@ let g:ctrlp_match_func            = { 'match': 'pymatcher#PyMatch' }
 let g:ctrlp_lazy_update         = 200
 let g:ctrlp_clear_cache_on_exit = 0
 
-let g:ctrlp_by_filename = 1
-
 "--------------------------------------------------------
 " Abbreviations
 " -------------------------------------------------------
