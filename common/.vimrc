@@ -693,7 +693,7 @@ xmap ' S'
 " Keymap
 " --------------------------------------------------------------------------------------------------
 
-nmap <silent> ,k :call <SID>ToggleKeymap()<CR>
+nmap <silent> <Leader>k :call <SID>ToggleKeymap()<CR>
 
 function! s:ToggleKeymap()
 	if &keymap == ""
