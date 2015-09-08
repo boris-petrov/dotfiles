@@ -90,7 +90,7 @@ lesskey
 
 # enable services
 sudo systemctl enable asd
-sudo systemctl enable psd
+systemctl --user enable psd
 sudo systemctl enable slim
 sudo systemctl enable sshd
 sudo systemctl enable ntpd
