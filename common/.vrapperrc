@@ -2,6 +2,8 @@
 map J 4j
 map K 4k
 
+set ignorecase
+
 inoremap hj <ESC>
 inoremap jh <ESC>
 inoremap jk <ESC>
