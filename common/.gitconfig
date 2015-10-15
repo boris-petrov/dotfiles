@@ -17,6 +17,7 @@
 	unstage = reset HEAD --
 	sync = !git stash && git pull && git push && git stash pop
 [pull]
+	ff = no
 	rebase = true
 [push]
 	default = simple
