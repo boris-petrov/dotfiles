@@ -330,7 +330,7 @@ awful.rules.rules = {
     -- Browsers
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][2], switchtotag = true } },
-    { rule = { class = "Chromium" },
+    { rule = { class = "chromium" },
       properties = { tag = tags[1][2], switchtotag = true } },
     { rule = { instance = "plugin-container" }, properties = { floating = true } }, -- Firefox Flash player
     { rule = { instance = "exe" },              properties = { floating = true } }, -- Chrome Flash player
