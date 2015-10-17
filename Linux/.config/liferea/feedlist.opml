@@ -7,7 +7,7 @@
     <outline title="Feed List" text="Feed List" description="Feed List" type="folder" id="rrihwcc" sortColumn="time" expanded="true">
       <outline title="Feeds" text="Feeds" description="Feeds" type="folder" id="hmjewgk" sortColumn="time" expanded="true">
         <outline title="Comics" text="Comics" description="Comics" type="folder" id="fvpxqpq" sortColumn="time" expanded="true">
-          <outline title="xkcd" text="xkcd" description="xkcd" type="atom" id="tcanhnl" sortColumn="time" xmlUrl="http://xkcd.com/atom.xml" htmlUrl="http://xkcd.com/" updateInterval="-1" collapsed="true"/>
+          <outline title="xkcd" text="xkcd" description="xkcd" type="atom" id="tcanhnl" sortColumn="title" sortReversed="false" xmlUrl="http://xkcd.com/atom.xml" htmlUrl="http://xkcd.com/" updateInterval="-1" collapsed="true"/>
         </outline>
         <outline title="Programming" text="Programming" description="Programming" type="folder" id="jhdqfjk" sortColumn="time" expanded="true">
           <outline title="Lambda the Ultimate - Programming Languages Weblog" text="Lambda the Ultimate - Programming Languages Weblog" description="Lambda the Ultimate - Programming Languages Weblog" type="rss" id="vkqarhf" sortColumn="time" xmlUrl="http://lambda-the-ultimate.org/rss.xml" htmlUrl="http://lambda-the-ultimate.org" updateInterval="-1" collapsed="true"/>
@@ -19,7 +19,7 @@
           <outline title="Andrew&#x2019;s blog" text="Andrew&#x2019;s blog" description="Andrew&#x2019;s blog" type="rss" id="jemilik" sortColumn="time" xmlUrl="http://andrewradev.com/feed" htmlUrl="http://andrewradev.com/" updateInterval="-1" collapsed="true"/>
           <outline title="Rado's blog" text="Rado's blog" description="Rado's blog" type="rss" id="mqeerdf" sortColumn="time" xmlUrl="http://blog.rstankov.com/rss/" htmlUrl="http://blog.rstankov.com/" updateInterval="-1" collapsed="true"/>
           <outline title="Sofia Valley" text="Sofia Valley" description="Sofia Valley" type="rss" id="xflplrx" sortColumn="time" xmlUrl="http://sofiavalley.com/feed/" htmlUrl="http://sofiavalley.com" updateInterval="-1" collapsed="true"/>
-          <outline title="init Lab - Events" text="init Lab - Events" description="init Lab - Events" type="rss" id="cjjyyje" sortColumn="time" sortReversed="false" xmlUrl="https://initlab.org/events/feed/" htmlUrl="https://initlab.org/events/" updateInterval="-1" collapsed="true"/>
+          <outline title="init Lab - Events" text="init Lab - Events" description="init Lab - Events" type="rss" id="cjjyyje" sortColumn="time" xmlUrl="https://initlab.org/events/feed/" htmlUrl="https://initlab.org/events/" updateInterval="-1" collapsed="true"/>
         </outline>
         <outline title="FMI" text="FMI" description="FMI" type="folder" id="ftuoklg" sortColumn="time" expanded="true">
           <outline title="&#x41F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x438;&#x440;&#x430;&#x43D;&#x435; &#x441; Clojure :: &#x41D;&#x43E;&#x432;&#x438;&#x43D;&#x438;" text="&#x41F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x438;&#x440;&#x430;&#x43D;&#x435; &#x441; Clojure :: &#x41D;&#x43E;&#x432;&#x438;&#x43D;&#x438;" description="&#x41F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x438;&#x440;&#x430;&#x43D;&#x435; &#x441; Clojure :: &#x41D;&#x43E;&#x432;&#x438;&#x43D;&#x438;" type="rss" id="cluwggn" sortColumn="time" xmlUrl="http://fmi.clojure.bg/announcements.rss" htmlUrl="http://fmi.clojure.bg/" updateInterval="-1" collapsed="true"/>
