@@ -425,10 +425,7 @@ nnoremap <F4> :GundoToggle<CR>
 " CoffeeScript related stuff
 " --------------------------------------------------------------------------------------------------
 
-let coffee_compiler     = 'iced'
 let coffee_compile_vert = 1
-
-let g:syntastic_coffee_checkers = ['iced']
 
 " --------------------------------------------------------------------------------------------------
 " Session Options and Mappings
