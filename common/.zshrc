@@ -274,7 +274,7 @@ if [ `uname -s` = "Linux" ]; then
   # the next ones work with urxvt
   urxvt-bindings
 
-  source $HOME/dotfiles/common/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
   # zsh highlighting
   ZSH_HIGHLIGHT_STYLES[precommand]='fg=green'

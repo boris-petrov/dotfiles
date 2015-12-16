@@ -57,7 +57,7 @@ apacman -S archlinux-keyring \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
   aspell hunspell \
   gvim colordiff ctags the_silver_searcher \
-  zsh rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
+  zsh zsh-syntax-highlighting rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
   ntp openssh ntfs-3g oxygen-icons \
   zip unrar unzip \
   deluge flareget \
