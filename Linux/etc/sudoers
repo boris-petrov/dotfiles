@@ -1,4 +1,4 @@
-Cmnd_Alias PROGS = /usr/bin/pacman,/usr/bin/apacman,/usr/bin/systemctl poweroff,/usr/bin/systemctl reboot,/usr/bin/mount,/usr/bin/umount
+Cmnd_Alias PROGS = /usr/bin/pacman,/usr/bin/apacman,/usr/bin/systemctl poweroff,/usr/bin/systemctl reboot,/usr/bin/mount,/usr/bin/umount,/usr/bin/psd-overlay-helper
 Defaults! PROGS setenv
 root ALL=(ALL) ALL
 boris ALL=(ALL) ALL
