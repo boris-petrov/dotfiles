@@ -28,6 +28,7 @@
         </outline>
         <outline title="Sports" text="Sports" description="Sports" type="folder" id="qcwbhjq" sortColumn="time" expanded="true">
           <outline title="&#x411;&#x430;&#x43D;&#x441;&#x43A;&#x43E; &#x424;&#x438;&#x43B;&#x43C; &#x424;&#x435;&#x441;&#x442;" text="&#x411;&#x430;&#x43D;&#x441;&#x43A;&#x43E; &#x424;&#x438;&#x43B;&#x43C; &#x424;&#x435;&#x441;&#x442;" description="&#x411;&#x430;&#x43D;&#x441;&#x43A;&#x43E; &#x424;&#x438;&#x43B;&#x43C; &#x424;&#x435;&#x441;&#x442;" type="rss" id="qyguglt" sortColumn="time" xmlUrl="http://banskofilmfest.com/feed/" htmlUrl="http://banskofilmfest.com/" updateInterval="-1" collapsed="true"/>
+          <outline title="Home" text="Home" description="Home" type="rss" id="rafwmwi" sortColumn="time" xmlUrl="http://mtb-bg.com/index.php?format=feed&amp;type=rss" htmlUrl="http://mtb-bg.com/index.php/component/content/frontpage" updateInterval="-1" collapsed="true"/>
         </outline>
       </outline>
       <outline title="Unread" text="Unread" description="Unread" type="vfolder" id="xdtbbbp" sortColumn="time" matchType="any" collapsed="true">
