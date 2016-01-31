@@ -48,3 +48,5 @@
 	added = green
 	changed = red
 	untracked = cyan
+[fetch]
+	prune = true
