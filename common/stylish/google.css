@@ -17,7 +17,7 @@ body, .kno-ecr-pt, ._xdb .fl {
 }
 
 a:link, .w, #prs a:visited, #prs a:active, .q:active, .q:visited, .kl:active, .tbotu {
-    color: rgb(230,230,230);
+    color: grey;
 }
 
 .mblink:visited, a:visited {
