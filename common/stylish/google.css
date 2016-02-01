@@ -20,6 +20,10 @@ a:link, .w, #prs a:visited, #prs a:active, .q:active, .q:visited, .kl:active, .t
     color: rgb(230,230,230);
 }
 
+.mblink:visited, a:visited {
+    color: rgb(153,102,51);
+}
+
 .s {
     color: rgb(160,160,160);
 }
