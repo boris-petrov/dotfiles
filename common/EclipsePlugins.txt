@@ -1,0 +1,4 @@
+Update sites:
+http://vrapper.sourceforge.net/update-site/stable
+
+https://marketplace.eclipse.org/content/eclipse-moonrise-ui-theme
