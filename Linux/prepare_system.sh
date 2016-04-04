@@ -56,7 +56,7 @@ apacman -S archlinux-keyring \
   dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
   aspell hunspell \
-  gvim colordiff ctags the_silver_searcher \
+  gvim colordiff universal-ctags-git the_silver_searcher \
   zsh zsh-syntax-highlighting rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
   ntp openssh ntfs-3g oxygen-icons \
   zip unrar unzip \
