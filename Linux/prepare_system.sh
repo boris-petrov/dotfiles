@@ -53,7 +53,7 @@ apacman -S archlinux-keyring \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium chromium-pepper-flash firefox flashplugin \
   pidgin skype-secure skype4pidgin-git kbdd-latest-git pidgin-otr purple-whatsapp-git \
   # use "git@github.com:boris-petrov/Hotot.git" as _gitroot when installing hotot-qt4-git
-  dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh \
+  dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-gtk xdg-utils lxappearance feh gnome-themes-standard \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
   aspell hunspell \
   gvim colordiff universal-ctags-git the_silver_searcher \
