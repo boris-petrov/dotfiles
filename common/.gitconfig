@@ -1,6 +1,7 @@
 [user]
 	name = Boris Petrov
 	email = boris_petrov@live.com
+	signingkey = C54F9E23
 [github]
 	user = boris-petrov
 [diff]
