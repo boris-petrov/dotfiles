@@ -183,8 +183,6 @@ set synmaxcol=500 " do not syntax-highlight lines after the 500th symbols
 
 colorscheme rdark " cannot live without it
 
-set fileencodings=utf-8,utf-16,utf-32,cp-1251,unicode
-
 " should do this for when Vim is started from a Cygwin shell
 if has('win32')
 	set shell=C:\Windows\system32\cmd.exe
