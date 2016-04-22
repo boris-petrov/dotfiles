@@ -789,6 +789,8 @@ nnoremap <F1> <ESC>
 cnoremap <F1> <ESC>
 
 nmap <Leader>cl :let @+=expand("%:p")<CR>
+nmap <Leader>2 :%s;^\(\s\+\);\=repeat(' ', len(submatch(0))/2);g<CR>
+nmap <Leader>4 :%s;^\(\s\+\);\=repeat(' ', len(submatch(0))*2);g<CR>
 
 " Saving read-only files
 cnoremap sudow w !sudo tee % >/dev/null
