@@ -14,8 +14,6 @@ require("remborders")
 
 require("utils")
 
-local obvious = require("obvious")
-
 local APW = require("apw/widget")
 
 -- Themes define colours, icons, and wallpapers
@@ -30,6 +28,24 @@ local focus_client = function(c)
     -- the client, if needed
     client.focus = c
     c:raise()
+end
+
+local has_battery
+
+do
+    local found_battery
+
+    function has_battery()
+        if found_battery == nil then
+            local pipe   = io.popen 'acpi'
+            local output = pipe:read '*a'
+            pipe:close()
+
+            found_battery = not not string.match(output, '^Battery 0') -- force true/false
+        end
+
+        return found_battery
+    end
 end
 
 -- {{{ Error handling
@@ -138,9 +154,6 @@ local separator_widget = wibox.widget.background()
 separator_widget:set_widget(separator_widget_text)
 separator_widget:set_fg("#ffff00")
 
--- Battery widget
-local batwidget = obvious.battery()
-
 -- Create a wibox for each screen and add it
 local mywibox = {}
 local mylayoutbox = {}
@@ -177,8 +190,9 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     right_layout:add(APW)
-    if obvious.battery.get_data().charge then -- i.e. if there is a battery
-        right_layout:add(batwidget)
+    if has_battery() then
+        require("obvious.battery")
+        right_layout:add(obvious.battery())
         right_layout:add(separator_widget)
     end
     right_layout:add(kbdwidget)
