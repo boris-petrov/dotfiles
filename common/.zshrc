@@ -64,10 +64,20 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm 
 # Aliases
 ##############################
 
+# grc aliases
+
+alias grc='grc -es --colour=auto'
+alias ping='grc ping'
+alias make='grc make'
+alias mount='grc mount'
+alias ps='grc ps'
+alias df='grc df -hPT'
+
+# other aliases
+
 alias diff='colordiff -bup'
 alias mkdir='mkdir -p -v'
 
-alias df='df -hPT'
 alias du='du -ch'
 alias free='free -h'
 
