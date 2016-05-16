@@ -52,8 +52,7 @@ apacman -S archlinux-keyring \
   networkmanager network-manager-applet \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium chromium-pepper-flash firefox flashplugin \
   pidgin skype-secure skype4pidgin-git kbdd-git pidgin-otr purple-whatsapp-git \
-  # use "git@github.com:boris-petrov/Hotot.git" as _gitroot when installing hotot-qt4-git
-  dropbox liferea xcmenu-git thunderbird hotot-qt4-git htop autokey-py3 xdg-utils lxappearance feh gnome-themes-standard \
+  dropbox liferea xcmenu-git thunderbird htop autokey-py3 xdg-utils lxappearance feh gnome-themes-standard \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
   aspell hunspell \
   gvim colordiff universal-ctags-git the_silver_searcher grc \
@@ -83,6 +82,17 @@ pushd code/vrome
 git clone git@github.com:jinzhu/vrome.git .
 bundle
 bundle exec rake build
+popd
+
+# install Hotot
+mkdir -p code/Hotot
+pushd code/Hotot
+git clone git@github.com:boris-petrov/Hotot.git .
+mkdir build
+cd build
+cmake .. -DWITH_GTK2=off -DWITH_GTK3=off -DWITH_GTK=off -DWITH_GIR=off -DWITH_QT=On -DWITH_KDE=off -DWITH_KDE_QT=off -DWITH_CHROME=off -DPYTHON_EXECUTABLE=/usr/bin/python2
+make
+sudo make install
 popd
 
 # add less keybindings
