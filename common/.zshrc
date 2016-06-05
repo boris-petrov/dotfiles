@@ -85,8 +85,9 @@ alias tmux='tmux -u -2 -q'
 
 alias ctags='ctags -f.tags'
 
-alias ls='ls -hF --color=auto --group-directories-first'
-alias ll='ls -l'
+LS='ls -hF --color --group-directories-first'
+alias ls=$LS
+alias ll="grc $LS -l"
 alias la='ls -A'
 alias mv='mv -i'
 
