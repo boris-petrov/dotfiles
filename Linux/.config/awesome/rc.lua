@@ -456,7 +456,7 @@ client.connect_signal("manage", function(c, startup)
         c:connect_signal("focus", change_language_on_focus)
 
         -- Do not signal a particular window
-        if c.name and c.name:match("#airian") then
+        if c.name and c.name:match("19:I2FpcmlhbjEvJDZlODBhMTI4NzZkOTNhOTM=@p2p.thread.skype") then
             c:connect_signal("property::urgent", function(cl) cl.urgent = false end)
         end
     end
