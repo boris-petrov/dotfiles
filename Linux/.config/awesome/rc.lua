@@ -14,6 +14,8 @@ require("remborders")
 
 require("utils")
 
+require("obvious.battery")
+
 local APW = require("apw/widget")
 
 -- Themes define colours, icons, and wallpapers
@@ -28,24 +30,6 @@ local focus_client = function(c)
     -- the client, if needed
     client.focus = c
     c:raise()
-end
-
-local has_battery
-
-do
-    local found_battery
-
-    function has_battery()
-        if found_battery == nil then
-            local pipe   = io.popen 'acpi'
-            local output = pipe:read '*a'
-            pipe:close()
-
-            found_battery = not not string.match(output, '^Battery 0') -- force true/false
-        end
-
-        return found_battery
-    end
 end
 
 -- {{{ Error handling
@@ -190,8 +174,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     right_layout:add(APW)
-    if has_battery() then
-        require("obvious.battery")
+    if obvious.battery.get_data() then
         right_layout:add(obvious.battery())
         right_layout:add(separator_widget)
     end
