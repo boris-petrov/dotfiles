@@ -137,7 +137,7 @@ file() {
 }
 export file
 
-export LESS=-XRi
+export LESS="-XRi --quit-if-one-screen"
 
 ##############################
 # Functions
