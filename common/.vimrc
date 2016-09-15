@@ -78,8 +78,8 @@ set softtabstop=4
 
 set timeoutlen=500 " half a second to wait if there are 'colliding' mappings
 
-" set list
-" set listchars=trail:-
+set list
+set listchars=tab:\ \ ,nbsp:¬
 
 set matchpairs+=<:>
 
