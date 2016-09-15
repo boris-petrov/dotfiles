@@ -24,10 +24,6 @@ pushd Linux/.config/awesome
 popd
 popd
 
-# for infinality packages
-sudo pacman-key -r A9244FB5E93F11F0E975337FAE6866C7962DDE58
-sudo pacman-key --lsign-key A9244FB5E93F11F0E975337FAE6866C7962DDE58
-
 # refresh repositories
 sudo pacman -Syy
 
@@ -61,7 +57,7 @@ apacman -S archlinux-keyring \
   zip unrar unzip \
   deluge flareget \
   freerdp realvnc-viewer-bin \
-  infinality-bundle infinality-bundle-multilib ibfonts-meta-base ibfonts-meta-extended otf-inconsolatazi4-ibx otf-inconsolata-lgc \
+  fontconfig lib32-fontconfig freetype2 lib32-freetype2 ttf-dejavu otf-inconsolata-lgc \
   jdk nodejs npm ruby python python-pip gdb \
   thunar gvfs gvfs-smb sshfs \
   extundelete haveged rsibreak-git
