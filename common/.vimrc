@@ -820,8 +820,13 @@ nmap sak :SplitjoinJoin<CR>
 nmap gt <C-]>
 nmap gT <Nop>
 
-" Map <F5> to remove all trailing whitespace
-nnoremap <silent> <F5> :let _s=@/<CR>:%s/\s\+$//e<CR>:let @/=_s<CR>:nohl<CR>:set ff=unix<CR>:w<CR>
+function! s:FixWhitespace()
+	silent! %s/\%u00a0/ / " Replace nbsp by spaces
+	silent! %s/\s\+$//    " Remove trailing whitespace
+endfunction
+
+" Map <F5> to fix whitespace issues
+nnoremap <silent> <F5> :let _s=@/<CR>:call FixWhitespace()<CR>:let @/=_s<CR>:nohl<CR>:set ff=unix<CR>:w<CR>
 
 " free mappings - U, P, S, H, L, M, X, $, ^, &, -, _, +, |, \, ','
 
