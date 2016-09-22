@@ -820,7 +820,7 @@ nmap sak :SplitjoinJoin<CR>
 nmap gt <C-]>
 nmap gT <Nop>
 
-function! s:FixWhitespace()
+function! FixWhitespace()
 	silent! %s/\%u00a0/ / " Replace nbsp by spaces
 	silent! %s/\s\+$//    " Remove trailing whitespace
 endfunction
