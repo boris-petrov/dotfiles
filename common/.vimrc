@@ -170,9 +170,9 @@ set display=lastline " Show as much of the last line as possible and not these c
 set formatoptions-=o " Stop continuing the comments on pressing o and O
 
 if executable('rg')
-	set grepprg=rg\ --hidden\ --vimgrep\ --color\ off
+	set grepprg=rg\ --vimgrep\ --color\ off
 elseif executable('ag')
-	set grepprg=ag\ --hidden\ --nocolor
+	set grepprg=ag\ --nocolor
 else
 	set grepprg=grep\ -I\ -n\ -s\ --exclude-dir=node_modules\ --exclude-dir=.git\ --exclude-dir=.svn\ --exclude=.tags
 endif
