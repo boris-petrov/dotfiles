@@ -78,9 +78,6 @@ set softtabstop=4
 
 set timeoutlen=500 " half a second to wait if there are 'colliding' mappings
 
-set list
-set listchars=tab:\ \ ,nbsp:¬
-
 set matchpairs+=<:>
 
 set autoindent " indents a line as the previous one
@@ -286,7 +283,16 @@ endif
 
 augroup MyAutocmds
 	autocmd!
-	autocmd BufWinEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+
+	" match end of line whitespace
+	autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$\| \+\ze\t\|[^\t]\zs\t\+\| /
+	autocmd InsertLeave * match ExtraWhitespace /\s\+$\| \+\ze\t\|[^\t]\zs\t\+\| /
+	" match space before tab; tabs not at the start of the line
+	autocmd FileType *
+		\ if &filetype != 'gitcommit' && &filetype != 'qf' |
+		\   match ExtraWhitespace /\s\+$\| \+\ze\t\|[^\t]\zs\t\+\| / |
+		\ endif
+	autocmd BufWinLeave * call clearmatches()
 
 	autocmd BufEnter * let b:SuperTabDefaultCompletionType = '<C-p>'
 	autocmd BufEnter *.cpp,*.java let b:SuperTabDefaultCompletionType = 'context'
