@@ -800,6 +800,9 @@ cab q1 q!
 " Misc Mappings
 " --------------------------------------------------------------------------------------------------
 
+" Rescan the buffer from start and fix highlighting
+nnoremap <Leader>s <Esc>:syntax sync fromstart<CR>
+
 " Map F1 to ESC
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
