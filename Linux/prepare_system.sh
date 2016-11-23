@@ -45,7 +45,7 @@ apacman -S archlinux-keyring \
   zathura zathura-djvu zathura-pdf-poppler zathura-ps \
   libreoffice-fresh kbgoffice \
   cups gutenprint system-config-printer \
-  networkmanager network-manager-applet \
+  networkmanager network-manager-applet networkmanager-pptp \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium pepper-flash firefox flashplugin \
   pidgin skype-secure purple-skypeweb-git kbdd-git pidgin-otr purple-whatsapp-git \
   dropbox liferea xcmenu-git thunderbird htop autokey-py3 xdg-utils lxappearance feh gnome-themes-standard \
