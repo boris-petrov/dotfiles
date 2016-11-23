@@ -288,8 +288,9 @@ augroup MyAutocmds
 	autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$\| \+\ze\t\|[^\t]\zs\t\+\| /
 	autocmd InsertLeave * match ExtraWhitespace /\s\+$\| \+\ze\t\|[^\t]\zs\t\+\| /
 	" match space before tab; tabs not at the start of the line
-	autocmd FileType *
-		\ if &filetype != 'gitcommit' && &filetype != 'qf' |
+	autocmd FileType qf match ExtraWhitespace //
+	autocmd BufWinEnter *
+		\ if &filetype != 'gitcommit' && &filetype != 'git' && &filetype != 'qf' |
 		\   match ExtraWhitespace /\s\+$\| \+\ze\t\|[^\t]\zs\t\+\| / |
 		\ endif
 	autocmd BufWinLeave * call clearmatches()
