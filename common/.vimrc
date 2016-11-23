@@ -285,15 +285,18 @@ augroup MyAutocmds
 	autocmd!
 
 	" match end of line whitespace
-	autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$\| \+\ze\t\|[^\t]\zs\t\+\| /
-	autocmd InsertLeave * match ExtraWhitespace /\s\+$\| \+\ze\t\|[^\t]\zs\t\+\| /
+	function! s:MatchWhitespacePattern(pattern)
+		if &filetype != 'gitcommit' && &filetype != 'git' && &filetype != 'qf'
+			exe 'match ExtraWhitespace /'.escape(a:pattern, '/').'/'
+		else
+			match ExtraWhitespace ''
+		endif
+	endfunction
+
+	autocmd InsertEnter * call s:MatchWhitespacePattern('\s\+\%#\@<!$\| \+\ze\t\|[^\t]\zs\t\+\| ')
+	autocmd InsertLeave * call s:MatchWhitespacePattern('\s\+$\| \+\ze\t\|[^\t]\zs\t\+\| ')
 	" match space before tab; tabs not at the start of the line
-	autocmd FileType qf match ExtraWhitespace //
-	autocmd FileType gitcommit match ExtraWhitespace //
-	autocmd BufWinEnter *
-		\ if &filetype != 'gitcommit' && &filetype != 'git' && &filetype != 'qf' |
-		\   match ExtraWhitespace /\s\+$\| \+\ze\t\|[^\t]\zs\t\+\| / |
-		\ endif
+	autocmd FileType * call s:MatchWhitespacePattern('\s\+$\| \+\ze\t\|[^\t]\zs\t\+\| ')
 	autocmd BufWinLeave * call clearmatches()
 
 	autocmd BufEnter * let b:SuperTabDefaultCompletionType = '<C-p>'
