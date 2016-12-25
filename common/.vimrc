@@ -293,10 +293,10 @@ augroup MyAutocmds
 		endif
 	endfunction
 
-	autocmd InsertEnter * call s:MatchWhitespacePattern('\s\+\%#\@<!$\| \+\ze\t\|[^\t]\zs\t\+\| ')
-	autocmd InsertLeave * call s:MatchWhitespacePattern('\s\+$\| \+\ze\t\|[^\t]\zs\t\+\| ')
+	autocmd InsertEnter * call s:MatchWhitespacePattern('\s\+\%#\@<!$\|\t\+\ze \| \+\ze\t\|[^\t]\zs\t\+\| ')
+	autocmd InsertLeave * call s:MatchWhitespacePattern('\s\+$\|\t\+\ze \| \+\ze\t\|[^\t]\zs\t\+\| ')
 	" match space before tab; tabs not at the start of the line
-	autocmd FileType * call s:MatchWhitespacePattern('\s\+$\| \+\ze\t\|[^\t]\zs\t\+\| ')
+	autocmd FileType * call s:MatchWhitespacePattern('\s\+$\|\t\+\ze \| \+\ze\t\|[^\t]\zs\t\+\| ')
 	autocmd BufWinLeave * call clearmatches()
 
 	autocmd BufEnter * let b:SuperTabDefaultCompletionType = '<C-p>'
