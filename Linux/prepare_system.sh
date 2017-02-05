@@ -65,6 +65,8 @@ apacman -S archlinux-keyring \
 
 sudo npm install -g gulp coffee-script iced-coffee-script npm-check-updates bower diff-so-fancy
 
+sudo bootctl --path=/boot install
+
 # enable Vim persistent undo
 mkdir -p .vim/undodir
 
