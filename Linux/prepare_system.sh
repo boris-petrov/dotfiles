@@ -34,7 +34,7 @@ apacman -S archlinux-keyring \
   xf86-video-intel mesa-libgl lib32-mesa-libgl mesa-vdpau lib32-mesa-vdpau libva-intel-driver \
   nvidia lib32-nvidia-libgl libva-vdpau-driver \
   # the next line is for laptops only
-  xf86-input-synaptics acpi acpid laptop-mode-tools \
+  xf86-input-libinput acpi acpid laptop-mode-tools \
   # instead of "libacr38ucontrol", install the drivers
   # for the correct model of the USB stick
   libacr38ucontrol lsb-release deb2targz scinterface-bin \
