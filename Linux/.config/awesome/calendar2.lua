@@ -24,13 +24,14 @@ function add_calendar(inc_offset)
     local datespec = os.date("*t")
     datespec = datespec.year * 12 + datespec.month - 1 + offset
     datespec = (datespec % 12 + 1) .. " " .. math.floor(datespec / 12)
-    local cal = awful.util.pread("cal -m " .. datespec)
-    cal = string.gsub(cal, "^%s*(.-)%s*$", "%1")
-    calendar = naughty.notify({
-        text = string.format('<span font_desc="%s">%s</span>', "monospace", os.date("%a, %d %B %Y") .. "\n" .. cal),
-        timeout = 0, hover_timeout = 0.5,
-        width = 160, height = 130,
-    })
+    awful.spawn.easy_async("cal -m " .. datespec, function (stdout)
+        local cal = string.gsub(stdout, "^%s*(.-)%s*$", "%1")
+        calendar = naughty.notify({
+            text = string.format('<span font_desc="%s">%s</span>', "monospace", os.date("%a, %d %B %Y") .. "\n\n" .. cal),
+            timeout = 0, hover_timeout = 0.5,
+            width = 160, height = 130,
+        })
+    end)
 end
 
 function addCalendarToWidget(widget)
