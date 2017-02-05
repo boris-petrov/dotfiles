@@ -39,6 +39,7 @@ apacman -S archlinux-keyring \
   # for the correct model of the USB stick
   libacr38ucontrol lsb-release deb2targz scinterface-bin \
   pulseaudio pulseaudio-alsa lib32-libpulse pavucontrol \
+  systemd-boot-pacman-hook \
   alsa-utils alsa-plugins lib32-alsa-plugins libsamplerate \
   smplayer deadbeef \
   udisks2 udiskie dosfstools \
