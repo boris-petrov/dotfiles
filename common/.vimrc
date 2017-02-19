@@ -424,7 +424,7 @@ let g:Tlist_Exit_OnlyWindow=1
 let g:tlist_coffee_settings = 'coffee;c:class;m:method;f:function'
 
 " Gutentags
-let g:gutentags_tagfile = '.tags'
+let g:gutentags_ctags_tagfile = '.tags'
 let g:gutentags_generate_on_missing = 0
 let g:gutentags_generate_on_new = 0
 
