@@ -108,7 +108,7 @@ alias -g .....='../../../..'
 
 alias be='bundle exec'
 
-alias tailf='tail -f'
+alias tailf='tail -F'
 
 alias mplayer_softvol='mplayer -softvol -softvol-max 400'
 alias smplayer_softvol='smplayer -softvol -softvol-max 400'
