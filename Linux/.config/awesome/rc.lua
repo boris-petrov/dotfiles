@@ -404,7 +404,7 @@ awful.rules.rules = {
                                  width = cl_width }
                 end
             end
-            -- c:geometry(geometry)
+            c:geometry(geometry)
         end },
 
     -- Music
