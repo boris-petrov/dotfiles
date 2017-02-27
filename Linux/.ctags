@@ -1,7 +1,7 @@
 --recurse=yes
 --tag-relative=yes
 --fields=+iaS
---extra=+q
+--extras=+q
 --c++-kinds=+p
 --python-kinds=-i
 
