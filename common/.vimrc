@@ -489,10 +489,11 @@ xmap ia <Plug>SidewaysArgumentTextobjI
 " QuickFix list
 " --------------------------------------------------------------------------------------------------
 
-let g:qfenter_open_map  = ['l', '<CR>']
-let g:qfenter_vopen_map = []
-let g:qfenter_hopen_map = ['s']
-let g:qfenter_topen_map = ['t']
+let g:qfenter_keymap = {}
+let g:qfenter_keymap.open  = ['l', '<CR>']
+let g:qfenter_keymap.vopen = []
+let g:qfenter_keymap.hopen = ['s']
+let g:qfenter_keymap.topen = ['t']
 
 function! s:GetBufferList()
 	redir =>buflist
