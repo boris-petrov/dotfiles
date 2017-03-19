@@ -7,7 +7,7 @@
     <outline title="Feed List" text="Feed List" description="Feed List" type="folder" id="rrihwcc" sortColumn="time" expanded="true">
       <outline title="Feeds" text="Feeds" description="Feeds" type="folder" id="hmjewgk" sortColumn="time" expanded="true">
         <outline title="Comics" text="Comics" description="Comics" type="folder" id="fvpxqpq" sortColumn="time" expanded="true">
-          <outline title="xkcd" text="xkcd" description="xkcd" type="atom" id="tcanhnl" sortColumn="time" xmlUrl="http://xkcd.com/atom.xml" htmlUrl="http://xkcd.com/" updateInterval="-1" collapsed="true"/>
+          <outline title="xkcd" text="xkcd" description="xkcd" type="atom" id="tcanhnl" sortColumn="time" xmlUrl="http://xkcd.com/atom.xml" htmlUrl="https://xkcd.com/" updateInterval="-1" collapsed="true"/>
         </outline>
         <outline title="Programming" text="Programming" description="Programming" type="folder" id="jhdqfjk" sortColumn="time" expanded="true">
           <outline title="Lambda the Ultimate - Programming Languages Weblog" text="Lambda the Ultimate - Programming Languages Weblog" description="Lambda the Ultimate - Programming Languages Weblog" type="rss" id="vkqarhf" sortColumn="time" xmlUrl="http://lambda-the-ultimate.org/rss.xml" htmlUrl="http://lambda-the-ultimate.org" updateInterval="-1" collapsed="true"/>
