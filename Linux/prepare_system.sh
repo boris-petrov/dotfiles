@@ -46,7 +46,7 @@ apacman -S archlinux-keyring \
   zathura zathura-djvu zathura-pdf-poppler zathura-ps \
   libreoffice-fresh kbgoffice \
   cups gutenprint system-config-printer \
-  networkmanager network-manager-applet networkmanager-pptp \
+  networkmanager network-manager-applet networkmanager-pptp gnome-keyring \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium pepper-flash firefox flashplugin \
   pidgin skype-secure purple-skypeweb-git kbdd-git pidgin-otr \
   dropbox pcloud liferea xcmenu-git thunderbird htop autokey-py3 xdg-utils lxappearance feh gnome-themes-standard \
@@ -61,7 +61,7 @@ apacman -S archlinux-keyring \
   fontconfig lib32-fontconfig freetype2 lib32-freetype2 ttf-dejavu otf-inconsolata-lgc \
   jdk nodejs npm ruby python python-pip python-pycodestyle gdb \
   thunar gvfs gvfs-smb sshfs \
-  extundelete haveged rsibreak-git
+  extundelete haveged rsibreak-git cerebro
 
 sudo npm install -g gulp coffee-script iced-coffee-script npm-check-updates bower diff-so-fancy
 
