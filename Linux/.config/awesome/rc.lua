@@ -9,7 +9,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
-local menubar = require("menubar")
 
 -- remove borders when only a single window is visible
 require("remborders")
@@ -61,9 +60,6 @@ awful.layout.layouts = {
     awful.layout.suit.fair,
 }
 -- }}}
-
--- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 
 -- Keyboard map indicator and switcher
 local lts = { [0] = { [0] = " En ", [1] = "#ff0000" }, [1] = { [0] = " Bg ", [1] = "#00ff00" } }
@@ -223,10 +219,7 @@ globalkeys = awful.util.table.join(
     awful.key({ alt_modkey, "Shift"   }, "q",      awesome.quit),
     awful.key({ alt_modkey            }, "h",      function() awful.spawn(hostile_takeover) end),
 
-    awful.key({ alt_modkey,           }, "space",  function () awful.layout.inc( 1)                end),
-
-    -- Menubar
-    awful.key({ alt_modkey,           }, "d",      function() menubar.show() end)
+    awful.key({ alt_modkey,           }, "space",  function () awful.layout.inc( 1)                end)
 )
 
 clientkeys = awful.util.table.join(
@@ -342,7 +335,9 @@ awful.rules.rules = {
           "Wpa_gui",
           "pinentry",
           "veromix",
-          "xtightvncviewer"},
+          "xtightvncviewer",
+          "cerebro",
+        },
 
         name = {
           "Event Tester",  -- xev.
