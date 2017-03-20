@@ -61,6 +61,8 @@ apacman -S archlinux-keyring \
   fontconfig lib32-fontconfig freetype2 lib32-freetype2 ttf-dejavu otf-inconsolata-lgc \
   jdk nodejs npm ruby python python-pip python-pycodestyle gdb \
   thunar gvfs gvfs-smb sshfs \
+  # for Hotot
+  qtwebkit \
   extundelete haveged rsibreak-git cerebro
 
 sudo npm install -g gulp coffee-script iced-coffee-script npm-check-updates bower diff-so-fancy
