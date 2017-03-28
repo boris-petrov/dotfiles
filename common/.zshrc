@@ -38,7 +38,7 @@ add-zsh-hook precmd update_current_git_vars
 ##############################
 
 PROMPT='
-%{$fg[green]%}%n@%m$(prompt_git_info) %{$fg[yellow]%}%~
+%{$fg[green]%}%n@%m$(prompt_git_info) %{$bg[yellow]$fg[black]%}%~
 %{$reset_color%}%(?..%{${fg[red]}%})%B%#%{$reset_color%} '
 RPROMPT=""
 
