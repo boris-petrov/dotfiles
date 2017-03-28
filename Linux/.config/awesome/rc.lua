@@ -217,9 +217,7 @@ globalkeys = awful.util.table.join(
     awful.key({ alt_modkey,           }, "Return", function () awful.spawn(terminal) end),
     awful.key({ alt_modkey, "Shift"   }, "r",      awesome.restart),
     awful.key({ alt_modkey, "Shift"   }, "q",      awesome.quit),
-    awful.key({ alt_modkey            }, "h",      function() awful.spawn(hostile_takeover) end),
-
-    awful.key({ alt_modkey,           }, "space",  function () awful.layout.inc( 1)                end)
+    awful.key({ alt_modkey            }, "h",      function() awful.spawn(hostile_takeover) end)
 )
 
 clientkeys = awful.util.table.join(
