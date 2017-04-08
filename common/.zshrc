@@ -316,7 +316,6 @@ if [ `uname -s` = "Linux" ]; then
   add-zsh-hook preexec hook_function
 
   export GPG_TTY=$(tty)
-  export GPGKEY=566D2BFCC54F9E23
 
 elif [ `uname -o` = "Cygwin" ]; then
   xterm-bindings
