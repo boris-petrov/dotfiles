@@ -1,7 +1,7 @@
 [user]
 	name = Boris Petrov
 	email = boris_petrov@live.com
-	signingkey = C54F9E23
+	signingKey = 566D2BFCC54F9E23
 [github]
 	user = boris-petrov
 [diff]
@@ -9,6 +9,8 @@
 [merge]
 	ff = no
 	tool = meld
+[commit]
+	gpgSign = true
 [alias]
 	co = checkout
 	st = status
@@ -16,12 +18,14 @@
 	l = log --graph --decorate --pretty=oneline --abbrev-commit
 	cleanup = !git branch --merged master | grep -v 'master$' | xargs git branch -d
 	unstage = reset HEAD --
+	undo = reset --soft HEAD^
 	sync = !git stash && git pull && git push && git stash pop
 [pull]
 	ff = no
 	rebase = true
 [push]
 	default = simple
+	followTags = true
 [log]
 	follow = yes
 	date = iso
@@ -34,6 +38,8 @@
 	pager = less -x1,5
 [branch]
 	autosetuprebase = always
+[transfer]
+	fsckObjects = true
 [color]
 	ui = auto
 [color "branch"]
