@@ -2,5 +2,5 @@ Auto Compress File
 Copy Plain Text 2
 Enigmail
 FireTray
-Muttator
+https://addons.mozilla.org/en-US/thunderbird/addon/muttator/
 Thunderbird Conversations
