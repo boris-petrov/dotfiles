@@ -6,7 +6,7 @@ Xft.rgba:      rgb
 Xft.lcdfilter: lcddefault
 Xft.dpi:       96
 
-URxvt.termName: xterm-256color
+URxvt.termName: rxvt-unicode-256color
 
 URxvt.iconFile: /home/boris/dotfiles/Linux/icons/terminal.png
 
