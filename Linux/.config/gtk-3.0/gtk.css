@@ -1,2 +1,8 @@
 /* Remove dotted lines from GTK+ 3 applications */
 .undershoot.top, .undershoot.right, .undershoot.bottom, .undershoot.left { background-image: none; }
+
+@define-color GVIM_BACKGROUND_COLOR black;
+
+window#vim-main-window {
+    background-color: @GVIM_BACKGROUND_COLOR;
+}

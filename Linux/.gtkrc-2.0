@@ -29,11 +29,6 @@ gtk-enable-accels=1
 
 gtk-application-prefer-dark-theme=1
 
-style "vimfix" {
-	bg[NORMAL] = "Black" # this matches my gvim theme 'Normal' bg color.
-}
-widget "vim-main-window.*GtkForm" style "vimfix"
-
 binding "pidgin-chat-window-bindings" {
 	bind "<ctrl>j" { "message_send" () }
 }
