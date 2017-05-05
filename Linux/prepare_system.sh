@@ -122,6 +122,7 @@ sudo systemctl enable laptop-mode
 # install Thunderbird add-ons from ~/dotfiles/common/ThunderbirdAddons.txt
 # install Chrome's Stylish styles from ~/dotfiles/common/stylish/*
 # use Chrome's Page Monitor sites from ~/dotfiles/common/Chrome/Page Monitor.html
+# setup spelling in Chrome - Settings, search for "spell", Language and input settings
 # remove the 3 "group i = AltGr" lines in /usr/share/X11/xkb/compat/basic
 # set default soundcard in ~/.asoundrc
 # set Chrome/Thunderbird fonts, encodings
