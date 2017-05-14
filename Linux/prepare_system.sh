@@ -44,7 +44,7 @@ apacman -S archlinux-keyring \
   smplayer deadbeef \
   udisks2 udiskie dosfstools \
   zathura zathura-djvu zathura-pdf-poppler zathura-ps \
-  libreoffice-fresh kbgoffice \
+  libreoffice-fresh \
   cups gutenprint system-config-printer \
   networkmanager network-manager-applet networkmanager-pptp gnome-keyring \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium pepper-flash firefox flashplugin \
@@ -117,6 +117,7 @@ sudo systemctl enable laptop-mode
 
 # execute "set spell" in Vim in order to download its dictionaries
 # install aspell and hunspell dictionaries from Dropbox directory
+# install kbgoffice from https://bitbucket.org/axil42/aur-mirror/raw/master/kbgoffice/PKGBUILD or the file in this directory
 # execute "cp ~/Dropbox/Private/wallpaper.jpg ~/.config/awesome/themes/"
 # copy Pidgin stuff from Dropbox folder to ~/.purple
 # install Thunderbird add-ons from ~/dotfiles/common/ThunderbirdAddons.txt
