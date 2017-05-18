@@ -65,7 +65,7 @@ apacman -S archlinux-keyring \
   qtwebkit \
   extundelete haveged rsibreak-git cerebro
 
-sudo npm install -g gulp coffee-script iced-coffee-script npm-check-updates bower diff-so-fancy
+sudo npm install -g gulp coffeescript iced-coffee-script npm-check-updates bower diff-so-fancy
 
 sudo bootctl --path=/boot install
 
