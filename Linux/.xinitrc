@@ -4,7 +4,6 @@ xrdb -merge $HOME/.Xresources
 
 kbdd
 start-pulseaudio-x11
-syndaemon -t -k -i 1 -d
 udiskie --smart-tray &
 nm-applet &
 autokey-gtk &
