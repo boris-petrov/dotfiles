@@ -14,6 +14,7 @@ unsetopt BG_NICE # Run all background jobs at a lower priority. This option is s
 setopt HIST_IGNORE_SPACE # Do not enter command lines into the history list if they begin with a blank.
 unsetopt HUP # Send the HUP signal to running jobs when the shell exits.
 setopt PROMPT_SUBST # Enable substitutions of functions in prompt
+setopt COMPLETE_ALIASES # Prevent grc aliases from overriding zsh completions.
 
 bindkey -v # vi-mode
 
