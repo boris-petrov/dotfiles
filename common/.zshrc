@@ -73,18 +73,19 @@ alias make='grc make'
 alias mount='grc mount'
 alias ps='grc ps'
 alias df='grc df -hPT'
+alias du='grc du -ch'
+alias free='grc free -h'
 
 # other aliases
 
 alias diff='colordiff -bup'
 alias mkdir='mkdir -p -v'
 
-alias du='du -ch'
-alias free='free -h'
-
 alias tmux='tmux -u -2 -q'
 
 alias ctags='ctags -f.tags'
+
+alias ip='grc ip'
 
 LS='ls -hF --color --group-directories-first'
 alias ls=$LS
