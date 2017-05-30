@@ -24,7 +24,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'Yggdroot/indentLine'
 Plugin 'bkad/CamelCaseMotion'
 Plugin 'bling/vim-airline'
-Plugin 'boris-petrov/rainbow_parentheses.vim'
+Plugin 'boris-petrov/rainbow'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dietsche/vim-lastplace'
 Plugin 'easymotion/vim-easymotion'
@@ -320,12 +320,6 @@ augroup MyAutocmds
 		autocmd FileType coffee,ruby,eruby,html,slim,eco,scss setlocal grepprg+=\ --exclude-dir=coverage\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude-dir=vendor\ --exclude-dir=public\ --exclude-dir=env
 	endif
 
-	autocmd FileType * RainbowParenthesesActivate
-	autocmd Syntax * RainbowParenthesesLoadRound
-	autocmd Syntax * RainbowParenthesesLoadSquare
-	autocmd Syntax * RainbowParenthesesLoadBraces
-	autocmd FileType cpp RainbowParenthesesLoadChevrons
-
 	autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 	autocmd FileType haskell compiler ghc
@@ -370,6 +364,12 @@ runtime! macros/matchit.vim " smarter matching with % (ifs, elses...)
 
 " Saves txt and hs files after leaving insert mode if there were any changes
 " autocmd InsertLeave *.{txt,hs} :up
+
+" --------------------------------------------------------------------------------------------------
+" Rainbow Parentheses
+" --------------------------------------------------------------------------------------------------
+
+let g:rainbow_active = 1
 
 " --------------------------------------------------------------------------------------------------
 " Tabularize
