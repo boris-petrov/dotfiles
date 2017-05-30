@@ -43,6 +43,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'sickill/vim-pasta'
+Plugin 'AndrewRadev/whitespaste.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-commentary'
@@ -580,9 +581,6 @@ endfunction
 
 let g:pasta_enabled_filetypes = []
 let g:pasta_disabled_filetypes = []
-
-nmap p <Plug>AfterPasta
-nmap P <Plug>BeforePasta
 
 "------------------------------------------------------------------------
 " I haven't found how to hide this function (yet)
