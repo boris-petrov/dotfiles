@@ -75,6 +75,7 @@ alias ps='grc ps'
 alias df='grc df -hPT'
 alias du='grc du -ch'
 alias free='grc free -h'
+alias env='grc env'
 
 # other aliases
 
