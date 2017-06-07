@@ -557,7 +557,7 @@ function! s:Grep(count, args)
 		let query = a:args
 	end
 
-	exe 'grep '.options.shellescape(query).' .'
+	exe 'grep '.options.shellescape(query, '#').' .'
 endfunction
 
 function! s:LastSelectedText()
