@@ -527,7 +527,7 @@ nmap <silent> gr :call <SID>ToggleList("Quickfix List", 'c')<CR>
 " Ag
 " --------------------------------------------------------------------------------------------------
 
-command! -count=0 -nargs=* Grep call s:Grep(<count>, <q-args>)
+command! -range -nargs=* Grep call s:Grep(<count>, <q-args>)
 
 " Can be called in several ways:
 "
@@ -537,7 +537,7 @@ command! -count=0 -nargs=* Grep call s:Grep(<count>, <q-args>)
 
 function! s:Grep(count, args)
 	let options = ''
-	if a:count > 0
+	if a:count >= 0
 		" then we've selected something in visual mode
 		if executable('rg')
 			let options = '--fixed-strings '
