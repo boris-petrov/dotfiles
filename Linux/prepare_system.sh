@@ -127,6 +127,7 @@ sudo systemctl enable laptop-mode
 # remove the 3 "group i = AltGr" lines in /usr/share/X11/xkb/compat/basic
 # set default soundcard in ~/.asoundrc
 # set Chrome/Thunderbird fonts, encodings
+# add Facebook icons for Pidgin from https://github.com/PowaBanga/pidgin-EAP
 
 # Do this so Skype audio works:
 # As the main user, copy /etc/pulse/default.pa to ~/.config/pulse/default.pa and add:
