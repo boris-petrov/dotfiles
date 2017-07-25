@@ -64,7 +64,7 @@ awful.layout.layouts = {
 -- Keyboard map indicator and switcher
 local lts = { [0] = { [0] = " En ", [1] = "#ff0000" }, [1] = { [0] = " Bg ", [1] = "#00ff00" } }
 mykeyboardlayout = awful.widget.keyboardlayout()
-mykeyboardlayout._layout = { [0] = lts[0][0], [1] = lts[1][0] }
+mykeyboardlayout._layout = { [1] = lts[0][0], [2] = lts[1][0] }
 local kbdwidget = wibox.widget.background()
 kbdwidget:set_widget(mykeyboardlayout.widget)
 kbdwidget:set_fg(lts[0][1])
