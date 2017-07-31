@@ -278,7 +278,7 @@
 			<pref name='last_icon_folder' type='path' value='/home/boris/Dropbox/Private/avatars'/>
 		</pref>
 		<pref name='smileys'>
-			<pref name='theme' type='string' value='QIP-pidgin'/>
+			<pref name='theme' type='string' value='Facebookemo'/>
 		</pref>
 		<pref name='debug'>
 			<pref name='enabled' type='bool' value='0'/>
