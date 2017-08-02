@@ -25,6 +25,8 @@
 --exclude=**/env/**
 --exclude=tmp/**
 --exclude=**/tmp/**
+--exclude=bin/**
+--exclude=**/bin/**
 
 --langdef=coffee
 --langmap=coffee:.coffee
