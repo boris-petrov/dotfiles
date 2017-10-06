@@ -29,7 +29,7 @@ function add_calendar(inc_offset)
         calendar = naughty.notify({
             text = string.format('<span font_desc="%s">%s</span>', "monospace", os.date("%a, %d %B %Y") .. "\n\n" .. cal),
             timeout = 0, hover_timeout = 0.5,
-            width = 160, height = 130,
+            width = 160, height = 160,
         })
     end)
 end
