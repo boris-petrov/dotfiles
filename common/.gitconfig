@@ -69,3 +69,7 @@
 	show = diff-so-fancy | less --tabs=4 -RFX
 [interactive]
 	diffFilter = diff-so-fancy --patch-mode | less --tabs=4 -RFX
+[annex]
+	autocommit = false
+	resolvemerge = false
+	synccontent = true
