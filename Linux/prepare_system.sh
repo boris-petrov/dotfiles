@@ -48,7 +48,7 @@ apacman -S archlinux-keyring \
   cups gutenprint system-config-printer \
   networkmanager network-manager-applet networkmanager-pptp gnome-keyring \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium pepper-flash firefox flashplugin \
-  pidgin skype-secure telegram-purple purple-skypeweb-git purple-hangouts-hg purple-facebook-git kbdd-git pidgin-otr \
+  pidgin telegram-purple purple-skypeweb-git purple-hangouts-hg purple-facebook-git kbdd-git pidgin-otr \
   dropbox pcloud liferea xcmenu-git thunderbird htop autokey-py3 xdg-utils lxappearance feh gnome-themes-standard \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
   aspell hunspell \
