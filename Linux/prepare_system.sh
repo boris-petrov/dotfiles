@@ -75,8 +75,8 @@ mkdir -p .vim/undodir
 # install ruby's bundler
 sudo gem install bundler
 
-# install pep8 for Python checking
-sudo pip3 install pep8
+# install flake8 for Python checking
+sudo pip3 install flake8
 
 # install vrome
 mkdir -p code/vrome
