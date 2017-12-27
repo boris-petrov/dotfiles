@@ -28,7 +28,7 @@
 	follow = yes
 	date = iso
 [format]
-	pretty = %C(blue)%h%C(red) %an %C(green)%ad%C(reset)%d%n%B
+	pretty = %C(blue)%H%C(red) %an %C(green)%ad%C(yellow)%d%n%B
 [core]
 	autocrlf = input
 	whitespace = fix,space-before-tab,trailing-space,cr-at-eol
