@@ -13,7 +13,7 @@ local naughty = require("naughty")
 -- remove borders when only a single window is visible
 require("remborders")
 
-require("obvious.battery")
+local battery = require("obvious.battery")
 
 local APW = require("apw/widget")
 
@@ -153,9 +153,9 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.fixed.horizontal,
         APW,
     }
-    if obvious.battery.get_data() then
+    if battery.get_data() then
         rightwidgets = awful.util.table.join(rightwidgets, {
-            obvious.battery(),
+            battery(),
             separator_widget,
         })
     end
