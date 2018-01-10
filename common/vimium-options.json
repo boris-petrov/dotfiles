@@ -9,7 +9,7 @@
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "map d removeTab\nmap u restoreTab\nmap h previousTab\nmap l nextTab\nmap J scrollPageDown\nmap K scrollPageUp\nmap <BackSpace> goBack\nmap y copyCurrentUrl",
+  "keyMappings": "map d removeTab\nmap u restoreTab\nmap h previousTab\nmap l nextTab\nmap J scrollPageDown\nmap K scrollPageUp\nmap <BackSpace> goBack\nmap y copyCurrentUrl\nmap p openCopiedUrlInNewTab\nmap P openCopiedUrlInCurrentTab",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
