@@ -735,7 +735,7 @@ endfunction
 " Wrapping
 " --------------------------------------------------------------------------------------------------
 
-nmap <silent> gw :call <SID>ToggleHorizontalScrollbar()<CR>:<C-U>setlocal wrap! wrap?<CR>
+nmap <silent> <Leader>w :call <SID>ToggleHorizontalScrollbar()<CR>:<C-U>setlocal wrap! wrap?<CR>
 
 function! s:ToggleHorizontalScrollbar()
 	if &guioptions =~# "b"
