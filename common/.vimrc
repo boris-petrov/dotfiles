@@ -303,10 +303,6 @@ augroup MyAutocmds
 	autocmd BufEnter * let b:SuperTabDefaultCompletionType = '<C-p>'
 	autocmd BufEnter *.cpp,*.java let b:SuperTabDefaultCompletionType = 'context'
 
-	autocmd BufWritePre *.java :%JavaFormat
-	autocmd BufWritePost *.java :setf java
-	autocmd BufWritePost *.java :Validate
-
 	autocmd FileType cpp,c,cs,groovy setlocal commentstring=//\ %s
 
 	autocmd FileType help setlocal nonumber " no line numbers when viewing help
