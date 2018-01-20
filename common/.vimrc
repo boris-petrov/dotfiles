@@ -786,7 +786,7 @@ let g:gitgutter_map_keys = 0
 
 let g:ctrlp_map           = 'gz'
 let g:ctrlp_custom_ignore = {
-	\ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|vendor|build|dist.*|temp|tmp|log|var|env|bin|out|deps)$',
+	\ 'dir': '\v[\/](\.(git|hg|svn)|node_modules|bower_components|vendor|_?build|dist.*|temp|tmp|log|var|env|bin|out|deps)$',
 	\ }
 let g:ctrlp_match_window_bottom   = 0
 let g:ctrlp_match_window_reversed = 0
