@@ -458,6 +458,7 @@ function! s:VisualSearch(direction) range
 	execute "normal! vgvy"
 	let l:pattern = escape(@", '\\/.*$^~[]')
 	let l:pattern = substitute(l:pattern, "\n$", "", "")
+	let l:pattern = substitute(l:pattern, "\n", "\\\\n", "g")
 	if a:direction == 'b'
 		execute "normal ?" . l:pattern . "^M"
 	else
