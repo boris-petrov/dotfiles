@@ -27,6 +27,12 @@
 --exclude=**/tmp/**
 --exclude=bin/**
 --exclude=**/bin/**
+--exclude=_build/**
+--exclude=**/_build/**
+--exclude=deps/**
+--exclude=**/deps/**
+
+--exclude=**/package-lock.json
 
 --langdef=coffee
 --langmap=coffee:.coffee
