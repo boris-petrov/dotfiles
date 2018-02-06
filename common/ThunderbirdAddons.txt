@@ -1,6 +1,14 @@
+Extensions:
 Auto Compress File
 Copy Plain Text 2
 Enigmail
 FireTray
+Lightning
 https://addons.mozilla.org/en-US/thunderbird/addon/muttator/
 Thunderbird Conversations
+
+Appearance:
+TT DeepDark
+
+Plugins:
+Shockwave Flash
