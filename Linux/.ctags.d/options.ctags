@@ -31,6 +31,8 @@
 --exclude=**/_build/**
 --exclude=deps/**
 --exclude=**/deps/**
+--exclude=target/**
+--exclude=**/target/**
 
 --exclude=**/package-lock.json
 
