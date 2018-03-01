@@ -62,7 +62,7 @@ apacman -S archlinux-keyring \
   jdk nodejs npm ruby python python-pip python-pycodestyle gdb \
   thunar gvfs gvfs-smb sshfs \
   # for Hotot
-  qtwebkit \
+  qtwebkit intltool \
   extundelete haveged rsibreak-git cerebro
 
 sudo npm install -g gulp grunt coffeescript npm-check-updates bower diff-so-fancy
