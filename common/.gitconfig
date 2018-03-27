@@ -71,3 +71,5 @@
 	autocommit = false
 	resolvemerge = false
 	synccontent = true
+[submodule]
+	recurse = true
