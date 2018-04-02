@@ -5,6 +5,8 @@
 [github]
 	user = boris-petrov
 [diff]
+	algorithm = patience
+	compactionHeuristic = true
 	tool = meld
 [merge]
 	ff = no
@@ -67,6 +69,9 @@
 	show = diff-so-fancy | less --tabs=4 -RFX
 [interactive]
 	diffFilter = diff-so-fancy --patch-mode | less --tabs=4 -RFX
+[rebase]
+	missingCommitsCheck = warn
+	autoStash = true
 [annex]
 	autocommit = false
 	resolvemerge = false
