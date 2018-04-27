@@ -6,3 +6,4 @@ https://marketplace.eclipse.org/content/eclipse-moonrise-ui-theme
 Old formatter:
 https://eclipse-n-mati.blogspot.bg/2015/06/eclipse-mars-how-to-switch-back-to.html
 https://wiki.eclipse.org/images/4/45/OldJavaFormatter.zip
+https://github.com/alostale/luna-java-formatter
