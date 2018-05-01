@@ -1,6 +1,6 @@
 --langdef=groovy
 --langmap=groovy:.groovy
---regex-groovy=/^\s*(static|private|public|protected|\s)*(def|\w([.<>,]|\w|\s)+)\s+(\w+)\(/\4/f,function,functions/
+--regex-groovy=/^\s*(static|private|public|protected|\s)*(def|\w([.<>,?]|\w|\s)+)\s+(\w+)\(/\4/f,function,functions/
 --regex-groovy=/^\s*private def\s+(\w+)\s*/\1/v,private,private variables/
 --regex-groovy=/^\s*public def\s+(\w+)\s*/\1/u,public,public variables/
 --regex-groovy=/^\s*(abstract|private|public|\s)*class\s+(\w+)\s*/\2/c,class,classes/
