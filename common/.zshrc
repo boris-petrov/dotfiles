@@ -142,6 +142,7 @@ file() {
 export file
 
 export LESS="-XRi --quit-if-one-screen"
+export PAGER=less
 
 ##############################
 # Functions
