@@ -822,7 +822,7 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 cnoremap <F1> <ESC>
 
-nmap <Leader>cl :let @+=expand("%:p")<CR>
+nmap <Leader>cl :let @+=expand("%:p")<CR>:let @*=expand("%:p")<CR>
 nmap <Leader>2 :%s;^\(\s\+\);\=repeat(' ', len(submatch(0))/2);g<CR>
 nmap <Leader>4 :%s;^\(\s\+\);\=repeat(' ', len(submatch(0))*2);g<CR>
 xmap <Leader>2 :s;^\(\s\+\);\=repeat(' ', len(submatch(0))/2);g<CR>
