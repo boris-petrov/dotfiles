@@ -33,7 +33,7 @@ URxvt.scrollWithBuffer:  True
 URxvt.scrollTtyKeypress: True
 
 URxvt.perl-ext-common: default,selection-autotransform,clipboard,font-size,selection-to-clipboard
-URxvt.selection-autotransform.0: s|\\s+$||gm
+URxvt.selection-autotransform.0: s| +$||gm
 
 URxvt.keysym.C-Up:   perl:font-size:increase
 URxvt.keysym.C-Down: perl:font-size:decrease
