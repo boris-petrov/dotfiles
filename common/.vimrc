@@ -296,6 +296,7 @@ augroup MyAutocmds
 		endif
 	endfunction
 
+	" the last character in the following is a NBSP
 	autocmd InsertEnter * call s:MatchWhitespacePattern('\s\+\%#\@<!$\|\t\+\ze \| \+\ze\t\|[^\t]\zs\t\+\| ')
 	autocmd InsertLeave * call s:MatchWhitespacePattern('\s\+$\|\t\+\ze \| \+\ze\t\|[^\t]\zs\t\+\| ')
 	" match space before tab; tabs not at the start of the line
