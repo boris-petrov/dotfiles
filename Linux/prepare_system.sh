@@ -128,9 +128,3 @@ sudo systemctl enable laptop-mode
 # set default soundcard in ~/.asoundrc
 # set Chrome/Thunderbird fonts, encodings
 # add Facebook icons for Pidgin from https://github.com/PowaBanga/pidgin-EAP
-
-# Do this so Skype audio works:
-# As the main user, copy /etc/pulse/default.pa to ~/.config/pulse/default.pa and add:
-# load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1
-# As the _skype user, create ~/.config/pulse/client.conf and add:
-# default-server = 127.0.0.1
