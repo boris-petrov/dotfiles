@@ -13,3 +13,5 @@ export JAVA_HOME=/usr/lib/jvm/default
 export GTK_OVERLAY_SCROLLING=0
 
 export GPGKEY=566D2BFCC54F9E23
+
+export GOPATH=$HOME/go
