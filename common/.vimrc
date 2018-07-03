@@ -606,6 +606,7 @@ xmap <silent> <expr> p <SID>Repl()
 " delimitMate Mappings
 " --------------------------------------------------------------------------------------------------
 
+let delimitMate_expand_space = 1
 imap <expr> <CR> delimitMate#ShouldJump() ? "\<C-g>g" : "\<CR>\<Plug>DiscretionaryEnd"
 
 " --------------------------------------------------------------------------------------------------
