@@ -557,7 +557,7 @@ function! s:Grep(count, args)
 		let query = a:args
 	end
 
-	let escaped_query = substitute(shellescape(query, '#'), '\\!', '!', 'g')
+	let escaped_query = substitute(substitute(shellescape(query, '#'), '\\!', '!', 'g'), '|', '\\|', 'g')
 	exe 'grep '.options.escaped_query.' .'
 endfunction
 
