@@ -131,6 +131,8 @@ alias apacman='sudo apacman' # in order to use sudoers config and not ask for pa
 
 alias grep='grep --no-messages --color=auto'
 
+alias feh='feh --auto-rotate'
+
 which() {
   (alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
 }
