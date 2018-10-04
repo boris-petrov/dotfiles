@@ -78,14 +78,6 @@ sudo gem install bundler
 # install flake8 for Python checking
 sudo pip3 install flake8
 
-# install vrome
-mkdir -p code/vrome
-pushd code/vrome
-git clone git@github.com:jinzhu/vrome.git .
-bundle
-bundle exec rake build
-popd
-
 # install Hotot
 mkdir -p code/Hotot
 pushd code/Hotot
