@@ -6,14 +6,13 @@ cd
 
 sudo pacman -S wget git
 
-# install apacman
-wget https://aur.archlinux.org/packages/ap/apacman/apacman.tar.gz
-tar -xzf apacman.tar.gz
-pushd apacman
-makepkg -s
-sudo pacman -U apacman-*
+# install yay
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/yay.tar.gz
+tar -xzf yay.tar.gz
+pushd yay
+yes | makepkg -si
 popd
-rm -rf apacman apacman.tar.gz
+rm -rf yay yay.tar.gz
 
 # clone my dotfiles, install them and install screenful
 git clone git@github.com:boris-petrov/dotfiles.git
