@@ -14,6 +14,7 @@ liferea &
 xcmenu &
 rsibreak &
 cerebro &
+fluxgui &
 
 $HOME/bin/fix_screens
 
