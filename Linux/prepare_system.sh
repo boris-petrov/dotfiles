@@ -62,7 +62,7 @@ apacman -S archlinux-keyring \
   thunar gvfs gvfs-smb sshfs \
   # for Hotot
   qtwebkit intltool \
-  extundelete haveged rsibreak-git cerebro
+  extundelete haveged rsibreak-git cerebro fluxgui
 
 sudo npm install -g gulp grunt coffeescript npm-check-updates bower diff-so-fancy
 
