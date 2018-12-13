@@ -697,6 +697,7 @@ nmap d[ ds[
 nmap d] d[
 nmap d{ ds{
 nmap d} d{
+nmap d` ds`
 nmap d< ds<
 nmap d> d<
 nmap d" ds"
@@ -708,6 +709,7 @@ xmap ] S]
 xmap [ ]
 xmap } S}
 xmap { }
+xmap ` S`
 xmap > S>
 xmap < >
 xmap " S"
