@@ -127,8 +127,6 @@ alias htop='TERM=screen htop' # fix for tmux redrawing issue
 
 alias sudo='sudo -E '
 
-alias apacman='sudo apacman' # in order to use sudoers config and not ask for password
-
 alias grep='grep --no-messages --color=auto'
 
 alias feh='feh --auto-rotate'
