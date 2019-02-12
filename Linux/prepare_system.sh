@@ -49,7 +49,7 @@ apacman -S archlinux-keyring \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium pepper-flash firefox flashplugin \
   pidgin telegram-purple purple-skypeweb-git purple-hangouts-hg purple-facebook-git slack-libpurple-git purple-discord-git kbdd-git pidgin-otr \
   dropbox pcloud liferea xcmenu-git thunderbird htop autokey-py3 xdg-utils lxappearance feh gnome-themes-standard \
-  xorg-server xorg-xinit slim awesome dmenu xorg-xprop xlockmore arandr \
+  xorg-server xorg-xinit slim awesome dmenu xorg-xprop xscreensaver arandr \
   aspell hunspell \
   gvim colordiff universal-ctags-git the_silver_searcher ripgrep grc ngrok ncdu \
   zsh zsh-syntax-highlighting rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \

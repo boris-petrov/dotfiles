@@ -192,7 +192,7 @@ globalkeys = awful.util.table.join(
     awful.key({ alt_modkey,           }, "Down",   APW.Down),
     awful.key({ alt_modkey,           }, "m",      APW.ToggleMute),
 
-    awful.key({ alt_modkey,           }, "l",      function() awful.spawn("xlock -mode blank") end),
+    awful.key({ alt_modkey,           }, "l",      function() awful.spawn("xscreensaver-command -lock") end),
 
     awful.key({ alt_modkey,           }, "`",      awful.tag.history.restore),
 
