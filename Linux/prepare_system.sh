@@ -57,7 +57,7 @@ apacman -S archlinux-keyring \
   zip unrar unzip \
   deluge flareget \
   freerdp realvnc-viewer-bin \
-  fontconfig lib32-fontconfig freetype2 lib32-freetype2 ttf-dejavu otf-inconsolata-lgc \
+  fontconfig lib32-fontconfig freetype2 lib32-freetype2 ttf-dejavu otf-inconsolata-lgc-git \
   jdk nodejs npm ruby python python-pip python-pycodestyle gdb \
   thunar gvfs gvfs-smb sshfs \
   # for Hotot
