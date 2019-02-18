@@ -15,6 +15,7 @@ xcmenu &
 rsibreak &
 cerebro &
 fluxgui &
+xscreensaver -no-splash &
 
 $HOME/bin/fix_screens
 
