@@ -1,7 +1,7 @@
-Update sites:
-http://vrapper.sourceforge.net/update-site/stable
-
-https://marketplace.eclipse.org/content/eclipse-moonrise-ui-theme
+Marketplace stuff:
+https://marketplace.eclipse.org/content/vrapper-vim
+https://marketplace.eclipse.org/content/darkest-dark-theme-devstyle
+https://marketplace.eclipse.org/content/groovy-development-tools
 
 Old formatter:
 https://eclipse-n-mati.blogspot.bg/2015/06/eclipse-mars-how-to-switch-back-to.html
