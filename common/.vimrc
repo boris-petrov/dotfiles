@@ -350,13 +350,13 @@ augroup MyAutocmds
 	autocmd FileType git setlocal foldlevel=99
 
 	autocmd BufEnter *.git/COMMIT_EDITMSG exe 'normal! gg' | if getline('.') =~ '^\s*$' | startinsert | endif
-	autocmd BufEnter *.git/COMMIT_EDITMSG nmap <buffer> q :q<CR>
-	autocmd BufEnter *.git/index nmap <buffer> d <CR>:Gdiff<CR><C-w>hgg
-	autocmd BufEnter *.git/index nmap <buffer> C cvc
-	autocmd BufEnter *.git/index nmap <buffer> ca cva
-	autocmd BufEnter *.git/index nmap <buffer> j <C-n>
-	autocmd BufEnter *.git/index nmap <buffer> k <C-p>
-	autocmd BufEnter *.git/index nmap <buffer> l <CR>
+	autocmd FileType gitcommit nmap <buffer> q :q<CR>
+	autocmd FileType fugitive nmap <buffer> d <CR>:Gdiff<CR><C-w>hgg
+	autocmd FileType fugitive nmap <buffer> C cc
+	autocmd FileType fugitive nmap <buffer> ca cva
+	autocmd FileType fugitive nmap <buffer> j <C-n>
+	autocmd FileType fugitive nmap <buffer> k <C-p>
+	autocmd FileType fugitive nmap <buffer> l <CR>
 	autocmd FileType fugitiveblame nnoremap <buffer> j  <C-w>lj<C-w>h
 	autocmd FileType fugitiveblame nnoremap <buffer> J  <C-w>l4j<C-w>h
 	autocmd FileType fugitiveblame nnoremap <buffer> k  <C-w>lk<C-w>h
