@@ -19,7 +19,6 @@ Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'AndrewRadev/switch.vim'
 Plugin 'AndrewRadev/vim-eco'
 Plugin 'AndrewRadev/whitespaste.vim'
-Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -28,7 +27,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bkad/CamelCaseMotion'
 Plugin 'bling/vim-airline'
 Plugin 'boris-petrov/rainbow'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'dietsche/vim-lastplace'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'ervandew/supertab'
@@ -797,17 +796,11 @@ nmap gs :Gstatus<CR><C-n>
 let g:gitgutter_map_keys = 0
 
 " --------------------------------------------------------------------------------------------------
-" Ctrl-P Mappings
+" fzf Mappings
 " --------------------------------------------------------------------------------------------------
 
-let g:ctrlp_map           = 'gz'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_match_window_bottom   = 0
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_match_func            = { 'match': 'pymatcher#PyMatch' }
-
-let g:ctrlp_lazy_update         = 200
-let g:ctrlp_clear_cache_on_exit = 0
+nnoremap gz :Files<CR>
+let g:fzf_layout = { 'up': '~40%' }
 
 "--------------------------------------------------------
 " Abbreviations
