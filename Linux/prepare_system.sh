@@ -91,6 +91,9 @@ popd
 # add less keybindings
 lesskey
 
+# Handle out-of-memory situations better:
+sudo sh -c 'echo "vm.oom_kill_allocating_task = 1" >> /etc/sysctl.d/local.conf'
+
 # enable services
 sudo systemctl enable asd
 systemctl --user enable psd
