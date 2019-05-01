@@ -42,7 +42,7 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'mechatroner/rainbow_csv'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'sickill/vim-pasta'
 Plugin 'sjl/gundo.vim'
@@ -238,19 +238,19 @@ let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 let OmniCpp_DefaultNamespaces = ["std"]
 
 " --------------------------------------------------------------------------------------------------
-" syntastic settings
+" ale settings
 " --------------------------------------------------------------------------------------------------
 
-let g:syntastic_enable_balloons = 0
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': [],
-                           \ 'passive_filetypes': ['cpp', 'java', 'c'] }
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_auto_jump = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_python_flake8_args = "--max-line-length 119"
+let g:ale_linters = {
+\   'python': ['flake8'],
+\}
+
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+let g:ale_python_flake8_options = '--max-line-length 119'
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_linters_explicit = 1
 
 " --------------------------------------------------------------------------------------------------
 " commentary mappings
