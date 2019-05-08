@@ -26,7 +26,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bkad/CamelCaseMotion'
 Plugin 'bling/vim-airline'
-Plugin 'boris-petrov/rainbow'
+Plugin 'luochen1990/rainbow'
 Plugin 'junegunn/fzf.vim'
 Plugin 'dietsche/vim-lastplace'
 Plugin 'easymotion/vim-easymotion'
@@ -377,6 +377,9 @@ runtime! macros/matchit.vim " smarter matching with % (ifs, elses...)
 " --------------------------------------------------------------------------------------------------
 
 let g:rainbow_active = 1
+let g:rainbow_conf = {
+\   'parentheses_options': 'contains=TOP,@Spell',
+\}
 
 " --------------------------------------------------------------------------------------------------
 " Tabularize
