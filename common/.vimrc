@@ -378,7 +378,7 @@ runtime! macros/matchit.vim " smarter matching with % (ifs, elses...)
 
 let g:rainbow_active = 1
 let g:rainbow_conf = {
-\   'parentheses_options': 'contains=TOP,@Spell',
+\   'parentheses_options': 'contains=@Spell',
 \}
 
 " --------------------------------------------------------------------------------------------------
