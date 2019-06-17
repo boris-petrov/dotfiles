@@ -12,6 +12,7 @@ unsetopt LIST_AMBIGUOUS # If this option is set completions are shown only if th
 unsetopt AUTO_REMOVE_SLASH
 unsetopt BG_NICE # Run all background jobs at a lower priority. This option is set by default.
 setopt HIST_IGNORE_SPACE # Do not enter command lines into the history list if they begin with a blank.
+setopt histignoredups # Ignore duplicate lines in the history.
 unsetopt HUP # Send the HUP signal to running jobs when the shell exits.
 setopt PROMPT_SUBST # Enable substitutions of functions in prompt
 
@@ -20,6 +21,7 @@ bindkey -v # vi-mode
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+HISTORY_IGNORE="(ls|cd|cd ..|pwd|exit|bg|fg)"
 
 ##############################
 # Git status in prompt
