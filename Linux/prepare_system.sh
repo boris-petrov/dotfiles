@@ -47,7 +47,7 @@ apacman -S archlinux-keyring \
   cups gutenprint system-config-printer \
   networkmanager network-manager-applet networkmanager-pptp networkmanager-openvpn networkmanager-l2tp gnome-keyring \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium pepper-flash firefox flashplugin \
-  pidgin telegram-purple purple-skypeweb-git purple-hangouts-hg purple-facebook-git slack-libpurple-git purple-discord-git kbdd-git pidgin-otr \
+  pidgin telegram-purple-git purple-skypeweb-git purple-hangouts-hg purple-facebook-git slack-libpurple-git purple-discord-git kbdd-git pidgin-otr \
   dropbox pcloud liferea xcmenu-git thunderbird htop autokey-py3 xdg-utils lxappearance feh gnome-themes-standard \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xscreensaver arandr \
   aspell hunspell \
@@ -88,6 +88,24 @@ make
 sudo make install
 popd
 
+pushd code
+git clone git://github.com/EionRobb/pidgin-groupchat-typing-notifications.git
+pushd pidgin-groupchat-typing-notifications
+make
+sudo make install
+popd
+rm -rf pidgin-groupchat-typing-notifications
+popd
+
+pushd code
+git clone git://github.com/EionRobb/icyque.git
+pushd icyque
+make
+sudo make install
+popd
+rm -rf icyque
+popd
+
 # add less keybindings
 lesskey
 
@@ -122,3 +140,4 @@ sudo systemctl enable laptop-mode
 # set default soundcard in ~/.asoundrc
 # set Chrome/Thunderbird fonts, encodings
 # add Facebook icons for Pidgin from https://github.com/PowaBanga/pidgin-EAP
+# enable wanted Pidgin plugins (like the groupchat-typing-notifications one)
