@@ -27,7 +27,7 @@ popd
 sudo pacman -Syy
 
 # install packages
-apacman -S archlinux-keyring \
+yay -S archlinux-keyring \
   intel-ucode \
   # ONE of the next two lines should be chosen
   xf86-video-intel mesa-libgl lib32-mesa-libgl mesa-vdpau lib32-mesa-vdpau libva-intel-driver \
