@@ -13,7 +13,7 @@ hotot-qt &
 liferea &
 xcmenu &
 rsibreak &
-cerebro &
+ulauncher &
 fluxgui &
 xscreensaver -no-splash &
 
