@@ -60,9 +60,12 @@ yay -S archlinux-keyring \
   fontconfig lib32-fontconfig freetype2 lib32-freetype2 ttf-dejavu otf-inconsolata-lgc-git \
   jdk nodejs npm ruby python python-pip python-pycodestyle gdb \
   thunar gvfs gvfs-smb sshfs \
+  earlyoom \
   # for Hotot
   qtwebkit intltool \
   extundelete haveged rsibreak-git ulauncher fluxgui
+
+sudo bash -c "echo -e \"EARLYOOM_ARGS=\"-r 0 --avoid \'^chromium$\' --prefer \'^java$\'\"\" > /etc/default/earlyoom"
 
 sudo npm install -g gulp grunt coffeescript npm-check-updates bower diff-so-fancy
 
@@ -121,6 +124,7 @@ sudo systemctl enable ntpd
 sudo systemctl enable cups-browsed
 sudo systemctl enable haveged
 sudo systemctl enable pcscd
+sudo systemctl enable earlyoom
 
 # TODO: if on laptop:
 sudo systemctl enable NetworkManager
