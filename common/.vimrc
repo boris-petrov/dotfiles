@@ -358,12 +358,14 @@ augroup MyAutocmds
 	autocmd FileType fugitive nmap <buffer> j <C-n>
 	autocmd FileType fugitive nmap <buffer> k <C-p>
 	autocmd FileType fugitive nmap <buffer> l <CR>
+	autocmd FileType fugitive nmap <buffer> q gq
 	autocmd FileType fugitiveblame nnoremap <buffer> j  <C-w>lj<C-w>h
 	autocmd FileType fugitiveblame nnoremap <buffer> J  <C-w>l4j<C-w>h
 	autocmd FileType fugitiveblame nnoremap <buffer> k  <C-w>lk<C-w>h
 	autocmd FileType fugitiveblame nnoremap <buffer> K  <C-w>l4k<C-w>h
 	autocmd FileType fugitiveblame nnoremap <buffer> gg <C-w>lgg<C-w>h
 	autocmd FileType fugitiveblame nnoremap <buffer> G  <C-w>lG<C-w>h
+	autocmd FileType fugitiveblame nmap <buffer> q gq
 augroup END
 
 runtime! macros/matchit.vim " smarter matching with % (ifs, elses...)
