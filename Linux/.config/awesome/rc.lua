@@ -353,7 +353,7 @@ awful.rules.rules = {
       callback = move_to_current_tag,
     },
 
-    { rule_any = { class = { "Firefox", "Chromium-browser", "Chromium" } },
+    { rule_any = { class = { "firefox", "Chromium-browser", "Chromium" } },
       properties = { screen = 1, tag = "2", switchtotag = true } },
     { rule = { instance = "plugin-container" }, properties = { floating = true } }, -- Firefox Flash player
     { rule = { instance = "exe" },              properties = { floating = true } }, -- Chrome Flash player
