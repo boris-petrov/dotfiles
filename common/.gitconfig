@@ -67,9 +67,9 @@
 	log = diff-so-fancy | less --tabs=4 -RFX
 	diff = diff-so-fancy | less --tabs=4 -RFX
 	show = diff-so-fancy | less --tabs=4 -RFX
-; Commented out until https://github.com/so-fancy/diff-so-fancy/issues/35 is fixed
-; [interactive]
-; 	diffFilter = diff-so-fancy --patch-mode | less --tabs=4 -RFX
+; Workaround taken from https://github.com/so-fancy/diff-so-fancy/issues/35
+[interactive]
+	diffFilter = (echo && diff-so-fancy)
 [rebase]
 	missingCommitsCheck = warn
 	autoStash = true
