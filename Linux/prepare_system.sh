@@ -131,6 +131,9 @@ sudo systemctl enable NetworkManager
 sudo systemctl enable acpid
 sudo systemctl enable laptop-mode
 
+npm config set ignore-scripts true
+yarn config set ignore-scripts true
+
 # execute "set spell" in Vim in order to download its dictionaries
 # install aspell and hunspell dictionaries from Dropbox directory
 # install kbgoffice from https://bitbucket.org/axil42/aur-mirror/raw/master/kbgoffice/PKGBUILD or the file in this directory
