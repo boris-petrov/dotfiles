@@ -1,1 +1,6 @@
+RDP:
 xfreerdp /v:192.168.88.234:3389 /u:boris_petrov@live.com /size:1920x1060
+
+VPN:
+sudo pon pbt
+sudo ip route add 192.168.50.0/24 dev ppp0
