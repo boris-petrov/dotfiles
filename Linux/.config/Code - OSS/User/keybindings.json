@@ -1,0 +1,12 @@
+[
+    {
+        "key": "space",
+        "command": "cursorPageDown",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'",
+    },
+    {
+        "key": "shift+space",
+        "command": "cursorPageUp",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'",
+    },
+]

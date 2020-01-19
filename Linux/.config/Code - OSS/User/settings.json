@@ -1,0 +1,158 @@
+{
+    "eslint.packageManager": "yarn",
+    "eslint.runtime": "/usr/bin/node",
+    "editor.suggestSelection": "first",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "eslint.probe": [
+        "javascript",
+        "typescript",
+    ],
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true,
+    "update.showReleaseNotes": false,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "editor.fontSize": 15,
+    "editor.fontFamily": "'Inconsolata', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.emptySelectionClipboard": false,
+    "editor.dragAndDrop": false,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.folding": false,
+    "editor.renderFinalNewline": false,
+    "editor.tabCompletion": "on",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "files.enableTrash": false,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.enableExperiments": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "window.customMenuBarAltFocus": false,
+    "window.enableMenuBarMnemonics": false,
+    "search.useGlobalIgnoreFiles": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+    "terminal.explorerKind": "external",
+    "terminal.external.linuxExec": "urxvt",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.scrollback": 10000,
+    "update.mode": "manual",
+    "editor.minimap.showSlider": "always",
+    "git.autoStash": true,
+    "eslint.migration.2_x": "off",
+    "stylelint.packageManager": "yarn",
+    "vim.visualstar": true,
+    "vim.hlsearch": true,
+    "vim.camelCaseMotion.enable": true,
+    "vim.leader": ",",
+    "vim.smartcase": false,
+    "vim.searchHighlightColor": "rgba(255, 0, 255, 0.3)",
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before" : ["W"],
+            "after" : ["<leader>", "w"],
+        },
+        {
+            "before" : ["u"],
+            "commands" : ["undo"],
+        },
+        {
+            "before" : ["<C-r>"],
+            "commands" : ["redo"],
+        },
+        {
+            "before": ["<C-l>"],
+            "after": ["g", "t"],
+        },
+        {
+            "before": ["<C-h>"],
+            "after": ["g", "T"],
+        },
+        {
+            "before": ["<leader>", "j"],
+            "after": ["J"],
+        },
+        {
+            "before": ["<tab>"],
+            "commands": ["editor.action.indentLines"],
+        },
+        {
+            "before": ["shift+tab"],
+            "commands": ["editor.action.outdentLines"],
+        },
+        {
+            "before": ["J"],
+            "after": ["j", "j", "j", "j"],
+        },
+        {
+            "before": ["K"],
+            "after": ["k", "k", "k", "k"],
+        },
+        {
+            "before": ["V"],
+            "after": ["v", "$", "h"],
+        },
+        {
+            "before": ["Y"],
+            "after": ["y", "$", "h"],
+        },
+        {
+            "before": ["<CR>"],
+            "after": ["o", "<Esc>"],
+        },
+        {
+            "before": ["<Esc>"],
+            "commands": [":nohl"],
+        },
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"],
+        },
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>"],
+        },
+        {
+            "before": ["h", "j"],
+            "after": ["<Esc>"],
+        },
+        {
+            "before": ["j", "h"],
+            "after": ["<Esc>"],
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["v", "v"],
+            "after": ["V"],
+        },
+        {
+            "before": ["p"],
+            "after": ["p", "g", "v", "y"],
+        },
+        {
+            "before": ["<tab>"],
+            "commands": ["editor.action.indentLines"],
+        },
+        {
+            "before": ["shift+tab"],
+            "commands": ["editor.action.outdentLines"],
+        },
+        {
+            "before": ["J"],
+            "after": ["j", "j", "j", "j"],
+        },
+        {
+            "before": ["K"],
+            "after": ["k", "k", "k", "k"],
+        },
+    ],
+}
