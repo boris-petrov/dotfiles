@@ -55,36 +55,44 @@
     "vim.useSystemClipboard": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before" : ["g", "b"],
+            "before": ["<C-j>"],
+            "commands": ["scrollLineDown"],
+        },
+        {
+            "before": ["<C-k>"],
+            "commands": ["scrollLineUp"],
+        },
+        {
+            "before": ["g", "b"],
             "commands": ["workbench.action.navigateBack"],
         },
         {
-            "before" : ["g", "z"],
+            "before": ["g", "z"],
             "commands": ["workbench.action.quickOpen"],
         },
         {
-            "before" : ["<C-d>"],
+            "before": ["<C-d>"],
             "commands": ["workbench.action.closeActiveEditor"],
         },
         {
-            "before" : ["<C-w>"],
+            "before": ["<C-w>"],
             "commands": ["workbench.action.closeActiveEditor"],
         },
         {
-            "before" : ["g", "t"],
+            "before": ["g", "t"],
             "commands": ["editor.action.revealDefinition"],
         },
         {
-            "before" : ["W"],
-            "after" : ["<leader>", "w"],
+            "before": ["W"],
+            "after": ["<leader>", "w"],
         },
         {
-            "before" : ["u"],
-            "commands" : ["undo"],
+            "before": ["u"],
+            "commands": ["undo"],
         },
         {
-            "before" : ["<C-r>"],
-            "commands" : ["redo"],
+            "before": ["<C-r>"],
+            "commands": ["redo"],
         },
         {
             "before": ["<C-l>"],
