@@ -55,6 +55,26 @@
     "vim.useSystemClipboard": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
+            "before" : ["g", "b"],
+            "commands": ["workbench.action.navigateBack"],
+        },
+        {
+            "before" : ["g", "z"],
+            "commands": ["workbench.action.quickOpen"],
+        },
+        {
+            "before" : ["<C-d>"],
+            "commands": ["workbench.action.closeActiveEditor"],
+        },
+        {
+            "before" : ["<C-w>"],
+            "commands": ["workbench.action.closeActiveEditor"],
+        },
+        {
+            "before" : ["g", "t"],
+            "commands": ["editor.action.revealDefinition"],
+        },
+        {
             "before" : ["W"],
             "after" : ["<leader>", "w"],
         },
@@ -155,4 +175,11 @@
             "after": ["k", "k", "k", "k"],
         },
     ],
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "sync.forceDownload": false,
+    "sync.quietSync": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.renderControlCharacters": true,
+    "sync.gist": "de4d5a2bfb42a2dc290390f9fb0fa4e9",
 }
