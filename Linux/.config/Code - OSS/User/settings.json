@@ -31,6 +31,7 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "workbench.enableExperiments": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "window.customMenuBarAltFocus": false,
@@ -52,7 +53,6 @@
     "vim.leader": ",",
     "vim.smartcase": false,
     "vim.searchHighlightColor": "rgba(255, 0, 255, 0.3)",
-    "vim.useSystemClipboard": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<C-j>"],
@@ -116,11 +116,11 @@
         },
         {
             "before": ["J"],
-            "after": ["j", "j", "j", "j"],
+            "after": ["4", "j"],
         },
         {
             "before": ["K"],
-            "after": ["k", "k", "k", "k"],
+            "after": ["4", "k"],
         },
         {
             "before": ["V"],
@@ -176,11 +176,11 @@
         },
         {
             "before": ["J"],
-            "after": ["j", "j", "j", "j"],
+            "after": ["4", "j"],
         },
         {
             "before": ["K"],
-            "after": ["k", "k", "k", "k"],
+            "after": ["4", "k"],
         },
     ],
     "sync.autoDownload": true,
@@ -190,4 +190,5 @@
     "workbench.startupEditor": "newUntitledFile",
     "editor.renderControlCharacters": true,
     "sync.gist": "de4d5a2bfb42a2dc290390f9fb0fa4e9",
+    "workbench.colorTheme": "One Dark Pro Monokai Darker",
 }
