@@ -35,7 +35,6 @@
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "window.customMenuBarAltFocus": false,
-    "window.enableMenuBarMnemonics": false,
     "search.useGlobalIgnoreFiles": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
     "terminal.explorerKind": "external",
@@ -191,4 +190,6 @@
     "editor.renderControlCharacters": true,
     "sync.gist": "de4d5a2bfb42a2dc290390f9fb0fa4e9",
     "workbench.colorTheme": "One Dark Pro Monokai Darker",
+    "window.enableMenuBarMnemonics": false,
+    "window.titleBarStyle": "custom",
 }
