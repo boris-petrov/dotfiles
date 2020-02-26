@@ -192,4 +192,5 @@
     "workbench.colorTheme": "One Dark Pro Monokai Darker",
     "window.enableMenuBarMnemonics": false,
     "window.titleBarStyle": "custom",
+    "els.codeLens.relatedFiles": false,
 }
