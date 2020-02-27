@@ -35,6 +35,8 @@
 --exclude=**/target/**
 
 --exclude=**/package-lock.json
+--exclude=**/*.svg
+--exclude=**/*.xml
 
 --langdef=coffee
 --langmap=coffee:.coffee
