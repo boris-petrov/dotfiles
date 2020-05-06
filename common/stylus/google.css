@@ -32,6 +32,10 @@ a:link, .w, #prs a:visited, #prs a:active, .q:active, .q:visited, .kl:active, .t
     background-color: rgb(50,50,50);
 }
 
+cite {
+    color: grey;
+}
+
 #lst-ib {
     color: rgb(180,180,180);
 }
