@@ -35,7 +35,7 @@
 	autocrlf = input
 	whitespace = fix,space-before-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore_global
-	pager = less -x1,5
+	pager = delta --diff-so-fancy
 [branch]
 	autosetuprebase = always
 [transfer]
@@ -64,12 +64,11 @@
 	newNormal = "green bold"
 	newHighlight = "green bold 22"
 [pager]
-	log = diff-so-fancy | less --tabs=4 -RFX
-	diff = diff-so-fancy | less --tabs=4 -RFX
-	show = diff-so-fancy | less --tabs=4 -RFX
-; Workaround taken from https://github.com/so-fancy/diff-so-fancy/issues/35
+	log = delta --diff-so-fancy
+	diff = delta --diff-so-fancy
+	show = delta --diff-so-fancy
 [interactive]
-	diffFilter = (echo && diff-so-fancy)
+	diffFilter = delta --diff-so-fancy --color-only
 [rebase]
 	missingCommitsCheck = warn
 	autoStash = true

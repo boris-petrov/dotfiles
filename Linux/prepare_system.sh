@@ -60,14 +60,14 @@ yay -S archlinux-keyring \
   fontconfig lib32-fontconfig freetype2 lib32-freetype2 ttf-dejavu otf-inconsolata-lgc-git \
   jdk nodejs npm ruby python python-pip python-pycodestyle gdb \
   thunar gvfs gvfs-smb sshfs \
-  earlyoom \
+  earlyoom delta \
   # for Hotot
   qtwebkit intltool \
   extundelete haveged rsibreak-git ulauncher fluxgui
 
 sudo bash -c "echo -e \"EARLYOOM_ARGS=\"-m 3 -r 0 --avoid \'^(chromium|firefox)$\' --prefer \'^java$\'\"\" > /etc/default/earlyoom"
 
-sudo npm install -g gulp grunt coffeescript npm-check-updates bower diff-so-fancy
+sudo npm install -g gulp grunt coffeescript npm-check-updates bower
 
 sudo bootctl --path=/boot install
 
