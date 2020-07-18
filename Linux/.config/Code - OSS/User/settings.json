@@ -1,5 +1,4 @@
 {
-    "eslint.packageManager": "yarn",
     "eslint.runtime": "/usr/bin/node",
     "editor.suggestSelection": "first",
     "files.exclude": {
@@ -8,10 +7,6 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "eslint.probe": [
-        "javascript",
-        "typescript",
-    ],
     "eslint.alwaysShowStatus": true,
     "eslint.lintTask.enable": true,
     "update.showReleaseNotes": false,
@@ -45,7 +40,6 @@
     "editor.minimap.showSlider": "always",
     "git.autoStash": true,
     "eslint.migration.2_x": "off",
-    "stylelint.packageManager": "yarn",
     "vim.visualstar": true,
     "vim.hlsearch": true,
     "vim.camelCaseMotion.enable": true,
@@ -180,6 +174,46 @@
         {
             "before": ["K"],
             "after": ["4", "k"],
+        },
+        {
+            "before": ["("],
+            "after": ["S", ")"],
+        },
+        {
+            "before": [")"],
+            "after": ["S", ")"],
+        },
+        {
+            "before": ["["],
+            "after": ["S", "]"],
+        },
+        {
+            "before": ["]"],
+            "after": ["S", "]"],
+        },
+        {
+            "before": ["{"],
+            "after": ["S", "}"],
+        },
+        {
+            "before": ["}"],
+            "after": ["S", "}"],
+        },
+        {
+            "before": ["<"],
+            "after": ["S", ">"],
+        },
+        {
+            "before": [">"],
+            "after": ["S", ">"],
+        },
+        {
+            "before": ["'"],
+            "after": ["S", "'"],
+        },
+        {
+            "before": ["\""],
+            "after": ["S", "\""],
         },
     ],
     "sync.autoDownload": true,
