@@ -4,7 +4,7 @@ local math    = require("math")
 local string  = require("string")
 local naughty = require("naughty")
 
-module("calendar2")
+local calendar2 = {}
 
 local calendar = nil
 local offset = 0
@@ -34,7 +34,7 @@ function add_calendar(inc_offset)
     end)
 end
 
-function addCalendarToWidget(widget)
+function calendar2.addCalendarToWidget(widget)
     widget:connect_signal("mouse::enter", function()
         add_calendar(0)
     end)
@@ -49,3 +49,5 @@ function addCalendarToWidget(widget)
         end)
     ))
 end
+
+return calendar2
