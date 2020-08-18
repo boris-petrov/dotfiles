@@ -15,6 +15,7 @@ setopt HIST_IGNORE_SPACE # Do not enter command lines into the history list if t
 setopt histignoredups # Ignore duplicate lines in the history.
 unsetopt HUP # Send the HUP signal to running jobs when the shell exits.
 setopt PROMPT_SUBST # Enable substitutions of functions in prompt
+setopt interactivecomments # Enable ability to add comments at the end of a line
 
 bindkey -v # vi-mode
 
