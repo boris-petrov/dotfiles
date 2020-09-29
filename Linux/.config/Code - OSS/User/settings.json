@@ -22,9 +22,6 @@
     "editor.tabCompletion": "on",
     "editor.acceptSuggestionOnCommitCharacter": false,
     "files.enableTrash": false,
-    "files.eol": "\n",
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
     "workbench.enableExperiments": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.highlightModifiedTabs": true,
@@ -47,6 +44,10 @@
     "vim.smartcase": false,
     "vim.searchHighlightColor": "rgba(255, 0, 255, 0.3)",
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["v", "v"],
+            "after": ["V"],
+        },
         {
             "before": ["<C-j>"],
             "commands": ["scrollLineDown"],
@@ -152,10 +153,6 @@
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
-            "before": ["v", "v"],
-            "after": ["V"],
-        },
-        {
             "before": ["p"],
             "after": ["p", "g", "v", "y"],
         },
@@ -214,6 +211,48 @@
         {
             "before": ["\""],
             "after": ["S", "\""],
+        },
+    ],
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [
+        {
+            "before": ["("],
+            "after": ["s", ")"],
+        },
+        {
+            "before": [")"],
+            "after": ["s", ")"],
+        },
+        {
+            "before": ["["],
+            "after": ["s", "]"],
+        },
+        {
+            "before": ["]"],
+            "after": ["s", "]"],
+        },
+        {
+            "before": ["{"],
+            "after": ["s", "}"],
+        },
+        {
+            "before": ["}"],
+            "after": ["s", "}"],
+        },
+        {
+            "before": ["<"],
+            "after": ["s", ">"],
+        },
+        {
+            "before": [">"],
+            "after": ["s", ">"],
+        },
+        {
+            "before": ["'"],
+            "after": ["s", "'"],
+        },
+        {
+            "before": ["\""],
+            "after": ["s", "\""],
         },
     ],
     "sync.autoDownload": true,
