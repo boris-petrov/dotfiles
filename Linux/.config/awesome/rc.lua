@@ -54,6 +54,8 @@ hostile_takeover = "gvim /home/boris/documents/Hostile\\ Takeover.txt"
 alt_modkey = "Mod1"
 win_modkey = "Mod4"
 
+mainmenu = awful.menu({ items = { { "open terminal", terminal } } })
+
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.max,
@@ -181,6 +183,7 @@ end)
 
 -- {{{ Mouse bindings
 root.buttons(awful.util.table.join(
+    awful.button({ }, 3, function () mainmenu:toggle() end),
     awful.button({ }, 4, awful.tag.viewnext),
     awful.button({ }, 5, awful.tag.viewprev)
 ))
