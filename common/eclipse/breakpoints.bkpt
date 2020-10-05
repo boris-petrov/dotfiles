@@ -9,12 +9,51 @@
 <attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=backend/\/usr\/lib\/jvm\/java-8-jdk\/jre\/lib\/rt.jar&lt;java.lang(ClassCastException.class[ClassCastException"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="message" value="Breakpoint:ClassCastException [Suspend VM] [Include Subclasses]: caught and uncaught"/>
-<attrib name="org.eclipse.jdt.debug.core.installCount" value="0"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
 <attrib name="org.eclipse.jdt.debug.core.checked" value="false"/>
 <attrib name="org.eclipse.jdt.debug.core.suspend_on_subclasses" value="true"/>
 <attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
 <attrib name="org.eclipse.jdt.debug.core.typeName" value="java.lang.ClassCastException"/>
 <attrib name="org.eclipse.jdt.internal.core.JavaModelManager.handleId" value="=backend/\/usr\/lib\/jvm\/java-8-jdk\/jre\/lib\/rt.jar&lt;java.lang(ClassCastException.class"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/" type="8"/>
+<marker type="org.eclipse.jdt.debug.javaExceptionBreakpointMarker">
+<attrib name="org.eclipse.jdt.debug.core.caught" value="false"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="1"/>
+<attrib name="org.eclipse.jdt.debug.core.uncaught" value="true"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=backend/\/home\/boris\/.gradle\/caches\/modules-2\/files-2.1\/org.mongodb\/bson\/3.3.0\/d57b1626e7007a93deb12b2b607e85f6822bf060\/bson-3.3.0.jar&lt;org.bson.codecs.configuration(CodecConfigurationException.class[CodecConfigurationException"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="message" value="Breakpoint:CodecConfigurationException [Suspend VM] [Include Subclasses]: uncaught"/>
+<attrib name="org.eclipse.jdt.debug.core.checked" value="false"/>
+<attrib name="org.eclipse.jdt.debug.core.suspend_on_subclasses" value="true"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="org.bson.codecs.configuration.CodecConfigurationException"/>
+<attrib name="org.eclipse.jdt.internal.core.JavaModelManager.handleId" value="=backend/\/home\/boris\/.gradle\/caches\/modules-2\/files-2.1\/org.mongodb\/bson\/3.3.0\/d57b1626e7007a93deb12b2b607e85f6822bf060\/bson-3.3.0.jar&lt;org.bson.codecs.configuration(CodecConfigurationException.class"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/" type="8"/>
+<marker type="org.eclipse.jdt.debug.javaExceptionBreakpointMarker">
+<attrib name="org.eclipse.jdt.debug.core.caught" value="true"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=backend/\/usr\/lib\/jvm\/java-8-jdk\/jre\/lib\/rt.jar&lt;java.util(ConcurrentModificationException.class[ConcurrentModificationException"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Breakpoint:ConcurrentModificationException [Include Subclasses]: caught and uncaught"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="0"/>
+<attrib name="org.eclipse.jdt.debug.core.checked" value="false"/>
+<attrib name="org.eclipse.jdt.debug.core.suspend_on_subclasses" value="true"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.uncaught" value="true"/>
+<attrib name="org.eclipse.debug.core.registered" value="true"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="java.util.ConcurrentModificationException"/>
+<attrib name="org.eclipse.jdt.internal.core.JavaModelManager.handleId" value="=backend/\/usr\/lib\/jvm\/java-8-jdk\/jre\/lib\/rt.jar&lt;java.util(ConcurrentModificationException.class"/>
 <attrib name="workingset_name" value=""/>
 <attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
 </marker>
@@ -43,10 +82,46 @@
 <attrib name="org.eclipse.jdt.debug.core.caught" value="true"/>
 <attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="1"/>
 <attrib name="org.eclipse.jdt.debug.core.uncaught" value="true"/>
-<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=backend/\/usr\/lib\/jvm\/java-8-jdk\/jre\/lib\/rt.jar&lt;java.lang(NullPointerException.class[NullPointerException"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=backend/\/usr\/lib\/jvm\/java-10-jdk\/lib\/jrt-fs.jar`java.base&lt;java.lang(NoClassDefFoundError.class[NoClassDefFoundError"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
-<attrib name="message" value="Breakpoint:NullPointerException [Suspend VM] [Include Subclasses]: caught and uncaught"/>
 <attrib name="org.eclipse.jdt.debug.core.installCount" value="0"/>
+<attrib name="message" value="Breakpoint:NoClassDefFoundError [Suspend VM]: caught and uncaught"/>
+<attrib name="org.eclipse.jdt.debug.core.checked" value="false"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="java.lang.NoClassDefFoundError"/>
+<attrib name="org.eclipse.jdt.internal.core.JavaModelManager.handleId" value="=backend/\/usr\/lib\/jvm\/java-10-jdk\/lib\/jrt-fs.jar`java.base&lt;java.lang(NoClassDefFoundError.class"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/" type="8"/>
+<marker type="org.eclipse.jdt.debug.javaExceptionBreakpointMarker">
+<attrib name="org.eclipse.jdt.debug.core.caught" value="false"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="1"/>
+<attrib name="org.eclipse.jdt.debug.core.uncaught" value="true"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=backend/\/usr\/lib\/jvm\/java-10-jdk\/lib\/jrt-fs.jar`java.base&lt;java.lang(NoSuchMethodError.class[NoSuchMethodError"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Breakpoint:NoSuchMethodError [Suspend VM]: uncaught"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.jdt.debug.core.checked" value="false"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="java.lang.NoSuchMethodError"/>
+<attrib name="org.eclipse.jdt.internal.core.JavaModelManager.handleId" value="=backend/\/usr\/lib\/jvm\/java-10-jdk\/lib\/jrt-fs.jar`java.base&lt;java.lang(NoSuchMethodError.class"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="false" persistant="true" registered="true">
+<resource path="/" type="8"/>
+<marker type="org.eclipse.jdt.debug.javaExceptionBreakpointMarker">
+<attrib name="org.eclipse.jdt.debug.core.caught" value="true"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="1"/>
+<attrib name="org.eclipse.jdt.debug.core.uncaught" value="true"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=backend/\/usr\/lib\/jvm\/java-8-jdk\/jre\/lib\/rt.jar&lt;java.lang(NullPointerException.class[NullPointerException"/>
+<attrib name="org.eclipse.debug.core.enabled" value="false"/>
+<attrib name="message" value="Breakpoint:NullPointerException [Suspend VM] [Include Subclasses]: caught and uncaught"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
 <attrib name="org.eclipse.jdt.debug.core.checked" value="false"/>
 <attrib name="org.eclipse.jdt.debug.core.suspend_on_subclasses" value="true"/>
 <attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
@@ -62,10 +137,29 @@
 <attrib name="org.eclipse.jdt.debug.core.caught" value="true"/>
 <attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="1"/>
 <attrib name="org.eclipse.jdt.debug.core.uncaught" value="true"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=backend/\/home\/boris\/.gradle\/caches\/modules-2\/files-2.1\/org.camunda.bpm\/camunda-engine\/7.9.0\/f3888bf9533ffe3463add2d53d3bd7f62ee40a82\/camunda-engine-7.9.0.jar&lt;org.camunda.bpm.engine(ProcessEngineException.class[ProcessEngineException"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="0"/>
+<attrib name="message" value="Breakpoint:ProcessEngineException [Suspend VM] [Include Subclasses]: caught and uncaught"/>
+<attrib name="org.eclipse.jdt.debug.core.checked" value="false"/>
+<attrib name="org.eclipse.jdt.debug.core.suspend_on_subclasses" value="true"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="org.camunda.bpm.engine.ProcessEngineException"/>
+<attrib name="org.eclipse.jdt.internal.core.JavaModelManager.handleId" value="=backend/\/home\/boris\/.gradle\/caches\/modules-2\/files-2.1\/org.camunda.bpm\/camunda-engine\/7.9.0\/f3888bf9533ffe3463add2d53d3bd7f62ee40a82\/camunda-engine-7.9.0.jar&lt;org.camunda.bpm.engine(ProcessEngineException.class"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/" type="8"/>
+<marker type="org.eclipse.jdt.debug.javaExceptionBreakpointMarker">
+<attrib name="org.eclipse.jdt.debug.core.caught" value="true"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="1"/>
+<attrib name="org.eclipse.jdt.debug.core.uncaught" value="true"/>
 <attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=backend/\/usr\/lib\/jvm\/java-8-jdk\/jre\/lib\/rt.jar&lt;java.lang(StackOverflowError.class[StackOverflowError"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="message" value="Breakpoint:StackOverflowError [Suspend VM] [Include Subclasses]: caught and uncaught"/>
-<attrib name="org.eclipse.jdt.debug.core.installCount" value="0"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
 <attrib name="org.eclipse.jdt.debug.core.checked" value="false"/>
 <attrib name="org.eclipse.jdt.debug.core.suspend_on_subclasses" value="true"/>
 <attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
@@ -77,19 +171,17 @@
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
 <resource path="/" type="8"/>
-<marker type="org.eclipse.jdt.debug.javaExceptionBreakpointMarker">
-<attrib name="org.eclipse.jdt.debug.core.caught" value="false"/>
-<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="1"/>
-<attrib name="org.eclipse.jdt.debug.core.uncaught" value="true"/>
-<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=backend/\/usr\/lib\/jvm\/java-8-jdk\/jre\/lib\/rt.jar&lt;java.lang(Throwable.class[Throwable"/>
+<marker charStart="34403" lineNumber="813" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="34403"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=backend/\/home\/boris\/.gradle\/caches\/modules-2\/files-2.1\/nu.validator\/validator\/20.7.2\/cff65f9bbf2a61ad277fb81bb9cc945364b49569\/validator-20.7.2.jar=/gradle_used_by_scope=/integrationTest=/=/test=/true=/&lt;nu.validator.messages(MessageEmitterAdapter.class[MessageEmitterAdapter"/>
+<attrib name="charEnd" value="34424"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
-<attrib name="message" value="Breakpoint:Throwable [Suspend VM] [Include Subclasses]: uncaught"/>
+<attrib name="message" value="Line breakpoint:MessageEmitterAdapter [line: 813] - message(MessageType, Exception, String, int, int, boolean, int[])"/>
 <attrib name="org.eclipse.jdt.debug.core.installCount" value="0"/>
-<attrib name="org.eclipse.jdt.debug.core.checked" value="true"/>
-<attrib name="org.eclipse.jdt.debug.core.suspend_on_subclasses" value="true"/>
 <attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
-<attrib name="org.eclipse.jdt.debug.core.typeName" value="java.lang.Throwable"/>
-<attrib name="org.eclipse.jdt.internal.core.JavaModelManager.handleId" value="=backend/\/usr\/lib\/jvm\/java-8-jdk\/jre\/lib\/rt.jar&lt;java.lang(Throwable.class"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="nu.validator.messages.MessageEmitterAdapter"/>
+<attrib name="org.eclipse.jdt.internal.core.JavaModelManager.handleId" value="=backend/\/home\/boris\/.gradle\/caches\/modules-2\/files-2.1\/nu.validator\/validator\/20.7.2\/cff65f9bbf2a61ad277fb81bb9cc945364b49569\/validator-20.7.2.jar=/gradle_used_by_scope=/integrationTest=/=/test=/true=/&lt;nu.validator.messages(MessageEmitterAdapter.class"/>
 <attrib name="workingset_name" value=""/>
 <attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
 </marker>
