@@ -67,7 +67,7 @@ awful.layout.layouts = {
 local lts = { [0] = { [0] = " En ", [1] = "#ff0000" }, [1] = { [0] = " Bg ", [1] = "#00ff00" } }
 mykeyboardlayout = awful.widget.keyboardlayout()
 mykeyboardlayout._layout = { [1] = lts[0][0], [2] = lts[1][0] }
-local kbdwidget = wibox.widget.background()
+local kbdwidget = wibox.container.background()
 kbdwidget:set_widget(mykeyboardlayout.widget)
 kbdwidget:set_fg(lts[0][1])
 
@@ -81,7 +81,7 @@ calendar2.addCalendarToWidget(mytextclock)
 -- Separator widget
 local separator_widget_text = wibox.widget.textbox()
 separator_widget_text:set_text(" |")
-local separator_widget = wibox.widget.background()
+local separator_widget = wibox.container.background()
 separator_widget:set_widget(separator_widget_text)
 separator_widget:set_fg("#ffff00")
 
