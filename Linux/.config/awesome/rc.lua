@@ -304,7 +304,9 @@ root.keys(globalkeys)
 -- }}}
 
 move_to_current_tag = function(c)
-    c.focus:move_to_tag(client.focus.screen.selected_tag)
+    if c.focus ~= nil then
+        c.focus:move_to_tag(client.focus.screen.selected_tag)
+    end
 end
 
 -- {{{ Rules
