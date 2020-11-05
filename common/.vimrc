@@ -322,6 +322,7 @@ augroup MyAutocmds
 	autocmd FileType help nmap <buffer> q :q<CR>
 
 	autocmd FileType coffee,javascript,typescript,ruby,eruby,html,htmldjango,zsh,sh,yaml,scss,html.handlebars setlocal tabstop=2 shiftwidth=2 softtabstop=2
+	autocmd FileType html.handlebars setlocal nofixendofline
 	autocmd FileType cs,java,vim,go,groovy setlocal noexpandtab
 	autocmd FileType coffee,python,slim setlocal foldmethod=indent nofoldenable
 	if !executable('ag')
