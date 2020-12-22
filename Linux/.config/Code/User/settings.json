@@ -1,270 +1,270 @@
 {
-    "eslint.runtime": "/usr/bin/node",
-    "editor.suggestSelection": "first",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+  "eslint.runtime": "/usr/bin/node",
+  "editor.suggestSelection": "first",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.lintTask.enable": true,
+  "update.showReleaseNotes": false,
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "editor.fontSize": 15,
+  "editor.fontFamily": "'Inconsolata', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.emptySelectionClipboard": false,
+  "editor.dragAndDrop": false,
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.folding": false,
+  "editor.linkedEditing": true,
+  "editor.renderFinalNewline": false,
+  "editor.tabCompletion": "on",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "files.enableTrash": false,
+  "workbench.enableExperiments": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "window.customMenuBarAltFocus": false,
+  "search.useGlobalIgnoreFiles": true,
+  "extensions.ignoreRecommendations": true,
+  "terminal.explorerKind": "external",
+  "terminal.external.linuxExec": "urxvt",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.scrollback": 10000,
+  "update.mode": "manual",
+  "editor.minimap.showSlider": "always",
+  "git.autoStash": true,
+  "eslint.migration.2_x": "off",
+  "vim.visualstar": true,
+  "vim.hlsearch": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.leader": ",",
+  "vim.smartcase": false,
+  "vim.searchHighlightColor": "rgba(255, 0, 255, 0.3)",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["v", "v"],
+      "after": ["V"]
     },
-    "eslint.alwaysShowStatus": true,
-    "eslint.lintTask.enable": true,
-    "update.showReleaseNotes": false,
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "editor.fontSize": 15,
-    "editor.fontFamily": "'Inconsolata', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.emptySelectionClipboard": false,
-    "editor.dragAndDrop": false,
-    "editor.copyWithSyntaxHighlighting": false,
-    "editor.folding": false,
-    "editor.linkedEditing": true,
-    "editor.renderFinalNewline": false,
-    "editor.tabCompletion": "on",
-    "editor.acceptSuggestionOnCommitCharacter": false,
-    "files.enableTrash": false,
-    "workbench.enableExperiments": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.editor.highlightModifiedTabs": true,
-    "workbench.settings.enableNaturalLanguageSearch": false,
-    "window.customMenuBarAltFocus": false,
-    "search.useGlobalIgnoreFiles": true,
-    "extensions.ignoreRecommendations": true,
-    "terminal.explorerKind": "external",
-    "terminal.external.linuxExec": "urxvt",
-    "terminal.integrated.copyOnSelection": true,
-    "terminal.integrated.scrollback": 10000,
-    "update.mode": "manual",
-    "editor.minimap.showSlider": "always",
-    "git.autoStash": true,
-    "eslint.migration.2_x": "off",
-    "vim.visualstar": true,
-    "vim.hlsearch": true,
-    "vim.camelCaseMotion.enable": true,
-    "vim.leader": ",",
-    "vim.smartcase": false,
-    "vim.searchHighlightColor": "rgba(255, 0, 255, 0.3)",
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["v", "v"],
-            "after": ["V"],
-        },
-        {
-            "before": ["<C-j>"],
-            "commands": ["scrollLineDown"],
-        },
-        {
-            "before": ["<C-k>"],
-            "commands": ["scrollLineUp"],
-        },
-        {
-            "before": ["g", "b"],
-            "commands": ["workbench.action.navigateBack"],
-        },
-        {
-            "before": ["g", "z"],
-            "commands": ["workbench.action.quickOpen"],
-        },
-        {
-            "before": ["<C-d>"],
-            "commands": ["workbench.action.closeActiveEditor"],
-        },
-        {
-            "before": ["<C-w>"],
-            "commands": ["workbench.action.closeActiveEditor"],
-        },
-        {
-            "before": ["g", "t"],
-            "commands": ["editor.action.revealDefinition"],
-        },
-        {
-            "before": ["W"],
-            "after": ["<leader>", "w"],
-        },
-        {
-            "before": ["u"],
-            "commands": ["undo"],
-        },
-        {
-            "before": ["<C-r>"],
-            "commands": ["redo"],
-        },
-        {
-            "before": ["<C-l>"],
-            "after": ["g", "t"],
-        },
-        {
-            "before": ["<C-h>"],
-            "after": ["g", "T"],
-        },
-        {
-            "before": ["<leader>", "j"],
-            "after": ["J"],
-        },
-        {
-            "before": ["<tab>"],
-            "commands": ["editor.action.indentLines"],
-        },
-        {
-            "before": ["shift+tab"],
-            "commands": ["editor.action.outdentLines"],
-        },
-        {
-            "before": ["J"],
-            "after": ["4", "j"],
-        },
-        {
-            "before": ["K"],
-            "after": ["4", "k"],
-        },
-        {
-            "before": ["V"],
-            "after": ["v", "$", "h"],
-        },
-        {
-            "before": ["Y"],
-            "after": ["y", "$", "h"],
-        },
-        {
-            "before": ["<CR>"],
-            "after": ["o", "<Esc>"],
-        },
-        {
-            "before": ["<Esc>"],
-            "commands": [":nohl"],
-        },
-    ],
-    "vim.insertModeKeyBindingsNonRecursive": [
-        {
-            "before": ["j", "k"],
-            "after": ["<Esc>"],
-        },
-        {
-            "before": ["k", "j"],
-            "after": ["<Esc>"],
-        },
-        {
-            "before": ["h", "j"],
-            "after": ["<Esc>"],
-        },
-        {
-            "before": ["j", "h"],
-            "after": ["<Esc>"],
-        },
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": ["p"],
-            "after": ["p", "g", "v", "y"],
-        },
-        {
-            "before": ["<tab>"],
-            "commands": ["editor.action.indentLines"],
-        },
-        {
-            "before": ["shift+tab"],
-            "commands": ["editor.action.outdentLines"],
-        },
-        {
-            "before": ["J"],
-            "after": ["4", "j"],
-        },
-        {
-            "before": ["K"],
-            "after": ["4", "k"],
-        },
-        {
-            "before": ["("],
-            "after": ["S", ")"],
-        },
-        {
-            "before": [")"],
-            "after": ["S", ")"],
-        },
-        {
-            "before": ["["],
-            "after": ["S", "]"],
-        },
-        {
-            "before": ["]"],
-            "after": ["S", "]"],
-        },
-        {
-            "before": ["{"],
-            "after": ["S", "}"],
-        },
-        {
-            "before": ["}"],
-            "after": ["S", "}"],
-        },
-        {
-            "before": ["<"],
-            "after": ["S", ">"],
-        },
-        {
-            "before": [">"],
-            "after": ["S", ">"],
-        },
-        {
-            "before": ["'"],
-            "after": ["S", "'"],
-        },
-        {
-            "before": ["\""],
-            "after": ["S", "\""],
-        },
-    ],
-    "vim.operatorPendingModeKeyBindingsNonRecursive": [
-        {
-            "before": ["("],
-            "after": ["s", ")"],
-        },
-        {
-            "before": [")"],
-            "after": ["s", ")"],
-        },
-        {
-            "before": ["["],
-            "after": ["s", "]"],
-        },
-        {
-            "before": ["]"],
-            "after": ["s", "]"],
-        },
-        {
-            "before": ["{"],
-            "after": ["s", "}"],
-        },
-        {
-            "before": ["}"],
-            "after": ["s", "}"],
-        },
-        {
-            "before": ["<"],
-            "after": ["s", ">"],
-        },
-        {
-            "before": [">"],
-            "after": ["s", ">"],
-        },
-        {
-            "before": ["'"],
-            "after": ["s", "'"],
-        },
-        {
-            "before": ["\""],
-            "after": ["s", "\""],
-        },
-    ],
-    "sync.autoDownload": true,
-    "sync.autoUpload": true,
-    "sync.forceDownload": false,
-    "sync.quietSync": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.renderControlCharacters": true,
-    "sync.gist": "de4d5a2bfb42a2dc290390f9fb0fa4e9",
-    "workbench.colorTheme": "One Dark Pro Monokai Darker",
-    "window.enableMenuBarMnemonics": false,
-    "window.titleBarStyle": "custom",
-    "els.codeLens.relatedFiles": false,
+    {
+      "before": ["<C-j>"],
+      "commands": ["scrollLineDown"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["scrollLineUp"]
+    },
+    {
+      "before": ["g", "b"],
+      "commands": ["workbench.action.navigateBack"]
+    },
+    {
+      "before": ["g", "z"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<C-d>"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<C-w>"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["g", "t"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["W"],
+      "after": ["<leader>", "w"]
+    },
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["g", "t"]
+    },
+    {
+      "before": ["<C-h>"],
+      "after": ["g", "T"]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "after": ["J"]
+    },
+    {
+      "before": ["<tab>"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["shift+tab"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": ["J"],
+      "after": ["4", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["4", "k"]
+    },
+    {
+      "before": ["V"],
+      "after": ["v", "$", "h"]
+    },
+    {
+      "before": ["Y"],
+      "after": ["y", "$", "h"]
+    },
+    {
+      "before": ["<CR>"],
+      "after": ["o", "<Esc>"]
+    },
+    {
+      "before": ["<Esc>"],
+      "commands": [":nohl"]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["k", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["h", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["j", "h"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
+    },
+    {
+      "before": ["<tab>"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["shift+tab"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": ["J"],
+      "after": ["4", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["4", "k"]
+    },
+    {
+      "before": ["("],
+      "after": ["S", ")"]
+    },
+    {
+      "before": [")"],
+      "after": ["S", ")"]
+    },
+    {
+      "before": ["["],
+      "after": ["S", "]"]
+    },
+    {
+      "before": ["]"],
+      "after": ["S", "]"]
+    },
+    {
+      "before": ["{"],
+      "after": ["S", "}"]
+    },
+    {
+      "before": ["}"],
+      "after": ["S", "}"]
+    },
+    {
+      "before": ["<"],
+      "after": ["S", ">"]
+    },
+    {
+      "before": [">"],
+      "after": ["S", ">"]
+    },
+    {
+      "before": ["'"],
+      "after": ["S", "'"]
+    },
+    {
+      "before": ["\""],
+      "after": ["S", "\""]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    {
+      "before": ["("],
+      "after": ["s", ")"]
+    },
+    {
+      "before": [")"],
+      "after": ["s", ")"]
+    },
+    {
+      "before": ["["],
+      "after": ["s", "]"]
+    },
+    {
+      "before": ["]"],
+      "after": ["s", "]"]
+    },
+    {
+      "before": ["{"],
+      "after": ["s", "}"]
+    },
+    {
+      "before": ["}"],
+      "after": ["s", "}"]
+    },
+    {
+      "before": ["<"],
+      "after": ["s", ">"]
+    },
+    {
+      "before": [">"],
+      "after": ["s", ">"]
+    },
+    {
+      "before": ["'"],
+      "after": ["s", "'"]
+    },
+    {
+      "before": ["\""],
+      "after": ["s", "\""]
+    }
+  ],
+  "sync.autoDownload": true,
+  "sync.autoUpload": true,
+  "sync.forceDownload": false,
+  "sync.quietSync": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.renderControlCharacters": true,
+  "sync.gist": "de4d5a2bfb42a2dc290390f9fb0fa4e9",
+  "workbench.colorTheme": "One Dark Pro Monokai Darker",
+  "window.enableMenuBarMnemonics": false,
+  "window.titleBarStyle": "custom",
+  "els.codeLens.relatedFiles": false
 }
