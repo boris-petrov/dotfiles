@@ -40,6 +40,7 @@
 	autosetuprebase = always
 [delta]
 	features = diff-so-fancy
+	hunk-header-style = line-number syntax
 [transfer]
 	fsckObjects = true
 [color]
