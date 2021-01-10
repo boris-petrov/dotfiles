@@ -35,9 +35,11 @@
 	autocrlf = input
 	whitespace = fix,space-before-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore_global
-	pager = delta --diff-so-fancy
+	pager = delta
 [branch]
 	autosetuprebase = always
+[delta]
+	features = diff-so-fancy
 [transfer]
 	fsckObjects = true
 [color]
@@ -64,11 +66,11 @@
 	newNormal = "green bold"
 	newHighlight = "green bold 22"
 [pager]
-	log = delta --diff-so-fancy
-	diff = delta --diff-so-fancy
-	show = delta --diff-so-fancy
+	log = delta
+	diff = delta
+	show = delta
 [interactive]
-	diffFilter = delta --diff-so-fancy --color-only
+	diffFilter = delta --color-only
 [rebase]
 	missingCommitsCheck = warn
 	autoStash = true
