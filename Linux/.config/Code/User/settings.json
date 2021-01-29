@@ -266,5 +266,7 @@
   "workbench.colorTheme": "One Dark Pro Monokai Darker",
   "window.enableMenuBarMnemonics": false,
   "window.titleBarStyle": "custom",
-  "els.codeLens.relatedFiles": false
+  "els.codeLens.relatedFiles": false,
+  "files.autoSave": "off",
+  "workbench.settings.editor": "json"
 }
