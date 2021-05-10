@@ -802,11 +802,11 @@ highlight diffFile guifg=Yellow
 " fugitive mappings
 " --------------------------------------------------------------------------------------------------
 
-cab Gs Gstatus
+cab Gs Git
 cab Gc Gcommit
 cab Gd Gdiff
 
-nmap gs :Gstatus<CR><C-n>
+nmap gs :Git<CR><C-n>
 
 " --------------------------------------------------------------------------------------------------
 " vim-gutter Settings
