@@ -47,11 +47,11 @@ yay -S archlinux-keyring \
   cups gutenprint system-config-printer \
   networkmanager network-manager-applet networkmanager-pptp networkmanager-openvpn networkmanager-l2tp gnome-keyring \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium pepper-flash firefox flashplugin \
-  pidgin telegram-purple purple-skypeweb-git purple-hangouts-hg purple-facebook-git slack-libpurple-git purple-discord-git purple-matrix-git kbdd-git pidgin-otr \
+  pidgin telegram-purple purple-skypeweb-git purple-hangouts-git purple-facebook-git slack-libpurple-git purple-discord-git purple-matrix-git kbdd-git pidgin-otr \
   dropbox pcloud liferea xcmenu-git thunderbird htop autokey xdg-utils lxappearance feh gnome-themes-standard \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xscreensaver arandr \
   aspell hunspell \
-  gvim colordiff universal-ctags-git the_silver_searcher ripgrep fzf grc ngrok ncdu \
+  gvim colordiff uctags-git the_silver_searcher ripgrep fzf grc ngrok ncdu \
   zsh zsh-syntax-highlighting rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git tmux \
   ntp openssh ntfs-3g oxygen-icons \
   zip unrar unzip \
