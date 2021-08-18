@@ -362,8 +362,8 @@ augroup MyAutocmds
 	autocmd FileType fugitive nmap <buffer> d <CR>:Gdiff<CR><C-w>hgg
 	autocmd FileType fugitive nmap <buffer> C cc
 	autocmd FileType fugitive nmap <buffer> ca cva
-	autocmd FileType fugitive nmap <buffer> j <C-n>
-	autocmd FileType fugitive nmap <buffer> k <C-p>
+	autocmd FileType fugitive nmap <buffer> j )
+	autocmd FileType fugitive nmap <buffer> k (
 	autocmd FileType fugitive nmap <buffer> l <CR>
 	autocmd FileType fugitive nmap <buffer> q gq
 	autocmd FileType fugitiveblame nnoremap <buffer> j  <C-w>lj<C-w>h
@@ -806,7 +806,7 @@ cab Gs Git
 cab Gc Gcommit
 cab Gd Gdiff
 
-nmap gs :Git<CR><C-n>
+nmap gs :Git<CR>
 
 " --------------------------------------------------------------------------------------------------
 " vim-gutter Settings
