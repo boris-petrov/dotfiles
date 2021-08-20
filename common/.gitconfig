@@ -11,6 +11,7 @@
 [merge]
 	ff = no
 	tool = meld
+	autoStash = true
 [commit]
 	gpgSign = true
 [alias]
