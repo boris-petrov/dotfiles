@@ -272,5 +272,7 @@
   "window.titleBarStyle": "custom",
   "els.codeLens.relatedFiles": false,
   "files.autoSave": "off",
-  "workbench.settings.editor": "json"
+  "workbench.settings.editor": "json",
+  "workbench.editor.wrapTabs": true,
+  "editor.suggest.showStatusBar": true
 }
