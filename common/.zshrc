@@ -347,4 +347,13 @@ elif [ `uname -o` = "Cygwin" ]; then
   alias gvim=vim
 fi
 
+# replaces `git push --force` with `git push --force-with-lease`
+git() {
+  if [[ $@ == 'push -f'* || $@ == 'push --force'* ]]; then
+    command git push --force-with-lease
+  else
+    command git "$@"
+  fi
+}
+
 ulimit -c unlimited
