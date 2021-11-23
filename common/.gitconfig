@@ -76,6 +76,8 @@
 [rebase]
 	missingCommitsCheck = warn
 	autoStash = true
+[advice]
+	skippedCherryPicks = false
 [annex]
 	autocommit = false
 	resolvemerge = false
