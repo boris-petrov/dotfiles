@@ -48,7 +48,7 @@ yay -S archlinux-keyring \
   networkmanager network-manager-applet networkmanager-pptp networkmanager-openvpn networkmanager-l2tp gnome-keyring \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium pepper-flash firefox flashplugin \
   pidgin telegram-purple purple-skypeweb-git purple-hangouts-git purple-facebook-git slack-libpurple-git purple-discord-git purple-matrix-git kbdd-git pidgin-otr \
-  dropbox pcloud liferea xcmenu-git thunderbird htop autokey xdg-utils lxappearance feh gnome-themes-standard \
+  dropbox pcloud liferea xcmenu-git thunderbird htop autokey-gtk xdg-utils lxappearance feh gnome-themes-standard \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xscreensaver arandr \
   aspell hunspell \
   gvim colordiff uctags-git the_silver_searcher ripgrep fzf grc ngrok ncdu \
