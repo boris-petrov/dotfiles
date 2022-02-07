@@ -24,6 +24,7 @@
   "editor.tabCompletion": "on",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "files.enableTrash": false,
+  "html.autoCreateQuotes": false,
   "workbench.enableExperiments": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.highlightModifiedTabs": true,
