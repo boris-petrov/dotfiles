@@ -356,4 +356,7 @@ git() {
   fi
 }
 
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
 ulimit -c unlimited
