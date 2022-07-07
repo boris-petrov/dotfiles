@@ -26,6 +26,7 @@
 	rebase = true
 [push]
 	default = simple
+	autoSetupRemote = true
 	followTags = true
 [log]
 	follow = yes
