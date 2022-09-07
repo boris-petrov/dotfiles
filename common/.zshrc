@@ -98,6 +98,7 @@ alias mv='mv -i'
 
 alias gs='git status'
 alias gd='git diff'
+alias gdd="GIT_EXTERNAL_DIFF=difft git diff --ext-diff"
 alias ga='git add'
 alias gc='git commit -v'
 alias gl='git log'
