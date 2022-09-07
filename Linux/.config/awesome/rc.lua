@@ -410,11 +410,11 @@ awful.rules.rules = {
       properties = { screen = 1, tag = "7" } },
 
     -- Mail
-    { rule = { class = "Thunderbird" },
+    { rule = { class = "thunderbird" },
       properties = { screen = screen.count(), tag = "8" } },
-    { rule = { class = "Thunderbird", name = "Attach File(s)" },
+    { rule = { class = "thunderbird", name = "Attach File(s)" },
       callback = move_to_current_tag },
-    { rule = { class = "Thunderbird", instance = "Msgcompose" },
+    { rule = { class = "thunderbird", instance = "Msgcompose" },
       callback = move_to_current_tag },
 
     -- Downloads
