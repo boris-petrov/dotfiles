@@ -60,7 +60,7 @@ yay -S archlinux-keyring \
   fontconfig lib32-fontconfig freetype2 lib32-freetype2 ttf-dejavu otf-inconsolata-lgc-git \
   jdk nodejs npm ruby python python-pip python-pycodestyle gdb \
   thunar gvfs gvfs-smb sshfs \
-  earlyoom git-delta \
+  earlyoom git-delta difftastic \
   # for Hotot
   qtwebkit intltool \
   extundelete haveged rsibreak-git ulauncher fluxgui
