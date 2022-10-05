@@ -74,8 +74,6 @@
 	show = delta
 [interactive]
 	diffFilter = delta --color-only
-[add.interactive]
-	useBuiltin = false # bug in `delta` - https://github.com/dandavison/delta/issues/1114
 [rebase]
 	missingCommitsCheck = warn
 	autoStash = true
