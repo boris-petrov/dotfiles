@@ -24,4 +24,24 @@ return {
     top = 0,
     bottom = 0,
   },
+
+  mouse_bindings = {
+    {
+      event = { Up = { streak = 1, button = 'Left' } },
+      mods = 'NONE',
+      action = wezterm.action.CompleteSelection 'ClipboardAndPrimarySelection',
+    },
+
+    {
+      event = { Up = { streak = 2, button = 'Left' } },
+      mods = 'NONE',
+      action = wezterm.action.CompleteSelection 'ClipboardAndPrimarySelection',
+    },
+
+    {
+      event = { Up = { streak = 1, button = 'Left' } },
+      mods = 'CTRL',
+      action = wezterm.action.OpenLinkAtMouseCursor,
+    },
+  },
 }
