@@ -48,7 +48,7 @@ beautiful.init(awful.util.get_themes_dir() .. "default/theme.lua")
 beautiful.border_focus = "#7fff00"
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt"
+terminal = "wezterm"
 hostile_takeover = "gvim /home/boris/documents/Hostile\\ Takeover.txt"
 
 alt_modkey = "Mod1"
