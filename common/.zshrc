@@ -351,6 +351,10 @@ git() {
   fi
 }
 
+gradle() {
+  [ -f './gradlew' ] && ./gradlew "$@" || /usr/bin/gradle "$@"
+}
+
 # great video about `fzf` - https://www.youtube.com/watch?v=qgG5Jhi_Els
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
