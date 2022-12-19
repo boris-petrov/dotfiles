@@ -352,7 +352,11 @@ git() {
 }
 
 gradle() {
-  [ -f './gradlew' ] && ./gradlew "$@" || /usr/bin/gradle "$@"
+  if [ -f './gradlew' ]; then
+    ./gradlew "$@"
+  else
+    /usr/bin/gradle "$@"
+  fi
 }
 
 # great video about `fzf` - https://www.youtube.com/watch?v=qgG5Jhi_Els
