@@ -353,7 +353,7 @@ git() {
 
 use-gradlew() {
   if [[ $BUFFER =~ '(^|&&|;)\s*(xvfb-run\s.*\s)?gradle\s' && -f './gradlew' ]]; then
-    BUFFER=${BUFFER:s/gradle/.\/gradlew}
+    BUFFER=${BUFFER:gs/gradle/.\/gradlew}
   fi
   zle .$WIDGET "$@"
 }
