@@ -351,13 +351,13 @@ git() {
   fi
 }
 
-gradle() {
-  if [ -f './gradlew' ]; then
-    ./gradlew "$@"
-  else
-    /usr/bin/gradle "$@"
+use-gradlew() {
+  if [[ $BUFFER =~ '^\s*(xvfb-run\s.*\s)?gradle\s' && -f './gradlew' ]]; then
+    BUFFER=${BUFFER:s/gradle/.\/gradlew}
   fi
+  zle .$WIDGET "$@"
 }
+zle -N accept-line use-gradlew
 
 # great video about `fzf` - https://www.youtube.com/watch?v=qgG5Jhi_Els
 source /usr/share/fzf/key-bindings.zsh
