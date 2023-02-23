@@ -20,7 +20,7 @@
   "editor.copyWithSyntaxHighlighting": false,
   "editor.folding": false,
   "editor.linkedEditing": true,
-  "editor.renderFinalNewline": false,
+  "editor.renderFinalNewline": "off",
   "editor.tabCompletion": "on",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "files.enableTrash": false,
