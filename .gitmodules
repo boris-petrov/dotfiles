@@ -1,6 +1,3 @@
-[submodule "common/.vim/bundle/Vundle.vim"]
-	path = common/.vim/bundle/Vundle.vim
-	url = git@github.com:VundleVim/Vundle.vim.git
 [submodule "Linux/.config/awesome/obvious"]
 	path = Linux/.config/awesome/obvious
 	url = git@github.com:hoelzro/obvious.git
