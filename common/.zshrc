@@ -297,6 +297,7 @@ if [ `uname -s` = "Linux" ]; then
   urxvt-bindings
 
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source $HOME/.config/fzf-tab/fzf-tab.plugin.zsh
 
   # zsh highlighting
   ZSH_HIGHLIGHT_STYLES[precommand]='fg=green'

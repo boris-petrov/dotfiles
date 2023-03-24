@@ -4,3 +4,6 @@
 [submodule "Linux/.config/awesome/apw"]
 	path = Linux/.config/awesome/apw
 	url = git@github.com:mokasin/apw.git
+[submodule "Linux/.config/fzf-tab"]
+	path = Linux/.config/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab
