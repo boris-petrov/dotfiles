@@ -46,7 +46,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'w0rp/ale'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'sickill/vim-pasta'
-Plugin 'sjl/gundo.vim'
+Plugin 'simnalamburt/vim-mundo'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
@@ -449,10 +449,10 @@ let g:gutentags_generate_on_missing = 0
 let g:gutentags_generate_on_new = 0
 
 " --------------------------------------------------------------------------------------------------
-" Gundo
+" Mundo
 " --------------------------------------------------------------------------------------------------
 
-nnoremap <F4> :GundoToggle<CR>
+nnoremap <F4> :MundoToggle<CR>
 
 " --------------------------------------------------------------------------------------------------
 " CoffeeScript related stuff
