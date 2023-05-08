@@ -7,7 +7,6 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "eslint.alwaysShowStatus": true,
   "eslint.lintTask.enable": true,
   "update.showReleaseNotes": false,
   "telemetry.telemetryLevel": "off",
@@ -262,13 +261,8 @@
       "after": ["s", "\""]
     }
   ],
-  "sync.autoDownload": true,
-  "sync.autoUpload": true,
-  "sync.forceDownload": false,
-  "sync.quietSync": true,
   "workbench.startupEditor": "newUntitledFile",
   "editor.renderControlCharacters": true,
-  "sync.gist": "de4d5a2bfb42a2dc290390f9fb0fa4e9",
   "workbench.colorTheme": "One Dark Pro Monokai Darker",
   "window.enableMenuBarMnemonics": false,
   "window.titleBarStyle": "custom",
