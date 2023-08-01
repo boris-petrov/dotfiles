@@ -65,7 +65,7 @@ yay -S archlinux-keyring \
   qtwebkit intltool \
   extundelete haveged rsibreak-git ulauncher fluxgui
 
-sudo bash -c "echo -e \"EARLYOOM_ARGS=\"-m 3 -r 0 --avoid \'^\(chromium\|firefox\|awesome\|slim\)$\' --prefer \'^\(java\|code\|node\)$\'\"\" > /etc/default/earlyoom"
+sudo bash -c "echo -e \"EARLYOOM_ARGS=\"-m 3 -r 0 --avoid \'^\(firefox\|awesome\|slim\)$\' --prefer \'^\(java\|code\|node\|chromium\)$\'\"\" > /etc/default/earlyoom"
 
 sudo npm install -g gulp grunt coffeescript npm-check-updates bower
 
