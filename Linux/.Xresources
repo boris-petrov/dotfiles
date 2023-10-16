@@ -4,7 +4,8 @@ Xft.autohint:  False
 Xft.hintstyle: hintfull
 Xft.rgba:      rgb
 Xft.lcdfilter: lcddefault
-Xft.dpi:       96
+/* set the following to the same value as shown by `xdpyinfo | grep resolution` (after fixing `/etc/X11/xorg.conf.d/90-monitor.conf` and rebooting) */
+Xft.dpi:       118
 
 URxvt.termName: rxvt-unicode-256color
 
