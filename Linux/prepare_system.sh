@@ -57,6 +57,7 @@ yay -S --needed archlinux-keyring \
   thunar gvfs gvfs-smb sshfs \
   earlyoom git-delta difftastic \
   intltool less htop \
+  pinentry kwayland5 qt5-x11extras \
   extundelete haveged rsibreak-git ulauncher fluxgui redshift
 
 sudo bash -c "echo -e \"EARLYOOM_ARGS=\"-m 3 -r 0 --avoid \'^\(firefox\|awesome\|slim\)$\' --prefer \'^\(java\|code\|node\|chromium\)$\'\"\" > /etc/default/earlyoom"
