@@ -288,10 +288,10 @@ if has('win32')
 	command! DejaVu      set guifont=DejaVu_LGC_Sans_Mono:h13:cDEFAULT
 elseif has('unix')
 	" set guifont=DejaVu\ LGC\ Sans\ Mono\ Book\ 14
-	set guifont=Inconsolata\ LGC\ 15
+	set guifont=Inconsolata\ LGC\ 12
 
-	command! Inconsolata set guifont=Inconsolata\ LGC\ 15
-	command! DejaVu      set guifont=DejaVu\ LGC\ Sans\ Mono\ Book\ 14
+	command! Inconsolata set guifont=Inconsolata\ LGC\ 12
+	command! DejaVu      set guifont=DejaVu\ LGC\ Sans\ Mono\ Book\ 11
 endif
 
 " --------------------------------------------------------------------------------------------------

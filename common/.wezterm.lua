@@ -4,7 +4,7 @@ return {
   check_for_updates = false,
 
   font = wezterm.font 'Inconsolata LGC',
-  font_size = 15,
+  font_size = 12,
 
   hide_tab_bar_if_only_one_tab = true,
 
