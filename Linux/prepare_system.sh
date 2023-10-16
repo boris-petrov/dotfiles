@@ -27,19 +27,14 @@ popd
 sudo pacman -Syy
 
 # install packages
-yay -S archlinux-keyring \
+yay -S --needed archlinux-keyring \
   intel-ucode \
-  # ONE of the next two lines should be chosen
-  xf86-video-intel mesa-libgl lib32-mesa-libgl mesa-vdpau lib32-mesa-vdpau libva-intel-driver \
-  nvidia lib32-nvidia-libgl libva-vdpau-driver \
-  # the next line is for laptops only
+  xf86-video-intel mesa-libgl mesa-vdpau libva-intel-driver \
   xf86-input-libinput acpi acpid laptop-mode-tools \
-  # instead of "libacr38ucontrol", install the drivers
-  # for the correct model of the USB stick
-  libacr38ucontrol lsb-release deb2targz scinterface-bin \
-  pulseaudio pulseaudio-alsa lib32-libpulse pavucontrol \
+  lsb-release deb2targz \
+  pulseaudio pulseaudio-alsa pavucontrol sof-firmware \
   systemd-boot-pacman-hook \
-  alsa-utils alsa-plugins lib32-alsa-plugins libsamplerate \
+  alsa-utils alsa-plugins libsamplerate \
   smplayer deadbeef \
   udisks2 udiskie dosfstools \
   zathura zathura-djvu zathura-pdf-poppler zathura-ps \
@@ -48,37 +43,33 @@ yay -S archlinux-keyring \
   networkmanager network-manager-applet networkmanager-pptp networkmanager-openvpn networkmanager-l2tp gnome-keyring \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium pepper-flash firefox flashplugin \
   pidgin telegram-tdlib-purple-minimal-git purple-skypeweb-git purple-hangouts-git purple-facebook-git slack-libpurple-git purple-discord-git purple-matrix-git kbdd-git pidgin-otr \
-  dropbox pcloud liferea xcmenu-git thunderbird htop autokey-gtk xdg-utils lxappearance feh gnome-themes-standard \
+  dropbox liferea xcmenu-git thunderbird htop autokey-gtk xdg-utils lxappearance feh gnome-themes-extra \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xscreensaver arandr \
   aspell hunspell \
   gvim colordiff uctags-git the_silver_searcher ripgrep fzf grc ngrok ncdu \
   zsh zsh-syntax-highlighting rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git wezterm tmux fzf fd \
   ntp openssh ntfs-3g oxygen-icons \
   zip unrar unzip \
-  deluge flareget \
-  freerdp realvnc-viewer-bin \
-  fontconfig lib32-fontconfig freetype2 lib32-freetype2 ttf-dejavu otf-inconsolata-lgc-git \
-  jdk nodejs npm ruby python python-pip python-pycodestyle gdb \
+  deluge-gtk flareget \
+  freerdp tigervnc \
+  fontconfig freetype2 ttf-dejavu otf-inconsolata-lgc-git \
+  jdk nodejs npm pnpm ruby python python-pip python-pycodestyle gdb \
   thunar gvfs gvfs-smb sshfs \
   earlyoom git-delta difftastic \
-  # for Hotot
-  qtwebkit intltool \
-  extundelete haveged rsibreak-git ulauncher fluxgui
+  intltool less htop \
+  extundelete haveged rsibreak-git ulauncher fluxgui redshift
 
 sudo bash -c "echo -e \"EARLYOOM_ARGS=\"-m 3 -r 0 --avoid \'^\(firefox\|awesome\|slim\)$\' --prefer \'^\(java\|code\|node\|chromium\)$\'\"\" > /etc/default/earlyoom"
 
-sudo npm install -g gulp grunt coffeescript npm-check-updates bower
+sudo npm install -g gulp grunt coffeescript npm-check-updates bower ember-cli stylelint prettier
 
-sudo bootctl --path=/boot install
+# sudo bootctl --path=/boot install
 
 # enable Vim persistent undo
 mkdir -p .vim/undodir
 
 # install ruby's bundler
 sudo gem install bundler
-
-# install flake8 for Python checking
-sudo pip3 install flake8
 
 # install Hotot
 mkdir -p code/Hotot
@@ -92,7 +83,7 @@ sudo make install
 popd
 
 pushd code
-git clone git://github.com/EionRobb/pidgin-groupchat-typing-notifications.git
+git clone https://github.com/EionRobb/pidgin-groupchat-typing-notifications.git
 pushd pidgin-groupchat-typing-notifications
 make
 sudo make install
@@ -101,16 +92,13 @@ rm -rf pidgin-groupchat-typing-notifications
 popd
 
 pushd code
-git clone git://github.com/EionRobb/icyque.git
+git clone https://github.com/EionRobb/icyque.git
 pushd icyque
 make
 sudo make install
 popd
 rm -rf icyque
 popd
-
-# add less keybindings
-lesskey
 
 # Handle out-of-memory situations better:
 sudo sh -c 'echo "vm.oom_kill_allocating_task = 1" >> /etc/sysctl.d/local.conf'
@@ -132,14 +120,15 @@ sudo systemctl enable acpid
 sudo systemctl enable laptop-mode
 
 npm config set ignore-scripts true
-yarn config set ignore-scripts true
+pnpm config set ignore-scripts true
 
+# copy `/etc/X11/xorg.conf.d` from the old laptop
 # execute "set spell" in Vim in order to download its dictionaries
 # install aspell and hunspell dictionaries from Dropbox directory
 # install kbgoffice from https://bitbucket.org/axil42/aur-mirror/raw/master/kbgoffice/PKGBUILD or the file in this directory
 # execute "cp ~/Dropbox/Private/wallpaper.jpg ~/.config/awesome/themes/"
-# copy Pidgin stuff from Dropbox folder to ~/.purple
-# install Thunderbird add-ons from ~/dotfiles/common/ThunderbirdAddons.txt
+# cp ~/.purple from the old laptop OR copy Pidgin stuff from Dropbox folder to ~/.purple
+# cp ~/.thunderbird from the old laptop
 # install Chrome's Stylus styles from ~/dotfiles/common/stylish/*
 # use Chrome's Page Monitor sites from ~/dotfiles/common/Chrome/Page Monitor.html
 # setup spelling in Chrome - Settings, search for "spell", Language and input settings
@@ -148,3 +137,4 @@ yarn config set ignore-scripts true
 # set Chrome/Thunderbird fonts, encodings
 # add Facebook icons for Pidgin from https://github.com/PowaBanga/pidgin-EAP
 # enable wanted Pidgin plugins (like the groupchat-typing-notifications one)
+# set the `Adwaita-dark` theme in `lxappearance`
