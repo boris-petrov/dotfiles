@@ -1,0 +1,16 @@
+style "font" {
+    font_name = "DejaVu Sans Book 11"
+}
+widget_class "*" style "font"
+
+gtk-key-theme-name="Emacs"
+
+gtk-enable-mnemonics=1
+gtk-enable-accels=1
+
+gtk-application-prefer-dark-theme=1
+
+binding "pidgin-chat-window-bindings" {
+    bind "<ctrl>j" { "message_send" () }
+}
+widget "*pidgin_conv_entry" binding "pidgin-chat-window-bindings"
