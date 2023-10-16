@@ -372,7 +372,7 @@ awful.rules.rules = {
         properties = { screen = 1, tag = "4", switchtotag = true, floating = true, focus = true,
                        maximized_vertical = true, maximized_horizontal = false },
         callback = function (c)
-            local cl_width = 250  -- width of buddy list window
+            local cl_width = 500  -- width of buddy list window
             local def_left = true -- default placement. note: you have to restart
                                   -- pidgin for changes to take effect
 
