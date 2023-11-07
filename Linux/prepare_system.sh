@@ -28,6 +28,7 @@ sudo pacman -Syy
 
 # install packages
 yay -S --needed archlinux-keyring \
+  man-db xdotool xbindkeys \
   intel-ucode \
   xf86-video-intel mesa-libgl mesa-vdpau libva-intel-driver \
   xf86-input-libinput acpi acpid laptop-mode-tools \

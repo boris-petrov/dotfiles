@@ -1,0 +1,5 @@
+# To generate a default file with some explanations:
+# xbindkeys --defaults > ~/.xbindkeysrc_default
+
+"xdotool key --delay 0 --clearmodifiers Shift+Insert"
+  Shift + Delete + Release

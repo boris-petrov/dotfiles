@@ -3,6 +3,7 @@ source $HOME/.zprofile
 xrdb -merge $HOME/.Xresources
 
 kbdd
+xbindkeys
 start-pulseaudio-x11
 udiskie --smart-tray &
 nm-applet &
