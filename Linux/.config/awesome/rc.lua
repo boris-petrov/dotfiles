@@ -69,7 +69,14 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 mykeyboardlayout._layout = { [1] = lts[0][0], [2] = lts[1][0] }
 local kbdwidget = wibox.container.background()
 kbdwidget:set_widget(mykeyboardlayout.widget)
-kbdwidget:set_fg(lts[0][1])
+
+local function set_keyboard_layout()
+    local layout = awesome.xkb_get_layout_group()
+    mykeyboardlayout.widget:set_text(lts[layout][0])
+    kbdwidget:set_fg(lts[layout][1])
+end
+
+set_keyboard_layout()
 
 -- {{{ Wibar
 -- Create a textclock widget
@@ -515,9 +522,7 @@ end)
 client.connect_signal("focus",   function(c) c.border_color = beautiful.border_focus  end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
-awesome.connect_signal("xkb::group_changed", function ()
-    local layout = awesome.xkb_get_layout_group()
-    kbdwidget:set_fg(lts[layout][1])
-end)
+awesome.connect_signal("xkb::group_changed", set_keyboard_layout)
+awesome.connect_signal("xkb::map_changed", set_keyboard_layout)
 
 -- }}}
