@@ -808,6 +808,9 @@ cab Gd Gdiff
 
 nmap gs :Git<CR>
 
+command! -nargs=0 -range Glogr tabnew | set ft=diff buftype=nofile | 0r!git -C "#:h" log -L "<line1>,<line2>:#:t"
+command! -nargs=0 Glogf tabnew | set ft=diff buftype=nofile | 0r!git -C "#:h" log -p --follow "#:t"
+
 " --------------------------------------------------------------------------------------------------
 " vim-gutter Settings
 " --------------------------------------------------------------------------------------------------
