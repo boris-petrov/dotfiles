@@ -15,6 +15,7 @@
 [commit]
 	gpgSign = true
 [alias]
+	cp = cherry-pick
 	co = checkout
 	br = branch
 	cleanup = !git branch --merged master | grep -v 'master$' | xargs git branch -d
