@@ -9,6 +9,7 @@
 	compactionHeuristic = true
 	tool = meld
 [merge]
+	conflictStyle = zdiff3
 	ff = no
 	tool = meld
 	autoStash = true
