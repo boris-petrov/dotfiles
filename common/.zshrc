@@ -137,8 +137,6 @@ alias sudo='sudo -E '
 
 alias grep='grep --no-messages --color=auto'
 
-alias feh='feh --auto-rotate'
-
 which() {
   (alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
 }
