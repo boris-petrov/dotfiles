@@ -15,7 +15,7 @@ liferea &
 xcmenu &
 rsibreak &
 ulauncher &
-fluxgui &
+redshift-gtk &
 xscreensaver -no-splash &
 
 $HOME/bin/fix_screens
