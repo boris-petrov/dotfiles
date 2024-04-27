@@ -11,11 +11,14 @@ select-word-style bash
 unsetopt LIST_AMBIGUOUS # If this option is set completions are shown only if the completions don't have an unambiguous prefix or suffix that could be inserted in the command line.
 unsetopt AUTO_REMOVE_SLASH
 unsetopt BG_NICE # Run all background jobs at a lower priority. This option is set by default.
+setopt EXTENDED_HISTORY # Write the history file in the ':start:elapsed;command' format.
+setopt INC_APPEND_HISTORY # Write to the history file immediately, not when the shell exits.
 setopt HIST_IGNORE_SPACE # Do not enter command lines into the history list if they begin with a blank.
 setopt histignoredups # Ignore duplicate lines in the history.
 unsetopt HUP # Send the HUP signal to running jobs when the shell exits.
 setopt PROMPT_SUBST # Enable substitutions of functions in prompt
 setopt interactivecomments # Enable ability to add comments at the end of a line
+setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from each command line being added to the history.
 
 bindkey -v # vi-mode
 
@@ -23,6 +26,7 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 HISTORY_IGNORE="(ls|cd|cd ..|pwd|exit|bg|fg)"
+HIST_STAMPS="yyyy-mm-dd"
 
 ##############################
 # Git status in prompt
