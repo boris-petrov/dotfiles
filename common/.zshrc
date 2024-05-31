@@ -368,8 +368,7 @@ use-gradlew() {
 zle -N accept-line use-gradlew
 
 # great video about `fzf` - https://www.youtube.com/watch?v=qgG5Jhi_Els
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+eval "$(fzf --zsh)"
 export FD_OPTIONS='--follow --exclude .git --exclude node_modules'
 export FZF_DEFAULT_COMMAND="git ls-tree -r --name-only HEAD || fd --type f --type l $FD_OPTIONS"
 export FZF_CTRL_T_COMMAND="fd $FD_OPTIONS"
