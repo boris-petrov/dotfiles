@@ -27,7 +27,7 @@ bindkey -v # vi-mode
 
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
-SAVEHIST=10000
+SAVEHIST=$HISTSIZE
 HISTORY_IGNORE="(ls|cd|cd ..|pwd|exit|bg|fg)"
 HIST_STAMPS="yyyy-mm-dd"
 
