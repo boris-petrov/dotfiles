@@ -3,7 +3,7 @@ local wezterm = require 'wezterm'
 return {
   check_for_updates = false,
 
-  font = wezterm.font 'Inconsolata LGC',
+  font = wezterm.font 'Inconsolata LGC Nerd Font',
   font_size = 12,
 
   hide_tab_bar_if_only_one_tab = true,

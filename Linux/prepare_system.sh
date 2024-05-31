@@ -53,7 +53,7 @@ yay -S --needed archlinux-keyring \
   zip unrar unzip \
   deluge-gtk flareget \
   freerdp tigervnc \
-  fontconfig freetype2 ttf-dejavu otf-inconsolata-lgc-git \
+  fontconfig freetype2 ttf-dejavu otf-inconsolata-lgc-git ttf-inconsolata-lgc-nerd \
   jdk nodejs npm pnpm ruby python python-pip python-pycodestyle gdb \
   thunar gvfs gvfs-smb sshfs \
   earlyoom git-delta difftastic \

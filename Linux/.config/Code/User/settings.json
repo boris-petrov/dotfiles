@@ -12,7 +12,7 @@
   "telemetry.telemetryLevel": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.fontSize": 15,
-  "editor.fontFamily": "'Inconsolata', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "'Inconsolata LGC Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.guides.bracketPairs": "active",
   "editor.emptySelectionClipboard": false,
   "editor.dragAndDrop": false,
