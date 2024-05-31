@@ -299,6 +299,7 @@ if [ `uname -s` = "Linux" ]; then
   urxvt-bindings
 
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
   # could also use `https://github.com/lincheney/fzf-tab-completion` instead
   source $HOME/.config/fzf-tab/fzf-tab.plugin.zsh
 

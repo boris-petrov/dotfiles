@@ -48,7 +48,8 @@ yay -S --needed archlinux-keyring \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xscreensaver arandr \
   aspell hunspell \
   gvim colordiff uctags-git the_silver_searcher ripgrep fzf grc ngrok ncdu \
-  zsh zsh-syntax-highlighting rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git wezterm tmux fzf fd \
+  zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
+  rxvt-unicode-pixbuf urxvt-clipboard urxvt-font-size-git wezterm tmux fzf fd \
   ntp openssh ntfs-3g oxygen-icons \
   zip unrar unzip \
   deluge-gtk flareget \
