@@ -371,6 +371,7 @@ zle -N accept-line use-gradlew
 eval "$(fzf --zsh)"
 export FD_OPTIONS='--follow --exclude .git --exclude node_modules'
 export FZF_DEFAULT_COMMAND="git ls-tree -r --name-only HEAD || fd --type f --type l $FD_OPTIONS"
+export FZF_CTRL_R_OPTS="--nth 2.." # the fist column (event numbers) is excluded from the search
 export FZF_CTRL_T_COMMAND="fd $FD_OPTIONS"
 export FZF_DEFAULT_OPTS='--no-mouse --reverse --multi --inline-info'
 
