@@ -59,7 +59,7 @@ yay -S --needed archlinux-keyring \
   thunar gvfs gvfs-smb sshfs \
   earlyoom git-delta difftastic \
   intltool less htop \
-  pinentry kwayland5 qt5-x11extras \
+  pinentry kwindowsystem kguiaddons \
   btrustbiss ccid opensc acsccid \
   extundelete haveged rsibreak-git ulauncher redshift
 
