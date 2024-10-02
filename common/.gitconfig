@@ -22,6 +22,7 @@
 	cleanup = !git branch --merged master | grep -v 'master$' | xargs git branch -d
 	unstage = reset HEAD --
 	undo = reset --soft HEAD^
+	sc = commit --amend --no-edit
 	sync = !git stash && git pull && git push && git stash pop
 [pull]
 	ff = no
