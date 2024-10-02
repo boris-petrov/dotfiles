@@ -57,10 +57,10 @@ yay -S --needed archlinux-keyring \
   fontconfig freetype2 ttf-dejavu otf-inconsolata-lgc-git ttf-inconsolata-lgc-nerd \
   jdk nodejs npm pnpm ruby python python-pip python-pycodestyle gdb \
   thunar gvfs gvfs-smb sshfs \
-  earlyoom git-delta difftastic \
+  earlyoom git-delta git-absorb difftastic \
   intltool less htop \
   pinentry kwindowsystem kguiaddons \
-  btrustbiss ccid opensc acsccid \
+  btrustbiss ccid opensc acsccid pcsclite \
   extundelete haveged rsibreak-git ulauncher redshift
 
 sudo bash -c "echo -e \"EARLYOOM_ARGS=\"-m 3 -r 0 --avoid \'^\(firefox\|awesome\|slim\)$\' --prefer \'^\(java\|code\|node\|chromium\)$\'\"\" > /etc/default/earlyoom"
