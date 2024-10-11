@@ -87,6 +87,9 @@
 	autocommit = false
 	resolvemerge = false
 	synccontent = true
+[absorb]
+	maxStack = 50
+	oneFixupPerCommit = true
 [submodule]
 	recurse = true
 	fetchJobs = 4
