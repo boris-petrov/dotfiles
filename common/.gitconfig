@@ -47,6 +47,7 @@
 	tabs = 4
 	features = diff-so-fancy
 	hunk-header-style = line-number syntax
+	line-numbers = true
 [transfer]
 	fsckObjects = true
 [color]
