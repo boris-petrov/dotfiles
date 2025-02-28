@@ -43,7 +43,7 @@ yay -S --needed archlinux-keyring \
   cups gutenprint system-config-printer \
   networkmanager network-manager-applet networkmanager-pptp networkmanager-openvpn networkmanager-l2tp gnome-keyring \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium pepper-flash firefox flashplugin \
-  pidgin telegram-tdlib-purple-minimal-git purple-skypeweb-git purple-teams-git purple-googlechat purple-facebook-git slack-libpurple-git purple-discord-git purple-matrix-git kbdd-git pidgin-otr \
+  pidgin telegram-tdlib-purple-minimal-git purple-skypeweb-git purple-teams-git purple-gowhatsapp-git purple-googlechat purple-facebook-git slack-libpurple-git purple-discord-git purple-matrix-git kbdd-git pidgin-otr \
   dropbox liferea xcmenu-git thunderbird htop autokey-gtk xdg-utils lxappearance feh gnome-themes-extra \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xscreensaver arandr \
   aspell hunspell \
