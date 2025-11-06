@@ -20,4 +20,6 @@ xscreensaver -no-splash &
 
 $HOME/bin/fix_screens
 
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+
 exec awesome
