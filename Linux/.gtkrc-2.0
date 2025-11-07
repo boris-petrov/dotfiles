@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/boris/.gtkrc-2.0.mine"
-gtk-theme-name="Rezlooks-dark"
+gtk-theme-name="Adwaita-dark"
 gtk-icon-theme-name="oxygen"
 gtk-font-name="DejaVu Sans Book 11"
 gtk-cursor-theme-name="Adwaita"

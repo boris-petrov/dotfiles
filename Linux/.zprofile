@@ -15,3 +15,7 @@ export GTK_OVERLAY_SCROLLING=0
 export GPGKEY=566D2BFCC54F9E23
 
 export GOPATH=$HOME/go
+
+export GTK_THEME=Adwaita:dark
+export GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
+export QT_STYLE_OVERRIDE=Adwaita-Dark

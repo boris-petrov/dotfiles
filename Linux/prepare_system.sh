@@ -45,6 +45,7 @@ yay -S --needed archlinux-keyring \
   anything-sync-daemon profile-sync-daemon profile-cleaner chromium pepper-flash firefox flashplugin \
   pidgin telegram-tdlib-purple-minimal-git purple-skypeweb-git purple-teams-git purple-gowhatsapp-git purple-googlechat purple-facebook-git slack-libpurple-git purple-discord-git purple-matrix-git kbdd-git pidgin-otr \
   dropbox liferea xcmenu-git thunderbird htop autokey-gtk xdg-utils lxappearance feh gnome-themes-extra \
+  gnome-themes-extra-gtk2 adwaita-qt5-git adwaita-qt6-git \
   xorg-server xorg-xinit slim awesome dmenu xorg-xprop xscreensaver arandr \
   aspell hunspell \
   gvim colordiff uctags-git the_silver_searcher ripgrep fzf grc ngrok ncdu \
@@ -126,6 +127,8 @@ sudo systemctl enable laptop-mode
 npm config set ignore-scripts true
 pnpm config set ignore-scripts true
 
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
 # copy `/etc/X11/xorg.conf.d` from the old laptop
 # execute "set spell" in Vim in order to download its dictionaries
 # install aspell and hunspell dictionaries from Dropbox directory
@@ -141,4 +144,3 @@ pnpm config set ignore-scripts true
 # set Chrome/Thunderbird fonts, encodings
 # add Facebook icons for Pidgin from https://github.com/PowaBanga/pidgin-EAP
 # enable wanted Pidgin plugins (like the groupchat-typing-notifications one)
-# set the `Adwaita-dark` theme in `lxappearance`
