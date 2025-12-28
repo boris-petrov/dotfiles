@@ -46,7 +46,7 @@ yay -S --needed archlinux-keyring \
   pidgin telegram-tdlib-purple-minimal-git purple-skypeweb-git purple-teams-git purple-gowhatsapp-git purple-googlechat purple-facebook-git slack-libpurple-git purple-discord-git purple-matrix-git kbdd-git pidgin-otr \
   dropbox liferea xcmenu-git thunderbird htop autokey-gtk xdg-utils lxappearance feh gnome-themes-extra \
   gnome-themes-extra-gtk2 adwaita-qt5-git adwaita-qt6-git \
-  xorg-server xorg-xinit slim awesome dmenu xorg-xprop xscreensaver arandr \
+  xorg-server xorg-xinit slim awesome dmenu xorg-xprop xscreensaver arandr brightnessctl \
   aspell hunspell \
   gvim colordiff uctags-git the_silver_searcher ripgrep fzf grc ngrok ncdu \
   zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
