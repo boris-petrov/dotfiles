@@ -36,7 +36,7 @@ yay -S --needed archlinux-keyring \
   pulseaudio pulseaudio-alsa pavucontrol sof-firmware \
   systemd-boot-pacman-hook \
   alsa-utils alsa-plugins libsamplerate \
-  smplayer deadbeef \
+  smplayer deadbeef playerctl \
   udisks2 udiskie dosfstools \
   zathura zathura-djvu zathura-pdf-poppler zathura-ps \
   libreoffice-fresh \
